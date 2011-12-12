@@ -27,9 +27,10 @@
 #ifndef __vtkPointLoad_h
 #define __vtkPointLoad_h
 
+#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkImageAlgorithm.h"
 
-class VTK_IMAGING_EXPORT vtkPointLoad :  public vtkImageAlgorithm
+class VTKIMAGINGCORE_EXPORT vtkPointLoad :  public vtkImageAlgorithm
 {
 public:
   vtkTypeMacro(vtkPointLoad,vtkImageAlgorithm);

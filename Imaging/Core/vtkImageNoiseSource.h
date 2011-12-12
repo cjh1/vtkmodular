@@ -26,10 +26,11 @@
 #define __vtkImageNoiseSource_h
 
 
+#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkImageAlgorithm.h"
 
 
-class VTK_IMAGING_EXPORT vtkImageNoiseSource : public vtkImageAlgorithm 
+class VTKIMAGINGCORE_EXPORT vtkImageNoiseSource : public vtkImageAlgorithm
 {
 public:
   static vtkImageNoiseSource *New();

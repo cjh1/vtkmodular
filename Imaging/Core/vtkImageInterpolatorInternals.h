@@ -17,6 +17,7 @@
 #ifndef __vtkImageInterpolatorInternals_h
 #define __vtkImageInterpolatorInternals_h
 
+#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkMath.h"
 
 // The interpolator info struct

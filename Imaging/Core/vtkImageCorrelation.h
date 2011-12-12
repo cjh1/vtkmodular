@@ -26,9 +26,10 @@
 
 
 
+#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkThreadedImageAlgorithm.h"
 
-class VTK_IMAGING_EXPORT vtkImageCorrelation : public vtkThreadedImageAlgorithm
+class VTKIMAGINGCORE_EXPORT vtkImageCorrelation : public vtkThreadedImageAlgorithm
 {
 public:
   static vtkImageCorrelation *New();

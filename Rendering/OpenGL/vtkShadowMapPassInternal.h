@@ -19,6 +19,7 @@
 #ifndef __vtkShadowMapPassInternal_h
 #define __vtkShadowMapPassInternal_h
 
+#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkCamera.h"
 #include "vtkTextureObject.h"
 

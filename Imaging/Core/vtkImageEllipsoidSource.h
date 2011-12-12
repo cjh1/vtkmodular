@@ -23,9 +23,10 @@
 #ifndef __vtkImageEllipsoidSource_h
 #define __vtkImageEllipsoidSource_h
 
+#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkImageAlgorithm.h"
 
-class VTK_IMAGING_EXPORT vtkImageEllipsoidSource : public vtkImageAlgorithm
+class VTKIMAGINGCORE_EXPORT vtkImageEllipsoidSource : public vtkImageAlgorithm
 {
 public:
   static vtkImageEllipsoidSource *New();

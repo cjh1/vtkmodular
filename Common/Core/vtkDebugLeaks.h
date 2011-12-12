@@ -26,6 +26,7 @@
 #ifndef __vtkDebugLeaks_h
 #define __vtkDebugLeaks_h
 
+#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 #include "vtkToolkits.h" // Needed for VTK_DEBUG_LEAKS macro setting.
@@ -34,7 +35,7 @@
 class vtkDebugLeaksHashTable;
 class vtkSimpleCriticalSection;
 
-class VTK_COMMON_EXPORT vtkDebugLeaks : public vtkObject
+class VTKCOMMONCORE_EXPORT vtkDebugLeaks : public vtkObject
 {
 public: 
   static vtkDebugLeaks *New();

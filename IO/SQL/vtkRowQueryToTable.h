@@ -35,11 +35,12 @@
 #ifndef __vtkRowQueryToTable_h
 #define __vtkRowQueryToTable_h
 
+#include "vtkIOSQLExport.h" // For export macro
 #include "vtkTableAlgorithm.h"
 
 class vtkRowQuery;
 
-class VTK_IO_EXPORT vtkRowQueryToTable : public vtkTableAlgorithm
+class VTKIOSQL_EXPORT vtkRowQueryToTable : public vtkTableAlgorithm
 {
 public:
   static vtkRowQueryToTable* New();

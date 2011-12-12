@@ -27,6 +27,7 @@
 #define __vtkPointAccumulator_h
 
 
+#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkstd/exception"
 #include "vtkPoints.h"
 

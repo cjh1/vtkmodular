@@ -202,11 +202,12 @@
 #ifndef __vtkCommand_h
 #define __vtkCommand_h
 
+#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkObjectBase.h"
 #include "vtkObject.h" // Need vtkTypeMacro
 
 // The superclass that all commands should be subclasses of
-class VTK_COMMON_EXPORT vtkCommand : public vtkObjectBase
+class VTKCOMMONCORE_EXPORT vtkCommand : public vtkObjectBase
 {
 public:
   vtkTypeMacro(vtkCommand,vtkObjectBase);

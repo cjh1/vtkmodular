@@ -26,9 +26,10 @@
 #define __vtkImageSpatialAlgorithm_h
 
 
+#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkThreadedImageAlgorithm.h"
 
-class VTK_IMAGING_EXPORT vtkImageSpatialAlgorithm : public vtkThreadedImageAlgorithm
+class VTKIMAGINGCORE_EXPORT vtkImageSpatialAlgorithm : public vtkThreadedImageAlgorithm
 {
 public:
   static vtkImageSpatialAlgorithm *New();

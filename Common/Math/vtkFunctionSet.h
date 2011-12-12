@@ -26,9 +26,10 @@
 #ifndef __vtkFunctionSet_h
 #define __vtkFunctionSet_h
 
+#include "vtkCommonMathExport.h" // For export macro
 #include "vtkObject.h"
 
-class VTK_COMMON_EXPORT vtkFunctionSet : public vtkObject
+class VTKCOMMONMATH_EXPORT vtkFunctionSet : public vtkObject
 {
 public:
   vtkTypeMacro(vtkFunctionSet,vtkObject);

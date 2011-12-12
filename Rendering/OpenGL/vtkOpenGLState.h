@@ -31,6 +31,7 @@
 #ifndef __vtkOpenGLState_h
 #define __vtkOpenGLState_h
 
+#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkgl.h"
 #include <vtkstd/vector>
 
@@ -353,7 +354,7 @@ public:
   bool HasFragmentShader;
 };
 
-class VTK_RENDERING_EXPORT vtkOpenGLState
+class VTKRENDERINGOPENGL_EXPORT vtkOpenGLState
 {
 public:
   vtkOpenGLState(vtkOpenGLRenderWindow *context);

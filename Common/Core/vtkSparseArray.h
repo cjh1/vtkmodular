@@ -63,6 +63,7 @@
 #ifndef __vtkSparseArray_h
 #define __vtkSparseArray_h
 
+#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkArrayCoordinates.h"
 #include "vtkArraySort.h"
 #include "vtkObjectFactory.h"

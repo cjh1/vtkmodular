@@ -40,6 +40,7 @@
 #ifndef __vtkWeakPointer_h
 #define __vtkWeakPointer_h
 
+#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkWeakPointerBase.h"
 
 template <class T>

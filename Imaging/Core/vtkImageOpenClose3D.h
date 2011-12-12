@@ -32,11 +32,12 @@
 #define __vtkImageOpenClose3D_h
 
 
+#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkImageAlgorithm.h"
 
 class vtkImageDilateErode3D;
 
-class VTK_IMAGING_EXPORT vtkImageOpenClose3D : public vtkImageAlgorithm
+class VTKIMAGINGCORE_EXPORT vtkImageOpenClose3D : public vtkImageAlgorithm
 {
 public:
   // Description:

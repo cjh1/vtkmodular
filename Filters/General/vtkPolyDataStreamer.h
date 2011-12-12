@@ -30,9 +30,10 @@
 #ifndef __vtkPolyDataStreamer_h
 #define __vtkPolyDataStreamer_h
 
+#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
-class VTK_GRAPHICS_EXPORT vtkPolyDataStreamer : public vtkPolyDataAlgorithm
+class VTKFILTERSGENERAL_EXPORT vtkPolyDataStreamer : public vtkPolyDataAlgorithm
 {
 public:
   static vtkPolyDataStreamer *New();

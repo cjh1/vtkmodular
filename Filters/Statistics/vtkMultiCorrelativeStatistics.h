@@ -60,12 +60,13 @@ PURPOSE.  See the above copyright notice for more information.
 #ifndef __vtkMultiCorrelativeStatistics_h
 #define __vtkMultiCorrelativeStatistics_h
 
+#include "vtkFiltersStatisticsExport.h" // For export macro
 #include "vtkStatisticsAlgorithm.h"
 
 class vtkMultiBlockDataSet;
 class vtkVariant;
 
-class VTK_INFOVIS_EXPORT vtkMultiCorrelativeStatistics : public vtkStatisticsAlgorithm
+class VTKFILTERSSTATISTICS_EXPORT vtkMultiCorrelativeStatistics : public vtkStatisticsAlgorithm
 {
 public:
   vtkTypeMacro(vtkMultiCorrelativeStatistics, vtkStatisticsAlgorithm);

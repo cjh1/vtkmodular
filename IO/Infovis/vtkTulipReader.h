@@ -50,9 +50,10 @@
 #ifndef _vtkTulipReader_h
 #define _vtkTulipReader_h
 
+#include "vtkIOInfovisExport.h" // For export macro
 #include "vtkUndirectedGraphAlgorithm.h"
 
-class VTK_INFOVIS_EXPORT vtkTulipReader : public vtkUndirectedGraphAlgorithm
+class VTKIOINFOVIS_EXPORT vtkTulipReader : public vtkUndirectedGraphAlgorithm
 {
 public:
   static vtkTulipReader *New();

@@ -21,9 +21,10 @@
 #ifndef __vtkDataSetWriter_h
 #define __vtkDataSetWriter_h
 
+#include "vtkIOGeometryExport.h" // For export macro
 #include "vtkDataWriter.h"
 
-class VTK_IO_EXPORT vtkDataSetWriter : public vtkDataWriter
+class VTKIOGEOMETRY_EXPORT vtkDataSetWriter : public vtkDataWriter
 {
 public:
   static vtkDataSetWriter *New();

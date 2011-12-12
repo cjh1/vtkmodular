@@ -24,9 +24,10 @@
 #ifndef __vtkIdentityTransform_h
 #define __vtkIdentityTransform_h
 
+#include "vtkCommonTransformsExport.h" // For export macro
 #include "vtkLinearTransform.h"
 
-class VTK_COMMON_EXPORT vtkIdentityTransform : public vtkLinearTransform
+class VTKCOMMONTRANSFORMS_EXPORT vtkIdentityTransform : public vtkLinearTransform
 {
 public:
   static vtkIdentityTransform *New();

@@ -28,6 +28,7 @@
 #ifndef __vtkTypeTemplate_h
 #define __vtkTypeTemplate_h
 
+#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkObjectBase.h"
 #include <typeinfo>
 

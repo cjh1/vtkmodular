@@ -35,6 +35,7 @@
 #ifndef __vtkMath_h
 #define __vtkMath_h
 
+#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkObject.h"
 #ifndef VTK_LEGACY_REMOVE
 # include "vtkPolynomialSolversUnivariate.h" // For backwards compatibility of old solvers
@@ -60,7 +61,7 @@ class vtkMathInternal;
 class vtkMinimalStandardRandomSequence;
 class vtkBoxMuellerRandomSequence;
 
-class VTK_COMMON_EXPORT vtkMath : public vtkObject
+class VTKCOMMONCORE_EXPORT vtkMath : public vtkObject
 {
 public:
   static vtkMath *New();

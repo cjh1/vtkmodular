@@ -38,9 +38,10 @@
 class vtkSpline;
 class vtkPoints;
 
+#include "vtkCommonComputationalGeometryExport.h" // For export macro
 #include "vtkParametricFunction.h"
 
-class VTK_FILTERING_EXPORT vtkParametricSpline : public vtkParametricFunction
+class VTKCOMMONCOMPUTATIONALGEOMETRY_EXPORT vtkParametricSpline : public vtkParametricFunction
 {
 public:
   vtkTypeMacro(vtkParametricSpline,vtkParametricFunction);

@@ -28,9 +28,10 @@
 #ifndef __vtkMaskPoints_h
 #define __vtkMaskPoints_h
 
+#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
-class VTK_GRAPHICS_EXPORT vtkMaskPoints : public vtkPolyDataAlgorithm
+class VTKFILTERSCORE_EXPORT vtkMaskPoints : public vtkPolyDataAlgorithm
 {
 public:
   static vtkMaskPoints *New();
