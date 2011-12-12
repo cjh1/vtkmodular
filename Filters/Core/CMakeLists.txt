@@ -1,0 +1,82 @@
+set(Kit_SRCS
+  vtkAppendFilter.cxx
+  vtkAppendPolyData.cxx
+  vtkAppendSelection.cxx
+  vtkArrayCalculator.cxx
+  vtkAssignAttribute.cxx
+  vtkAttributeDataToFieldDataFilter.cxx
+  vtkCellDataToPointData.cxx
+  vtkCleanPolyData.cxx
+  vtkClipPolyData.cxx
+  vtkCompositeDataProbeFilter.cxx
+  vtkConnectivityFilter.cxx
+  vtkContourFilter.cxx
+  vtkContourGrid.cxx
+  vtkDataObjectGenerator.cxx
+  vtkDataObjectToDataSetFilter.cxx
+  vtkDataSetEdgeSubdivisionCriterion.cxx
+  vtkDataSetToDataObjectFilter.cxx
+  vtkDecimatePolylineFilter.cxx
+  vtkDecimatePro.cxx
+  vtkDelaunay2D.cxx
+  vtkDelaunay3D.cxx
+  vtkElevationFilter.cxx
+  vtkFeatureEdges.cxx
+  vtkFieldDataToAttributeDataFilter.cxx
+  vtkGlyph2D.cxx
+  vtkGlyph3D.cxx
+  vtkHedgeHog.cxx
+  vtkHull.cxx
+  vtkIdFilter.cxx
+  vtkMarchingCubes.cxx
+  vtkMarchingSquares.cxx
+  vtkMaskFields.cxx
+  vtkMaskPoints.cxx
+  vtkMaskPolyData.cxx
+  vtkMassProperties.cxx
+  vtkMergeDataObjectFilter.cxx
+  vtkMergeFields.cxx
+  vtkMergeFilter.cxx
+  vtkPointDataToCellData.cxx
+  vtkPolyDataConnectivityFilter.cxx
+  vtkPolyDataNormals.cxx
+  vtkProbeFilter.cxx
+  vtkQuadricClustering.cxx
+  vtkQuadricDecimation.cxx
+  vtkRearrangeFields.cxx
+  vtkReverseSense.cxx
+  vtkSimpleElevationFilter.cxx
+  vtkSmoothPolyDataFilter.cxx
+  vtkStreamer.cxx
+  vtkStreamLine.cxx
+  vtkStreamPoints.cxx
+  vtkStripper.cxx
+  vtkStructuredGridOutlineFilter.cxx
+  vtkSynchronizedTemplates2D.cxx
+  vtkSynchronizedTemplates3D.cxx
+  vtkSynchronizedTemplatesCutter3D.cxx
+  vtkTensorGlyph.cxx
+  vtkThreshold.cxx
+  vtkThresholdPoints.cxx
+  vtkTriangleFilter.cxx
+  vtkTubeFilter.cxx
+  vtkVectorDot.cxx
+  vtkVectorNorm.cxx
+  vtkWindowedSincPolyDataFilter.cxx
+  
+  vtkSelectionAlgorithm.cxx
+  vtkCutter.cxx
+  vtkGridSynchronizedTemplates3D.cxx
+  vtkRectilinearSynchronizedTemplates.cxx
+  vtkEdgeSubdivisionCriterion.cxx
+  vtkStreamingTessellator.cxx
+
+  #vtkOutlineFilter.cxx # Needs vtkOutlineSource
+  )
+
+include_directories(
+  ${CMAKE_CURRENT_BINARY_DIR}
+  ${VTK_SOURCE_DIR}/Utilities
+  )
+
+vtk_add_library(vtkFiltersCore ${Kit_SRCS})

@@ -1,0 +1,19 @@
+vtk_module(vtkIOImage
+  DEPENDS
+    vtkCommonCore
+    vtkCommonDataModel
+    vtkCommonSystem
+    vtkCommonMath
+    vtkCommonMisc
+    vtkCommonTransforms
+    vtkIOCore
+    vtkIOGeometry
+    vtkzlib
+    vtkjpeg
+    vtkpng
+    vtktiff
+    vtkmetaio
+    vtkoggtheora
+    kwsys
+    DICOMParser
+  DEFAULT ON)

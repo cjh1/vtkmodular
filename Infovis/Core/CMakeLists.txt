@@ -1,0 +1,44 @@
+set(Kit_SRCS
+  vtkAddMembershipArray.cxx
+  vtkAdjacencyMatrixToEdgeTable.cxx
+  vtkArrayNorm.cxx
+  vtkArrayToTable.cxx
+  vtkCollapseGraph.cxx
+  vtkCollapseVerticesByArray.cxx
+  vtkDataObjectToTable.cxx
+  vtkEdgeCenters.cxx
+  vtkExpandSelectedGraph.cxx
+  vtkExtractSelectedGraph.cxx
+  vtkGenerateIndexArray.cxx
+  vtkGraphHierarchicalBundleEdges.cxx
+  vtkGroupLeafVertices.cxx
+  vtkMergeColumns.cxx
+  vtkMergeGraphs.cxx
+  vtkMergeTables.cxx
+  vtkMutableGraphHelper.cxx
+  vtkNetworkHierarchy.cxx
+  vtkPruneTreeFilter.cxx
+  vtkRandomGraphSource.cxx
+  vtkRemoveIsolatedVertices.cxx
+  vtkSparseArrayToTable.cxx
+  vtkStreamGraph.cxx
+  vtkStringToCategory.cxx
+  vtkStringToNumeric.cxx
+  vtkTableToArray.cxx
+  vtkTableToGraph.cxx
+  vtkTableToSparseArray.cxx
+  vtkTableToTreeFilter.cxx
+  vtkThresholdGraph.cxx
+  vtkThresholdTable.cxx
+  vtkTransposeMatrix.cxx
+  vtkTreeFieldAggregator.cxx
+  vtkTreeLevelsFilter.cxx
+  vtkVertexDegree.cxx
+  )
+
+include_directories(
+  ${CMAKE_CURRENT_BINARY_DIR}
+  ${VTK_SOURCE_DIR}/Utilities
+  )
+
+vtk_add_library(vtkInfovisCore ${Kit_SRCS})
