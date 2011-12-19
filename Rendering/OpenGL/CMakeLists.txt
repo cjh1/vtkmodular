@@ -26,7 +26,7 @@ set(Kit_SRCS
   vtkOpenGLHardwareSupport.cxx
   vtkOpenGLImageMapper.cxx
   #vtkOpenGLImageResliceMapper.cxx
-  #vtkOpenGLImageSliceMapper.cxx
+  vtkOpenGLImageSliceMapper.cxx
   vtkOpenGLLight.cxx
   vtkOpenGLLightingPainter.cxx
   vtkOpenGLPainterDeviceAdapter.cxx
@@ -61,6 +61,7 @@ set(Kit_SRCS
   vtkGLSLShaderDeviceAdapter2.cxx
   vtkGLSLShader.cxx
   vtkGLSLShaderProgram.cxx
+  ${CMAKE_CURRENT_BINARY_DIR}/vtkRenderingOpenGLObjectFactory.cxx
   )
 
 set_source_files_properties(${CMAKE_CURRENT_BINARY_DIR}/vtkgl.cxx
@@ -153,8 +154,6 @@ include_directories(
   ${OPENGL_INCLUDE_DIR}
   ${CMAKE_CURRENT_SOURCE_DIR}
   ${VTK_SOURCE_DIR}/Utilities
-  ${VTK_SOURCE_DIR}/Rendering/GLSL # For the GLSL headers...
-  ${VTK_BINARY_DIR}/Rendering/GLSL # For the GLSL headers...
   )
 
 set(shader_files
@@ -196,5 +195,57 @@ foreach(file ${shader_files})
   list(APPEND Kit_SRCS ${res})
 endforeach()
 
+# Now we need to generate the object factory for this module. Create a list of
+# overrides, and then generate the class that overrides those classes.
+macro(vtk_add_override base override)
+  list(APPEND vtk_module_overrides ${base})
+  set(vtk_module_${base}_override ${override})
+endmacro()
+
+set(opengl_overrides
+  Actor
+  Camera
+  ClipPlanesPainter
+  CoincidentTopologyResolutionPainter
+  DisplayListPainter
+  Glyph3DMapper
+  ImageSliceMapper
+  Light
+  LightingPainter
+  PainterDeviceAdapter
+  Property
+  PolyDataMapper
+  Renderer
+  RepresentationPainter
+  ScalarsToColorsPainter
+  Texture
+  )
+foreach(_override ${opengl_overrides})
+  vtk_add_override(vtk${_override} vtkOpenGL${_override})
+endforeach()
+
+# Now we iterate and create that class file...
+foreach(_class ${vtk_module_overrides})
+  set(_override ${vtk_module_${_class}_override})
+  set(_vtk_override_includes "${_vtk_override_includes}
+#include \"${_override}.h\"")
+  set(_vtk_override_creates "${_vtk_override_creates}
+VTK_CREATE_CREATE_FUNCTION(${_override})")
+  set(_vtk_override_do "${_vtk_override_do}
+  this->RegisterOverride(\"${_class}\",
+                         \"${_override}\",
+                         \"Override for ${vtk-module} module\", 1,
+                         vtkObjectFactoryCreate${_override});")
+endforeach()
+
+# Now lets create the object factory classes
+string(TOUPPER ${vtk-module} VTK-MODULE)
+configure_file(${VTK_CMAKE_DIR}/vtkObjectFactory.h.in
+  ${CMAKE_CURRENT_BINARY_DIR}/${vtk-module}ObjectFactory.h)
+configure_file(${VTK_CMAKE_DIR}/vtkObjectFactory.cxx.in
+  ${CMAKE_CURRENT_BINARY_DIR}/${vtk-module}ObjectFactory.cxx)
+
 vtk_add_library(vtkRenderingOpenGL ${Kit_SRCS})
 target_link_libraries(vtkRenderingOpenGL ${OPENGL_LIBRARIES})
+
+add_subdirectory(Testing/Cxx)
