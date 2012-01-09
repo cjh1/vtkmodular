@@ -28,12 +28,11 @@
 #ifndef __vtkDataObjectReader_h
 #define __vtkDataObjectReader_h
 
-#include "vtkIOCoreExport.h" // For export macro
 #include "vtkDataReader.h"
 
 class vtkDataObject;
 
-class VTKIOCORE_EXPORT vtkDataObjectReader : public vtkDataReader
+class VTK_IO_EXPORT vtkDataObjectReader : public vtkDataReader
 {
 public:
   static vtkDataObjectReader *New();

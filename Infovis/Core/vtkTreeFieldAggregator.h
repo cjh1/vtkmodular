@@ -35,10 +35,9 @@
 class vtkPoints;
 class vtkTree;
 
-#include "vtkInfovisCoreExport.h" // For export macro
 #include "vtkTreeAlgorithm.h"
 
-class VTKINFOVISCORE_EXPORT vtkTreeFieldAggregator : public vtkTreeAlgorithm
+class VTK_INFOVIS_EXPORT vtkTreeFieldAggregator : public vtkTreeAlgorithm 
 {
 public:
   static vtkTreeFieldAggregator *New();

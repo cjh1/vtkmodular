@@ -23,13 +23,12 @@
 #ifndef __vtkJavaScriptDataWriter_h
 #define __vtkJavaScriptDataWriter_h
 
-#include "vtkIOCoreExport.h" // For export macro
 #include "vtkWriter.h"
 
 class vtkStdString;
 class vtkTable;
 
-class VTKIOCORE_EXPORT vtkJavaScriptDataWriter : public vtkWriter
+class VTK_IO_EXPORT vtkJavaScriptDataWriter : public vtkWriter
 {
 public:
   static vtkJavaScriptDataWriter* New();

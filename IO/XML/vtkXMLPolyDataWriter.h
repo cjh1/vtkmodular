@@ -27,12 +27,11 @@
 #ifndef __vtkXMLPolyDataWriter_h
 #define __vtkXMLPolyDataWriter_h
 
-#include "vtkIOXMLExport.h" // For export macro
 #include "vtkXMLUnstructuredDataWriter.h"
 
 class vtkPolyData;
 
-class VTKIOXML_EXPORT vtkXMLPolyDataWriter : public vtkXMLUnstructuredDataWriter
+class VTK_IO_EXPORT vtkXMLPolyDataWriter : public vtkXMLUnstructuredDataWriter
 {
 public:
   vtkTypeMacro(vtkXMLPolyDataWriter,vtkXMLUnstructuredDataWriter);

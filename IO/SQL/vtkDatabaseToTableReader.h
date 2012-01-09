@@ -20,14 +20,13 @@
 #ifndef __vtkDatabaseToTableReader_h
 #define __vtkDatabaseToTableReader_h
 
-#include "vtkIOSQLExport.h" // For export macro
-#include <vtkstd/string> // STL Header
+#include <string> // STL Header
 #include "vtkTableReader.h"
 
 class vtkSQLDatabase;
 class vtkStringArray;
 
-class VTKIOSQL_EXPORT vtkDatabaseToTableReader : public vtkTableReader
+class VTK_IO_EXPORT vtkDatabaseToTableReader : public vtkTableReader
 {
 public:
   vtkTypeMacro(vtkDatabaseToTableReader,vtkTableReader);
@@ -55,7 +54,7 @@ protected:
                           vtkInformationVector *) = 0;
   vtkSQLDatabase *Database;
   //BTX
-  vtkstd::string TableName;
+  std::string TableName;
   //ETX
 private:
   vtkDatabaseToTableReader(const vtkDatabaseToTableReader&);  // Not implemented.

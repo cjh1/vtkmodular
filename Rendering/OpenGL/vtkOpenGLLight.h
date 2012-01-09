@@ -20,12 +20,11 @@
 #ifndef __vtkOpenGLLight_h
 #define __vtkOpenGLLight_h
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkLight.h"
 
 class vtkOpenGLRenderer;
 
-class VTKRENDERINGOPENGL_EXPORT vtkOpenGLLight : public vtkLight
+class VTK_RENDERING_EXPORT vtkOpenGLLight : public vtkLight
 {
 public:
   static vtkOpenGLLight *New();

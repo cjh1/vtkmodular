@@ -35,12 +35,11 @@
 #ifndef __vtkCellLocator_h
 #define __vtkCellLocator_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkAbstractCellLocator.h"
 
 class vtkNeighborCells;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkCellLocator : public vtkAbstractCellLocator
+class VTK_FILTERING_EXPORT vtkCellLocator : public vtkAbstractCellLocator
 {
 public:
   vtkTypeMacro(vtkCellLocator,vtkAbstractCellLocator);

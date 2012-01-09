@@ -28,10 +28,9 @@
 #ifndef __vtkParametricConicSpiral_h
 #define __vtkParametricConicSpiral_h
 
-#include "vtkCommonComputationalGeometryExport.h" // For export macro
 #include "vtkParametricFunction.h"
 
-class VTKCOMMONCOMPUTATIONALGEOMETRY_EXPORT vtkParametricConicSpiral : public vtkParametricFunction
+class VTK_COMMON_EXPORT vtkParametricConicSpiral : public vtkParametricFunction
 {
 public:
   vtkTypeMacro(vtkParametricConicSpiral,vtkParametricFunction);

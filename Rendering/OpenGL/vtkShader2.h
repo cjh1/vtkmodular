@@ -36,7 +36,6 @@
 #ifndef __vtkShader2_h
 #define __vtkShader2_h
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkObject.h"
 
 // Values for GetType()/SetType()
@@ -52,7 +51,7 @@ enum vtkShader2Type
 class vtkOpenGLRenderWindow;
 class vtkUniformVariables;
 
-class VTKRENDERINGOPENGL_EXPORT vtkShader2 : public vtkObject
+class VTK_RENDERING_EXPORT vtkShader2 : public vtkObject
 {
 public:
   static vtkShader2 *New();

@@ -26,10 +26,9 @@
 #define __vtkImageGradientMagnitude_h
 
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkThreadedImageAlgorithm.h"
 
-class VTKIMAGINGCORE_EXPORT vtkImageGradientMagnitude : public vtkThreadedImageAlgorithm
+class VTK_IMAGING_EXPORT vtkImageGradientMagnitude : public vtkThreadedImageAlgorithm
 {
 public:
   static vtkImageGradientMagnitude *New();

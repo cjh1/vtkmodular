@@ -43,12 +43,11 @@
 #ifndef __vtkTransform_h
 #define __vtkTransform_h
 
-#include "vtkCommonTransformsExport.h" // For export macro
 #include "vtkLinearTransform.h"
 
 #include "vtkMatrix4x4.h" // Needed for inline methods
 
-class VTKCOMMONTRANSFORMS_EXPORT vtkTransform : public vtkLinearTransform
+class VTK_COMMON_EXPORT vtkTransform : public vtkLinearTransform
 {
  public:
   static vtkTransform *New();

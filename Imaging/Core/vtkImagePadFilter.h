@@ -23,10 +23,9 @@
 #ifndef __vtkImagePadFilter_h
 #define __vtkImagePadFilter_h
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkThreadedImageAlgorithm.h"
 
-class VTKIMAGINGCORE_EXPORT vtkImagePadFilter : public vtkThreadedImageAlgorithm
+class VTK_IMAGING_EXPORT vtkImagePadFilter : public vtkThreadedImageAlgorithm
 {
 public:
   static vtkImagePadFilter *New();

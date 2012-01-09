@@ -13,7 +13,6 @@
 
 =========================================================================*/
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkSystemIncludes.h"
 // Retained for compatibility, deprecated in VTK 5.10, remove in VTK 6.0.
 #ifndef VTK_LEGACY_REMOVE

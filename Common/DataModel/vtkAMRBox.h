@@ -30,12 +30,11 @@
 #ifndef __vtkAMRBox_h
 #define __vtkAMRBox_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkObject.h"
 #include "vtkType.h" //For utility functions.
-#include <vtkstd/vector> // STL Header
+#include <vector> // STL Header
 
-class VTKCOMMONDATAMODEL_EXPORT vtkAMRBox
+class VTK_FILTERING_EXPORT vtkAMRBox
 {
 public:
   // Description:
@@ -305,12 +304,12 @@ void FillRegion(
 // Split the boxes passed in N times in the i,j and k directions.
 // Once a box is split down to a single cell, or the given minimum side length
 // it won't be split anymore, but it will propagate through the operation.
-void Split(const int N[3], const int minSide[3], vtkstd::vector<vtkAMRBox> &decomp);
+void Split(const int N[3], const int minSide[3], std::vector<vtkAMRBox> &decomp);
 
 // Description:
 // Split the boxes passed in in the i,j and k directions, until splitting
 // operation would result boxes with side lengths less than the specified
 // minimum or the box is split down to a single cell..
-void Split(const int minSide[3], vtkstd::vector<vtkAMRBox> &decomp);
+void Split(const int minSide[3], std::vector<vtkAMRBox> &decomp);
 
 #endif

@@ -20,14 +20,13 @@
 #ifndef __vtkPoints2D_h
 #define __vtkPoints2D_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 #include "vtkDataArray.h" // Needed for inline methods
 
 class vtkIdList;
 
-class VTKCOMMONCORE_EXPORT vtkPoints2D : public vtkObject
+class VTK_COMMON_EXPORT vtkPoints2D : public vtkObject
 {
 public:
 //BTX

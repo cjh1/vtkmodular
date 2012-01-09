@@ -24,13 +24,12 @@
 #ifndef __vtkGaussianCubeReader_h
 #define __vtkGaussianCubeReader_h
 
-#include "vtkIOImageExport.h" // For export macro
 #include "vtkMoleculeReaderBase.h"
 
 class vtkImageData;
 class vtkTransform;
 
-class VTKIOIMAGE_EXPORT vtkGaussianCubeReader : public vtkMoleculeReaderBase
+class VTK_IO_EXPORT vtkGaussianCubeReader : public vtkMoleculeReaderBase 
 {
 public:
   static vtkGaussianCubeReader *New();

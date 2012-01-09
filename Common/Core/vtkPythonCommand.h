@@ -16,7 +16,6 @@
 #ifndef __vtkPythonCommand_h
 #define __vtkPythonCommand_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkPython.h"
 #include "vtkCommand.h"
 

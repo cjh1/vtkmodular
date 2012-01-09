@@ -56,13 +56,12 @@
 #ifndef __vtkClipPolyData_h
 #define __vtkClipPolyData_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
 class vtkImplicitFunction;
 class vtkIncrementalPointLocator;
 
-class VTKFILTERSCORE_EXPORT vtkClipPolyData : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkClipPolyData : public vtkPolyDataAlgorithm
 {
 public:
   vtkTypeMacro(vtkClipPolyData,vtkPolyDataAlgorithm);

@@ -28,12 +28,11 @@
 #ifndef __vtkSmoothErrorMetric_h
 #define __vtkSmoothErrorMetric_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkGenericSubdivisionErrorMetric.h"
 
 class vtkGenericDataSet;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkSmoothErrorMetric : public vtkGenericSubdivisionErrorMetric
+class VTK_FILTERING_EXPORT vtkSmoothErrorMetric : public vtkGenericSubdivisionErrorMetric
 {
 public:
   // Description:

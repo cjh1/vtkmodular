@@ -51,7 +51,6 @@
 #ifndef __vtkShaderProgram_h
 #define __vtkShaderProgram_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkActor;
@@ -66,7 +65,7 @@ class vtkShaderDeviceAdapter;
 
 // manages all shaders defined in the XML file
 // especially the part about sending things to the card
-class VTKRENDERINGCORE_EXPORT vtkShaderProgram : public vtkObject
+class VTK_RENDERING_EXPORT vtkShaderProgram : public vtkObject
 {
 public:
   vtkTypeMacro(vtkShaderProgram, vtkObject);

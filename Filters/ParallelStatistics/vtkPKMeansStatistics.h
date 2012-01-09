@@ -29,13 +29,12 @@
 #ifndef __vtkPKMeanStatistics_h
 #define __vtkPKMeanStatistics_h
 
-#include "vtkFiltersParallelStatisticsExport.h" // For export macro
 #include "vtkKMeansStatistics.h"
 
 class vtkMultiProcessController;
 class vtkCommunicator;
 
-class VTKFILTERSPARALLELSTATISTICS_EXPORT vtkPKMeansStatistics : public vtkKMeansStatistics
+class VTK_INFOVIS_EXPORT vtkPKMeansStatistics : public vtkKMeansStatistics
 {
 public:
   static vtkPKMeansStatistics* New();

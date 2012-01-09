@@ -24,12 +24,11 @@
 #ifndef __vtkShader2Collection_h
 #define __vtkShader2Collection_h
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkCollection.h"
 
 class vtkShader2;
 
-class VTKRENDERINGOPENGL_EXPORT vtkShader2Collection : public vtkCollection
+class VTK_RENDERING_EXPORT vtkShader2Collection : public vtkCollection
 {
  public:
   static vtkShader2Collection *New();

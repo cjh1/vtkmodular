@@ -29,12 +29,11 @@
 #ifndef __vtkBlankStructuredGridWithImage_h
 #define __vtkBlankStructuredGridWithImage_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkStructuredGridAlgorithm.h"
 
 class vtkImageData;
 
-class VTKFILTERSGENERAL_EXPORT vtkBlankStructuredGridWithImage : public vtkStructuredGridAlgorithm
+class VTK_GRAPHICS_EXPORT vtkBlankStructuredGridWithImage : public vtkStructuredGridAlgorithm
 {
 public:
   static vtkBlankStructuredGridWithImage *New();

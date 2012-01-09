@@ -24,14 +24,13 @@
 #ifndef __vtkXMLMaterial_h
 #define __vtkXMLMaterial_h
 
-#include "vtkIOXMLExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkXMLDataElement;
 class vtkXMLMaterialInternals;
 class vtkXMLShader;
 
-class VTKIOXML_EXPORT vtkXMLMaterial : public vtkObject
+class VTK_IO_EXPORT vtkXMLMaterial : public vtkObject
 {
 public:
   static vtkXMLMaterial* New();

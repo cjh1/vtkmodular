@@ -22,12 +22,11 @@
 #ifndef __vtkHyperOctreeFractalSource_h
 #define __vtkHyperOctreeFractalSource_h
 
-#include "vtkFiltersSourcesExport.h" // For export macro
 #include "vtkHyperOctreeAlgorithm.h"
 
 class vtkImplicitFunction;
 
-class VTKFILTERSSOURCES_EXPORT vtkHyperOctreeFractalSource : public vtkHyperOctreeAlgorithm
+class VTK_GRAPHICS_EXPORT vtkHyperOctreeFractalSource : public vtkHyperOctreeAlgorithm
 {
 public:
   vtkTypeMacro(vtkHyperOctreeFractalSource,vtkHyperOctreeAlgorithm);

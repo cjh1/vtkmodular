@@ -22,7 +22,6 @@
 #ifndef __vtkXMLWriter_h
 #define __vtkXMLWriter_h
 
-#include "vtkIOXMLExport.h" // For export macro
 #include "vtkAlgorithm.h"
 
 class vtkAbstractArray;
@@ -46,7 +45,7 @@ class OffsetsManagerGroup; // array of OffsetsManager
 class OffsetsManagerArray; // array of OffsetsManagerGroup
 //ETX
 
-class VTKIOXML_EXPORT vtkXMLWriter : public vtkAlgorithm
+class VTK_IO_EXPORT vtkXMLWriter : public vtkAlgorithm
 {
 public:
   vtkTypeMacro(vtkXMLWriter,vtkAlgorithm);

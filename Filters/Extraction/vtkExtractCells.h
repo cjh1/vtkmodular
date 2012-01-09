@@ -28,14 +28,13 @@
 #ifndef __vtkExtractCells_h
 #define __vtkExtractCells_h
 
-#include "vtkFiltersExtractionExport.h" // For export macro
 #include "vtkUnstructuredGridAlgorithm.h"
 
 class vtkIdList;
 class vtkExtractCellsSTLCloak;
 class vtkModelMetadata;
 
-class VTKFILTERSEXTRACTION_EXPORT vtkExtractCells : public vtkUnstructuredGridAlgorithm
+class VTK_GRAPHICS_EXPORT vtkExtractCells : public vtkUnstructuredGridAlgorithm
 {
 public:
   vtkTypeMacro(vtkExtractCells, vtkUnstructuredGridAlgorithm);

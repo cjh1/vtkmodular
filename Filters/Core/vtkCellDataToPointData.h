@@ -33,12 +33,11 @@
 #ifndef __vtkCellDataToPointData_h
 #define __vtkCellDataToPointData_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkDataSetAlgorithm.h"
 
 class vtkDataSet;
 
-class VTKFILTERSCORE_EXPORT vtkCellDataToPointData : public vtkDataSetAlgorithm
+class VTK_GRAPHICS_EXPORT vtkCellDataToPointData : public vtkDataSetAlgorithm
 {
 public:
   static vtkCellDataToPointData *New();

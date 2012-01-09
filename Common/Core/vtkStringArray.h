@@ -26,13 +26,12 @@
 #ifndef __vtkStringArray_h
 #define __vtkStringArray_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkAbstractArray.h"
 #include "vtkStdString.h" // needed for vtkStdString definition
 
 class vtkStringArrayLookup;
 
-class VTKCOMMONCORE_EXPORT vtkStringArray : public vtkAbstractArray
+class VTK_COMMON_EXPORT vtkStringArray : public vtkAbstractArray
 {
 public:
   static vtkStringArray* New();
@@ -59,7 +58,7 @@ public:
   // Description:
   // Return the size of the data type.  WARNING: This may not mean
   // what you expect with strings.  It will return
-  // sizeof(vtkstd::string) and not take into account the data
+  // sizeof(std::string) and not take into account the data
   // included in any particular string.
   int GetDataTypeSize();
 

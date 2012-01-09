@@ -25,10 +25,9 @@
 #ifndef __vtkAppendPoints_h
 #define __vtkAppendPoints_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
-class VTKFILTERSGENERAL_EXPORT vtkAppendPoints : public vtkPolyDataAlgorithm
+class VTK_INFOVIS_EXPORT vtkAppendPoints : public vtkPolyDataAlgorithm
 {
 public:
   static vtkAppendPoints *New();

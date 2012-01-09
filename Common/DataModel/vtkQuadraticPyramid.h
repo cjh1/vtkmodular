@@ -36,7 +36,6 @@
 #ifndef __vtkQuadraticPyramid_h
 #define __vtkQuadraticPyramid_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkNonLinearCell.h"
 
 class vtkQuadraticEdge;
@@ -46,7 +45,7 @@ class vtkTetra;
 class vtkPyramid;
 class vtkDoubleArray;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkQuadraticPyramid : public vtkNonLinearCell
+class VTK_FILTERING_EXPORT vtkQuadraticPyramid : public vtkNonLinearCell
 {
 public:
   static vtkQuadraticPyramid *New();

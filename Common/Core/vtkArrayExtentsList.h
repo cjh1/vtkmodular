@@ -41,11 +41,10 @@
 #ifndef __vtkArrayExtentsList_h
 #define __vtkArrayExtentsList_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkArrayExtents.h"
 #include <vtksys/stl/vector> // STL Header
 
-class VTKCOMMONCORE_EXPORT vtkArrayExtentsList
+class VTK_COMMON_EXPORT vtkArrayExtentsList
 {
 public:
   // Description:
@@ -89,7 +88,7 @@ public:
 
 private:
   //BTX
-  vtkstd::vector<vtkArrayExtents> Storage;
+  std::vector<vtkArrayExtents> Storage;
   //ETX
 };
 

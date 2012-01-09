@@ -27,10 +27,9 @@
 #ifndef __vtkTransposeMatrix_h
 #define __vtkTransposeMatrix_h
 
-#include "vtkInfovisCoreExport.h" // For export macro
 #include "vtkArrayDataAlgorithm.h"
 
-class VTKINFOVISCORE_EXPORT vtkTransposeMatrix : public vtkArrayDataAlgorithm
+class VTK_INFOVIS_EXPORT vtkTransposeMatrix : public vtkArrayDataAlgorithm
 {
 public:
   static vtkTransposeMatrix* New();

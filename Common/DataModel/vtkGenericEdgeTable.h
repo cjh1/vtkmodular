@@ -27,13 +27,12 @@
 #ifndef __vtkGenericEdgeTable_h
 #define __vtkGenericEdgeTable_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkEdgeTableEdge;
 class vtkEdgeTablePoints;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkGenericEdgeTable : public vtkObject
+class VTK_FILTERING_EXPORT vtkGenericEdgeTable : public vtkObject
 {
 public:
   // Description:

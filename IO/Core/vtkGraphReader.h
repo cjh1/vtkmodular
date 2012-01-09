@@ -28,12 +28,11 @@
 #ifndef __vtkGraphReader_h
 #define __vtkGraphReader_h
 
-#include "vtkIOCoreExport.h" // For export macro
 #include "vtkDataReader.h"
 
 class vtkGraph;
 
-class VTKIOCORE_EXPORT vtkGraphReader : public vtkDataReader
+class VTK_IO_EXPORT vtkGraphReader : public vtkDataReader
 {
 public:
   static vtkGraphReader *New();

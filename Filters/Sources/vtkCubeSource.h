@@ -21,10 +21,9 @@
 #ifndef __vtkCubeSource_h
 #define __vtkCubeSource_h
 
-#include "vtkFiltersSourcesExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
-class VTKFILTERSSOURCES_EXPORT vtkCubeSource : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkCubeSource : public vtkPolyDataAlgorithm 
 {
 public:
   static vtkCubeSource *New();

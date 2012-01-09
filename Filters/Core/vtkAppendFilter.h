@@ -27,12 +27,11 @@
 #ifndef __vtkAppendFilter_h
 #define __vtkAppendFilter_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkUnstructuredGridAlgorithm.h"
 
 class vtkDataSetCollection;
 
-class VTKFILTERSCORE_EXPORT vtkAppendFilter : public vtkUnstructuredGridAlgorithm
+class VTK_GRAPHICS_EXPORT vtkAppendFilter : public vtkUnstructuredGridAlgorithm
 {
 public:
   static vtkAppendFilter *New();

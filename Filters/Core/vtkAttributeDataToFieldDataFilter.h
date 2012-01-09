@@ -38,10 +38,9 @@
 #ifndef __vtkAttributeDataToFieldDataFilter_h
 #define __vtkAttributeDataToFieldDataFilter_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkDataSetAlgorithm.h"
 
-class VTKFILTERSCORE_EXPORT vtkAttributeDataToFieldDataFilter : public vtkDataSetAlgorithm
+class VTK_GRAPHICS_EXPORT vtkAttributeDataToFieldDataFilter : public vtkDataSetAlgorithm
 {
 public:
   void PrintSelf(ostream& os, vtkIndent indent);

@@ -28,12 +28,11 @@
 #define __vtkOpenGLImageMapper_h
 
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkImageMapper.h"
 class vtkActor2D;
 
 
-class VTKRENDERINGOPENGL_EXPORT vtkOpenGLImageMapper : public vtkImageMapper
+class VTK_RENDERING_EXPORT vtkOpenGLImageMapper : public vtkImageMapper
 {
 public:
   static vtkOpenGLImageMapper *New();

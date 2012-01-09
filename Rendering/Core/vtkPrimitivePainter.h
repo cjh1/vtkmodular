@@ -26,14 +26,13 @@
 #ifndef __vtkPrimitivePainter_h
 #define __vtkPrimitivePainter_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkPolyDataPainter.h"
 
 class vtkDataArray;
 class vtkPoints;
 class vtkUnsignedCharArray;
 
-class VTKRENDERINGCORE_EXPORT vtkPrimitivePainter : public vtkPolyDataPainter
+class VTK_RENDERING_EXPORT vtkPrimitivePainter : public vtkPolyDataPainter
 {
 public:
   vtkTypeMacro(vtkPrimitivePainter, vtkPolyDataPainter);

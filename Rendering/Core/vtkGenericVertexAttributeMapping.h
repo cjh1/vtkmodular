@@ -25,10 +25,9 @@
 #ifndef __vtkGenericVertexAttributeMapping_h
 #define __vtkGenericVertexAttributeMapping_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkObject.h"
 
-class VTKRENDERINGCORE_EXPORT vtkGenericVertexAttributeMapping : public vtkObject
+class VTK_RENDERING_EXPORT vtkGenericVertexAttributeMapping : public vtkObject
 {
 public:
   static vtkGenericVertexAttributeMapping* New();

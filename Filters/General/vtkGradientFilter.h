@@ -33,10 +33,9 @@
 #ifndef __vtkGradientFilter_h
 #define __vtkGradientFilter_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkDataSetAlgorithm.h"
 
-class VTKFILTERSGENERAL_EXPORT vtkGradientFilter : public vtkDataSetAlgorithm
+class VTK_GRAPHICS_EXPORT vtkGradientFilter : public vtkDataSetAlgorithm
 {
 public:
   vtkTypeMacro(vtkGradientFilter, vtkDataSetAlgorithm);

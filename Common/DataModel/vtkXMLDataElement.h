@@ -25,12 +25,11 @@
 #ifndef __vtkXMLDataElement_h
 #define __vtkXMLDataElement_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkXMLDataParser;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkXMLDataElement : public vtkObject
+class VTK_COMMON_EXPORT vtkXMLDataElement : public vtkObject
 {
 public:
   vtkTypeMacro(vtkXMLDataElement,vtkObject);

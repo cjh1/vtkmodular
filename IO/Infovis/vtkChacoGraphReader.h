@@ -45,10 +45,9 @@
 #ifndef _vtkChacoGraphReader_h
 #define _vtkChacoGraphReader_h
 
-#include "vtkIOInfovisExport.h" // For export macro
 #include "vtkUndirectedGraphAlgorithm.h"
 
-class VTKIOINFOVIS_EXPORT vtkChacoGraphReader : public vtkUndirectedGraphAlgorithm
+class VTK_INFOVIS_EXPORT vtkChacoGraphReader : public vtkUndirectedGraphAlgorithm
 {
 public:
   static vtkChacoGraphReader *New();

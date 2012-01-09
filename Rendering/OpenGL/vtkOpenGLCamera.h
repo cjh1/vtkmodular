@@ -20,12 +20,11 @@
 #ifndef __vtkOpenGLCamera_h
 #define __vtkOpenGLCamera_h
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkCamera.h"
 
 class vtkOpenGLRenderer;
 
-class VTKRENDERINGOPENGL_EXPORT vtkOpenGLCamera : public vtkCamera
+class VTK_RENDERING_EXPORT vtkOpenGLCamera : public vtkCamera
 {
 public:
   static vtkOpenGLCamera *New();

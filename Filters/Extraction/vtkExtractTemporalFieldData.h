@@ -32,14 +32,13 @@
 #ifndef __vtkExtractTemporalFieldData_h
 #define __vtkExtractTemporalFieldData_h
 
-#include "vtkFiltersExtractionExport.h" // For export macro
 #include "vtkTableAlgorithm.h"
 
 class vtkDataSet;
 class vtkTable;
 class vtkDataSetAttributes;
 
-class VTKFILTERSEXTRACTION_EXPORT vtkExtractTemporalFieldData : public vtkTableAlgorithm
+class VTK_GRAPHICS_EXPORT vtkExtractTemporalFieldData : public vtkTableAlgorithm
 {
 public:
   static vtkExtractTemporalFieldData *New();

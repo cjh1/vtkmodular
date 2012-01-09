@@ -28,7 +28,6 @@
 #ifndef __vtkDataTransferHelper_h
 #define __vtkDataTransferHelper_h
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkObject.h"
 #include "vtkWeakPointer.h" // needed for vtkWeakPointer.
 #include "vtkSmartPointer.h" // needed for vtkSmartPointer.
@@ -39,7 +38,7 @@ class vtkTextureObject;
 class vtkOpenGLExtensionManager;
 class vtkRenderWindow;
 
-class VTKRENDERINGOPENGL_EXPORT vtkDataTransferHelper : public vtkObject
+class VTK_RENDERING_EXPORT vtkDataTransferHelper : public vtkObject
 {
 public:
   static vtkDataTransferHelper* New();

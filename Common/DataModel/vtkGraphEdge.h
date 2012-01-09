@@ -30,10 +30,9 @@
 #ifndef __vtkGraphEdge_h
 #define __vtkGraphEdge_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkObject.h"
 
-class VTKCOMMONDATAMODEL_EXPORT vtkGraphEdge : public vtkObject
+class VTK_FILTERING_EXPORT vtkGraphEdge : public vtkObject
 {
 public:
   static vtkGraphEdge *New();

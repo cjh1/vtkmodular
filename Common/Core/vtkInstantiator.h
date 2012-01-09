@@ -53,7 +53,6 @@
 #ifndef __vtkInstantiator_h
 #define __vtkInstantiator_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 // The vtkDebugLeaks singleton must be initialized before and
@@ -63,7 +62,7 @@
 class vtkInstantiatorInitialize;
 class vtkInstantiatorHashTable;
 
-class VTKCOMMONCORE_EXPORT vtkInstantiator : public vtkObject
+class VTK_COMMON_EXPORT vtkInstantiator : public vtkObject
 {
 public:
   static vtkInstantiator* New();
@@ -116,7 +115,7 @@ private:
 //BTX
 // Utility class to make sure vtkInstantiator is initialized before it
 // is used.
-class VTKCOMMONCORE_EXPORT vtkInstantiatorInitialize
+class VTK_COMMON_EXPORT vtkInstantiatorInitialize
 {
 public:
   vtkInstantiatorInitialize();

@@ -26,7 +26,6 @@
 #ifndef __vtkOpenGLGlyph3DMapper_h
 #define __vtkOpenGLGlyph3DMapper_h
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkGlyph3DMapper.h"
 #include "vtkGlyph3D.h" // for the constants (VTK_SCALE_BY_SCALAR, ...).
 #include "vtkWeakPointer.h" // needed for vtkWeakPointer.
@@ -35,7 +34,7 @@ class vtkOpenGLGlyph3DMapperArray; // pimp
 class vtkPainterPolyDataMapper;
 class vtkScalarsToColorsPainter;
 
-class VTKRENDERINGOPENGL_EXPORT vtkOpenGLGlyph3DMapper : public vtkGlyph3DMapper
+class VTK_RENDERING_EXPORT vtkOpenGLGlyph3DMapper : public vtkGlyph3DMapper
 {
 public:
   static vtkOpenGLGlyph3DMapper* New();

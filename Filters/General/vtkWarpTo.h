@@ -20,10 +20,9 @@
 #ifndef __vtkWarpTo_h
 #define __vtkWarpTo_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkPointSetAlgorithm.h"
 
-class VTKFILTERSGENERAL_EXPORT vtkWarpTo : public vtkPointSetAlgorithm
+class VTK_GRAPHICS_EXPORT vtkWarpTo : public vtkPointSetAlgorithm
 {
 public:
   static vtkWarpTo *New();
@@ -46,12 +45,19 @@ public:
   vtkSetMacro(Absolute,int);
   vtkGetMacro(Absolute,int);
   vtkBooleanMacro(Absolute,int);
-  
+
+  int FillInputPortInformation(int port, vtkInformation *info);
+
 protected:
-  vtkWarpTo(); 
+  vtkWarpTo();
   ~vtkWarpTo() {};
 
-  int RequestData(vtkInformation *, vtkInformationVector **, vtkInformationVector *);
+  int RequestDataObject(vtkInformation *request,
+                        vtkInformationVector **inputVector,
+                        vtkInformationVector *outputVector);
+  int RequestData(vtkInformation *,
+                  vtkInformationVector **,
+                  vtkInformationVector *);
   double ScaleFactor;
   double Position[3];
   int   Absolute;

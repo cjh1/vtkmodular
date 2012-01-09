@@ -38,7 +38,6 @@
 #ifndef __vtkRenderWindow_h
 #define __vtkRenderWindow_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkWindow.h"
 
 class vtkFloatArray;
@@ -92,7 +91,7 @@ class vtkUnsignedCharArray;
     }
 #endif
 
-class VTKRENDERINGCORE_EXPORT vtkRenderWindow : public vtkWindow
+class VTK_RENDERING_EXPORT vtkRenderWindow : public vtkWindow
 {
 public:
   vtkTypeMacro(vtkRenderWindow,vtkWindow);

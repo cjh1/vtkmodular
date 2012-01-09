@@ -23,12 +23,11 @@
 #ifndef __vtkMedicalImageReader2_h
 #define __vtkMedicalImageReader2_h
 
-#include "vtkIOImageExport.h" // For export macro
 #include "vtkImageReader2.h"
 
 class vtkMedicalImageProperties;
 
-class VTKIOIMAGE_EXPORT vtkMedicalImageReader2 : public vtkImageReader2
+class VTK_IO_EXPORT vtkMedicalImageReader2 : public vtkImageReader2
 {
 public:
   static vtkMedicalImageReader2 *New();

@@ -24,11 +24,10 @@
 #ifndef __vtkRendererCollection_h
 #define __vtkRendererCollection_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkCollection.h"
 #include "vtkRenderer.h" // Needed for static cast
 
-class VTKRENDERINGCORE_EXPORT vtkRendererCollection : public vtkCollection
+class VTK_RENDERING_EXPORT vtkRendererCollection : public vtkCollection
 {
  public:
   static vtkRendererCollection *New();

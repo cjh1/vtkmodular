@@ -33,7 +33,6 @@
 #ifndef __vtkSLACReader_h
 #define __vtkSLACReader_h
 
-#include "vtkIONetCDFExport.h" // For export macro
 #include "vtkMultiBlockDataSetAlgorithm.h"
 
 #include "vtkSmartPointer.h"      // For internal method.
@@ -43,7 +42,7 @@ class vtkIdTypeArray;
 class vtkInformationIntegerKey;
 class vtkInformationObjectBaseKey;
 
-class VTKIONETCDF_EXPORT vtkSLACReader : public vtkMultiBlockDataSetAlgorithm
+class VTK_IO_EXPORT vtkSLACReader : public vtkMultiBlockDataSetAlgorithm
 {
 public:
   vtkTypeMacro(vtkSLACReader, vtkMultiBlockDataSetAlgorithm);
@@ -114,7 +113,7 @@ public:
   // Description:
   // Simple class used internally to define an edge based on the endpoints.  The
   // endpoints are canonically identified by the lower and higher values.
-  class VTKIONETCDF_EXPORT EdgeEndpoints
+  class VTK_IO_EXPORT EdgeEndpoints
   {
   public:
     EdgeEndpoints() : MinEndPoint(-1), MaxEndPoint(-1) {}
@@ -141,7 +140,7 @@ public:
 
   // Description:
   // Simple class used internally for holding midpoint information.
-  class VTKIONETCDF_EXPORT MidpointCoordinates
+  class VTK_IO_EXPORT MidpointCoordinates
   {
   public:
     MidpointCoordinates() {}
@@ -259,7 +258,7 @@ protected:
 //BTX
   // Description:
   // Manages a map from edges to midpoint coordinates.
-  class VTKIONETCDF_EXPORT MidpointCoordinateMap
+  class VTK_IO_EXPORT MidpointCoordinateMap
   {
   public:
     MidpointCoordinateMap();
@@ -288,7 +287,7 @@ protected:
 
   // Description:
   // Manages a map from edges to the point id of the midpoint.
-  class VTKIONETCDF_EXPORT MidpointIdMap
+  class VTK_IO_EXPORT MidpointIdMap
   {
   public:
     MidpointIdMap();

@@ -29,11 +29,10 @@
 #ifndef __vtkGAMBITReader_h
 #define __vtkGAMBITReader_h
 
-#include "vtkIOGeometryExport.h" // For export macro
 #include "vtkUnstructuredGridAlgorithm.h"
 
 class vtkDoubleArray;
-class VTKIOGEOMETRY_EXPORT vtkGAMBITReader : public vtkUnstructuredGridAlgorithm
+class VTK_IO_EXPORT vtkGAMBITReader : public vtkUnstructuredGridAlgorithm
 {
 public:
   static vtkGAMBITReader *New();

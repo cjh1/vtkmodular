@@ -26,12 +26,11 @@
 #ifndef __vtkAppendSelection_h
 #define __vtkAppendSelection_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkSelectionAlgorithm.h"
 
 class vtkSelection;
 
-class VTKFILTERSCORE_EXPORT vtkAppendSelection : public vtkSelectionAlgorithm
+class VTK_GRAPHICS_EXPORT vtkAppendSelection : public vtkSelectionAlgorithm
 {
 public:
   static vtkAppendSelection *New();

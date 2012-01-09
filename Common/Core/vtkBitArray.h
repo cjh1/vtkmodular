@@ -22,12 +22,11 @@
 #ifndef __vtkBitArray_h
 #define __vtkBitArray_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkDataArray.h"
 
 class vtkBitArrayLookup;
 
-class VTKCOMMONCORE_EXPORT vtkBitArray : public vtkDataArray
+class VTK_COMMON_EXPORT vtkBitArray : public vtkDataArray
 {
 public:
   static vtkBitArray *New();

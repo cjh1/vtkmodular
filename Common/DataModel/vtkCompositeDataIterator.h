@@ -19,7 +19,6 @@
 #ifndef __vtkCompositeDataIterator_h
 #define __vtkCompositeDataIterator_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkCompositeDataSet;
@@ -28,7 +27,7 @@ class vtkCompositeDataSetIndex;
 class vtkDataObject;
 class vtkInformation;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkCompositeDataIterator : public vtkObject
+class VTK_FILTERING_EXPORT vtkCompositeDataIterator : public vtkObject
 {
 public:
   static vtkCompositeDataIterator* New();

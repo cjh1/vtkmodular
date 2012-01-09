@@ -27,7 +27,6 @@
 #ifndef __vtkLODProp3D_h
 #define __vtkLODProp3D_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkProp3D.h"
 
 class vtkRenderer;
@@ -51,7 +50,7 @@ typedef struct
   double       Level;
 } vtkLODProp3DEntry;
 
-class VTKRENDERINGCORE_EXPORT vtkLODProp3D : public vtkProp3D
+class VTK_RENDERING_EXPORT vtkLODProp3D : public vtkProp3D
 {
 public:
   // Description:

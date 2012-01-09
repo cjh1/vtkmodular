@@ -26,10 +26,9 @@
 #ifndef __vtkChooserPainter_h
 #define __vtkChooserPainter_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkPolyDataPainter.h"
 
-class VTKRENDERINGCORE_EXPORT vtkChooserPainter : public vtkPolyDataPainter
+class VTK_RENDERING_EXPORT vtkChooserPainter : public vtkPolyDataPainter
 {
 public:
   static vtkChooserPainter *New();

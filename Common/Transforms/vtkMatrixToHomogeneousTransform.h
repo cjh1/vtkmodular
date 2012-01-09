@@ -26,12 +26,11 @@
 #ifndef __vtkMatrixToHomogeneousTransform_h
 #define __vtkMatrixToHomogeneousTransform_h
 
-#include "vtkCommonTransformsExport.h" // For export macro
 #include "vtkHomogeneousTransform.h"
 
 class vtkMatrix4x4;
 
-class VTKCOMMONTRANSFORMS_EXPORT vtkMatrixToHomogeneousTransform : public vtkHomogeneousTransform
+class VTK_COMMON_EXPORT vtkMatrixToHomogeneousTransform : public vtkHomogeneousTransform
 {
  public:
   static vtkMatrixToHomogeneousTransform *New();

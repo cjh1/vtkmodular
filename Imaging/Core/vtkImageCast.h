@@ -31,10 +31,9 @@
 #define __vtkImageCast_h
 
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkThreadedImageAlgorithm.h"
 
-class VTKIMAGINGCORE_EXPORT vtkImageCast : public vtkThreadedImageAlgorithm
+class VTK_IMAGING_EXPORT vtkImageCast : public vtkThreadedImageAlgorithm
 {
 public:
   static vtkImageCast *New();

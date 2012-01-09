@@ -47,7 +47,6 @@
 #include "qx11info_x11.h"
 #endif
 
-#include "vtkstd/map"
 #include "vtkInteractorStyleTrackballCamera.h"
 #include "vtkRenderWindow.h"
 #if defined(QVTK_USE_CARBON)
@@ -97,7 +96,6 @@ QVTKWidget::QVTKWidget(QWidget* p, Qt::WFlags f)
   mPaintEngine = new QVTKPaintEngine;
 
   this->mCachedImage = vtkImageData::New();
-  this->mCachedImage->SetScalarTypeToUnsignedChar();
   this->mCachedImage->SetOrigin(0,0,0);
   this->mCachedImage->SetSpacing(1,1,1);
 
@@ -315,9 +313,8 @@ void QVTKWidget::saveImageToCache()
 
   int w = this->width();
   int h = this->height();
-  this->mCachedImage->SetNumberOfScalarComponents(3);
   this->mCachedImage->SetExtent(0, w-1, 0, h-1, 0, 0);
-  this->mCachedImage->AllocateScalars();
+  this->mCachedImage->AllocateScalars(VTK_UNSIGNED_CHAR, 3);
   vtkUnsignedCharArray* array = vtkUnsignedCharArray::SafeDownCast(
     this->mCachedImage->GetPointData()->GetScalars());
   // We use back-buffer if
@@ -333,7 +330,6 @@ void QVTKWidget::setAutomaticImageCacheEnabled(bool flag)
   if (!flag)
     {
     this->mCachedImage->Initialize();
-    this->mCachedImage->SetScalarTypeToUnsignedChar();
     this->mCachedImage->SetOrigin(0,0,0);
     this->mCachedImage->SetSpacing(1,1,1);
     }
@@ -473,7 +469,7 @@ void QVTKWidget::paintEvent(QPaintEvent* )
     }
 
   iren->Render();
-  
+
   // In Qt 4.1+ let's support redirected painting
   // if redirected, let's grab the image from VTK, and paint it to the device
   QPaintDevice* device = QPainter::redirected(this);
@@ -517,6 +513,9 @@ void QVTKWidget::mouseMoveEvent(QMouseEvent* e)
   if(this->mRenWin)
     {
     mIrenAdapter->ProcessEvent(e, this->mRenWin->GetInteractor());
+
+    // Emit a mouse press event for anyone who might be interested
+    emit mouseEvent(e);
     }
 }
 
@@ -548,6 +547,9 @@ void QVTKWidget::mouseReleaseEvent(QMouseEvent* e)
   if(this->mRenWin)
     {
     mIrenAdapter->ProcessEvent(e, this->mRenWin->GetInteractor());
+
+    // Emit a mouse press event for anyone who might be interested
+    emit mouseEvent(e);
     }
 }
 

@@ -26,14 +26,13 @@
 #ifndef __vtkXMLHyperOctreeWriter_h
 #define __vtkXMLHyperOctreeWriter_h
 
-#include "vtkIOXMLExport.h" // For export macro
 #include "vtkXMLWriter.h"
 
 class vtkHyperOctree;
 class vtkHyperOctreeCursor;
 class vtkIntArray;
 
-class VTKIOXML_EXPORT vtkXMLHyperOctreeWriter : public vtkXMLWriter
+class VTK_IO_EXPORT vtkXMLHyperOctreeWriter : public vtkXMLWriter
 {
 public:
   vtkTypeMacro(vtkXMLHyperOctreeWriter,vtkXMLWriter);

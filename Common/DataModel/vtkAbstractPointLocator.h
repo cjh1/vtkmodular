@@ -24,12 +24,11 @@
 #ifndef __vtkAbstractPointLocator_h
 #define __vtkAbstractPointLocator_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkLocator.h"
 
 class vtkIdList;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkAbstractPointLocator : public vtkLocator
+class VTK_FILTERING_EXPORT vtkAbstractPointLocator : public vtkLocator
 {
 public:
   vtkTypeMacro(vtkAbstractPointLocator,vtkLocator);

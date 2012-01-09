@@ -20,7 +20,6 @@
 #ifndef __vtkUniformGrid_h
 #define __vtkUniformGrid_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkImageData.h"
 
 class vtkEmptyCell;
@@ -28,7 +27,7 @@ class vtkStructuredVisibilityConstraint;
 class vtkUnsignedCharArray;
 class vtkAMRBox;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkUniformGrid : public vtkImageData
+class VTK_FILTERING_EXPORT vtkUniformGrid : public vtkImageData
 {
 public:
   // Description:

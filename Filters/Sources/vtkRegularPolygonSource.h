@@ -24,10 +24,9 @@
 #ifndef __vtkRegularPolygonSource_h
 #define __vtkRegularPolygonSource_h
 
-#include "vtkFiltersSourcesExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
-class VTKFILTERSSOURCES_EXPORT vtkRegularPolygonSource : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkRegularPolygonSource : public vtkPolyDataAlgorithm 
 {
 public:
   // Description:

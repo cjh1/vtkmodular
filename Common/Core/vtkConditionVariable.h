@@ -27,7 +27,6 @@
 #ifndef __vtkConditionVariable_h
 #define __vtkConditionVariable_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 #include "vtkMutexLock.h" // Need for friend access to vtkSimpleMutexLock
@@ -104,7 +103,7 @@ typedef int vtkConditionType;
 #endif
 
 // Condition variable that is not a vtkObject.
-class VTKCOMMONCORE_EXPORT vtkSimpleConditionVariable
+class VTK_COMMON_EXPORT vtkSimpleConditionVariable
 {
 public:
   vtkSimpleConditionVariable();
@@ -138,7 +137,7 @@ protected:
 
 //ETX
 
-class VTKCOMMONCORE_EXPORT vtkConditionVariable : public vtkObject
+class VTK_COMMON_EXPORT vtkConditionVariable : public vtkObject
 {
 public:
   static vtkConditionVariable* New();

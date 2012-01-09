@@ -24,13 +24,12 @@
 #ifndef __vtkExtractBlock_h
 #define __vtkExtractBlock_h
 
-#include "vtkFiltersExtractionExport.h" // For export macro
 #include "vtkMultiBlockDataSetAlgorithm.h"
 
 class vtkCompositeDataIterator;
 class vtkMultiPieceDataSet;
 
-class VTKFILTERSEXTRACTION_EXPORT vtkExtractBlock : public vtkMultiBlockDataSetAlgorithm
+class VTK_GRAPHICS_EXPORT vtkExtractBlock : public vtkMultiBlockDataSetAlgorithm
 {
 public:
   static vtkExtractBlock* New();

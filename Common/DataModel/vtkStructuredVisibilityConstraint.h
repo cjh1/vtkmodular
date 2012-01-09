@@ -26,12 +26,11 @@
 #ifndef __vtkStructuredVisibilityConstraint_h
 #define __vtkStructuredVisibilityConstraint_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkObject.h"
 
 #include "vtkUnsignedCharArray.h" // Needed for inline methods.
 
-class VTKCOMMONDATAMODEL_EXPORT vtkStructuredVisibilityConstraint : public vtkObject
+class VTK_COMMON_EXPORT vtkStructuredVisibilityConstraint : public vtkObject
 {
 public:
   static vtkStructuredVisibilityConstraint *New();

@@ -26,10 +26,9 @@
 #ifndef __vtkHyperOctreePointsGrabber_h
 #define __vtkHyperOctreePointsGrabber_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkObject.h"
 
-class VTKCOMMONDATAMODEL_EXPORT vtkHyperOctreePointsGrabber : public vtkObject
+class VTK_FILTERING_EXPORT vtkHyperOctreePointsGrabber : public vtkObject
 {
 public:
   vtkTypeMacro(vtkHyperOctreePointsGrabber,vtkObject);

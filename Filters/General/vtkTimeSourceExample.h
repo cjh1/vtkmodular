@@ -25,10 +25,9 @@
 #ifndef __vtkTimeSourceExample_h
 #define __vtkTimeSourceExample_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkUnstructuredGridAlgorithm.h"
 
-class VTKFILTERSGENERAL_EXPORT vtkTimeSourceExample : public vtkUnstructuredGridAlgorithm
+class VTK_GRAPHICS_EXPORT vtkTimeSourceExample : public vtkUnstructuredGridAlgorithm
 {
 public:
   static vtkTimeSourceExample *New();

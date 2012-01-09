@@ -28,12 +28,11 @@
 #ifndef __vtkAddMembershipArray_h
 #define __vtkAddMembershipArray_h
 
-#include "vtkInfovisCoreExport.h" // For export macro
 #include "vtkPassInputTypeAlgorithm.h"
 
 class vtkAbstractArray;
 
-class VTKINFOVISCORE_EXPORT vtkAddMembershipArray : public vtkPassInputTypeAlgorithm
+class VTK_INFOVIS_EXPORT vtkAddMembershipArray : public vtkPassInputTypeAlgorithm
 {
 public:
   static vtkAddMembershipArray* New();

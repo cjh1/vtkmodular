@@ -22,11 +22,10 @@
 #ifndef __vtkOutputWindow_h
 #define __vtkOutputWindow_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 //BTX
-class VTKCOMMONCORE_EXPORT vtkOutputWindowCleanup
+class VTK_COMMON_EXPORT vtkOutputWindowCleanup
 {
 public:
   vtkOutputWindowCleanup();
@@ -34,7 +33,7 @@ public:
 };
 //ETX
 
-class VTKCOMMONCORE_EXPORT vtkOutputWindow : public vtkObject
+class VTK_COMMON_EXPORT vtkOutputWindow : public vtkObject
 {
 public:
 // Methods from vtkObject

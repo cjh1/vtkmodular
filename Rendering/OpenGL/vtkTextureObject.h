@@ -22,7 +22,6 @@
 #ifndef __vtkTextureObject_h
 #define __vtkTextureObject_h
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkObject.h"
 #include "vtkWeakPointer.h" // needed for vtkWeakPointer.
 
@@ -30,7 +29,7 @@ class vtkRenderWindow;
 class vtkOpenGLExtensionManager;
 class vtkPixelBufferObject;
 
-class VTKRENDERINGOPENGL_EXPORT vtkTextureObject : public vtkObject
+class VTK_RENDERING_EXPORT vtkTextureObject : public vtkObject
 {
 public:
 

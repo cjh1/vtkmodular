@@ -34,7 +34,7 @@ class vtkLargeInteger;
 class vtkSmartPointerBase;
 class vtkStdString;
 
-class VTKCOMMONCORE_EXPORT vtkOStreamWrapper
+class VTK_COMMON_EXPORT vtkOStreamWrapper
 {
 public:
   // Description:

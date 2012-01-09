@@ -51,7 +51,6 @@
 #ifndef __vtkMarchingContourFilter_h
 #define __vtkMarchingContourFilter_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
 #include "vtkContourValues.h" // Needed for direct access to ContourValues
@@ -59,7 +58,7 @@
 class vtkIncrementalPointLocator;
 class vtkScalarTree;
 
-class VTKFILTERSGENERAL_EXPORT vtkMarchingContourFilter : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkMarchingContourFilter : public vtkPolyDataAlgorithm
 {
 public:
   vtkTypeMacro(vtkMarchingContourFilter,vtkPolyDataAlgorithm);

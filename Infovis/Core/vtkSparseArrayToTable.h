@@ -38,10 +38,9 @@
 #ifndef __vtkSparseArrayToTable_h
 #define __vtkSparseArrayToTable_h
 
-#include "vtkInfovisCoreExport.h" // For export macro
 #include "vtkTableAlgorithm.h"
 
-class VTKINFOVISCORE_EXPORT vtkSparseArrayToTable : public vtkTableAlgorithm
+class VTK_INFOVIS_EXPORT vtkSparseArrayToTable : public vtkTableAlgorithm
 {
 public:
   static vtkSparseArrayToTable* New();

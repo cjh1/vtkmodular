@@ -35,12 +35,11 @@
 #ifndef __vtkRISReader_h
 #define __vtkRISReader_h
 
-#include "vtkIOInfovisExport.h" // For export macro
 #include "vtkTableAlgorithm.h"
 
 class vtkTable;
 
-class VTKIOINFOVIS_EXPORT vtkRISReader : public vtkTableAlgorithm
+class VTK_INFOVIS_EXPORT vtkRISReader : public vtkTableAlgorithm
 {
 public:
   static vtkRISReader* New();

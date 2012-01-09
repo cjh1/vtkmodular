@@ -26,10 +26,9 @@
 #ifndef __vtkRotationFilter_h
 #define __vtkRotationFilter_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkUnstructuredGridAlgorithm.h"
 
-class VTKFILTERSGENERAL_EXPORT vtkRotationFilter : public vtkUnstructuredGridAlgorithm
+class VTK_GRAPHICS_EXPORT vtkRotationFilter : public vtkUnstructuredGridAlgorithm
 {
 public:
   static vtkRotationFilter *New(); 

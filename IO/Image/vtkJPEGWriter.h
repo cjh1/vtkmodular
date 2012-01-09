@@ -24,13 +24,12 @@
 #ifndef __vtkJPEGWriter_h
 #define __vtkJPEGWriter_h
 
-#include "vtkIOImageExport.h" // For export macro
 #include "vtkImageWriter.h"
 
 class vtkUnsignedCharArray;
 class vtkImageData;
 
-class VTKIOIMAGE_EXPORT vtkJPEGWriter : public vtkImageWriter
+class VTK_IO_EXPORT vtkJPEGWriter : public vtkImageWriter
 {
 public:
   static vtkJPEGWriter *New();

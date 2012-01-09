@@ -34,12 +34,11 @@
 #ifndef __vtkDataObjectGenerator_h
 #define __vtkDataObjectGenerator_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkDataObjectAlgorithm.h"
 
 class vtkInternalStructureCache;
 
-class VTKFILTERSCORE_EXPORT vtkDataObjectGenerator
+class VTK_GRAPHICS_EXPORT vtkDataObjectGenerator 
 : public vtkDataObjectAlgorithm
 {
  public:

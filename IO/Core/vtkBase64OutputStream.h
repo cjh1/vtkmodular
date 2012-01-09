@@ -20,10 +20,9 @@
 #ifndef __vtkBase64OutputStream_h
 #define __vtkBase64OutputStream_h
 
-#include "vtkIOCoreExport.h" // For export macro
 #include "vtkOutputStream.h"
 
-class VTKIOCORE_EXPORT vtkBase64OutputStream : public vtkOutputStream
+class VTK_IO_EXPORT vtkBase64OutputStream : public vtkOutputStream
 {
 public:
   vtkTypeMacro(vtkBase64OutputStream,vtkOutputStream);

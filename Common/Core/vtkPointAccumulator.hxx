@@ -27,8 +27,7 @@
 #define __vtkPointAccumulator_h
 
 
-#include "vtkCommonCoreExport.h" // For export macro
-#include "vtkstd/exception"
+#include <exception>
 #include "vtkPoints.h"
 
 template<typename T_CPP, class T_VTK>
@@ -76,7 +75,7 @@ class vtkPointAccumulator
         #ifndef NDEBUG
         abort();
         #else
-        throw vtkstd::bad_alloc();
+        throw std::bad_alloc();
         #endif
         }
       // mark begin of new

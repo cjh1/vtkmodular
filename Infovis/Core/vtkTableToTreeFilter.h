@@ -29,10 +29,9 @@
 #ifndef __vtkTableToTreeFilter_h
 #define __vtkTableToTreeFilter_h
 
-#include "vtkInfovisCoreExport.h" // For export macro
 #include "vtkTreeAlgorithm.h"
 
-class VTKINFOVISCORE_EXPORT vtkTableToTreeFilter : public vtkTreeAlgorithm
+class VTK_INFOVIS_EXPORT vtkTableToTreeFilter : public vtkTreeAlgorithm
 {
 public:
   static vtkTableToTreeFilter* New();

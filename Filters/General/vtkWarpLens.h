@@ -20,10 +20,9 @@
 #ifndef __vtkWarpLens_h
 #define __vtkWarpLens_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkPointSetAlgorithm.h"
 
-class VTKFILTERSGENERAL_EXPORT vtkWarpLens : public vtkPointSetAlgorithm
+class VTK_GRAPHICS_EXPORT vtkWarpLens : public vtkPointSetAlgorithm
 {
 public:
   static vtkWarpLens *New();
@@ -75,11 +74,18 @@ public:
   vtkSetMacro(ImageHeight,int);
   vtkGetMacro(ImageHeight,int);
 
+  int FillInputPortInformation(int port, vtkInformation *info);
+
 protected:
   vtkWarpLens();
   ~vtkWarpLens() {};
 
-  int RequestData(vtkInformation *, vtkInformationVector **, vtkInformationVector *);
+  int RequestDataObject(vtkInformation *request,
+                        vtkInformationVector **inputVector,
+                        vtkInformationVector *outputVector);
+  int RequestData(vtkInformation *,
+                  vtkInformationVector **,
+                  vtkInformationVector *);
 
   double PrincipalPoint[2];      // The calibrated principal point of camera/lens in mm
   double K1;                     // Symmetric radial distortion parameters

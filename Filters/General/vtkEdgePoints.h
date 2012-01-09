@@ -27,12 +27,11 @@
 #ifndef __vtkEdgePoints_h
 #define __vtkEdgePoints_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
 class vtkMergePoints;
 
-class VTKFILTERSGENERAL_EXPORT vtkEdgePoints : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkEdgePoints : public vtkPolyDataAlgorithm
 {
 public:
   vtkTypeMacro(vtkEdgePoints,vtkPolyDataAlgorithm);

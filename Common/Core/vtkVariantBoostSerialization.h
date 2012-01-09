@@ -30,7 +30,6 @@
 #ifndef __vtkVariantBoostSerialization_h
 #define __vtkVariantBoostSerialization_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkSetGet.h"
 #include "vtkType.h"
 #include "vtkVariant.h"
@@ -52,7 +51,7 @@ template<typename Archiver>
 void serialize(Archiver& ar, vtkStdString& str,
                const unsigned int vtkNotUsed(version))
 {
-  ar & boost::serialization::base_object<vtkstd::string>(str);
+  ar & boost::serialization::base_object<std::string>(str);
 }
 
 //----------------------------------------------------------------------------

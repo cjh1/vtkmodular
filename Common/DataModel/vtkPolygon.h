@@ -22,7 +22,6 @@
 #ifndef __vtkPolygon_h
 #define __vtkPolygon_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkCell.h"
 
 class vtkDoubleArray;
@@ -33,7 +32,7 @@ class vtkQuad;
 class vtkTriangle;
 class vtkIncrementalPointLocator;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkPolygon : public vtkCell
+class VTK_FILTERING_EXPORT vtkPolygon : public vtkCell
 {
 public:
   static vtkPolygon *New();

@@ -28,10 +28,9 @@
 #ifndef __vtkOverlayPass_h
 #define __vtkOverlayPass_h
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkDefaultPass.h"
 
-class VTKRENDERINGOPENGL_EXPORT vtkOverlayPass : public vtkDefaultPass
+class VTK_RENDERING_EXPORT vtkOverlayPass : public vtkDefaultPass
 {
 public:
   static vtkOverlayPass *New();

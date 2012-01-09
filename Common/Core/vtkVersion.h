@@ -26,7 +26,6 @@
 #define __vtkVersion_h
 
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 #if VTK_MINOR_VERSION & 1
@@ -37,7 +36,7 @@
 #endif
 
 
-class VTKCOMMONCORE_EXPORT vtkVersion : public vtkObject
+class VTK_COMMON_EXPORT vtkVersion : public vtkObject
 {
 public:
   static vtkVersion *New();

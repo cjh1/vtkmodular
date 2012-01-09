@@ -36,12 +36,11 @@ PURPOSE.  See the above copyright notice for more information.
 #ifndef __vtkFacetWriter_h
 #define __vtkFacetWriter_h
 
-#include "vtkIOGeometryExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
 class vtkInformation;
 
-class VTKIOGEOMETRY_EXPORT vtkFacetWriter : public vtkPolyDataAlgorithm
+class VTK_IO_EXPORT vtkFacetWriter : public vtkPolyDataAlgorithm
 {
 public:
   static vtkFacetWriter *New();

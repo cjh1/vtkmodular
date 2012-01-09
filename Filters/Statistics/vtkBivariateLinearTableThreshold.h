@@ -37,7 +37,6 @@ PURPOSE.  See the above copyright notice for more information.
 #ifndef __vtkBivariateLinearTableThreshold__h
 #define __vtkBivariateLinearTableThreshold__h
 
-#include "vtkFiltersStatisticsExport.h" // For export macro
 #include "vtkTableAlgorithm.h"
 #include "vtkSmartPointer.h"  //Required for smart pointer internal ivars
 
@@ -46,7 +45,7 @@ class vtkDoubleArray;
 class vtkIdTypeArray;
 class vtkTable;
 
-class VTKFILTERSSTATISTICS_EXPORT vtkBivariateLinearTableThreshold : public vtkTableAlgorithm
+class VTK_INFOVIS_EXPORT vtkBivariateLinearTableThreshold : public vtkTableAlgorithm
 {
 public:
   static vtkBivariateLinearTableThreshold* New();

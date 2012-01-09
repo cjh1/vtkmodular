@@ -36,10 +36,9 @@
 #ifndef __vtkMultiBlockDataSet_h
 #define __vtkMultiBlockDataSet_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkCompositeDataSet.h"
 
-class VTKCOMMONDATAMODEL_EXPORT vtkMultiBlockDataSet : public vtkCompositeDataSet
+class VTK_FILTERING_EXPORT vtkMultiBlockDataSet : public vtkCompositeDataSet
 {
 public:
   static vtkMultiBlockDataSet* New();

@@ -20,10 +20,9 @@
 #ifndef __vtkGenericDataObjectWriter_h
 #define __vtkGenericDataObjectWriter_h
 
-#include "vtkIOGeometryExport.h" // For export macro
 #include "vtkDataWriter.h"
 
-class VTKIOGEOMETRY_EXPORT vtkGenericDataObjectWriter : public vtkDataWriter
+class VTK_IO_EXPORT vtkGenericDataObjectWriter : public vtkDataWriter
 {
 public:
   static vtkGenericDataObjectWriter *New();

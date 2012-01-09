@@ -22,10 +22,9 @@
 #ifndef __vtkSphere_h
 #define __vtkSphere_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkImplicitFunction.h"
 
-class VTKCOMMONDATAMODEL_EXPORT vtkSphere : public vtkImplicitFunction
+class VTK_FILTERING_EXPORT vtkSphere : public vtkImplicitFunction
 {
 public:
   vtkTypeMacro(vtkSphere,vtkImplicitFunction);

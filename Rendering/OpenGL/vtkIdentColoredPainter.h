@@ -43,14 +43,13 @@
 #ifndef __vtkIdentColoredPainter_h
 #define __vtkIdentColoredPainter_h
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkPolyDataPainter.h"
 
 class vtkCellArray;
 class vtkIdTypeArray;
 class vtkProp;
 
-class VTKRENDERINGOPENGL_EXPORT vtkIdentColoredPainter : public vtkPolyDataPainter
+class VTK_RENDERING_EXPORT vtkIdentColoredPainter : public vtkPolyDataPainter
 {
 public:
   vtkTypeMacro(vtkIdentColoredPainter, vtkPolyDataPainter);

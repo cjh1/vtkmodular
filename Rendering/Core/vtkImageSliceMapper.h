@@ -27,13 +27,12 @@
 #ifndef __vtkImageSliceMapper_h
 #define __vtkImageSliceMapper_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkImageMapper3D.h"
 
 class vtkCamera;
 class vtkPoints;
 
-class VTKRENDERINGCORE_EXPORT vtkImageSliceMapper : public vtkImageMapper3D
+class VTK_RENDERING_EXPORT vtkImageSliceMapper : public vtkImageMapper3D
 {
 public:
   static vtkImageSliceMapper *New();
@@ -73,6 +72,10 @@ public:
   // is set.
   vtkSetVector6Macro(CroppingRegion, int);
   vtkGetVector6Macro(CroppingRegion, int);
+
+  // Description:
+  // Override Update to handle some tricky details.
+  virtual void Update();
 
   // Description:
   // This should only be called by the renderer.
@@ -165,6 +168,7 @@ protected:
   int ExactPixelMatch;
   int PassColorData;
   vtkPoints *Points;
+  vtkTimeStamp UpdateTime;
 
 private:
   vtkImageSliceMapper(const vtkImageSliceMapper&);  // Not implemented.

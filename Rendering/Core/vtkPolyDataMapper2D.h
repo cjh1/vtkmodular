@@ -31,7 +31,6 @@
 #define __vtkPolyDataMapper2D_h
 
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkMapper2D.h"
 
 class vtkCoordinate;
@@ -39,7 +38,7 @@ class vtkPolyData;
 class vtkScalarsToColors;
 class vtkUnsignedCharArray;
 
-class VTKRENDERINGCORE_EXPORT vtkPolyDataMapper2D : public vtkMapper2D
+class VTK_RENDERING_EXPORT vtkPolyDataMapper2D : public vtkMapper2D
 {
 public:
   vtkTypeMacro(vtkPolyDataMapper2D,vtkMapper2D);

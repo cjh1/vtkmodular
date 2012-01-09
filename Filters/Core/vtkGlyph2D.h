@@ -27,10 +27,9 @@
 #ifndef __vtkGlyph2D_h
 #define __vtkGlyph2D_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkGlyph3D.h"
 
-class VTKFILTERSCORE_EXPORT vtkGlyph2D : public vtkGlyph3D
+class VTK_GRAPHICS_EXPORT vtkGlyph2D : public vtkGlyph3D
 {
 public:
   vtkTypeMacro(vtkGlyph2D,vtkGlyph3D);

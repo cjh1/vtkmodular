@@ -27,12 +27,11 @@
 #ifndef __vtkOggTheoraWriter_h
 #define __vtkOggTheoraWriter_h
 
-#include "vtkIOImageExport.h" // For export macro
 #include "vtkGenericMovieWriter.h"
 
 class vtkOggTheoraWriterInternal;
 
-class VTKIOIMAGE_EXPORT vtkOggTheoraWriter : public vtkGenericMovieWriter
+class VTK_IO_EXPORT vtkOggTheoraWriter : public vtkGenericMovieWriter
 {
 public:
   static vtkOggTheoraWriter *New();

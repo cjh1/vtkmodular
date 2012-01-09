@@ -33,7 +33,6 @@
 #ifndef __vtkStreamGraph_h
 #define __vtkStreamGraph_h
 
-#include "vtkInfovisCoreExport.h" // For export macro
 #include "vtkGraphAlgorithm.h"
 
 class vtkBitArray;
@@ -43,7 +42,7 @@ class vtkMutableGraphHelper;
 class vtkStringArray;
 class vtkTable;
 
-class VTKINFOVISCORE_EXPORT vtkStreamGraph : public vtkGraphAlgorithm
+class VTK_INFOVIS_EXPORT vtkStreamGraph : public vtkGraphAlgorithm
 {
 public:
   static vtkStreamGraph* New();

@@ -33,7 +33,6 @@
 #ifndef __vtkAnnotation_h
 #define __vtkAnnotation_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkDataObject.h"
 
 class vtkInformationStringKey;
@@ -42,7 +41,7 @@ class vtkInformationIntegerVectorKey;
 class vtkInformationDataObjectKey;
 class vtkSelection;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkAnnotation : public vtkDataObject
+class VTK_FILTERING_EXPORT vtkAnnotation : public vtkDataObject
 {
 public:
   vtkTypeMacro(vtkAnnotation, vtkDataObject);

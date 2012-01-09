@@ -19,14 +19,13 @@
 #ifndef __vtkGPUInfoListArray_h
 #define __vtkGPUInfoListArray_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkGPUInfo.h"
-#include <vtkstd/vector> // STL Header
+#include <vector> // STL Header
 
 class vtkGPUInfoListArray
 {
 public:
-  vtkstd::vector<vtkGPUInfo *> v;
+  std::vector<vtkGPUInfo *> v;
 };
 
 #endif

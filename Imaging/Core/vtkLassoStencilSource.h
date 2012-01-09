@@ -27,14 +27,13 @@
 #define __vtkLassoStencilSource_h
 
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkImageStencilSource.h"
 
 class vtkPoints;
 class vtkSpline;
 class vtkLSSPointMap;
 
-class VTKIMAGINGCORE_EXPORT vtkLassoStencilSource : public vtkImageStencilSource
+class VTK_IMAGING_EXPORT vtkLassoStencilSource : public vtkImageStencilSource
 {
 public:
   static vtkLassoStencilSource *New();

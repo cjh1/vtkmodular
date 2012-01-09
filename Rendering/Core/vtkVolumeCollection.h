@@ -24,12 +24,11 @@
 #ifndef __vtkVolumeCollection_h
 #define __vtkVolumeCollection_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkPropCollection.h"
 
 #include "vtkVolume.h"  // Needed for static cast
 
-class VTKRENDERINGCORE_EXPORT vtkVolumeCollection : public vtkPropCollection
+class VTK_RENDERING_EXPORT vtkVolumeCollection : public vtkPropCollection
 {
  public:
   static vtkVolumeCollection *New();

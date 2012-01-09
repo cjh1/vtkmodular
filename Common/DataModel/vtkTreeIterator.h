@@ -28,12 +28,11 @@
 #ifndef __vtkTreeIterator_h
 #define __vtkTreeIterator_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkTree;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkTreeIterator : public vtkObject
+class VTK_FILTERING_EXPORT vtkTreeIterator : public vtkObject
 {
 public:
   vtkTypeMacro(vtkTreeIterator, vtkObject);

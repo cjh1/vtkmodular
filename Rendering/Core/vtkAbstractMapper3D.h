@@ -29,14 +29,13 @@
 #ifndef __vtkAbstractMapper3D_h
 #define __vtkAbstractMapper3D_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkAbstractMapper.h"
 
 class vtkWindow;
 class vtkDataSet;
 class vtkMatrix4x4;
 
-class VTKRENDERINGCORE_EXPORT vtkAbstractMapper3D : public vtkAbstractMapper
+class VTK_RENDERING_EXPORT vtkAbstractMapper3D : public vtkAbstractMapper
 {
 public:
   vtkTypeMacro(vtkAbstractMapper3D,vtkAbstractMapper);

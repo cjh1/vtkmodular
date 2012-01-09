@@ -45,7 +45,6 @@
 #ifndef __vtkHyperStreamline_h
 #define __vtkHyperStreamline_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
 #define VTK_INTEGRATE_FORWARD 0
@@ -59,7 +58,7 @@
 
 class vtkHyperArray;
 
-class VTKFILTERSGENERAL_EXPORT vtkHyperStreamline : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkHyperStreamline : public vtkPolyDataAlgorithm
 {
 public:
   vtkTypeMacro(vtkHyperStreamline,vtkPolyDataAlgorithm);

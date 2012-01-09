@@ -33,7 +33,6 @@
 #ifndef __vtkAVSucdReader_h
 #define __vtkAVSucdReader_h
 
-#include "vtkIOGeometryExport.h" // For export macro
 #include "vtkUnstructuredGridAlgorithm.h"
 
 class vtkIntArray;
@@ -41,7 +40,7 @@ class vtkFloatArray;
 class vtkIdTypeArray;
 class vtkDataArraySelection;
 
-class VTKIOGEOMETRY_EXPORT vtkAVSucdReader : public vtkUnstructuredGridAlgorithm
+class VTK_IO_EXPORT vtkAVSucdReader : public vtkUnstructuredGridAlgorithm
 {
 public:
   static vtkAVSucdReader *New();

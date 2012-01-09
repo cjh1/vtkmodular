@@ -24,10 +24,9 @@
 #ifndef __vtkMultiBlockMergeFilter_h
 #define __vtkMultiBlockMergeFilter_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkMultiBlockDataSetAlgorithm.h"
 
-class VTKFILTERSGENERAL_EXPORT vtkMultiBlockMergeFilter
+class VTK_GRAPHICS_EXPORT vtkMultiBlockMergeFilter 
 : public vtkMultiBlockDataSetAlgorithm
 {
 public:

@@ -54,14 +54,13 @@
 #ifndef __vtkAssignAttribute_h
 #define __vtkAssignAttribute_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkPassInputTypeAlgorithm.h"
 
 #include "vtkDataSetAttributes.h" // Needed for NUM_ATTRIBUTES
 
 class vtkFieldData;
 
-class VTKFILTERSCORE_EXPORT vtkAssignAttribute : public vtkPassInputTypeAlgorithm
+class VTK_GRAPHICS_EXPORT vtkAssignAttribute : public vtkPassInputTypeAlgorithm
 {
 public:
   vtkTypeMacro(vtkAssignAttribute,vtkPassInputTypeAlgorithm);

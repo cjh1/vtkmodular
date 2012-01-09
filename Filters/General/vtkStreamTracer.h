@@ -77,7 +77,6 @@
 #ifndef __vtkStreamTracer_h
 #define __vtkStreamTracer_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
 #include "vtkInitialValueProblemSolver.h" // Needed for constants
@@ -91,7 +90,7 @@ class vtkIdList;
 class vtkIntArray;
 class vtkAbstractInterpolatedVelocityField;
 
-class VTKFILTERSGENERAL_EXPORT vtkStreamTracer : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkStreamTracer : public vtkPolyDataAlgorithm
 {
 public:
   vtkTypeMacro(vtkStreamTracer,vtkPolyDataAlgorithm);

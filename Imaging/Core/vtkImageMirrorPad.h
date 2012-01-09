@@ -22,10 +22,9 @@
 #define __vtkImageMirrorPad_h
 
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkImagePadFilter.h"
 
-class VTKIMAGINGCORE_EXPORT vtkImageMirrorPad : public vtkImagePadFilter
+class VTK_IMAGING_EXPORT vtkImageMirrorPad : public vtkImagePadFilter
 {
 public:
   static vtkImageMirrorPad *New();

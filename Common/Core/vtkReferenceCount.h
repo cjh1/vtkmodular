@@ -21,10 +21,9 @@
 #ifndef __vtkReferenceCount_h
 #define __vtkReferenceCount_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkObject.h"
 
-class VTKCOMMONCORE_EXPORT vtkReferenceCount : public vtkObject
+class VTK_COMMON_EXPORT vtkReferenceCount : public vtkObject
 {
 public:
   static vtkReferenceCount *New();

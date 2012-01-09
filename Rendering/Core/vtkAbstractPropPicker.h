@@ -59,7 +59,6 @@
 #ifndef __vtkAbstractPropPicker_h
 #define __vtkAbstractPropPicker_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkAbstractPicker.h"
 
 class vtkProp;
@@ -71,7 +70,7 @@ class vtkProp3D;
 class vtkAssemblyPath;
 class vtkActor2D;
 
-class VTKRENDERINGCORE_EXPORT vtkAbstractPropPicker : public vtkAbstractPicker
+class VTK_RENDERING_EXPORT vtkAbstractPropPicker : public vtkAbstractPicker
 {
 public:
   vtkTypeMacro(vtkAbstractPropPicker,vtkAbstractPicker);

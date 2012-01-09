@@ -35,11 +35,10 @@
 #ifndef __vtkCompositeDataProbeFilter_h
 #define __vtkCompositeDataProbeFilter_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkProbeFilter.h"
 
 class vtkCompositeDataSet;
-class VTKFILTERSCORE_EXPORT vtkCompositeDataProbeFilter : public vtkProbeFilter
+class VTK_GRAPHICS_EXPORT vtkCompositeDataProbeFilter : public vtkProbeFilter
 {
 public:
   static vtkCompositeDataProbeFilter* New();

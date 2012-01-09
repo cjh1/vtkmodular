@@ -29,10 +29,9 @@
 #ifndef __vtkCameraPass_h
 #define __vtkCameraPass_h
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkRenderPass.h"
 
-class VTKRENDERINGOPENGL_EXPORT vtkCameraPass : public vtkRenderPass
+class VTK_RENDERING_EXPORT vtkCameraPass : public vtkRenderPass
 {
 public:
   static vtkCameraPass *New();

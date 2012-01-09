@@ -26,14 +26,13 @@
 #ifndef __vtkPointSet_h
 #define __vtkPointSet_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkDataSet.h"
 
 #include "vtkPoints.h" // Needed for inline methods
 
 class vtkPointLocator;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkPointSet : public vtkDataSet
+class VTK_FILTERING_EXPORT vtkPointSet : public vtkDataSet
 {
 public:
   vtkTypeMacro(vtkPointSet,vtkDataSet);

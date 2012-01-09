@@ -34,13 +34,12 @@
 #ifndef __vtkOctreePointLocatorNode_h
 #define __vtkOctreePointLocatorNode_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkCell;
 class vtkPlanesIntersection;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkOctreePointLocatorNode : public vtkObject
+class VTK_FILTERING_EXPORT vtkOctreePointLocatorNode : public vtkObject
 {
 public:
   vtkTypeMacro(vtkOctreePointLocatorNode, vtkObject);

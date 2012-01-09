@@ -24,10 +24,9 @@
 #ifndef __vtkImageIterateFilter_h
 #define __vtkImageIterateFilter_h
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkThreadedImageAlgorithm.h"
 
-class VTKIMAGINGCORE_EXPORT vtkImageIterateFilter : public vtkThreadedImageAlgorithm
+class VTK_IMAGING_EXPORT vtkImageIterateFilter : public vtkThreadedImageAlgorithm
 {
 public:
   vtkTypeMacro(vtkImageIterateFilter,vtkThreadedImageAlgorithm);

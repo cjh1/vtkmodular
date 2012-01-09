@@ -46,7 +46,6 @@
 #ifndef __vtkGaussianBlurPass_h
 #define __vtkGaussianBlurPass_h
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkImageProcessingPass.h"
 
 class vtkOpenGLRenderWindow;
@@ -56,7 +55,7 @@ class vtkShader2;
 class vtkFrameBufferObject;
 class vtkTextureObject;
 
-class VTKRENDERINGOPENGL_EXPORT vtkGaussianBlurPass : public vtkImageProcessingPass
+class VTK_RENDERING_EXPORT vtkGaussianBlurPass : public vtkImageProcessingPass
 {
 public:
   static vtkGaussianBlurPass *New();

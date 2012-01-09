@@ -30,12 +30,11 @@
 #ifndef __vtkInterpolateDataSetAttributes_h
 #define __vtkInterpolateDataSetAttributes_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkDataSetAlgorithm.h"
 
 class vtkDataSetCollection;
 
-class VTKFILTERSGENERAL_EXPORT vtkInterpolateDataSetAttributes : public vtkDataSetAlgorithm
+class VTK_GRAPHICS_EXPORT vtkInterpolateDataSetAttributes : public vtkDataSetAlgorithm
 {
 public:
   static vtkInterpolateDataSetAttributes *New();

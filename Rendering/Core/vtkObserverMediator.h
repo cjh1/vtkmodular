@@ -29,7 +29,6 @@
 #ifndef __vtkObserverMediator_h
 #define __vtkObserverMediator_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkRenderWindowInteractor;
@@ -37,7 +36,7 @@ class vtkInteractorObserver;
 class vtkObserverMap;
 
 
-class VTKRENDERINGCORE_EXPORT vtkObserverMediator : public vtkObject
+class VTK_RENDERING_EXPORT vtkObserverMediator : public vtkObject
 {
 public:
   // Description:

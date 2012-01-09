@@ -23,7 +23,6 @@
 #ifndef __vtkXMLCompositeDataWriter_h
 #define __vtkXMLCompositeDataWriter_h
 
-#include "vtkIOXMLExport.h" // For export macro
 #include "vtkXMLWriter.h"
 #include "vtkStdString.h" // needed for vtkStdString.
 
@@ -32,7 +31,7 @@ class vtkCompositeDataSet;
 class vtkXMLDataElement;
 class vtkXMLCompositeDataWriterInternals;
 
-class VTKIOXML_EXPORT vtkXMLCompositeDataWriter : public vtkXMLWriter
+class VTK_IO_EXPORT vtkXMLCompositeDataWriter : public vtkXMLWriter
 {
 public:
   vtkTypeMacro(vtkXMLCompositeDataWriter,vtkXMLWriter);

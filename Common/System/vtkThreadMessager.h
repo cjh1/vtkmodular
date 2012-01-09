@@ -20,14 +20,13 @@
 #ifndef __vtkThreadMessager_h
 #define __vtkThreadMessager_h
 
-#include "vtkCommonSystemExport.h" // For export macro
 #include "vtkObject.h"
 
 #if defined(VTK_USE_PTHREADS) || defined(VTK_HP_PTHREADS)
 #include <pthread.h> // Needed for pthread types
 #endif
 
-class VTKCOMMONSYSTEM_EXPORT vtkThreadMessager : public vtkObject
+class VTK_COMMON_EXPORT vtkThreadMessager : public vtkObject 
 {
 public:
   static vtkThreadMessager *New();

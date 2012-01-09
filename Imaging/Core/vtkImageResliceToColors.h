@@ -30,12 +30,11 @@
 #define __vtkImageResliceToColors_h
 
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkImageReslice.h"
 
 class vtkScalarsToColors;
 
-class VTKIMAGINGCORE_EXPORT vtkImageResliceToColors : public vtkImageReslice
+class VTK_IMAGING_EXPORT vtkImageResliceToColors : public vtkImageReslice
 {
 public:
   static vtkImageResliceToColors *New();

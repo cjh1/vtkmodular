@@ -42,7 +42,6 @@
 #ifndef __vtkSimpleCellTessellator_h
 #define __vtkSimpleCellTessellator_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkGenericCellTessellator.h"
 
 class vtkTriangleTile;
@@ -62,7 +61,7 @@ class vtkIdList;
 //-----------------------------------------------------------------------------
 //
 // The tessellation object
-class VTKCOMMONDATAMODEL_EXPORT vtkSimpleCellTessellator : public vtkGenericCellTessellator
+class VTK_FILTERING_EXPORT vtkSimpleCellTessellator : public vtkGenericCellTessellator
 {
 public:
   static vtkSimpleCellTessellator *New();

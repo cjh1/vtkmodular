@@ -22,12 +22,11 @@
 #ifndef __vtkClearZPass_h
 #define __vtkClearZPass_h
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkRenderPass.h"
 
 class vtkOpenGLRenderWindow;
 
-class VTKRENDERINGOPENGL_EXPORT vtkClearZPass : public vtkRenderPass
+class VTK_RENDERING_EXPORT vtkClearZPass : public vtkRenderPass
 {
 public:
   static vtkClearZPass *New();

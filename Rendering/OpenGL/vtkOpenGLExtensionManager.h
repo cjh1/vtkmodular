@@ -46,7 +46,6 @@
 // Generally speaking, when using OpenGL extensions, you will need an
 // vtkOpenGLExtensionManager and the prototypes defined in vtkgl.h.
 // \code
-#include "vtkRenderingOpenGLExport.h" // For export macro
 // #include "vtkOpenGLExtensionManager.h"
 // #include "vtkgl.h"
 // \endcode
@@ -138,7 +137,7 @@ extern "C" {
 }
 //ETX
 
-class VTKRENDERINGOPENGL_EXPORT vtkOpenGLExtensionManager : public vtkObject
+class VTK_RENDERING_EXPORT vtkOpenGLExtensionManager : public vtkObject
 {
 public:
   vtkTypeMacro(vtkOpenGLExtensionManager, vtkObject);

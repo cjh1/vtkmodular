@@ -37,13 +37,12 @@
 #ifndef __vtkImplicitVolume_h
 #define __vtkImplicitVolume_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkImplicitFunction.h"
 
 class vtkIdList;
 class vtkImageData;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkImplicitVolume : public vtkImplicitFunction
+class VTK_FILTERING_EXPORT vtkImplicitVolume : public vtkImplicitFunction
 {
 public:
   vtkTypeMacro(vtkImplicitVolume,vtkImplicitFunction);

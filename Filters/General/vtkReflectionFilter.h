@@ -22,12 +22,11 @@
 #ifndef __vtkReflectionFilter_h
 #define __vtkReflectionFilter_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkDataObjectAlgorithm.h"
 class vtkUnstructuredGrid;
 class vtkDataSet;
 
-class VTKFILTERSGENERAL_EXPORT vtkReflectionFilter : public vtkDataObjectAlgorithm
+class VTK_GRAPHICS_EXPORT vtkReflectionFilter : public vtkDataObjectAlgorithm
 {
 public:
   static vtkReflectionFilter *New();

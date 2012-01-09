@@ -25,13 +25,12 @@
 #ifndef __vtkCollectionIterator_h
 #define __vtkCollectionIterator_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkCollection;
 class vtkCollectionElement;
 
-class VTKCOMMONCORE_EXPORT vtkCollectionIterator : public vtkObject
+class VTK_COMMON_EXPORT vtkCollectionIterator : public vtkObject
 {
 public:
   vtkTypeMacro(vtkCollectionIterator,vtkObject);

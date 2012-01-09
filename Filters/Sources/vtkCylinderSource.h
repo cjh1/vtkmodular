@@ -23,12 +23,11 @@
 #ifndef __vtkCylinderSource_h
 #define __vtkCylinderSource_h
 
-#include "vtkFiltersSourcesExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
 #include "vtkCell.h" // Needed for VTK_CELL_SIZE
 
-class VTKFILTERSSOURCES_EXPORT vtkCylinderSource : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkCylinderSource : public vtkPolyDataAlgorithm 
 {
 public:
   static vtkCylinderSource *New();

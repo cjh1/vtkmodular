@@ -30,7 +30,6 @@
 #ifndef __vtkGraphToGlyphs_h
 #define __vtkGraphToGlyphs_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 #include "vtkSmartPointer.h" // for SP ivars
 
@@ -41,7 +40,7 @@ class vtkGlyphSource2D;
 class vtkRenderer;
 class vtkSphereSource;
 
-class VTKRENDERINGCORE_EXPORT vtkGraphToGlyphs : public vtkPolyDataAlgorithm
+class VTK_RENDERING_EXPORT vtkGraphToGlyphs : public vtkPolyDataAlgorithm 
 {
 public:
   static vtkGraphToGlyphs *New();

@@ -26,10 +26,9 @@
 #ifndef __vtkArrowSource_h
 #define __vtkArrowSource_h
 
-#include "vtkFiltersSourcesExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
-class VTKFILTERSSOURCES_EXPORT vtkArrowSource : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkArrowSource : public vtkPolyDataAlgorithm
 {
 public:
   // Description

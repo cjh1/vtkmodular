@@ -29,13 +29,12 @@
 #ifndef __vtkPDescriptiveStatistics_h
 #define __vtkPDescriptiveStatistics_h
 
-#include "vtkFiltersParallelStatisticsExport.h" // For export macro
 #include "vtkDescriptiveStatistics.h"
 
 class vtkMultiBlockDataSet;
 class vtkMultiProcessController;
 
-class VTKFILTERSPARALLELSTATISTICS_EXPORT vtkPDescriptiveStatistics : public vtkDescriptiveStatistics
+class VTK_INFOVIS_EXPORT vtkPDescriptiveStatistics : public vtkDescriptiveStatistics
 {
 public:
   static vtkPDescriptiveStatistics* New();

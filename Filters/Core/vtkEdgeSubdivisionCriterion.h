@@ -31,14 +31,13 @@
 // .SECTION See Also
 // vtkDataSetSubdivisionAlgorithm vtkStreamingTessellator
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkDataSetAttributes;
 class vtkMatrix4x4;
 class vtkStreamingTessellator;
 
-class VTKFILTERSCORE_EXPORT vtkEdgeSubdivisionCriterion : public vtkObject
+class VTK_GRAPHICS_EXPORT vtkEdgeSubdivisionCriterion : public vtkObject
 {
   public:
     vtkTypeMacro(vtkEdgeSubdivisionCriterion,vtkObject);

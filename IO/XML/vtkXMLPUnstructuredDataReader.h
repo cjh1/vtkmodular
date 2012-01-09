@@ -23,14 +23,13 @@
 #ifndef __vtkXMLPUnstructuredDataReader_h
 #define __vtkXMLPUnstructuredDataReader_h
 
-#include "vtkIOXMLExport.h" // For export macro
 #include "vtkXMLPDataReader.h"
 
 class vtkPointSet;
 class vtkCellArray;
 class vtkXMLUnstructuredDataReader;
 
-class VTKIOXML_EXPORT vtkXMLPUnstructuredDataReader : public vtkXMLPDataReader
+class VTK_IO_EXPORT vtkXMLPUnstructuredDataReader : public vtkXMLPDataReader
 {
 public:
   vtkTypeMacro(vtkXMLPUnstructuredDataReader,vtkXMLPDataReader);

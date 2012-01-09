@@ -34,10 +34,9 @@
 
 
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkThreadedImageAlgorithm.h"
 
-class VTKIMAGINGCORE_EXPORT vtkImageLogic : public vtkThreadedImageAlgorithm
+class VTK_IMAGING_EXPORT vtkImageLogic : public vtkThreadedImageAlgorithm
 {
 public:
   static vtkImageLogic *New();

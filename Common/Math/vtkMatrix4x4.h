@@ -24,10 +24,9 @@
 #ifndef __vtkMatrix4x4_h
 #define __vtkMatrix4x4_h
 
-#include "vtkCommonMathExport.h" // For export macro
 #include "vtkObject.h"
 
-class VTKCOMMONMATH_EXPORT vtkMatrix4x4 : public vtkObject
+class VTK_COMMON_EXPORT vtkMatrix4x4 : public vtkObject
 {
   // Some of the methods in here have a corresponding static (class)
   // method taking a pointer to 16 doubles that constitutes a user

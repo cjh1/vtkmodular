@@ -27,12 +27,11 @@
 #ifndef __vtkParametricRandomHills_h
 #define __vtkParametricRandomHills_h
 
-#include "vtkCommonComputationalGeometryExport.h" // For export macro
 #include "vtkParametricFunction.h"
 
 class vtkDoubleArray;
 
-class VTKCOMMONCOMPUTATIONALGEOMETRY_EXPORT vtkParametricRandomHills : public vtkParametricFunction
+class VTK_COMMON_EXPORT vtkParametricRandomHills : public vtkParametricFunction
 {
 
 public:

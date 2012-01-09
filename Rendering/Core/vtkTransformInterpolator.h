@@ -47,7 +47,6 @@
 #ifndef __vtkTransformInterpolator_h
 #define __vtkTransformInterpolator_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 
@@ -59,7 +58,7 @@ class vtkQuaternionInterpolator;
 class vtkTransformList;
 
 
-class VTKRENDERINGCORE_EXPORT vtkTransformInterpolator : public vtkObject
+class VTK_RENDERING_EXPORT vtkTransformInterpolator : public vtkObject
 {
 public:
   vtkTypeMacro(vtkTransformInterpolator, vtkObject);

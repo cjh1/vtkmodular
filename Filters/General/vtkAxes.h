@@ -22,10 +22,9 @@
 #ifndef __vtkAxes_h
 #define __vtkAxes_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
-class VTKFILTERSGENERAL_EXPORT vtkAxes : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkAxes : public vtkPolyDataAlgorithm 
 {
 public:
   static vtkAxes *New();

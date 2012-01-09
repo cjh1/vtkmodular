@@ -28,13 +28,12 @@
 #ifndef __vtkQuadraticEdge_h
 #define __vtkQuadraticEdge_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkNonLinearCell.h"
 
 class vtkLine;
 class vtkDoubleArray;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkQuadraticEdge : public vtkNonLinearCell
+class VTK_FILTERING_EXPORT vtkQuadraticEdge : public vtkNonLinearCell
 {
 public:
   static vtkQuadraticEdge *New();

@@ -51,7 +51,6 @@
 #define __vtkImageReslice_h
 
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkThreadedImageAlgorithm.h"
 
 // interpolation mode constants
@@ -66,7 +65,7 @@ class vtkImageStencilData;
 class vtkScalarsToColors;
 class vtkAbstractImageInterpolator;
 
-class VTKIMAGINGCORE_EXPORT vtkImageReslice : public vtkThreadedImageAlgorithm
+class VTK_IMAGING_EXPORT vtkImageReslice : public vtkThreadedImageAlgorithm
 {
 public:
   static vtkImageReslice *New();

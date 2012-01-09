@@ -34,10 +34,9 @@
 #ifndef __vtkImageDifference_h
 #define __vtkImageDifference_h
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkThreadedImageAlgorithm.h"
 
-class VTKIMAGINGCORE_EXPORT vtkImageDifference : public vtkThreadedImageAlgorithm
+class VTK_IMAGING_EXPORT vtkImageDifference : public vtkThreadedImageAlgorithm
 {
 public:
   static vtkImageDifference *New();

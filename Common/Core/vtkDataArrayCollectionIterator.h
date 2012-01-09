@@ -21,13 +21,12 @@
 #ifndef __vtkDataArrayCollectionIterator_h
 #define __vtkDataArrayCollectionIterator_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkCollectionIterator.h"
 
 class vtkDataArray;
 class vtkDataArrayCollection;
 
-class VTKCOMMONCORE_EXPORT vtkDataArrayCollectionIterator : public vtkCollectionIterator
+class VTK_COMMON_EXPORT vtkDataArrayCollectionIterator : public vtkCollectionIterator
 {
 public:
   vtkTypeMacro(vtkDataArrayCollectionIterator,vtkCollectionIterator);

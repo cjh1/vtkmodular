@@ -38,13 +38,12 @@
 #ifndef __vtkSelectionAlgorithm_h
 #define __vtkSelectionAlgorithm_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkAlgorithm.h"
 #include "vtkSelection.h" // makes things a bit easier
 
 class vtkDataSet;
 
-class VTKFILTERSCORE_EXPORT vtkSelectionAlgorithm : public vtkAlgorithm
+class VTK_FILTERING_EXPORT vtkSelectionAlgorithm : public vtkAlgorithm
 {
 public:
   static vtkSelectionAlgorithm *New();

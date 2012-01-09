@@ -42,10 +42,9 @@
 #ifndef __vtkVolumeReader_h
 #define __vtkVolumeReader_h
 
-#include "vtkIOImageExport.h" // For export macro
 #include "vtkImageAlgorithm.h"
 
-class VTKIOIMAGE_EXPORT vtkVolumeReader : public vtkImageAlgorithm
+class VTK_IO_EXPORT vtkVolumeReader : public vtkImageAlgorithm
 {
 public:
   vtkTypeMacro(vtkVolumeReader,vtkImageAlgorithm);

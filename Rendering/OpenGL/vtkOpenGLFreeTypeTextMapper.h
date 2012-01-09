@@ -24,14 +24,22 @@
 #ifndef __vtkOpenGLFreeTypeTextMapper_h
 #define __vtkOpenGLFreeTypeTextMapper_h
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkTextMapper.h"
 
+//#include <FTGL.h>
+//
+//#ifdef FTGL_USE_NAMESPACE
+//namespace ftgl
+//{
+//#endif
 //BTX
-class FTFont;
+//class FTFont;
 //ETX
+//#ifdef FTGL_USE_NAMESPACE
+//}
+//#endif
 
-class VTKRENDERINGOPENGL_EXPORT vtkOpenGLFreeTypeTextMapper : public vtkTextMapper
+class VTK_RENDERING_EXPORT vtkOpenGLFreeTypeTextMapper : public vtkTextMapper
 {
 public:
   vtkTypeMacro(vtkOpenGLFreeTypeTextMapper,vtkTextMapper);

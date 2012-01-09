@@ -20,12 +20,11 @@
 #ifndef __vtkDataObjectCollection_h
 #define __vtkDataObjectCollection_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkCollection.h"
 
 #include "vtkDataObject.h" // Needed for inline methods
 
-class VTKCOMMONDATAMODEL_EXPORT vtkDataObjectCollection : public vtkCollection
+class VTK_FILTERING_EXPORT vtkDataObjectCollection : public vtkCollection
 {
 public:
   static vtkDataObjectCollection *New();

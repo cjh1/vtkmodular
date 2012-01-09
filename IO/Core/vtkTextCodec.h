@@ -34,11 +34,10 @@ PURPOSE.  See the above copyright notice for more information.
 #ifndef __vtkTextCodec_h
 #define __vtkTextCodec_h
 
-#include "vtkIOCoreExport.h" // For export macro
 #include "vtkObject.h"
 #include "vtkUnicodeString.h" // for the value type and for function return.
 
-class VTKIOCORE_EXPORT vtkTextCodec : public vtkObject
+class VTK_IO_EXPORT vtkTextCodec : public vtkObject
 {
 public:
   vtkTypeMacro(vtkTextCodec, vtkObject);

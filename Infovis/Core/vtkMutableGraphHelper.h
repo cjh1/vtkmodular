@@ -31,7 +31,6 @@
 #ifndef __vtkMutableGraphHelper_h
 #define __vtkMutableGraphHelper_h
 
-#include "vtkInfovisCoreExport.h" // For export macro
 #include "vtkObject.h"
 #include "vtkGraph.h" // For vtkEdgeType
 
@@ -41,7 +40,7 @@ class vtkGraphEdge;
 class vtkMutableDirectedGraph;
 class vtkMutableUndirectedGraph;
 
-class VTKINFOVISCORE_EXPORT vtkMutableGraphHelper : public vtkObject
+class VTK_INFOVIS_EXPORT vtkMutableGraphHelper : public vtkObject
 {
 public:
   static vtkMutableGraphHelper *New();

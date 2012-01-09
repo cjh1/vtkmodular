@@ -23,10 +23,9 @@
 #ifndef __vtkImageMagnify_h
 #define __vtkImageMagnify_h
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkThreadedImageAlgorithm.h"
 
-class VTKIMAGINGCORE_EXPORT vtkImageMagnify : public vtkThreadedImageAlgorithm
+class VTK_IMAGING_EXPORT vtkImageMagnify : public vtkThreadedImageAlgorithm
 {
 public:
   static vtkImageMagnify *New();

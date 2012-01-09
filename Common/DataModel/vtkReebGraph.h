@@ -115,7 +115,6 @@
 #ifndef __vtkReebGraph_h
 #define __vtkReebGraph_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include  "vtkMutableDirectedGraph.h"
 
 class vtkDataArray;
@@ -125,7 +124,7 @@ class vtkPolyData;
 class vtkReebGraphSimplificationMetric;
 class vtkUnstructuredGrid;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkReebGraph : public vtkMutableDirectedGraph
+class VTK_FILTERING_EXPORT vtkReebGraph : public vtkMutableDirectedGraph
 {
 
 public:

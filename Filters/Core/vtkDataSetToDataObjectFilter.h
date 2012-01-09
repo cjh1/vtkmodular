@@ -44,12 +44,11 @@
 #ifndef __vtkDataSetToDataObjectFilter_h
 #define __vtkDataSetToDataObjectFilter_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkDataObjectAlgorithm.h"
 
 class vtkDataSet;
 
-class VTKFILTERSCORE_EXPORT vtkDataSetToDataObjectFilter : public vtkDataObjectAlgorithm
+class VTK_GRAPHICS_EXPORT vtkDataSetToDataObjectFilter : public vtkDataObjectAlgorithm
 {
 public:
   vtkTypeMacro(vtkDataSetToDataObjectFilter,vtkDataObjectAlgorithm);

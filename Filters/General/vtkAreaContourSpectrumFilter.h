@@ -41,12 +41,11 @@
 #ifndef __vtkAreaContourSpectrumFilter_h
 #define __vtkAreaContourSpectrumFilter_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include  "vtkDataObjectAlgorithm.h"
 
 class vtkTable;
 
-class VTKFILTERSGENERAL_EXPORT vtkAreaContourSpectrumFilter :
+class VTK_GRAPHICS_EXPORT vtkAreaContourSpectrumFilter :
   public vtkDataObjectAlgorithm
 {
 public:

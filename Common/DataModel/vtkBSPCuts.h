@@ -33,12 +33,11 @@
 #ifndef __vtkBSPCuts_h
 #define __vtkBSPCuts_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkDataObject.h"
 
 class vtkKdNode;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkBSPCuts : public vtkDataObject
+class VTK_FILTERING_EXPORT vtkBSPCuts : public vtkDataObject
 {
 public:
   static vtkBSPCuts *New();

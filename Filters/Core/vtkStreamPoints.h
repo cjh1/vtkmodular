@@ -25,10 +25,9 @@
 #ifndef __vtkStreamPoints_h
 #define __vtkStreamPoints_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkStreamer.h"
 
-class VTKFILTERSCORE_EXPORT vtkStreamPoints : public vtkStreamer
+class VTK_GRAPHICS_EXPORT vtkStreamPoints : public vtkStreamer
 {
 public:
   vtkTypeMacro(vtkStreamPoints,vtkStreamer);

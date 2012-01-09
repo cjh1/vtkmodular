@@ -25,12 +25,11 @@
 #ifndef __vtkSurfaceLICPainter_h
 #define __vtkSurfaceLICPainter_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkPainter.h"
 
 class vtkRenderWindow;
 
-class VTKRENDERINGCORE_EXPORT vtkSurfaceLICPainter : public vtkPainter
+class VTK_RENDERING_EXPORT vtkSurfaceLICPainter : public vtkPainter
 {
 public:
   static vtkSurfaceLICPainter* New();

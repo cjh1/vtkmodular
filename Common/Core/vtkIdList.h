@@ -21,10 +21,9 @@
 #ifndef __vtkIdList_h
 #define __vtkIdList_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkObject.h"
 
-class VTKCOMMONCORE_EXPORT vtkIdList : public vtkObject
+class VTK_COMMON_EXPORT vtkIdList : public vtkObject
 {
 public:
   static vtkIdList *New();

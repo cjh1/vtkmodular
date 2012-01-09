@@ -27,10 +27,9 @@
 // I did not make this a subclass of in place filter because
 // the references on the data do not matter. I make no modifications
 // to the data.
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkImageAlgorithm.h"
 
-class VTKIMAGINGCORE_EXPORT vtkImageClip : public vtkImageAlgorithm
+class VTK_IMAGING_EXPORT vtkImageClip : public vtkImageAlgorithm
 {
 public:
   static vtkImageClip *New();

@@ -22,10 +22,9 @@
 #ifndef __vtkHierarchicalDataLevelFilter_h
 #define __vtkHierarchicalDataLevelFilter_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkLevelIdScalars.h"
 
-class VTKFILTERSGENERAL_EXPORT vtkHierarchicalDataLevelFilter : public vtkLevelIdScalars
+class VTK_GRAPHICS_EXPORT vtkHierarchicalDataLevelFilter : public vtkLevelIdScalars 
 {
 public:
   vtkTypeMacro(vtkHierarchicalDataLevelFilter,vtkLevelIdScalars);

@@ -23,14 +23,13 @@
 #ifndef __vtkCoincidentTopologyResolutionPainter_h
 #define __vtkCoincidentTopologyResolutionPainter_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkPolyDataPainter.h"
 
 class vtkInformationIntegerKey;
 class vtkInformationDoubleKey;
 class vtkInformationDoubleVectorKey;
 
-class VTKRENDERINGCORE_EXPORT vtkCoincidentTopologyResolutionPainter :
+class VTK_RENDERING_EXPORT vtkCoincidentTopologyResolutionPainter : 
   public vtkPolyDataPainter
 {
 public:

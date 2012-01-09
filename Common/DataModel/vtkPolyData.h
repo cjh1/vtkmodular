@@ -54,7 +54,6 @@
 #ifndef __vtkPolyData_h
 #define __vtkPolyData_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkPointSet.h"
 
 #include "vtkCellTypes.h" // Needed for inline methods
@@ -70,7 +69,7 @@ class vtkPolygon;
 class vtkTriangleStrip;
 class vtkEmptyCell;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkPolyData : public vtkPointSet
+class VTK_FILTERING_EXPORT vtkPolyData : public vtkPointSet
 {
 public:
   static vtkPolyData *New();
@@ -457,13 +456,6 @@ protected:
   // built only when necessary
   vtkCellTypes *Cells;
   vtkCellLinks *Links;
-
-  // This method is called during an update.  
-  // If the CropFilter is set, the user reqquested a piece which the 
-  // source cannot generate, then it will break up the
-  // data set in order to satisfy the request.
-  virtual void Crop();
-
 
 private:
   // Hide these from the user and the compiler.

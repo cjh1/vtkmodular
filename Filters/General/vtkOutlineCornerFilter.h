@@ -21,11 +21,10 @@
 #ifndef __vtkOutlineCornerFilter_h
 #define __vtkOutlineCornerFilter_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 class vtkOutlineCornerSource;
 
-class VTKFILTERSGENERAL_EXPORT vtkOutlineCornerFilter : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkOutlineCornerFilter : public vtkPolyDataAlgorithm
 {
 public:
   vtkTypeMacro(vtkOutlineCornerFilter,vtkPolyDataAlgorithm);

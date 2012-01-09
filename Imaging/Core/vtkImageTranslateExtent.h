@@ -20,10 +20,9 @@
 #ifndef __vtkImageTranslateExtent_h
 #define __vtkImageTranslateExtent_h
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkImageAlgorithm.h"
 
-class VTKIMAGINGCORE_EXPORT vtkImageTranslateExtent : public vtkImageAlgorithm
+class VTK_IMAGING_EXPORT vtkImageTranslateExtent : public vtkImageAlgorithm
 {
 public:
   static vtkImageTranslateExtent *New();

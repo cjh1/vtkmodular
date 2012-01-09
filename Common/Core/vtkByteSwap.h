@@ -20,10 +20,9 @@
 #ifndef __vtkByteSwap_h
 #define __vtkByteSwap_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkObject.h"
 
-class VTKCOMMONCORE_EXPORT vtkByteSwap : public vtkObject
+class VTK_COMMON_EXPORT vtkByteSwap : public vtkObject
 {
 public:
   static vtkByteSwap *New();

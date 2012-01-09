@@ -44,7 +44,6 @@
 #ifndef __vtkContourFilter_h
 #define __vtkContourFilter_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
 #include "vtkContourValues.h" // Needed for inline methods
@@ -56,7 +55,7 @@ class vtkSynchronizedTemplates3D;
 class vtkGridSynchronizedTemplates3D;
 class vtkRectilinearSynchronizedTemplates;
 
-class VTKFILTERSCORE_EXPORT vtkContourFilter : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkContourFilter : public vtkPolyDataAlgorithm
 {
 public:
   vtkTypeMacro(vtkContourFilter,vtkPolyDataAlgorithm);

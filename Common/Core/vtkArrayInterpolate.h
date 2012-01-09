@@ -42,7 +42,6 @@
 #ifndef __vtkArrayInterpolate_h
 #define __vtkArrayInterpolate_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkTypedArray.h"
 
 class vtkArrayExtents;

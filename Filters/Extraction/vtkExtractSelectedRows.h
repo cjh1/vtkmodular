@@ -29,11 +29,10 @@
 #ifndef __vtkExtractSelectedRows_h
 #define __vtkExtractSelectedRows_h
 
-#include "vtkFiltersExtractionExport.h" // For export macro
 #include "vtkTableAlgorithm.h"
 
 
-class VTKFILTERSEXTRACTION_EXPORT vtkExtractSelectedRows : public vtkTableAlgorithm
+class VTK_GRAPHICS_EXPORT vtkExtractSelectedRows : public vtkTableAlgorithm
 {
 public:
   static vtkExtractSelectedRows* New();

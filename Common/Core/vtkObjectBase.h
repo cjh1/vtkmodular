@@ -40,7 +40,6 @@
 #ifndef __vtkObjectBase_h
 #define __vtkObjectBase_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkIndent.h"
 #include "vtkSystemIncludes.h"
 
@@ -49,7 +48,7 @@ class vtkGarbageCollectorToObjectBaseFriendship;
 class vtkWeakPointerBase;
 class vtkWeakPointerBaseToObjectBaseFriendship;
 
-class VTKCOMMONCORE_EXPORT vtkObjectBase
+class VTK_COMMON_EXPORT vtkObjectBase
 {
   virtual const char* GetClassNameInternal() const { return "vtkObjectBase"; }
 public:
@@ -176,7 +175,7 @@ protected:
 
 private:
   //BTX
-  friend VTKCOMMONCORE_EXPORT ostream& operator<<(ostream& os, vtkObjectBase& o);
+  friend VTK_COMMON_EXPORT ostream& operator<<(ostream& os, vtkObjectBase& o);
   friend class vtkGarbageCollectorToObjectBaseFriendship;
   friend class vtkWeakPointerBaseToObjectBaseFriendship;
   //ETX

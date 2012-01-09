@@ -26,13 +26,12 @@
 #ifndef __vtkViewDependentErrorMetric_h
 #define __vtkViewDependentErrorMetric_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkGenericSubdivisionErrorMetric.h"
 
 class vtkViewport;
 class vtkCoordinate;
 
-class VTKRENDERINGCORE_EXPORT vtkViewDependentErrorMetric : public vtkGenericSubdivisionErrorMetric
+class VTK_FILTERING_EXPORT vtkViewDependentErrorMetric : public vtkGenericSubdivisionErrorMetric
 {
 public:
   // Description:

@@ -29,11 +29,10 @@
 #ifndef __vtkUnicodeStringArray_h
 #define __vtkUnicodeStringArray_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkAbstractArray.h"
 #include "vtkUnicodeString.h" // For value type
 
-class VTKCOMMONCORE_EXPORT vtkUnicodeStringArray :
+class VTK_COMMON_EXPORT vtkUnicodeStringArray :
   public vtkAbstractArray
 {
 public:

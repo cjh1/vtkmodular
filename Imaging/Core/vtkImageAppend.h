@@ -27,10 +27,9 @@
 #ifndef __vtkImageAppend_h
 #define __vtkImageAppend_h
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkThreadedImageAlgorithm.h"
 
-class VTKIMAGINGCORE_EXPORT vtkImageAppend : public vtkThreadedImageAlgorithm
+class VTK_IMAGING_EXPORT vtkImageAppend : public vtkThreadedImageAlgorithm
 {
 public:
   static vtkImageAppend *New();
@@ -117,8 +116,10 @@ protected:
 
   // overridden to allocate all of the output arrays, not just active scalars
   virtual void AllocateOutputData(vtkImageData *out,
+                                  vtkInformation* outInfo,
                                   int *uExtent);
-  virtual vtkImageData *AllocateOutputData(vtkDataObject *out);
+  virtual vtkImageData *AllocateOutputData(vtkDataObject *out,
+                                           vtkInformation* outInfo);
 
   // overridden to prevent shallow copies across, since we have to do it elementwise
   virtual void CopyAttributeData(vtkImageData *in, vtkImageData *out,

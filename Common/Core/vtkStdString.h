@@ -12,34 +12,33 @@
      PURPOSE.  See the above copyright notice for more information.
 
 =========================================================================*/
-// .NAME vtkStdString - Wrapper around vtkstd::string to keep symbols short.
+// .NAME vtkStdString - Wrapper around std::string to keep symbols short.
 // .SECTION Description
-// vtkStdString derives from vtkstd::string to provide shorter symbol
+// vtkStdString derives from std::string to provide shorter symbol
 // names than basic_string<...> in namespace std given by the standard
 // STL string.
 
 #ifndef __vtkStdString_h
 #define __vtkStdString_h
 
-#include "vtkCommonCoreExport.h" // For export macro
-#include "vtkSystemIncludes.h" // For VTKCOMMONCORE_EXPORT.
-#include <vtkstd/string>       // For the superclass.
+#include "vtkSystemIncludes.h" // For VTK_COMMON_EXPORT.
+#include <string>       // For the superclass.
 
 class vtkStdString;
-VTKCOMMONCORE_EXPORT ostream& operator<<(ostream&, const vtkStdString&);
+VTK_COMMON_EXPORT ostream& operator<<(ostream&, const vtkStdString&);
 
 // Workaround for a difference between GCC visibility and MSVC dllexport
 // Not setting the visibility of this class caused the
 // vtkArrayIteratorTemplate<vtkStdString> symbols to be hidden on Apple GCC 4.2
 // but exporting would cause failure on MSVC 10 (works either way with GCC 4.4
 #if defined(__APPLE__) && __GNUC__ >=4
-class VTKCOMMONCORE_EXPORT vtkStdString : public vtkstd::string
+class VTK_COMMON_EXPORT vtkStdString : public std::string
 #else
-class vtkStdString : public vtkstd::string
+class vtkStdString : public std::string
 #endif
 {
 public:
-  typedef vtkstd::string StdString;
+  typedef std::string StdString;
   typedef StdString::value_type             value_type;
   typedef StdString::pointer                pointer;
   typedef StdString::reference              reference;

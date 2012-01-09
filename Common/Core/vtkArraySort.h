@@ -40,12 +40,11 @@
 #ifndef __vtkArraySort_h
 #define __vtkArraySort_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkSystemIncludes.h"
 #include "vtkArrayCoordinates.h"
 #include <vector>
 
-class VTKCOMMONCORE_EXPORT vtkArraySort
+class VTK_COMMON_EXPORT vtkArraySort
 {
 public:
   typedef vtkArrayCoordinates::DimensionT DimensionT;
@@ -96,7 +95,7 @@ public:
 
   // Description:
   // Serialization
-  VTKCOMMONCORE_EXPORT friend ostream& operator<<(
+  VTK_COMMON_EXPORT friend ostream& operator<<(
     ostream& stream, const vtkArraySort& rhs);
 
 private:

@@ -27,7 +27,6 @@
 #ifndef __vtkImageMapper_h
 #define __vtkImageMapper_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkMapper2D.h"
 
 class vtkWindow;
@@ -35,7 +34,7 @@ class vtkViewport;
 class vtkActor2D;
 class vtkImageData;
 
-class VTKRENDERINGCORE_EXPORT vtkImageMapper : public vtkMapper2D
+class VTK_RENDERING_EXPORT vtkImageMapper : public vtkMapper2D
 {
 public:
   vtkTypeMacro(vtkImageMapper,vtkMapper2D);

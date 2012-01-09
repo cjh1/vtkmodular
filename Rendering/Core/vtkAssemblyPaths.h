@@ -24,14 +24,13 @@
 #ifndef __vtkAssemblyPaths_h
 #define __vtkAssemblyPaths_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkCollection.h"
 
 #include "vtkAssemblyPath.h" // Needed for inline methods
 
 class vtkProp;
 
-class VTKRENDERINGCORE_EXPORT vtkAssemblyPaths : public vtkCollection
+class VTK_COMMON_EXPORT vtkAssemblyPaths : public vtkCollection
 {
 public:
   static vtkAssemblyPaths *New();

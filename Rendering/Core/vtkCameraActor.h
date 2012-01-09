@@ -23,7 +23,6 @@
 #ifndef __vtkCameraActor_h
 #define __vtkCameraActor_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkProp3D.h"
 
 class vtkCamera;
@@ -32,7 +31,7 @@ class vtkPolyDataMapper;
 class vtkActor;
 class vtkProperty;
 
-class VTKRENDERINGCORE_EXPORT vtkCameraActor : public vtkProp3D
+class VTK_RENDERING_EXPORT vtkCameraActor : public vtkProp3D
 {
 public:
   static vtkCameraActor *New();

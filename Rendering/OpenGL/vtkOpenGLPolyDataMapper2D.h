@@ -24,10 +24,9 @@
 #ifndef __vtkOpenGLPolyDataMapper2D_h
 #define __vtkOpenGLPolyDataMapper2D_h
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkPolyDataMapper2D.h"
 
-class VTKRENDERINGOPENGL_EXPORT vtkOpenGLPolyDataMapper2D : public vtkPolyDataMapper2D
+class VTK_RENDERING_EXPORT vtkOpenGLPolyDataMapper2D : public vtkPolyDataMapper2D
 {
 public:
   vtkTypeMacro(vtkOpenGLPolyDataMapper2D,vtkPolyDataMapper2D);

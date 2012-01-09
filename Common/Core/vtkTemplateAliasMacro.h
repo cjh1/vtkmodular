@@ -36,7 +36,6 @@
 #ifndef __vtkTemplateAliasMacro_h
 #define __vtkTemplateAliasMacro_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkTypeTraits.h"
 
 // Allow individual switching of support for each scalar size/signedness.

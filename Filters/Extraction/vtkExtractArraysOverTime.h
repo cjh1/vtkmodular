@@ -33,7 +33,6 @@
 #ifndef __vtkExtractArraysOverTime_h
 #define __vtkExtractArraysOverTime_h
 
-#include "vtkFiltersExtractionExport.h" // For export macro
 #include "vtkMultiBlockDataSetAlgorithm.h"
 
 class vtkSelection;
@@ -42,7 +41,7 @@ class vtkTable;
 class vtkExtractArraysOverTimeInternal;
 class vtkDataSetAttributes;
 
-class VTKFILTERSEXTRACTION_EXPORT vtkExtractArraysOverTime : public vtkMultiBlockDataSetAlgorithm
+class VTK_GRAPHICS_EXPORT vtkExtractArraysOverTime : public vtkMultiBlockDataSetAlgorithm
 {
 public:
   static vtkExtractArraysOverTime *New();

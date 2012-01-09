@@ -38,12 +38,11 @@
 #ifndef __vtkSocketController_h
 #define __vtkSocketController_h
 
-#include "vtkParallelCoreExport.h" // For export macro
 #include "vtkMultiProcessController.h"
 
 class vtkSocketCommunicator;
 
-class VTKPARALLELCORE_EXPORT vtkSocketController : public vtkMultiProcessController
+class VTK_PARALLEL_EXPORT vtkSocketController : public vtkMultiProcessController
 {
 public:
   static vtkSocketController *New();

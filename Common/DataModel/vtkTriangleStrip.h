@@ -24,14 +24,13 @@
 #ifndef __vtkTriangleStrip_h
 #define __vtkTriangleStrip_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkCell.h"
 
 class vtkLine;
 class vtkTriangle;
 class vtkIncrementalPointLocator;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkTriangleStrip : public vtkCell
+class VTK_FILTERING_EXPORT vtkTriangleStrip : public vtkCell
 {
 public:
   static vtkTriangleStrip *New();

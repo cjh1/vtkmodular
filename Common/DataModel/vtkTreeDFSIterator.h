@@ -36,13 +36,12 @@
 #ifndef __vtkTreeDFSIterator_h
 #define __vtkTreeDFSIterator_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkTreeIterator.h"
 
 class vtkTreeDFSIteratorInternals;
 class vtkIntArray;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkTreeDFSIterator : public vtkTreeIterator
+class VTK_FILTERING_EXPORT vtkTreeDFSIterator : public vtkTreeIterator
 {
 public:
   static vtkTreeDFSIterator* New();

@@ -31,13 +31,12 @@
 #ifndef __vtkDefaultPass_h
 #define __vtkDefaultPass_h
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkRenderPass.h"
 
 class vtkOpenGLRenderWindow;
 class vtkDefaultPassLayerList; // Pimpl
 
-class VTKRENDERINGOPENGL_EXPORT vtkDefaultPass : public vtkRenderPass
+class VTK_RENDERING_EXPORT vtkDefaultPass : public vtkRenderPass
 {
 public:
   static vtkDefaultPass *New();

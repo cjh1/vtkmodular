@@ -52,7 +52,6 @@
 #ifndef __vtkFieldDataToAttributeDataFilter_h
 #define __vtkFieldDataToAttributeDataFilter_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkDataSetAlgorithm.h"
 
 #define VTK_DATA_OBJECT_FIELD 0
@@ -66,7 +65,7 @@ class vtkDataArray;
 class vtkDataSetAttributes;
 class vtkFieldData;
 
-class VTKFILTERSCORE_EXPORT vtkFieldDataToAttributeDataFilter : public vtkDataSetAlgorithm
+class VTK_GRAPHICS_EXPORT vtkFieldDataToAttributeDataFilter : public vtkDataSetAlgorithm
 {
 public:
   void PrintSelf(ostream& os, vtkIndent indent);

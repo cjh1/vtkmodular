@@ -19,11 +19,10 @@
 #ifndef __vtkLine_h
 #define __vtkLine_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkCell.h"
 class vtkIncrementalPointLocator;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkLine : public vtkCell
+class VTK_FILTERING_EXPORT vtkLine : public vtkCell
 {
 public:
   static vtkLine *New();

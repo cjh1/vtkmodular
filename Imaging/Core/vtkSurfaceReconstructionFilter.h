@@ -25,10 +25,9 @@
 #ifndef __vtkSurfaceReconstructionFilter_h
 #define __vtkSurfaceReconstructionFilter_h
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkImageAlgorithm.h"
 
-class VTKIMAGINGCORE_EXPORT vtkSurfaceReconstructionFilter : public vtkImageAlgorithm
+class VTK_IMAGING_EXPORT vtkSurfaceReconstructionFilter : public vtkImageAlgorithm
 {
 public:
   vtkTypeMacro(vtkSurfaceReconstructionFilter,vtkImageAlgorithm);

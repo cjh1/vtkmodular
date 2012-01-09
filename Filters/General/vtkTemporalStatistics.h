@@ -50,7 +50,6 @@
 #ifndef _vtkTemporalStatistics_h
 #define _vtkTemporalStatistics_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkPassInputTypeAlgorithm.h"
 
 class vtkCompositeDataSet;
@@ -58,7 +57,7 @@ class vtkDataSet;
 class vtkFieldData;
 class vtkGraph;
 
-class VTKFILTERSGENERAL_EXPORT vtkTemporalStatistics : public vtkPassInputTypeAlgorithm
+class VTK_GRAPHICS_EXPORT vtkTemporalStatistics : public vtkPassInputTypeAlgorithm
 {
 public:
   vtkTypeMacro(vtkTemporalStatistics, vtkPassInputTypeAlgorithm);

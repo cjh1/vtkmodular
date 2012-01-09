@@ -20,10 +20,9 @@
 #define __vtkImageLuminance_h
 
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkThreadedImageAlgorithm.h"
 
-class VTKIMAGINGCORE_EXPORT vtkImageLuminance : public vtkThreadedImageAlgorithm
+class VTK_IMAGING_EXPORT vtkImageLuminance : public vtkThreadedImageAlgorithm
 {
 public:
   static vtkImageLuminance *New();

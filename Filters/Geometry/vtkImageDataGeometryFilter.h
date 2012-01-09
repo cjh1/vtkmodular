@@ -35,10 +35,9 @@
 #ifndef __vtkImageDataGeometryFilter_h
 #define __vtkImageDataGeometryFilter_h
 
-#include "vtkFiltersGeometryExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
-class VTKFILTERSGEOMETRY_EXPORT vtkImageDataGeometryFilter : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkImageDataGeometryFilter : public vtkPolyDataAlgorithm
 {
 public:
   vtkTypeMacro(vtkImageDataGeometryFilter,vtkPolyDataAlgorithm);

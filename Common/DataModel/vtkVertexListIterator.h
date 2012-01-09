@@ -31,14 +31,13 @@
 #ifndef __vtkVertexListIterator_h
 #define __vtkVertexListIterator_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkObject.h"
 
 #include "vtkGraph.h" // For edge type definitions
 
 class vtkGraphEdge;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkVertexListIterator : public vtkObject
+class VTK_FILTERING_EXPORT vtkVertexListIterator : public vtkObject
 {
 public:
   static vtkVertexListIterator *New();

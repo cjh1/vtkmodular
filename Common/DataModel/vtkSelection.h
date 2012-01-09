@@ -25,7 +25,6 @@
 #ifndef __vtkSelection_h
 #define __vtkSelection_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkDataObject.h"
 
 //BTX
@@ -33,7 +32,7 @@ class vtkSelectionNode;
 struct vtkSelectionInternals;
 //ETX
 
-class VTKCOMMONDATAMODEL_EXPORT vtkSelection : public vtkDataObject
+class VTK_FILTERING_EXPORT vtkSelection : public vtkDataObject
 {
 public:
   vtkTypeMacro(vtkSelection,vtkDataObject);

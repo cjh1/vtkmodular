@@ -24,10 +24,9 @@
 #ifndef __vtkImageHSIToRGB_h
 #define __vtkImageHSIToRGB_h
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkThreadedImageAlgorithm.h"
 
-class VTKIMAGINGCORE_EXPORT vtkImageHSIToRGB : public vtkThreadedImageAlgorithm
+class VTK_IMAGING_EXPORT vtkImageHSIToRGB : public vtkThreadedImageAlgorithm
 {
 public:
   static vtkImageHSIToRGB *New();

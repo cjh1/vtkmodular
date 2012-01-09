@@ -26,13 +26,12 @@
 # define VTK_DATA_ARRAY_TEMPLATE_TYPE long long
 #endif
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkDataArray.h"
 #include "vtkDataArrayTemplate.h" // Real Superclass
 
 // Fake the superclass for the wrappers.
 #define vtkDataArray vtkDataArrayTemplate<long long>
-class VTKCOMMONCORE_EXPORT vtkLongLongArray : public vtkDataArray
+class VTK_COMMON_EXPORT vtkLongLongArray : public vtkDataArray
 #undef vtkDataArray
 {
 public:

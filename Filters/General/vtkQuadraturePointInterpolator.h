@@ -29,14 +29,13 @@
 #ifndef vtkQuadraturePointInterpolator_h
 #define vtkQuadraturePointInterpolator_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkDataSetAlgorithm.h"
 
 class vtkUnstructuredGrid;
 class vtkInformation;
 class vtkInformationVector;
 
-class VTKFILTERSGENERAL_EXPORT vtkQuadraturePointInterpolator : public vtkDataSetAlgorithm
+class VTK_GRAPHICS_EXPORT vtkQuadraturePointInterpolator : public vtkDataSetAlgorithm
 {
 public:
   static vtkQuadraturePointInterpolator *New();

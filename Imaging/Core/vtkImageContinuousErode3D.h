@@ -23,12 +23,11 @@
 #define __vtkImageContinuousErode3D_h
 
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkImageSpatialAlgorithm.h"
 
 class vtkImageEllipsoidSource;
 
-class VTKIMAGINGCORE_EXPORT vtkImageContinuousErode3D : public vtkImageSpatialAlgorithm
+class VTK_IMAGING_EXPORT vtkImageContinuousErode3D : public vtkImageSpatialAlgorithm
 {
 public:
   // Description:

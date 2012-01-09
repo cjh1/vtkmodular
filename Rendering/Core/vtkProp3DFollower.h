@@ -31,14 +31,13 @@
 #ifndef __vtkProp3DFollower_h
 #define __vtkProp3DFollower_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkProp3D.h"
 
 class vtkCamera;
 class vtkMapper;
 
 
-class VTKRENDERINGCORE_EXPORT vtkProp3DFollower : public vtkProp3D
+class VTK_RENDERING_EXPORT vtkProp3DFollower : public vtkProp3D
 {
  public:
   // Description:

@@ -32,7 +32,6 @@
 #define __vtkArrayIteratorIncludes_h
 
 // Iterators.
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkArrayIteratorTemplate.h"
 #include "vtkBitArrayIterator.h"
 

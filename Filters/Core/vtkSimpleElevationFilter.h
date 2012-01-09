@@ -24,10 +24,9 @@
 #ifndef __vtkSimpleElevationFilter_h
 #define __vtkSimpleElevationFilter_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkDataSetAlgorithm.h"
 
-class VTKFILTERSCORE_EXPORT vtkSimpleElevationFilter : public vtkDataSetAlgorithm
+class VTK_GRAPHICS_EXPORT vtkSimpleElevationFilter : public vtkDataSetAlgorithm 
 {
 public:
   vtkTypeMacro(vtkSimpleElevationFilter,vtkDataSetAlgorithm);

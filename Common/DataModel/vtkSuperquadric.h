@@ -39,12 +39,11 @@
 #ifndef __vtkSuperquadric_h
 #define __vtkSuperquadric_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkImplicitFunction.h"
 
 #define VTK_MIN_SUPERQUADRIC_THICKNESS  1e-4
 
-class VTKCOMMONDATAMODEL_EXPORT vtkSuperquadric : public vtkImplicitFunction
+class VTK_FILTERING_EXPORT vtkSuperquadric : public vtkImplicitFunction
 {
 public:
   // Description

@@ -42,12 +42,11 @@
 #ifndef __vtkFixedWidthTextReader_h
 #define __vtkFixedWidthTextReader_h
 
-#include "vtkIOInfovisExport.h" // For export macro
 #include "vtkTableAlgorithm.h"
 
 class vtkTable;
 
-class VTKIOINFOVIS_EXPORT vtkFixedWidthTextReader : public vtkTableAlgorithm
+class VTK_INFOVIS_EXPORT vtkFixedWidthTextReader : public vtkTableAlgorithm
 {
 public:
   static vtkFixedWidthTextReader* New();

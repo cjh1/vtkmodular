@@ -25,12 +25,11 @@
 #ifndef __vtkGenericMovieWriter_h
 #define __vtkGenericMovieWriter_h
 
-#include "vtkIOGeometryExport.h" // For export macro
 #include "vtkImageAlgorithm.h"
 
 class vtkImageData;
 
-class VTKIOGEOMETRY_EXPORT vtkGenericMovieWriter : public vtkImageAlgorithm
+class VTK_IO_EXPORT vtkGenericMovieWriter : public vtkImageAlgorithm
 {
 public:
   vtkTypeMacro(vtkGenericMovieWriter,vtkImageAlgorithm);

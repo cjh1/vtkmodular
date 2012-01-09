@@ -34,12 +34,11 @@
 #ifndef __vtkPiecewiseFunction_h
 #define __vtkPiecewiseFunction_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkDataObject.h"
 
 class vtkPiecewiseFunctionInternals;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkPiecewiseFunction : public vtkDataObject
+class VTK_FILTERING_EXPORT vtkPiecewiseFunction : public vtkDataObject
 {
 public:
   static vtkPiecewiseFunction *New();

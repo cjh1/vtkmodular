@@ -26,7 +26,6 @@
 #ifndef __vtkImageResliceMapper_h
 #define __vtkImageResliceMapper_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkImageMapper3D.h"
 
 class vtkImageSliceMapper;
@@ -40,7 +39,7 @@ class vtkImageResliceToColors;
 class vtkMatrix4x4;
 class vtkAbstractImageInterpolator;
 
-class VTKRENDERINGCORE_EXPORT vtkImageResliceMapper : public vtkImageMapper3D
+class VTK_RENDERING_EXPORT vtkImageResliceMapper : public vtkImageMapper3D
 {
 public:
   static vtkImageResliceMapper *New();
@@ -53,6 +52,15 @@ public:
   // data coordinates.  Use SliceFacesCamera and SliceAtFocalPoint
   // if you want the slice to automatically follow the camera.
   virtual void SetSlicePlane(vtkPlane *plane);
+
+  // Description:
+  // When using SliceAtFocalPoint, this causes the slicing to occur at
+  // the closest slice to the focal point, instead of the default behavior
+  // where a new slice is interpolated between the original slices.  This
+  // flag is ignored if the slicing is oblique to the original slices.
+  vtkSetMacro(JumpToNearestSlice, int);
+  vtkBooleanMacro(JumpToNearestSlice, int);
+  vtkGetMacro(JumpToNearestSlice, int);
 
   // Description:
   // The slab thickness, for thick slicing (default: zero)
@@ -193,6 +201,7 @@ protected:
 
   vtkImageSliceMapper *SliceMapper; // Does the OpenGL rendering
 
+  int JumpToNearestSlice; // Adjust SliceAtFocalPoint
   int AutoAdjustImageQuality; // LOD-style behavior
   int SeparateWindowLevelOperation; // Do window/level as a separate step
   double SlabThickness; // Current slab thickness

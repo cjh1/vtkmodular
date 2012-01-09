@@ -89,14 +89,13 @@
 #ifndef __vtkLightKit_h
 #define __vtkLightKit_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkLight;
 class vtkPiecewiseFunction;
 class vtkRenderer;
 
-class VTKRENDERINGCORE_EXPORT vtkLightKit : public vtkObject
+class VTK_RENDERING_EXPORT vtkLightKit : public vtkObject
 {
 public:
   static vtkLightKit *New();

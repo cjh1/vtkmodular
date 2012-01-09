@@ -32,10 +32,9 @@
 #ifndef __vtkCellCenters_h
 #define __vtkCellCenters_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
-class VTKFILTERSGENERAL_EXPORT vtkCellCenters : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkCellCenters : public vtkPolyDataAlgorithm
 {
 public:
   vtkTypeMacro(vtkCellCenters,vtkPolyDataAlgorithm);

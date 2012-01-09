@@ -23,12 +23,11 @@
 #ifndef __vtkShaderDeviceAdapter2_h
 #define __vtkShaderDeviceAdapter2_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkShaderProgram2;
 
-class VTKRENDERINGCORE_EXPORT vtkShaderDeviceAdapter2 : public vtkObject
+class VTK_RENDERING_EXPORT vtkShaderDeviceAdapter2 : public vtkObject
 {
 public:
   vtkTypeMacro(vtkShaderDeviceAdapter2, vtkObject);
@@ -50,6 +49,7 @@ public:
                              const void* attribute,
                              unsigned long offset = 0) = 0;
 
+//BTX
   // Description:
   // Set the shader program which is being updated by this device adapter.
   // The shader program is not reference counted to avoid reference loops.
@@ -71,6 +71,7 @@ protected:
 private:
   vtkShaderDeviceAdapter2(const vtkShaderDeviceAdapter2&); // Not implemented
   void operator=(const vtkShaderDeviceAdapter2&); // Not implemented
+//ETX
 };
 
 #endif

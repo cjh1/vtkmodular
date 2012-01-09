@@ -27,10 +27,9 @@
 #ifndef __vtkParametricTorus_h
 #define __vtkParametricTorus_h
 
-#include "vtkCommonComputationalGeometryExport.h" // For export macro
 #include "vtkParametricFunction.h"
 
-class VTKCOMMONCOMPUTATIONALGEOMETRY_EXPORT vtkParametricTorus : public vtkParametricFunction
+class VTK_COMMON_EXPORT vtkParametricTorus : public vtkParametricFunction
 {
 
 public:

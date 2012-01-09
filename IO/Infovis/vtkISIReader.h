@@ -33,12 +33,11 @@
 #ifndef __vtkISIReader_h
 #define __vtkISIReader_h
 
-#include "vtkIOInfovisExport.h" // For export macro
 #include "vtkTableAlgorithm.h"
 
 class vtkTable;
 
-class VTKIOINFOVIS_EXPORT vtkISIReader : public vtkTableAlgorithm
+class VTK_INFOVIS_EXPORT vtkISIReader : public vtkTableAlgorithm
 {
 public:
   static vtkISIReader* New();

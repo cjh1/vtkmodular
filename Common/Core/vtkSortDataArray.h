@@ -27,13 +27,12 @@
 #ifndef __vtkSortDataArray_h
 #define __vtkSortDataArray_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkIdList;
 class vtkAbstractArray;
 
-class VTKCOMMONCORE_EXPORT vtkSortDataArray : public vtkObject
+class VTK_COMMON_EXPORT vtkSortDataArray : public vtkObject
 {
 public:
   vtkTypeMacro(vtkSortDataArray, vtkObject);

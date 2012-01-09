@@ -22,7 +22,6 @@
 #ifndef __vtkPolyDataMapper_h
 #define __vtkPolyDataMapper_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkMapper.h"
 #include "vtkTexture.h" // used to include texture unit enum.
 
@@ -30,7 +29,7 @@ class vtkPolyData;
 class vtkRenderer;
 class vtkRenderWindow;
 
-class VTKRENDERINGCORE_EXPORT vtkPolyDataMapper : public vtkMapper
+class VTK_RENDERING_EXPORT vtkPolyDataMapper : public vtkMapper 
 {
 public:
   static vtkPolyDataMapper *New();

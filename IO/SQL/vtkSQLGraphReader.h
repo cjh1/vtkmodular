@@ -53,12 +53,11 @@
 #ifndef __vtkSQLGraphReader_h
 #define __vtkSQLGraphReader_h
 
-#include "vtkIOSQLExport.h" // For export macro
 #include "vtkGraphAlgorithm.h"
 
 class vtkSQLQuery;
 
-class VTKIOSQL_EXPORT vtkSQLGraphReader : public vtkGraphAlgorithm
+class VTK_INFOVIS_EXPORT vtkSQLGraphReader : public vtkGraphAlgorithm
 {
 public:
   static vtkSQLGraphReader* New();

@@ -25,12 +25,11 @@
 #ifndef __vtkRemoveIsolatedVertices_h
 #define __vtkRemoveIsolatedVertices_h
 
-#include "vtkInfovisCoreExport.h" // For export macro
 #include "vtkGraphAlgorithm.h"
 
 class vtkDataSet;
 
-class VTKINFOVISCORE_EXPORT vtkRemoveIsolatedVertices : public vtkGraphAlgorithm
+class VTK_INFOVIS_EXPORT vtkRemoveIsolatedVertices : public vtkGraphAlgorithm
 {
 public:
   static vtkRemoveIsolatedVertices* New();

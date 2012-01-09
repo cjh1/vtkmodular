@@ -28,11 +28,10 @@
 #ifndef __vtkBox_h
 #define __vtkBox_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkImplicitFunction.h"
 class vtkBoundingBox;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkBox : public vtkImplicitFunction
+class VTK_COMMON_EXPORT vtkBox : public vtkImplicitFunction
 {
 public:
   vtkTypeMacro(vtkBox,vtkImplicitFunction);

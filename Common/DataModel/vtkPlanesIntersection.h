@@ -39,14 +39,13 @@
 #ifndef __vtkPlanesIntersection_h
 #define __vtkPlanesIntersection_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkPlanes.h"
 
 class vtkPoints;
 class vtkPointsProjectedHull;
 class vtkCell;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkPlanesIntersection : public vtkPlanes
+class VTK_FILTERING_EXPORT vtkPlanesIntersection : public vtkPlanes
 {
   vtkTypeMacro(vtkPlanesIntersection, vtkPlanes);
 

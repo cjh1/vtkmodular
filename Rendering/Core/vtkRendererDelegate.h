@@ -26,12 +26,11 @@
 #ifndef __vtkRendererDelegate_h
 #define __vtkRendererDelegate_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkRenderer;
 
-class VTKRENDERINGCORE_EXPORT vtkRendererDelegate : public vtkObject
+class VTK_RENDERING_EXPORT vtkRendererDelegate : public vtkObject
 {
 public:
   vtkTypeMacro(vtkRendererDelegate,vtkObject);

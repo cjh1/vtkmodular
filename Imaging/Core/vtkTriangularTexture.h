@@ -28,10 +28,9 @@
 #ifndef __vtkTriangularTexture_h
 #define __vtkTriangularTexture_h
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkImageAlgorithm.h"
 
-class VTKIMAGINGCORE_EXPORT vtkTriangularTexture : public vtkImageAlgorithm
+class VTK_IMAGING_EXPORT vtkTriangularTexture : public vtkImageAlgorithm
 {
 public:
   vtkTypeMacro(vtkTriangularTexture,vtkImageAlgorithm);

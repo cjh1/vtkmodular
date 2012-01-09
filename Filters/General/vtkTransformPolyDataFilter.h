@@ -34,12 +34,11 @@
 #ifndef __vtkTransformPolyDataFilter_h
 #define __vtkTransformPolyDataFilter_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
 class vtkAbstractTransform;
 
-class VTKFILTERSGENERAL_EXPORT vtkTransformPolyDataFilter : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkTransformPolyDataFilter : public vtkPolyDataAlgorithm
 {
 public:
   static vtkTransformPolyDataFilter *New();

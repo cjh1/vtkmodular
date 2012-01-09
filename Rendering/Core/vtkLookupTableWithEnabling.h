@@ -30,12 +30,11 @@
 #ifndef __vtkLookupTableWithEnabling_h
 #define __vtkLookupTableWithEnabling_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkLookupTable.h"
 
 class vtkDataArray;
 
-class VTKRENDERINGCORE_EXPORT vtkLookupTableWithEnabling : public vtkLookupTable
+class VTK_COMMON_EXPORT vtkLookupTableWithEnabling : public vtkLookupTable
 {
 public:
   static vtkLookupTableWithEnabling *New();

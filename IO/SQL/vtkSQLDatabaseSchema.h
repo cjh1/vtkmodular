@@ -40,7 +40,6 @@ PURPOSE.  See the above copyright notice for more information.
 #ifndef __vtkSQLDatabaseSchema_h
 #define __vtkSQLDatabaseSchema_h
 
-#include "vtkIOSQLExport.h" // For export macro
 #include "vtkObject.h"
 
 #include <cstdarg> // Because one method has a variable list of arguments
@@ -55,7 +54,7 @@ PURPOSE.  See the above copyright notice for more information.
 
 class vtkSQLDatabaseSchemaInternals;
 
-class VTKIOSQL_EXPORT vtkSQLDatabaseSchema : public vtkObject
+class VTK_IO_EXPORT vtkSQLDatabaseSchema : public vtkObject
 {
  public:
   vtkTypeMacro(vtkSQLDatabaseSchema, vtkObject);

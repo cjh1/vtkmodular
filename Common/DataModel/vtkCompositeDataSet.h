@@ -30,7 +30,6 @@
 #ifndef __vtkCompositeDataSet_h
 #define __vtkCompositeDataSet_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkDataObject.h"
 
 class vtkCompositeDataIterator;
@@ -38,7 +37,7 @@ class vtkCompositeDataSetInternals;
 class vtkInformation;
 class vtkInformationStringKey;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkCompositeDataSet : public vtkDataObject
+class VTK_FILTERING_EXPORT vtkCompositeDataSet : public vtkDataObject
 {
 public:
   vtkTypeMacro(vtkCompositeDataSet, vtkDataObject);

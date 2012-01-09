@@ -39,10 +39,9 @@
 #ifndef __vtkMergeColumns_h
 #define __vtkMergeColumns_h
 
-#include "vtkInfovisCoreExport.h" // For export macro
 #include "vtkTableAlgorithm.h"
 
-class VTKINFOVISCORE_EXPORT vtkMergeColumns : public vtkTableAlgorithm
+class VTK_INFOVIS_EXPORT vtkMergeColumns : public vtkTableAlgorithm
 {
 public:
   static vtkMergeColumns* New();

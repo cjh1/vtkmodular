@@ -22,19 +22,18 @@
 #ifndef __vtkFrameBufferObject_h
 #define __vtkFrameBufferObject_h
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkObject.h"
 #include "vtkSmartPointer.h" // needed for vtkSmartPointer.
 #include "vtkWeakPointer.h" // needed for vtkWeakPointer.
 //BTX
-#include <vtkstd/vector> // for the lists of logical buffers.
+#include <vector> // for the lists of logical buffers.
 //ETX
 
 class vtkRenderWindow;
 class vtkTextureObject;
 class vtkOpenGLExtensionManager;
 
-class VTKRENDERINGOPENGL_EXPORT vtkFrameBufferObject : public vtkObject
+class VTK_RENDERING_EXPORT vtkFrameBufferObject : public vtkObject
 {
 public:
   static vtkFrameBufferObject* New();
@@ -213,10 +212,10 @@ protected:
   // Load all necessary extensions.
   bool LoadRequiredExtensions(vtkOpenGLExtensionManager *manager);
 
-  vtkstd::vector<unsigned int> UserZSlices;
-  vtkstd::vector<vtkSmartPointer<vtkTextureObject> > UserColorBuffers;
-  vtkstd::vector<vtkSmartPointer<vtkTextureObject> > ColorBuffers;
-  vtkstd::vector<unsigned int> ActiveBuffers;
+  std::vector<unsigned int> UserZSlices;
+  std::vector<vtkSmartPointer<vtkTextureObject> > UserColorBuffers;
+  std::vector<vtkSmartPointer<vtkTextureObject> > ColorBuffers;
+  std::vector<unsigned int> ActiveBuffers;
   vtkSmartPointer<vtkTextureObject> UserDepthBuffer;
   bool DepthBufferDirty;
 private:

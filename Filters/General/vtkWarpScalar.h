@@ -20,10 +20,10 @@
 //
 // If normals are not present in data, the Normal instance variable will
 // be used as the direction along which to warp the geometry. If normals are
-// present but you would like to use the Normal instance variable, set the 
+// present but you would like to use the Normal instance variable, set the
 // UseNormal boolean to true.
 //
-// If XYPlane boolean is set true, then the z-value is considered to be 
+// If XYPlane boolean is set true, then the z-value is considered to be
 // a scalar value (still scaled by scale factor), and the displacement is
 // along the z-axis. If scalars are also present, these are copied through
 // and can be used to color the surface.
@@ -36,12 +36,11 @@
 #ifndef __vtkWarpScalar_h
 #define __vtkWarpScalar_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkPointSetAlgorithm.h"
 
 class vtkDataArray;
 
-class VTKFILTERSGENERAL_EXPORT vtkWarpScalar : public vtkPointSetAlgorithm
+class VTK_GRAPHICS_EXPORT vtkWarpScalar : public vtkPointSetAlgorithm
 {
 public:
   static vtkWarpScalar *New();
@@ -68,17 +67,24 @@ public:
 
   // Description:
   // Turn on/off flag specifying that input data is x-y plane. If x-y plane,
-  // then the z value is used to warp the surface in the z-axis direction 
+  // then the z value is used to warp the surface in the z-axis direction
   // (times the scale factor) and scalars are used to color the surface.
   vtkSetMacro(XYPlane,int);
   vtkGetMacro(XYPlane,int);
   vtkBooleanMacro(XYPlane,int);
 
+  int FillInputPortInformation(int port, vtkInformation *info);
+
 protected:
   vtkWarpScalar();
   ~vtkWarpScalar();
 
-  int RequestData(vtkInformation *, vtkInformationVector **, vtkInformationVector *);
+  int RequestDataObject(vtkInformation *request,
+                        vtkInformationVector **inputVector,
+                        vtkInformationVector *outputVector);
+  int RequestData(vtkInformation *,
+                  vtkInformationVector **,
+                  vtkInformationVector *);
 
   double ScaleFactor;
   int UseNormal;

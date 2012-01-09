@@ -35,14 +35,13 @@
 #ifndef __vtkPlanes_h
 #define __vtkPlanes_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkImplicitFunction.h"
 
 class vtkPlane;
 class vtkPoints;
 class vtkDataArray;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkPlanes : public vtkImplicitFunction
+class VTK_COMMON_EXPORT vtkPlanes : public vtkImplicitFunction
 {
 public:
   static vtkPlanes *New();

@@ -23,11 +23,10 @@
 #ifndef __vtkArrayIteratorTemplate_h
 #define __vtkArrayIteratorTemplate_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkArrayIterator.h"
 
 template <class T>
-class VTKCOMMONCORE_EXPORT vtkArrayIteratorTemplate : public vtkArrayIterator
+class VTK_COMMON_EXPORT vtkArrayIteratorTemplate : public vtkArrayIterator
 {
 public:
   static vtkArrayIteratorTemplate<T>* New();
@@ -108,7 +107,7 @@ private:
 
 #if !defined(VTK_NO_EXPLICIT_TEMPLATE_INSTANTIATION)
 # define VTK_ARRAY_ITERATOR_TEMPLATE_INSTANTIATE(T) \
-   template class VTKCOMMONCORE_EXPORT vtkArrayIteratorTemplate< T >
+   template class VTK_COMMON_EXPORT vtkArrayIteratorTemplate< T >
 #else
 # include "vtkArrayIteratorTemplateImplicit.txx" // needed for templates.
 # define VTK_ARRAY_ITERATOR_TEMPLATE_INSTANTIATE(T)

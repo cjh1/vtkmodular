@@ -21,7 +21,6 @@
 #ifndef __vtkOpenGLPolyDataMapper_h
 #define __vtkOpenGLPolyDataMapper_h
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkPolyDataMapper.h"
 
 #include "vtkOpenGL.h" // Needed for GLenum
@@ -33,7 +32,7 @@ class vtkRenderWindow;
 class vtkOpenGLRenderer;
 class vtkOpenGLTexture;
 
-class VTKRENDERINGOPENGL_EXPORT vtkOpenGLPolyDataMapper : public vtkPolyDataMapper
+class VTK_RENDERING_EXPORT vtkOpenGLPolyDataMapper : public vtkPolyDataMapper
 {
 public:
   static vtkOpenGLPolyDataMapper *New();

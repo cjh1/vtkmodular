@@ -30,11 +30,10 @@
 #ifndef __vtkMultiPieceDataSet_h
 #define __vtkMultiPieceDataSet_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkCompositeDataSet.h"
 
 class vtkDataSet;
-class VTKCOMMONDATAMODEL_EXPORT vtkMultiPieceDataSet : public vtkCompositeDataSet
+class VTK_FILTERING_EXPORT vtkMultiPieceDataSet : public vtkCompositeDataSet
 {
 public:
   static vtkMultiPieceDataSet* New();

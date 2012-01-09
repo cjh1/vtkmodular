@@ -22,10 +22,9 @@
 #ifndef __vtkSLCReader_h
 #define __vtkSLCReader_h
 
-#include "vtkIOImageExport.h" // For export macro
 #include "vtkImageReader2.h"
 
-class VTKIOIMAGE_EXPORT vtkSLCReader : public vtkImageReader2
+class VTK_IO_EXPORT vtkSLCReader : public vtkImageReader2 
 {
 public:
   static vtkSLCReader *New();

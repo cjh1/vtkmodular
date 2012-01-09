@@ -32,7 +32,6 @@
 #ifndef __vtkPolyhedron_h
 #define __vtkPolyhedron_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkCell3D.h"
 
 class vtkIdTypeArray;
@@ -51,7 +50,7 @@ class vtkCellLocator;
 class vtkGenericCell;
 class vtkPointLocator;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkPolyhedron : public vtkCell3D
+class VTK_FILTERING_EXPORT vtkPolyhedron : public vtkCell3D
 {
 public:
   // Description:

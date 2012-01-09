@@ -37,7 +37,6 @@
 #ifndef __vtkClipClosedSurface_h
 #define __vtkClipClosedSurface_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
 class vtkPlaneCollection;
@@ -57,7 +56,7 @@ enum {
   VTK_CCS_SCALAR_MODE_LABELS = 2
 };
 
-class VTKFILTERSGENERAL_EXPORT vtkClipClosedSurface : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkClipClosedSurface : public vtkPolyDataAlgorithm
 {
 public:
   static vtkClipClosedSurface *New();

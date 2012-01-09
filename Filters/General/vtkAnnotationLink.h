@@ -41,7 +41,6 @@
 #ifndef __vtkAnnotationLink_h
 #define __vtkAnnotationLink_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkAnnotationLayersAlgorithm.h"
 
 class vtkCommand;
@@ -51,7 +50,7 @@ class vtkInformationVector;
 class vtkSelection;
 class vtkTable;
 
-class VTKFILTERSGENERAL_EXPORT vtkAnnotationLink : public vtkAnnotationLayersAlgorithm
+class VTK_GRAPHICS_EXPORT vtkAnnotationLink : public vtkAnnotationLayersAlgorithm
 {
 public:
   static vtkAnnotationLink *New();

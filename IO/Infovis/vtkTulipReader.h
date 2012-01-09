@@ -42,18 +42,30 @@
 // </code>
 // where "nodes" defines all the nodes ids in the graph, and "edge"
 // is a triple of edge id, source vertex id, and target vertex id.
-// The graph is read in as undirected graph.
-// NOTE: This currently only supports reading connectivity information.
-// Also, only string and int properties are supported.
-// Display information is discarded.
+// The graph is read in as undirected graph. Pedigree ids are set on the output
+// graph's vertices and edges that match the node and edge ids defined in the
+// Tulip file.
+//
+// Clusters are output as a vtkAnnotationLayers on output port 1. Each cluster
+// name is used to create an annotation layer, and each cluster with that name
+// is added to the layer as a vtkSelectionNode. Nesting hierarchies are treated
+// as if they were flat. See vtkGraphAnnotationLayersFilter for an example of
+// how the clusters can be represented visually.
+//
+// .SECTION Note
+// Only string, int, and double properties are supported. Display information
+// is discarded.
+//
+// .SECTION Thanks
+// Thanks to Colin Myers, University of Leeds for extending this implementation.
+
 
 #ifndef _vtkTulipReader_h
 #define _vtkTulipReader_h
 
-#include "vtkIOInfovisExport.h" // For export macro
 #include "vtkUndirectedGraphAlgorithm.h"
 
-class VTKIOINFOVIS_EXPORT vtkTulipReader : public vtkUndirectedGraphAlgorithm
+class VTK_INFOVIS_EXPORT vtkTulipReader : public vtkUndirectedGraphAlgorithm
 {
 public:
   static vtkTulipReader *New();
@@ -73,6 +85,10 @@ protected:
     vtkInformation *, 
     vtkInformationVector **, 
     vtkInformationVector *);
+
+  // Description:
+  // Set the outputs to vtkUndirectedGraph and vtkAnnotationLayers.
+  virtual int FillOutputPortInformation(int port, vtkInformation* info);
 
 private:
   char* FileName;

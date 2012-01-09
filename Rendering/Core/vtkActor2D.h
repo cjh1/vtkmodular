@@ -26,14 +26,13 @@
 #ifndef __vtkActor2D_h
 #define __vtkActor2D_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkProp.h"
 #include "vtkCoordinate.h" // For vtkViewportCoordinateMacro
 
 class vtkMapper2D;
 class vtkProperty2D;
 
-class VTKRENDERINGCORE_EXPORT vtkActor2D : public vtkProp
+class VTK_FILTERING_EXPORT vtkActor2D : public vtkProp
 {
 public:
   void PrintSelf(ostream& os, vtkIndent indent);

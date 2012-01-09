@@ -23,7 +23,6 @@
 #ifndef __vtkMoleculeReaderBase_h
 #define __vtkMoleculeReaderBase_h
 
-#include "vtkIOGeometryExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
 class vtkCellArray;
@@ -33,7 +32,7 @@ class vtkIdTypeArray;
 class vtkUnsignedCharArray;
 class vtkPoints;
 
-class VTKIOGEOMETRY_EXPORT vtkMoleculeReaderBase : public vtkPolyDataAlgorithm
+class VTK_IO_EXPORT vtkMoleculeReaderBase : public vtkPolyDataAlgorithm 
 {
 public:
   vtkTypeMacro(vtkMoleculeReaderBase,vtkPolyDataAlgorithm);

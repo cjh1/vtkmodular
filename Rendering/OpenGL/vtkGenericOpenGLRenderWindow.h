@@ -24,10 +24,9 @@
 #ifndef vtkGenericOpenGLRenderWindow_hpp
 #define vtkGenericOpenGLRenderWindow_hpp
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkOpenGLRenderWindow.h"
 
-class VTKRENDERINGOPENGL_EXPORT vtkGenericOpenGLRenderWindow : public vtkOpenGLRenderWindow
+class VTK_RENDERING_EXPORT vtkGenericOpenGLRenderWindow : public vtkOpenGLRenderWindow
 {
 public:
   static vtkGenericOpenGLRenderWindow* New();

@@ -24,7 +24,6 @@
 #ifndef __vtkCell3D_h
 #define __vtkCell3D_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkCell.h"
 
 class vtkOrderedTriangulator;
@@ -32,7 +31,7 @@ class vtkTetra;
 class vtkCellArray;
 class vtkDoubleArray;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkCell3D : public vtkCell
+class VTK_FILTERING_EXPORT vtkCell3D : public vtkCell
 {
 public:
   vtkTypeMacro(vtkCell3D,vtkCell);

@@ -22,10 +22,9 @@
 #ifndef __vtkHierarchicalPolyDataMapper_h
 #define __vtkHierarchicalPolyDataMapper_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkCompositePolyDataMapper.h"
 
-class VTKRENDERINGCORE_EXPORT vtkHierarchicalPolyDataMapper : public vtkCompositePolyDataMapper
+class VTK_RENDERING_EXPORT vtkHierarchicalPolyDataMapper : public vtkCompositePolyDataMapper 
 {
 
 public:

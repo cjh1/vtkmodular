@@ -26,10 +26,9 @@
 #ifndef __vtkBYUWriter_h
 #define __vtkBYUWriter_h
 
-#include "vtkIOGeometryExport.h" // For export macro
 #include "vtkPolyDataWriter.h"
 
-class VTKIOGEOMETRY_EXPORT vtkBYUWriter : public vtkPolyDataWriter
+class VTK_IO_EXPORT vtkBYUWriter : public vtkPolyDataWriter
 {
 public:
   static vtkBYUWriter *New();

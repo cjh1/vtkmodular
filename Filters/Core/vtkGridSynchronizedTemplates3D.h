@@ -27,14 +27,13 @@
 #ifndef __vtkGridSynchronizedTemplates3D_h
 #define __vtkGridSynchronizedTemplates3D_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 #include "vtkContourValues.h" // Because it passes all the calls to it
 
 class vtkKitwareContourFilter;
 class vtkStructuredGrid;
 
-class VTKFILTERSCORE_EXPORT vtkGridSynchronizedTemplates3D : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkGridSynchronizedTemplates3D : public vtkPolyDataAlgorithm
 {
 public:
   static vtkGridSynchronizedTemplates3D *New();

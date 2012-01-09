@@ -41,7 +41,6 @@
 #ifndef __vtkRenderWindowInteractor_h
 #define __vtkRenderWindowInteractor_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkTimerIdMap;
@@ -59,7 +58,7 @@ class vtkRenderer;
 class vtkObserverMediator;
 class vtkInteractorEventRecorder;
 
-class VTKRENDERINGCORE_EXPORT vtkRenderWindowInteractor : public vtkObject
+class VTK_RENDERING_EXPORT vtkRenderWindowInteractor : public vtkObject
 {
   //BTX
   friend class vtkInteractorEventRecorder;

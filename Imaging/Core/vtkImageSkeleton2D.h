@@ -29,10 +29,9 @@
 #ifndef __vtkImageSkeleton2D_h
 #define __vtkImageSkeleton2D_h
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkImageIterateFilter.h"
 
-class VTKIMAGINGCORE_EXPORT vtkImageSkeleton2D : public vtkImageIterateFilter
+class VTK_IMAGING_EXPORT vtkImageSkeleton2D : public vtkImageIterateFilter
 {
 public:
   static vtkImageSkeleton2D *New();

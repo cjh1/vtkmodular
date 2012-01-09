@@ -23,10 +23,9 @@
 #ifndef __vtkImageWriter_h
 #define __vtkImageWriter_h
 
-#include "vtkIOImageExport.h" // For export macro
 #include "vtkImageAlgorithm.h"
 
-class VTKIOIMAGE_EXPORT vtkImageWriter : public vtkImageAlgorithm
+class VTK_IO_EXPORT vtkImageWriter : public vtkImageAlgorithm
 {
 public:
   static vtkImageWriter *New();
@@ -94,7 +93,7 @@ protected:
                               ofstream *file);
   virtual void WriteFile(ofstream *file, vtkImageData *data,
                          int extent[6], int wExtent[6]);
-  virtual void WriteFileHeader(ofstream *, vtkImageData *, int wExt[6]) {};
+  virtual void WriteFileHeader(ofstream *, vtkImageData *, int [6]) {};
   virtual void WriteFileTrailer(ofstream *, vtkImageData *) {};
   
   // This is called by the superclass.

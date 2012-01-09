@@ -41,12 +41,11 @@
 #ifndef __vtkArrayWeights_h
 #define __vtkArrayWeights_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkSystemIncludes.h"
 
 class vtkArrayWeightsStorage; // pimpl
 
-class VTKCOMMONCORE_EXPORT vtkArrayWeights
+class VTK_COMMON_EXPORT vtkArrayWeights
 {
 public:
   // Description:

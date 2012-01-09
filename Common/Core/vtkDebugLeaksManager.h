@@ -22,10 +22,9 @@
 #ifndef __vtkDebugLeaksManager_h
 #define __vtkDebugLeaksManager_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkSystemIncludes.h"
 
-class VTKCOMMONCORE_EXPORT vtkDebugLeaksManager
+class VTK_COMMON_EXPORT vtkDebugLeaksManager
 {
 public:
   vtkDebugLeaksManager();

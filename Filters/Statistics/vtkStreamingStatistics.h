@@ -31,7 +31,6 @@ PURPOSE.  See the above copyright notice for more information.
 #ifndef __vtkStreamingStatistics_h
 #define __vtkStreamingStatistics_h
 
-#include "vtkFiltersStatisticsExport.h" // For export macro
 #include "vtkTableAlgorithm.h"
 
 class vtkDataObjectCollection;
@@ -39,7 +38,7 @@ class vtkMultiBlockDataSet;
 class vtkStatisticsAlgorithm;
 class vtkTable;
 
-class VTKFILTERSSTATISTICS_EXPORT vtkStreamingStatistics : public vtkTableAlgorithm
+class VTK_INFOVIS_EXPORT vtkStreamingStatistics : public vtkTableAlgorithm
 {
 public:
   vtkTypeMacro(vtkStreamingStatistics, vtkTableAlgorithm);

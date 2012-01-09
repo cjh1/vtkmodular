@@ -23,10 +23,9 @@
 #ifndef __vtkDummyGPUInfoList_h
 #define __vtkDummyGPUInfoList_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkGPUInfoList.h"
 
-class VTKRENDERINGCORE_EXPORT vtkDummyGPUInfoList : public vtkGPUInfoList
+class VTK_RENDERING_EXPORT vtkDummyGPUInfoList : public vtkGPUInfoList
 {
 public:
   static vtkDummyGPUInfoList* New();

@@ -21,10 +21,9 @@
 #ifndef __vtkStructuredGridOutlineFilter_h
 #define __vtkStructuredGridOutlineFilter_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
-class VTKFILTERSCORE_EXPORT vtkStructuredGridOutlineFilter : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkStructuredGridOutlineFilter : public vtkPolyDataAlgorithm
 {
 public:
   static vtkStructuredGridOutlineFilter *New();

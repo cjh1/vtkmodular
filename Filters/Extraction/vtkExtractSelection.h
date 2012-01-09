@@ -28,7 +28,6 @@
 #ifndef __vtkExtractSelection_h
 #define __vtkExtractSelection_h
 
-#include "vtkFiltersExtractionExport.h" // For export macro
 #include "vtkExtractSelectionBase.h"
 
 class vtkExtractSelectedBlock;
@@ -41,7 +40,7 @@ class vtkProbeSelectedLocations;
 class vtkSelection;
 class vtkSelectionNode;
 
-class VTKFILTERSEXTRACTION_EXPORT vtkExtractSelection : public vtkExtractSelectionBase
+class VTK_GRAPHICS_EXPORT vtkExtractSelection : public vtkExtractSelectionBase
 {
 public:
   static vtkExtractSelection *New();

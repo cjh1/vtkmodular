@@ -52,7 +52,6 @@ statement of authorship are reproduced on all copies.
 // vtkDataSetToUnstructuredGridFilter vtkDataSet vtkStreamingTessellator
 // vtkDataSetEdgeSubdivisionCriterion
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkUnstructuredGridAlgorithm.h"
 
 class vtkDataArray;
@@ -64,7 +63,7 @@ class vtkStreamingTessellator;
 class vtkEdgeSubdivisionCriterion;
 class vtkUnstructuredGrid;
 
-class VTKFILTERSGENERAL_EXPORT vtkTessellatorFilter : public vtkUnstructuredGridAlgorithm
+class VTK_GRAPHICS_EXPORT vtkTessellatorFilter : public vtkUnstructuredGridAlgorithm
 {
 public:
   vtkTypeMacro(vtkTessellatorFilter,vtkUnstructuredGridAlgorithm);

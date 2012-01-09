@@ -30,10 +30,9 @@
 #ifndef __vtkPointPicker_h
 #define __vtkPointPicker_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkPicker.h"
 
-class VTKRENDERINGCORE_EXPORT vtkPointPicker : public vtkPicker
+class VTK_RENDERING_EXPORT vtkPointPicker : public vtkPicker
 {
 public:
   static vtkPointPicker *New();

@@ -29,10 +29,9 @@
 #ifndef __vtkParametricEnneper_h
 #define __vtkParametricEnneper_h
 
-#include "vtkCommonComputationalGeometryExport.h" // For export macro
 #include "vtkParametricFunction.h"
 
-class VTKCOMMONCOMPUTATIONALGEOMETRY_EXPORT vtkParametricEnneper : public vtkParametricFunction
+class VTK_COMMON_EXPORT vtkParametricEnneper : public vtkParametricFunction
 {
 public:
 

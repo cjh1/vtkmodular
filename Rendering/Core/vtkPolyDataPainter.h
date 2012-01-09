@@ -41,14 +41,13 @@
 #ifndef __vtkPolyDataPainter_h
 #define __vtkPolyDataPainter_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkPainter.h"
 
 class vtkInformationIntegerKey;
 class vtkInformationObjectBaseKey;
 class vtkPolyData;
 
-class VTKRENDERINGCORE_EXPORT vtkPolyDataPainter : public vtkPainter
+class VTK_RENDERING_EXPORT vtkPolyDataPainter : public vtkPainter
 {
 public:
   vtkTypeMacro(vtkPolyDataPainter, vtkPainter);

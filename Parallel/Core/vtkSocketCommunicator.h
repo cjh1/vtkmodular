@@ -31,7 +31,6 @@
 #ifndef __vtkSocketCommunicator_h
 #define __vtkSocketCommunicator_h
 
-#include "vtkParallelCoreExport.h" // For export macro
 #include "vtkCommunicator.h"
 
 #include "vtkByteSwap.h" // Needed for vtkSwap macros
@@ -51,7 +50,7 @@
 class vtkClientSocket;
 class vtkServerSocket;
 
-class VTKPARALLELCORE_EXPORT vtkSocketCommunicator : public vtkCommunicator
+class VTK_PARALLEL_EXPORT vtkSocketCommunicator : public vtkCommunicator
 {
 public:
   static vtkSocketCommunicator *New();
@@ -191,6 +190,25 @@ public:
   // is invalid if the socket is not connected.
   vtkGetMacro(IsServer, int);
 
+  // Description:
+  // Uniquely identifies the version of this class.  If the versions match,
+  // then the socket communicators should be compatible.
+  static int GetVersion();
+
+  // Description:
+  // This flag is cleared before vtkCommand::WrongTagEvent is fired when ever a
+  // message with mismatched tag is received. If the handler wants the message
+  // to be buffered for later use, it should set this flag to true. In which
+  // case the vtkSocketCommunicator will  buffer the messsage and it will be
+  // automatically processed the next time one does a ReceiveTagged() with a
+  // matching tag.
+  void BufferCurrentMessage()
+    { this->BufferMessage = true; }
+
+  // Description:
+  // Returns true if there are any messages in the receive buffer.
+  bool HasBufferredMessages();
+
 //BTX
 protected:
 
@@ -216,12 +234,19 @@ protected:
                     const char* logName);
   int ReceivePartialTagged(void* data, int wordSize, int numWords, int tag,
                     const char* logName);
+
+  int ReceivedTaggedFromBuffer(
+    void* data, int wordSize, int numWords, int tag, const char* logName);
   
+  // Description:
+  // Fix byte order for received data.
+  void FixByteOrder(void* data, int wordSize, int numWords);
+
   // Internal utility methods.
   void LogTagged(const char* name, const void* data, int wordSize, int numWords,
                  int tag, const char* logName);
   int CheckForErrorInternal(int id);
-
+  bool BufferMessage;
 private:
   vtkSocketCommunicator(const vtkSocketCommunicator&);  // Not implemented.
   void operator=(const vtkSocketCommunicator&);  // Not implemented.
@@ -240,10 +265,10 @@ private:
   // enough since we split messages > VTK_INT_MAX.
   int TagMessageLength;
 
-  // Description:
-  // Uniquely identifies the version of this class.  If the versions match,
-  // then the socket communicators should be compatible.
-  static int GetVersion();
+  //  Buffer to save messages received with different tag than requested.
+  class vtkMessageBuffer;
+  vtkMessageBuffer* ReceivedMessageBuffer;
+  
 //ETX
 };
 

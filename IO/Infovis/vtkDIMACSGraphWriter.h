@@ -45,12 +45,11 @@
 #ifndef __vtkDIMACSGraphWriter_h
 #define __vtkDIMACSGraphWriter_h
 
-#include "vtkIOInfovisExport.h" // For export macro
 #include "vtkDataWriter.h"
 
 class vtkGraph;
 
-class VTKIOINFOVIS_EXPORT vtkDIMACSGraphWriter : public vtkDataWriter
+class VTK_INFOVIS_EXPORT vtkDIMACSGraphWriter : public vtkDataWriter
 {
 public:
   static vtkDIMACSGraphWriter *New();

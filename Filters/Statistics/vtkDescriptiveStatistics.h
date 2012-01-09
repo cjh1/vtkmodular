@@ -45,7 +45,6 @@ PURPOSE.  See the above copyright notice for more information.
 #ifndef __vtkDescriptiveStatistics_h
 #define __vtkDescriptiveStatistics_h
 
-#include "vtkFiltersStatisticsExport.h" // For export macro
 #include "vtkStatisticsAlgorithm.h"
 
 class vtkMultiBlockDataSet;
@@ -53,7 +52,7 @@ class vtkStringArray;
 class vtkTable;
 class vtkVariant;
 
-class VTKFILTERSSTATISTICS_EXPORT vtkDescriptiveStatistics : public vtkStatisticsAlgorithm
+class VTK_INFOVIS_EXPORT vtkDescriptiveStatistics : public vtkStatisticsAlgorithm
 {
 public:
   vtkTypeMacro(vtkDescriptiveStatistics, vtkStatisticsAlgorithm);

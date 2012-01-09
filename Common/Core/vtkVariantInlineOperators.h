@@ -1,4 +1,3 @@
-#include "vtkCommonCoreExport.h" // For export macro
 #include <climits>
 
 // ----------------------------------------------------------------------

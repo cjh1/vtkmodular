@@ -64,10 +64,9 @@
 #ifndef __vtkAbstractInterpolatedVelocityField_h
 #define __vtkAbstractInterpolatedVelocityField_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkFunctionSet.h"
 //BTX
-#include <vtkstd/vector> // STL Header; Required for vector
+#include <vector> // STL Header; Required for vector
 //ETX
 
 class vtkDataSet;
@@ -78,7 +77,7 @@ class vtkPointData;
 class vtkGenericCell;
 class vtkAbstractInterpolatedVelocityFieldDataSetsType;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkAbstractInterpolatedVelocityField : public vtkFunctionSet
+class VTK_FILTERING_EXPORT vtkAbstractInterpolatedVelocityField : public vtkFunctionSet
 {
 public:
   vtkTypeMacro( vtkAbstractInterpolatedVelocityField, vtkFunctionSet );
@@ -224,7 +223,7 @@ private:
 };
 
 //BTX
-typedef vtkstd::vector< vtkDataSet * > DataSetsTypeBase;
+typedef std::vector< vtkDataSet * > DataSetsTypeBase;
 class   vtkAbstractInterpolatedVelocityFieldDataSetsType: public DataSetsTypeBase { };
 //ETX
 

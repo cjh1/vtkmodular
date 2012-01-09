@@ -42,13 +42,12 @@
 #ifndef __vtkProcessGroup_h
 #define __vtkProcessGroup_h
 
-#include "vtkParallelCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkMultiProcessController;
 class vtkCommunicator;
 
-class VTKPARALLELCORE_EXPORT vtkProcessGroup : public vtkObject
+class VTK_PARALLEL_EXPORT vtkProcessGroup : public vtkObject
 {
 public:
   vtkTypeMacro(vtkProcessGroup, vtkObject);

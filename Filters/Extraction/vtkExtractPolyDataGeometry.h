@@ -35,12 +35,11 @@
 #ifndef __vtkExtractPolyDataGeometry_h
 #define __vtkExtractPolyDataGeometry_h
 
-#include "vtkFiltersExtractionExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
 class vtkImplicitFunction;
 
-class VTKFILTERSEXTRACTION_EXPORT vtkExtractPolyDataGeometry : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkExtractPolyDataGeometry : public vtkPolyDataAlgorithm
 {
 public:
   vtkTypeMacro(vtkExtractPolyDataGeometry,vtkPolyDataAlgorithm);

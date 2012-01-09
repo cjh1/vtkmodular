@@ -29,11 +29,10 @@
 #ifndef __vtkFrustumSource_h
 #define __vtkFrustumSource_h
 
-#include "vtkFiltersSourcesExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 class vtkPlanes;
 
-class VTKFILTERSSOURCES_EXPORT vtkFrustumSource : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkFrustumSource : public vtkPolyDataAlgorithm 
 {
 public:
   static vtkFrustumSource *New();

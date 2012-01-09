@@ -22,10 +22,9 @@
 #ifndef __vtkShaderCodeLibrary_h
 #define __vtkShaderCodeLibrary_h
 
-#include "vtkIOGeometryExport.h" // For export macro
 #include "vtkObject.h"
 
-class VTKIOGEOMETRY_EXPORT vtkShaderCodeLibrary : public vtkObject
+class VTK_IO_EXPORT vtkShaderCodeLibrary : public vtkObject
 {
 public:
   static vtkShaderCodeLibrary* New();

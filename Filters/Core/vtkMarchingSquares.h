@@ -36,7 +36,6 @@
 #ifndef __vtkMarchingSquares_h
 #define __vtkMarchingSquares_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
 #include "vtkContourValues.h" // Passes calls to vtkContourValues
@@ -44,7 +43,7 @@
 class vtkImageData;
 class vtkIncrementalPointLocator;
 
-class VTKFILTERSCORE_EXPORT vtkMarchingSquares : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkMarchingSquares : public vtkPolyDataAlgorithm
 {
 public:
   static vtkMarchingSquares *New();

@@ -23,12 +23,11 @@
 #ifndef __vtkStructuredGridWriter_h
 #define __vtkStructuredGridWriter_h
 
-#include "vtkIOGeometryExport.h" // For export macro
 #include "vtkDataWriter.h"
 
 class vtkStructuredGrid;
 
-class VTKIOGEOMETRY_EXPORT vtkStructuredGridWriter : public vtkDataWriter
+class VTK_IO_EXPORT vtkStructuredGridWriter : public vtkDataWriter
 {
 public:
   static vtkStructuredGridWriter *New();

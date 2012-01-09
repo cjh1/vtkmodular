@@ -28,12 +28,11 @@
 #ifndef __vtkUnstructuredGridReader_h
 #define __vtkUnstructuredGridReader_h
 
-#include "vtkIOGeometryExport.h" // For export macro
 #include "vtkDataReader.h"
 
 class vtkUnstructuredGrid;
 
-class VTKIOGEOMETRY_EXPORT vtkUnstructuredGridReader : public vtkDataReader
+class VTK_IO_EXPORT vtkUnstructuredGridReader : public vtkDataReader
 {
 public:
   static vtkUnstructuredGridReader *New();

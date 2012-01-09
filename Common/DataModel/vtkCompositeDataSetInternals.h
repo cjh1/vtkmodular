@@ -18,12 +18,11 @@
 #ifndef __vtkCompositeDataSetInternals_h
 #define __vtkCompositeDataSetInternals_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkDataObject.h"
 #include "vtkInformation.h"
 #include "vtkSmartPointer.h"
 
-#include <vtkstd/vector>
+#include <vector>
 
 //-----------------------------------------------------------------------------
 // Item in the VectorOfDataObjects.
@@ -43,7 +42,7 @@ struct vtkCompositeDataSetItem
 class vtkCompositeDataSetInternals
 {
 public:
-  typedef vtkstd::vector<vtkCompositeDataSetItem> VectorOfDataObjects;
+  typedef std::vector<vtkCompositeDataSetItem> VectorOfDataObjects;
   typedef VectorOfDataObjects::iterator Iterator;
   typedef VectorOfDataObjects::reverse_iterator ReverseIterator;
 
@@ -52,7 +51,7 @@ public:
 
 
 //-----------------------------------------------------------------------------
-class vtkCompositeDataSetIndex : public vtkstd::vector<unsigned int>
+class vtkCompositeDataSetIndex : public std::vector<unsigned int>
 {
   int IsValid()
     {

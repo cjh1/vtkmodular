@@ -23,10 +23,9 @@
 #ifndef __vtkWarpVector_h
 #define __vtkWarpVector_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkPointSetAlgorithm.h"
 
-class VTKFILTERSGENERAL_EXPORT vtkWarpVector : public vtkPointSetAlgorithm
+class VTK_GRAPHICS_EXPORT vtkWarpVector : public vtkPointSetAlgorithm
 {
 public:
   static vtkWarpVector *New();
@@ -38,11 +37,18 @@ public:
   vtkSetMacro(ScaleFactor,double);
   vtkGetMacro(ScaleFactor,double);
 
+  int FillInputPortInformation(int port, vtkInformation *info);
+
 protected:
   vtkWarpVector();
   ~vtkWarpVector();
 
-  int RequestData(vtkInformation *, vtkInformationVector **, vtkInformationVector *);
+  int RequestDataObject(vtkInformation *request,
+                        vtkInformationVector **inputVector,
+                        vtkInformationVector *outputVector);
+  int RequestData(vtkInformation *,
+                  vtkInformationVector **,
+                  vtkInformationVector *);
   double ScaleFactor;
 
 private:

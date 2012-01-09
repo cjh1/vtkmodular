@@ -44,12 +44,11 @@
 #ifndef __vtkPainterDeviceAdapter_h
 #define __vtkPainterDeviceAdapter_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkObject.h"
 #include "vtkDataArray.h" // needed for inline functions.
 class vtkRenderer;
 
-class VTKRENDERINGCORE_EXPORT vtkPainterDeviceAdapter : public vtkObject
+class VTK_RENDERING_EXPORT vtkPainterDeviceAdapter : public vtkObject
 {
 public:
   static vtkPainterDeviceAdapter* New();

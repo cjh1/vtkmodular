@@ -19,6 +19,7 @@
 #include "vtkNew.h"
 #include "vtkContext2D.h"
 #include "vtkPen.h"
+#include "vtkChart.h"
 #include "vtkTextProperty.h"
 #include "vtkVector.h"
 #include "vtkFloatArray.h"
@@ -387,6 +388,7 @@ void vtkAxis::SetMinimum(double minimum)
   this->UsingNiceMinMax = false;
   this->TickMarksDirty = true;
   this->Modified();
+  this->InvokeEvent(vtkChart::UpdateRange);
 }
 
 //-----------------------------------------------------------------------------
@@ -415,6 +417,7 @@ void vtkAxis::SetMaximum(double maximum)
   this->UsingNiceMinMax = false;
   this->TickMarksDirty = true;
   this->Modified();
+  this->InvokeEvent(vtkChart::UpdateRange);
 }
 
 //-----------------------------------------------------------------------------
@@ -436,6 +439,20 @@ void vtkAxis::SetRange(double minimum, double maximum)
 {
   this->SetMinimum(minimum);
   this->SetMaximum(maximum);
+}
+
+//-----------------------------------------------------------------------------
+void vtkAxis::SetRange(double *range)
+{
+  this->SetMinimum(range[0]);
+  this->SetMaximum(range[1]);
+}
+
+//-----------------------------------------------------------------------------
+void vtkAxis::GetRange(double *range)
+{
+  range[0] = this->Minimum;
+  range[1] = this->Maximum;
 }
 
 //-----------------------------------------------------------------------------
@@ -484,8 +501,10 @@ void vtkAxis::AutoScale()
   // Calculate the min and max, set the number of ticks and the tick spacing
   if (this->TickLabelAlgorithm == vtkAxis::TICK_SIMPLE)
     {
-    this->TickInterval = this->CalculateNiceMinMax(this->Minimum,
-                                                   this->Maximum);
+    double min = this->Minimum;
+    double max = this->Maximum;
+    this->TickInterval = this->CalculateNiceMinMax(min, max);
+    this->SetRange(min, max);
     }
   this->UsingNiceMinMax = true;
   this->GenerateTickLabels(this->Minimum, this->Maximum);
@@ -848,7 +867,7 @@ void vtkAxis::GenerateTickLabels(double min, double max)
       if (this->TickLabelAlgorithm == vtkAxis::TICK_SIMPLE)
         {
         vtksys_ios::ostringstream ostr;
-        ostr.imbue(vtkstd::locale::classic());
+        ostr.imbue(std::locale::classic());
         if (this->Notation > 0)
           {
           ostr.precision(this->Precision);
@@ -889,7 +908,7 @@ void vtkAxis::GenerateTickLabels()
       }
     // Now create a label for the tick position
     vtksys_ios::ostringstream ostr;
-    ostr.imbue(vtkstd::locale::classic());
+    ostr.imbue(std::locale::classic());
     if (this->Notation > 0)
       {
       ostr.precision(this->Precision);
@@ -921,7 +940,7 @@ void vtkAxis::GenerateTickLabels()
 void vtkAxis::GenerateLabelFormat(int notation, double n)
 {
   vtksys_ios::ostringstream ostr;
-  ostr.imbue(vtkstd::locale::classic());
+  ostr.imbue(std::locale::classic());
 
   switch(notation)
     {
@@ -1251,7 +1270,7 @@ void vtkAxis::GenerateLogScaleTickMarks(int order,
 
     // Now create a label for the tick position
     vtksys_ios::ostringstream ostr;
-    ostr.imbue(vtkstd::locale::classic());
+    ostr.imbue(std::locale::classic());
     if (this->Notation > 0)
       {
       ostr.precision(this->Precision);

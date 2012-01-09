@@ -20,13 +20,12 @@
 #ifndef __vtkOpenGLRenderer_h
 #define __vtkOpenGLRenderer_h
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkRenderer.h"
 
 class vtkOpenGLRendererLayerList; // Pimpl
 class vtkShaderProgram2;
 
-class VTKRENDERINGOPENGL_EXPORT vtkOpenGLRenderer : public vtkRenderer
+class VTK_RENDERING_EXPORT vtkOpenGLRenderer : public vtkRenderer
 {
 protected:
   int NumberOfLightsBound;

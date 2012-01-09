@@ -21,10 +21,9 @@
 #ifndef __vtkThresholdGraph_h
 #define __vtkThresholdGraph_h
 
-#include "vtkInfovisCoreExport.h" // For export macro
 #include "vtkGraphAlgorithm.h"
 
-class VTKINFOVISCORE_EXPORT vtkThresholdGraph : public vtkGraphAlgorithm
+class VTK_INFOVIS_EXPORT vtkThresholdGraph : public vtkGraphAlgorithm
 {
 public:
 

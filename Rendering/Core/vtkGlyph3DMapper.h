@@ -26,12 +26,11 @@
 #ifndef __vtkGlyph3DMapper_h
 #define __vtkGlyph3DMapper_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkMapper.h"
 #include "vtkGlyph3D.h" // for the constants (VTK_SCALE_BY_SCALAR, ...).
 #include "vtkWeakPointer.h" // needed for vtkWeakPointer.
 
-class VTKRENDERINGCORE_EXPORT vtkGlyph3DMapper : public vtkMapper
+class VTK_RENDERING_EXPORT vtkGlyph3DMapper : public vtkMapper
 {
 public:
   static vtkGlyph3DMapper* New();

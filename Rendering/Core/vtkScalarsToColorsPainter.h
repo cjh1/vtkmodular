@@ -22,7 +22,6 @@
 #ifndef __vtkScalarsToColorsPainter_h
 #define __vtkScalarsToColorsPainter_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkPainter.h"
 #include "vtkSmartPointer.h" // needed for vtkSmartPointer.
 class vtkDataArray;
@@ -34,7 +33,7 @@ class vtkInformationStringKey;
 class vtkDataSet;
 class vtkScalarsToColors;
 
-class VTKRENDERINGCORE_EXPORT vtkScalarsToColorsPainter : public vtkPainter
+class VTK_RENDERING_EXPORT vtkScalarsToColorsPainter : public vtkPainter
 {
 public:
   static vtkScalarsToColorsPainter* New();

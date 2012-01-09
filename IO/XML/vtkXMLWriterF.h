@@ -26,7 +26,6 @@
 #endif
 
 /* Calls will be forwarded to the C interface.  */
-#include "vtkIOXMLExport.h" // For export macro
 #include "vtkXMLWriterC.h"
 
 #include <stdio.h>  /* fprintf */

@@ -35,12 +35,11 @@
 #ifndef __vtkPriorityQueue_h
 #define __vtkPriorityQueue_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 #include "vtkIdTypeArray.h" // Needed for inline methods
 
-class VTKCOMMONCORE_EXPORT vtkPriorityQueue : public vtkObject
+class VTK_COMMON_EXPORT vtkPriorityQueue : public vtkObject
 {
 public:
   //BTX

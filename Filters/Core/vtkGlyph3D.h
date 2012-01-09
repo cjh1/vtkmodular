@@ -72,7 +72,6 @@
 #ifndef __vtkGlyph3D_h
 #define __vtkGlyph3D_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
 #define VTK_SCALE_BY_SCALAR 0
@@ -94,7 +93,7 @@
 
 class vtkTransform;
 
-class VTKFILTERSCORE_EXPORT vtkGlyph3D : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkGlyph3D : public vtkPolyDataAlgorithm
 {
 public:
   vtkTypeMacro(vtkGlyph3D,vtkPolyDataAlgorithm);

@@ -23,10 +23,9 @@
 #ifndef __vtkJPEGReader_h
 #define __vtkJPEGReader_h
 
-#include "vtkIOImageExport.h" // For export macro
 #include "vtkImageReader2.h"
 
-class VTKIOIMAGE_EXPORT vtkJPEGReader : public vtkImageReader2
+class VTK_IO_EXPORT vtkJPEGReader : public vtkImageReader2
 {
 public:
   static vtkJPEGReader *New();

@@ -57,12 +57,11 @@
 #ifndef __vtkArrayExtents_h
 #define __vtkArrayExtents_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkSystemIncludes.h"
 #include "vtkArrayRange.h"
 #include <vector> // STL Header
 
-class VTKCOMMONCORE_EXPORT vtkArrayExtents
+class VTK_COMMON_EXPORT vtkArrayExtents
 {
 public:
   typedef vtkArrayCoordinates::DimensionT DimensionT;
@@ -198,7 +197,7 @@ public:
   // different number of dimensions.
   bool Contains(const vtkArrayCoordinates& coordinates) const;
 
-  VTKCOMMONCORE_EXPORT friend ostream& operator<<(
+  VTK_COMMON_EXPORT friend ostream& operator<<(
     ostream& stream, const vtkArrayExtents& rhs);
 
 private:

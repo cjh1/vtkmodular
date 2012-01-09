@@ -23,13 +23,12 @@
 #ifndef __vtkInformationVector_h
 #define __vtkInformationVector_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkInformation;
 class vtkInformationVectorInternals;
 
-class VTKCOMMONCORE_EXPORT vtkInformationVector : public vtkObject
+class VTK_COMMON_EXPORT vtkInformationVector : public vtkObject
 {
 public:
   static vtkInformationVector *New();

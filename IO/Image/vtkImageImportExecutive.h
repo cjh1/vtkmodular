@@ -19,10 +19,9 @@
 #ifndef __vtkImageImportExecutive_h
 #define __vtkImageImportExecutive_h
 
-#include "vtkIOImageExport.h" // For export macro
 #include "vtkStreamingDemandDrivenPipeline.h"
 
-class VTKIOIMAGE_EXPORT vtkImageImportExecutive :
+class VTK_IMAGING_EXPORT vtkImageImportExecutive : 
   public vtkStreamingDemandDrivenPipeline
 {
 public:

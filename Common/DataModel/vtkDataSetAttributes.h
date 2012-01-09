@@ -41,12 +41,11 @@
 #ifndef __vtkDataSetAttributes_h
 #define __vtkDataSetAttributes_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkFieldData.h"
 
 class vtkLookupTable;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkDataSetAttributes : public vtkFieldData
+class VTK_FILTERING_EXPORT vtkDataSetAttributes : public vtkFieldData
 {
 public:
   // Description:
@@ -602,7 +601,7 @@ public:
   // operations on fields. For example, vtkAppendFilter uses it to 
   // determine which attributes the input datasets share in common.
   class vtkInternalComponentNames;
-  class VTKCOMMONDATAMODEL_EXPORT FieldList
+  class VTK_FILTERING_EXPORT FieldList
   {
   public:
     FieldList(int numInputs);

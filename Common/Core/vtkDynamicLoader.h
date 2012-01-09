@@ -22,7 +22,6 @@
 #ifndef __vtkDynamicLoader_h
 #define __vtkDynamicLoader_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkObject.h"
 #include <vtksys/DynamicLoader.hxx>
 
@@ -32,7 +31,7 @@ typedef vtksys::DynamicLoader::LibraryHandle vtkLibHandle;
 typedef vtksys::DynamicLoader::SymbolPointer vtkSymbolPointer;
 //ETX
 
-class VTKCOMMONCORE_EXPORT vtkDynamicLoader : public vtkObject
+class VTK_COMMON_EXPORT vtkDynamicLoader : public vtkObject
 {
 public:
   static vtkDynamicLoader* New();

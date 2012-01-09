@@ -40,7 +40,6 @@
 #ifndef __vtkPainter_h
 #define __vtkPainter_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkObject.h"
 #include "vtkWeakPointer.h" // needed for vtkWeakPointer.
 
@@ -55,7 +54,7 @@ class vtkRenderer;
 class vtkTimerLog;
 class vtkWindow;
 
-class VTKRENDERINGCORE_EXPORT vtkPainter : public vtkObject
+class VTK_RENDERING_EXPORT vtkPainter : public vtkObject
 {
 public:
   vtkTypeMacro(vtkPainter, vtkObject);

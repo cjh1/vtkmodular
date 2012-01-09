@@ -28,7 +28,6 @@
 #ifndef __vtkCollection_h
 #define __vtkCollection_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 //BTX - begin tcl exclude
@@ -44,7 +43,7 @@ typedef void * vtkCollectionSimpleIterator;
 
 class vtkCollectionIterator;
 
-class VTKCOMMONCORE_EXPORT vtkCollection : public vtkObject
+class VTK_COMMON_EXPORT vtkCollection : public vtkObject
 {
 public:
   vtkTypeMacro(vtkCollection,vtkObject);

@@ -28,11 +28,10 @@
 #ifndef __vtkDataSetGradient_h
 #define __vtkDataSetGradient_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkDataSetAlgorithm.h"
 
 
-class VTKFILTERSGENERAL_EXPORT vtkDataSetGradient : public vtkDataSetAlgorithm
+class VTK_GRAPHICS_EXPORT vtkDataSetGradient : public vtkDataSetAlgorithm
 {
  public:
   static vtkDataSetGradient* New();

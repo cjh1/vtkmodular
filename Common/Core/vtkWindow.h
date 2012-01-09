@@ -23,12 +23,11 @@
 #ifndef __vtkWindow_h
 #define __vtkWindow_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkUnsignedCharArray;
 
-class VTKCOMMONCORE_EXPORT vtkWindow : public vtkObject
+class VTK_COMMON_EXPORT vtkWindow : public vtkObject
 {
 public:
   vtkTypeMacro(vtkWindow,vtkObject);

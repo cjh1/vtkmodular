@@ -21,11 +21,10 @@
 #ifndef __vtkLevelIdScalars_h
 #define __vtkLevelIdScalars_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkHierarchicalBoxDataSetAlgorithm.h"
 
 class vtkUniformGrid;
-class VTKFILTERSGENERAL_EXPORT vtkLevelIdScalars : public vtkHierarchicalBoxDataSetAlgorithm
+class VTK_GRAPHICS_EXPORT vtkLevelIdScalars : public vtkHierarchicalBoxDataSetAlgorithm
 {
 public:
   static vtkLevelIdScalars* New();

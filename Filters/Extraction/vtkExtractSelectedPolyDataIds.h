@@ -22,12 +22,11 @@
 #ifndef __vtkExtractSelectedPolyDataIds_h
 #define __vtkExtractSelectedPolyDataIds_h
 
-#include "vtkFiltersExtractionExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
 class vtkSelection;
 
-class VTKFILTERSEXTRACTION_EXPORT vtkExtractSelectedPolyDataIds : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkExtractSelectedPolyDataIds : public vtkPolyDataAlgorithm
 {
 public:
   vtkTypeMacro(vtkExtractSelectedPolyDataIds,vtkPolyDataAlgorithm);

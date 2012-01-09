@@ -24,12 +24,11 @@
 #ifndef __vtkTransformCollection_h
 #define __vtkTransformCollection_h
 
-#include "vtkCommonTransformsExport.h" // For export macro
 #include "vtkCollection.h"
 
 #include "vtkTransform.h" // Needed for inline methods
 
-class VTKCOMMONTRANSFORMS_EXPORT vtkTransformCollection : public vtkCollection
+class VTK_COMMON_EXPORT vtkTransformCollection : public vtkCollection
 {
 public:
   vtkTypeMacro(vtkTransformCollection,vtkCollection);

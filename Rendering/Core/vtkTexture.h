@@ -42,7 +42,6 @@
 #ifndef __vtkTexture_h
 #define __vtkTexture_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkImageAlgorithm.h"
 
 class vtkImageData;
@@ -57,7 +56,7 @@ class vtkTransform;
 #define VTK_TEXTURE_QUALITY_16BIT   16
 #define VTK_TEXTURE_QUALITY_32BIT   32
 
-class VTKRENDERINGCORE_EXPORT vtkTexture : public vtkImageAlgorithm
+class VTK_RENDERING_EXPORT vtkTexture : public vtkImageAlgorithm
 {
 public:
   static vtkTexture *New();

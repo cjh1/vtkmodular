@@ -25,12 +25,11 @@
 #ifndef __vtkGeometricErrorMetric_h
 #define __vtkGeometricErrorMetric_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkGenericSubdivisionErrorMetric.h"
 
 class vtkGenericDataSet;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkGeometricErrorMetric : public vtkGenericSubdivisionErrorMetric
+class VTK_FILTERING_EXPORT vtkGeometricErrorMetric : public vtkGenericSubdivisionErrorMetric
 {
 public:
   // Description:

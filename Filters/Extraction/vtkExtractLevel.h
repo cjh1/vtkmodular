@@ -21,10 +21,9 @@
 #ifndef __vtkExtractLevel_h
 #define __vtkExtractLevel_h
 
-#include "vtkFiltersExtractionExport.h" // For export macro
 #include "vtkHierarchicalBoxDataSetAlgorithm.h"
 
-class VTKFILTERSEXTRACTION_EXPORT vtkExtractLevel : public vtkHierarchicalBoxDataSetAlgorithm
+class VTK_GRAPHICS_EXPORT vtkExtractLevel : public vtkHierarchicalBoxDataSetAlgorithm
 {
 public:
   static vtkExtractLevel* New();

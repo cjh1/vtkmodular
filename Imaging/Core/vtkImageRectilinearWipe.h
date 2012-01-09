@@ -44,7 +44,6 @@
 #ifndef __vtkImageRectilinearWipe_h
 #define __vtkImageRectilinearWipe_h
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkThreadedImageAlgorithm.h"
 
 #define VTK_WIPE_QUAD 0
@@ -55,7 +54,7 @@
 #define VTK_WIPE_UPPER_LEFT 5
 #define VTK_WIPE_UPPER_RIGHT 6
 
-class VTKIMAGINGCORE_EXPORT vtkImageRectilinearWipe : public vtkThreadedImageAlgorithm
+class VTK_IMAGING_EXPORT vtkImageRectilinearWipe : public vtkThreadedImageAlgorithm
 {
 public:
   static vtkImageRectilinearWipe *New();

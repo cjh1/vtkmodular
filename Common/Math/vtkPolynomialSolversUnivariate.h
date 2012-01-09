@@ -46,10 +46,9 @@
 #ifndef __vtkPolynomialSolversUnivariate_h
 #define __vtkPolynomialSolversUnivariate_h
 
-#include "vtkCommonMathExport.h" // For export macro
 #include "vtkObject.h"
 
-class VTKCOMMONMATH_EXPORT vtkPolynomialSolversUnivariate : public vtkObject
+class VTK_COMMON_EXPORT vtkPolynomialSolversUnivariate : public vtkObject
 {
 public:
   static vtkPolynomialSolversUnivariate *New();

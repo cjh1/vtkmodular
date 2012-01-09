@@ -26,13 +26,12 @@
 #ifndef __vtkInformationKey_h
 #define __vtkInformationKey_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkObjectBase.h"
 #include "vtkObject.h" // Need vtkTypeMacro
 
 class vtkInformation;
 
-class VTKCOMMONCORE_EXPORT vtkInformationKey : public vtkObjectBase
+class VTK_COMMON_EXPORT vtkInformationKey : public vtkObjectBase
 {
 public:
   vtkTypeMacro(vtkInformationKey,vtkObjectBase);

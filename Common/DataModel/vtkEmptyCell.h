@@ -20,10 +20,9 @@
 #ifndef __vtkEmptyCell_h
 #define __vtkEmptyCell_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkCell.h"
 
-class VTKCOMMONDATAMODEL_EXPORT vtkEmptyCell : public vtkCell
+class VTK_FILTERING_EXPORT vtkEmptyCell : public vtkCell
 {
 public:
   static vtkEmptyCell *New();

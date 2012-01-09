@@ -28,10 +28,9 @@
 #ifndef __vtkOpaquePass_h
 #define __vtkOpaquePass_h
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkDefaultPass.h"
 
-class VTKRENDERINGOPENGL_EXPORT vtkOpaquePass : public vtkDefaultPass
+class VTK_RENDERING_EXPORT vtkOpaquePass : public vtkDefaultPass
 {
 public:
   static vtkOpaquePass *New();

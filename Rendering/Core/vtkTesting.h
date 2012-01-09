@@ -59,10 +59,9 @@
 #ifndef __vtkTesting_h
 #define __vtkTesting_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkObject.h"
-#include <vtkstd/vector> // STL Header used for argv
-#include <vtkstd/string> // STL Header used for argv
+#include <vector> // STL Header used for argv
+#include <string> // STL Header used for argv
 
 class vtkAlgorithm;
 class vtkRenderWindow;
@@ -71,7 +70,7 @@ class vtkDataArray;
 class vtkDataSet;
 class vtkRenderWindowInteractor;
 
-class VTKRENDERINGCORE_EXPORT vtkTesting : public vtkObject
+class VTK_RENDERING_EXPORT vtkTesting : public vtkObject
 {
 public:
   static vtkTesting *New();
@@ -240,7 +239,7 @@ protected:
   int Verbose;
   
 //BTX
-  vtkstd::vector<vtkstd::string> Args;
+  std::vector<std::string> Args;
 //ETX
   char *DataRoot;
   double StartWallTime;

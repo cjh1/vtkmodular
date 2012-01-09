@@ -21,10 +21,9 @@
 #ifndef __vtkArcSource_h
 #define __vtkArcSource_h
 
-#include "vtkFiltersSourcesExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
-class VTKFILTERSSOURCES_EXPORT vtkArcSource : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkArcSource : public vtkPolyDataAlgorithm 
 {
 public:
   static vtkArcSource *New();

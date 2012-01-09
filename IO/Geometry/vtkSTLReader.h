@@ -32,7 +32,6 @@
 #ifndef __vtkSTLReader_h
 #define __vtkSTLReader_h
 
-#include "vtkIOGeometryExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
 class vtkCellArray;
@@ -40,7 +39,7 @@ class vtkFloatArray;
 class vtkIncrementalPointLocator;
 class vtkPoints;
 
-class VTKIOGEOMETRY_EXPORT vtkSTLReader : public vtkPolyDataAlgorithm
+class VTK_IO_EXPORT vtkSTLReader : public vtkPolyDataAlgorithm 
 {
 public:
   vtkTypeMacro(vtkSTLReader,vtkPolyDataAlgorithm);
@@ -77,14 +76,14 @@ public:
   // default an instance of vtkMergePoints is used.
   void SetLocator(vtkIncrementalPointLocator *locator);
   vtkGetObjectMacro(Locator,vtkIncrementalPointLocator);
-
-  // Description:
-  // Create default locator. Used to create one when none is specified.
-  void CreateDefaultLocator();
       
 protected:
   vtkSTLReader();
   ~vtkSTLReader();
+
+  // Description:
+  // Create default locator. Used to create one when none is specified.
+  vtkIncrementalPointLocator* NewDefaultLocator();
 
   char *FileName;
   int Merging;

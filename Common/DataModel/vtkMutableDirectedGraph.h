@@ -32,14 +32,13 @@
 #ifndef __vtkMutableDirectedGraph_h
 #define __vtkMutableDirectedGraph_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkDirectedGraph.h"
 
 class vtkEdgeListIterator;
 class vtkGraphEdge;
 class vtkVariant;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkMutableDirectedGraph : public vtkDirectedGraph
+class VTK_FILTERING_EXPORT vtkMutableDirectedGraph : public vtkDirectedGraph
 {
 public:
   static vtkMutableDirectedGraph *New();

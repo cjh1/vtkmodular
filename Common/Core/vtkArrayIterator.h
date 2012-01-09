@@ -40,10 +40,9 @@
 #ifndef __vtkArrayIterator_h
 #define __vtkArrayIterator_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkObject.h"
 class vtkAbstractArray;
-class VTKCOMMONCORE_EXPORT vtkArrayIterator : public vtkObject
+class VTK_COMMON_EXPORT vtkArrayIterator : public vtkObject
 {
 public:
   vtkTypeMacro(vtkArrayIterator, vtkObject);

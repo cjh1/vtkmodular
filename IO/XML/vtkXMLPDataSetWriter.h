@@ -26,10 +26,9 @@
 #ifndef __vtkXMLPDataSetWriter_h
 #define __vtkXMLPDataSetWriter_h
 
-#include "vtkIOXMLExport.h" // For export macro
 #include "vtkXMLPDataWriter.h"
 
-class VTKIOXML_EXPORT vtkXMLPDataSetWriter : public vtkXMLPDataWriter
+class VTK_IO_EXPORT vtkXMLPDataSetWriter : public vtkXMLPDataWriter
 {
 public:
   vtkTypeMacro(vtkXMLPDataSetWriter,vtkXMLPDataWriter);

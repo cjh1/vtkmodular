@@ -31,10 +31,9 @@
 #ifndef __vtkMCubesWriter_h
 #define __vtkMCubesWriter_h
 
-#include "vtkIOGeometryExport.h" // For export macro
 #include "vtkPolyDataWriter.h"
 
-class VTKIOGEOMETRY_EXPORT vtkMCubesWriter : public vtkPolyDataWriter
+class VTK_IO_EXPORT vtkMCubesWriter : public vtkPolyDataWriter
 {
 public:
   static vtkMCubesWriter *New();

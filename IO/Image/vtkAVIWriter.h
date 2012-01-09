@@ -23,12 +23,11 @@
 #ifndef __vtkAVIWriter_h
 #define __vtkAVIWriter_h
 
-#include "vtkIOImageExport.h" // For export macro
 #include "vtkGenericMovieWriter.h"
 
 class vtkAVIWriterInternal;
 
-class VTKIOIMAGE_EXPORT vtkAVIWriter : public vtkGenericMovieWriter
+class VTK_IO_EXPORT vtkAVIWriter : public vtkGenericMovieWriter
 {
 public:
   static vtkAVIWriter *New();

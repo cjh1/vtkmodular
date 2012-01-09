@@ -22,13 +22,12 @@
 #ifndef __vtkHedgeHog_h
 #define __vtkHedgeHog_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
 #define VTK_USE_VECTOR 0
 #define VTK_USE_NORMAL 1
 
-class VTKFILTERSCORE_EXPORT vtkHedgeHog : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkHedgeHog : public vtkPolyDataAlgorithm
 {
 public:
   static vtkHedgeHog *New();

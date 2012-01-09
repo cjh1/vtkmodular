@@ -55,7 +55,6 @@
 #ifndef __vtkParallelCoordinatesActor_h
 #define __vtkParallelCoordinatesActor_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkActor2D.h"
 
 class vtkAxisActor2D;
@@ -68,7 +67,7 @@ class vtkTextProperty;
 #define VTK_IV_COLUMN 0
 #define VTK_IV_ROW    1
 
-class VTKRENDERINGCORE_EXPORT vtkParallelCoordinatesActor : public vtkActor2D
+class VTK_RENDERING_EXPORT vtkParallelCoordinatesActor : public vtkActor2D
 {
 public:
   vtkTypeMacro(vtkParallelCoordinatesActor,vtkActor2D);

@@ -100,7 +100,6 @@ using namespace std;
 
 #define MAX_VARS 100
 #define DEFAULT_LAYER_THICKNESS 10
-double PI = 3.141592;
 
 
 //----------------------------------------------------------------------------
@@ -575,13 +574,17 @@ int vtkMPASReader::RequestData(vtkInformation *vtkNotUsed(reqInfo),
 
   // Collect the time step requested
   double* requestedTimeSteps = NULL;
+#ifndef NDEBUG
   int numRequestedTimeSteps = 0;
+#endif
   vtkInformationDoubleVectorKey* timeKey =
     static_cast<vtkInformationDoubleVectorKey*>
     (vtkStreamingDemandDrivenPipeline::UPDATE_TIME_STEPS());
   if (outInfo->Has(timeKey))
     {
+#ifndef NDEBUG
     numRequestedTimeSteps = outInfo->Length(timeKey);
+#endif
     requestedTimeSteps = outInfo->Get(timeKey);
     }
 
@@ -662,7 +665,7 @@ void vtkMPASReader::SetDefaults() {
 
   this->IncludeTopography = false;
   this->DoBugFix = false;
-  this->CenterRad = CenterLon * PI / 180.0;
+  this->CenterRad = CenterLon * vtkMath::DoublePi() / 180.0;
 
   this->PointX = NULL;
   this->PointY = NULL;
@@ -1117,7 +1120,7 @@ void vtkMPASReader::ShiftLonData()
       // need to shift over the point so center is at PI
       if (this->PointX[j] < 0)
         {
-        this->PointX[j] += 2*PI;
+        this->PointX[j] += 2*vtkMath::DoublePi();
         }
       }
     }
@@ -1127,18 +1130,18 @@ void vtkMPASReader::ShiftLonData()
     for (int j = this->PointOffset; j < this->NumberOfPoints + this->PointOffset; j++)
       {
       // need to shift over the point if centerLon dictates
-      if (this->CenterRad < PI)
+      if (this->CenterRad < vtkMath::DoublePi())
         {
-        if (this->PointX[j] > (this->CenterRad + PI))
+        if (this->PointX[j] > (this->CenterRad + vtkMath::DoublePi()))
           {
-          this->PointX[j] = -((2*PI) - this->PointX[j]);
+          this->PointX[j] = -((2*vtkMath::DoublePi()) - this->PointX[j]);
           }
         }
-      else if (this->CenterRad > PI)
+      else if (this->CenterRad > vtkMath::DoublePi())
         {
-        if (this->PointX[j] < (this->CenterRad - PI))
+        if (this->PointX[j] < (this->CenterRad - vtkMath::DoublePi()))
           {
-          this->PointX[j] += 2*PI;
+          this->PointX[j] += 2*vtkMath::DoublePi();
           }
         }
       }
@@ -1161,12 +1164,12 @@ int vtkMPASReader::AddMirrorPoint(int index, double dividerX)
   // add on east
   if (X < dividerX)
     {
-    X += 2*PI;
+    X += 2*vtkMath::DoublePi();
     }
   else
     {
     // add on west
-    X -= 2*PI;
+    X -= 2*vtkMath::DoublePi();
     }
 
   this->PointX[this->CurrentExtraPoint] = X;
@@ -1407,8 +1410,8 @@ void vtkMPASReader::OutputPoints(bool init)
 
     if (ProjectLatLon)
       {
-      x = this->PointX[j] * 180.0 / PI;
-      y = this->PointY[j] * 180.0 / PI;
+      x = this->PointX[j] * 180.0 / vtkMath::DoublePi();
+      y = this->PointY[j] * 180.0 / vtkMath::DoublePi();
       z = 0.0;
       }
     else
@@ -2218,7 +2221,7 @@ void vtkMPASReader::SetCenterLon(int val)
     {
     vtkDebugMacro( << "SetCenterLon: set to " << CenterLon << endl);
     CenterLon = val;
-    this->CenterRad = CenterLon * PI / 180.0;
+    this->CenterRad = CenterLon * vtkMath::DoublePi() / 180.0;
     vtkDebugMacro( << "this->CenterRad set to " << this->CenterRad << endl);
     if (ProjectLatLon)
       {

@@ -37,18 +37,17 @@ PURPOSE.  See the above copyright notice for more information.
 #ifndef __vtkPOrderStatistics_h
 #define __vtkPOrderStatistics_h
 
-#include "vtkFiltersParallelStatisticsExport.h" // For export macro
 #include "vtkOrderStatistics.h"
 
 //BTX
-#include <vtkstd/map> // STL Header
+#include <map> // STL Header
 //ETX
 
 class vtkIdTypeArray;
 class vtkMultiBlockDataSet;
 class vtkMultiProcessController;
 
-class VTKFILTERSPARALLELSTATISTICS_EXPORT vtkPOrderStatistics : public vtkOrderStatistics
+class VTK_INFOVIS_EXPORT vtkPOrderStatistics : public vtkOrderStatistics
 {
  public:
   static vtkPOrderStatistics* New();
@@ -82,11 +81,11 @@ class VTKFILTERSPARALLELSTATISTICS_EXPORT vtkPOrderStatistics : public vtkOrderS
   bool Reduce( vtkIdTypeArray*,
                vtkIdType&,
                char*,
-               vtkstd::map<vtkStdString,vtkIdType>& );
+               std::map<vtkStdString,vtkIdType>& );
 
   // Description:
   // Broadcast reduced histogram to all processes in the case of string inputs
-  bool Broadcast( vtkstd::map<vtkStdString,vtkIdType>&,
+  bool Broadcast( std::map<vtkStdString,vtkIdType>&,
                   vtkIdTypeArray*,
                   vtkStringArray*,
                   vtkIdType );

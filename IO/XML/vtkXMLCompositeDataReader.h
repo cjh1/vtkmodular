@@ -26,7 +26,6 @@
 #ifndef __vtkXMLCompositeDataReader_h
 #define __vtkXMLCompositeDataReader_h
 
-#include "vtkIOXMLExport.h" // For export macro
 #include "vtkXMLReader.h"
 
 class vtkCompositeDataSet;
@@ -36,7 +35,7 @@ class vtkInformationIntegerVectorKey;
 struct vtkXMLCompositeDataReaderInternals;
 //ETX
 
-class VTKIOXML_EXPORT vtkXMLCompositeDataReader : public vtkXMLReader
+class VTK_IO_EXPORT vtkXMLCompositeDataReader : public vtkXMLReader
 {
 public:
   vtkTypeMacro(vtkXMLCompositeDataReader,vtkXMLReader);

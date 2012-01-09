@@ -28,10 +28,9 @@
 #ifndef __vtkReverseSense_h
 #define __vtkReverseSense_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
-class VTKFILTERSCORE_EXPORT vtkReverseSense : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkReverseSense : public vtkPolyDataAlgorithm
 {
 public:
   vtkTypeMacro(vtkReverseSense,vtkPolyDataAlgorithm);

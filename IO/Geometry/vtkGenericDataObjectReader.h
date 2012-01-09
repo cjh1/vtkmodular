@@ -32,7 +32,6 @@
 #ifndef __vtkGenericDataObjectReader_h
 #define __vtkGenericDataObjectReader_h
 
-#include "vtkIOGeometryExport.h" // For export macro
 #include "vtkDataReader.h"
 
 class vtkDataObject;
@@ -45,7 +44,7 @@ class vtkTable;
 class vtkTree;
 class vtkUnstructuredGrid;
 
-class VTKIOGEOMETRY_EXPORT vtkGenericDataObjectReader : public vtkDataReader
+class VTK_IO_EXPORT vtkGenericDataObjectReader : public vtkDataReader
 {
 public:
   static vtkGenericDataObjectReader *New();

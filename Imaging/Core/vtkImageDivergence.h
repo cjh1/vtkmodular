@@ -24,10 +24,9 @@
 #ifndef __vtkImageDivergence_h
 #define __vtkImageDivergence_h
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkThreadedImageAlgorithm.h"
 
-class VTKIMAGINGCORE_EXPORT vtkImageDivergence : public vtkThreadedImageAlgorithm
+class VTK_IMAGING_EXPORT vtkImageDivergence : public vtkThreadedImageAlgorithm
 {
 public:
   static vtkImageDivergence *New();

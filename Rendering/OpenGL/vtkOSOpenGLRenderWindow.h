@@ -26,13 +26,12 @@
 #ifndef __vtkOSOpenGLRenderWindow_h
 #define __vtkOSOpenGLRenderWindow_h
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkOpenGLRenderWindow.h"
 
 class vtkIdList;
 class vtkOSOpenGLRenderWindowInternal;
 
-class VTKRENDERINGOPENGL_EXPORT vtkOSOpenGLRenderWindow : public vtkOpenGLRenderWindow
+class VTK_RENDERING_EXPORT vtkOSOpenGLRenderWindow : public vtkOpenGLRenderWindow
 {
 public:
   static vtkOSOpenGLRenderWindow *New();

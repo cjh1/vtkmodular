@@ -33,10 +33,9 @@
 #ifndef __vtkPNMReader_h
 #define __vtkPNMReader_h
 
-#include "vtkIOImageExport.h" // For export macro
 #include "vtkImageReader.h"
 
-class VTKIOIMAGE_EXPORT vtkPNMReader : public vtkImageReader
+class VTK_IO_EXPORT vtkPNMReader : public vtkImageReader
 {
 public:
   static vtkPNMReader *New();

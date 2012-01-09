@@ -20,12 +20,11 @@
 #ifndef __vtkGLSLShaderDeviceAdapter2_h
 #define __vtkGLSLShaderDeviceAdapter2_h
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkShaderDeviceAdapter2.h"
 
 class vtkShaderProgram2;
 
-class VTKRENDERINGOPENGL_EXPORT vtkGLSLShaderDeviceAdapter2
+class VTK_RENDERING_EXPORT vtkGLSLShaderDeviceAdapter2
   : public vtkShaderDeviceAdapter2
 {
 public:

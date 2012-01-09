@@ -24,7 +24,6 @@
 #ifndef __vtkXMLPStructuredDataReader_h
 #define __vtkXMLPStructuredDataReader_h
 
-#include "vtkIOXMLExport.h" // For export macro
 #include "vtkXMLPDataReader.h"
 
 class vtkExtentSplitter;
@@ -32,7 +31,7 @@ class vtkExtentTranslator;
 //class vtkTableExtentTranslator;
 class vtkXMLStructuredDataReader;
 
-class VTKIOXML_EXPORT vtkXMLPStructuredDataReader : public vtkXMLPDataReader
+class VTK_IO_EXPORT vtkXMLPStructuredDataReader : public vtkXMLPDataReader
 {
 public:
   vtkTypeMacro(vtkXMLPStructuredDataReader,vtkXMLPDataReader);

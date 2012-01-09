@@ -24,10 +24,9 @@
 #define __vtkImageLogarithmicScale_h
 
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkThreadedImageAlgorithm.h"
 
-class VTKIMAGINGCORE_EXPORT vtkImageLogarithmicScale : public vtkThreadedImageAlgorithm
+class VTK_IMAGING_EXPORT vtkImageLogarithmicScale : public vtkThreadedImageAlgorithm
 {
 public:
   static vtkImageLogarithmicScale *New();

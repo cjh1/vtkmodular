@@ -27,14 +27,13 @@
 #ifndef __vtkSynchronizedTemplates2D_h
 #define __vtkSynchronizedTemplates2D_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
 #include "vtkContourValues.h" // Needed for direct access to ContourValues
 
 class vtkImageData;
 
-class VTKFILTERSCORE_EXPORT vtkSynchronizedTemplates2D : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkSynchronizedTemplates2D : public vtkPolyDataAlgorithm
 {
 public:
   static vtkSynchronizedTemplates2D *New();

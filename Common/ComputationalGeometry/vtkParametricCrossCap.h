@@ -29,10 +29,9 @@
 #ifndef __vtkParametricCrossCap_h
 #define __vtkParametricCrossCap_h
 
-#include "vtkCommonComputationalGeometryExport.h" // For export macro
 #include "vtkParametricFunction.h"
 
-class VTKCOMMONCOMPUTATIONALGEOMETRY_EXPORT vtkParametricCrossCap : public vtkParametricFunction
+class VTK_COMMON_EXPORT vtkParametricCrossCap : public vtkParametricFunction
 {
 public:
 

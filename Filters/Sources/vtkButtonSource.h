@@ -42,13 +42,12 @@
 #ifndef __vtkButtonSource_h
 #define __vtkButtonSource_h
 
-#include "vtkFiltersSourcesExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
 #define VTK_TEXTURE_STYLE_FIT_IMAGE    0
 #define VTK_TEXTURE_STYLE_PROPORTIONAL 1
 
-class VTKFILTERSSOURCES_EXPORT vtkButtonSource : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkButtonSource : public vtkPolyDataAlgorithm 
 {
 public:
   void PrintSelf(ostream& os, vtkIndent indent);

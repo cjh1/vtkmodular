@@ -28,12 +28,11 @@
 #ifndef __vtkTableReader_h
 #define __vtkTableReader_h
 
-#include "vtkIOCoreExport.h" // For export macro
 #include "vtkDataReader.h"
 
 class vtkTable;
 
-class VTKIOCORE_EXPORT vtkTableReader : public vtkDataReader
+class VTK_IO_EXPORT vtkTableReader : public vtkDataReader
 {
 public:
   static vtkTableReader *New();

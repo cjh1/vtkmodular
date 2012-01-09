@@ -27,12 +27,11 @@
 #define __vtkImageMapToColors_h
 
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkThreadedImageAlgorithm.h"
 
 class vtkScalarsToColors;
 
-class VTKIMAGINGCORE_EXPORT vtkImageMapToColors : public vtkThreadedImageAlgorithm
+class VTK_IMAGING_EXPORT vtkImageMapToColors : public vtkThreadedImageAlgorithm
 {
 public:
   static vtkImageMapToColors *New();

@@ -31,13 +31,12 @@
 #ifndef __vtkRendererSource_h
 #define __vtkRendererSource_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkAlgorithm.h"
 #include "vtkImageData.h" // makes things a bit easier
 
 class vtkRenderer;
 
-class VTKRENDERINGCORE_EXPORT vtkRendererSource : public vtkAlgorithm
+class VTK_RENDERING_EXPORT vtkRendererSource : public vtkAlgorithm
 {
 public:
   static vtkRendererSource *New();

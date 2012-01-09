@@ -28,10 +28,9 @@
 #ifndef __vtkCylindricalTransform_h
 #define __vtkCylindricalTransform_h
 
-#include "vtkCommonTransformsExport.h" // For export macro
 #include "vtkWarpTransform.h"
 
-class VTKCOMMONTRANSFORMS_EXPORT vtkCylindricalTransform : public vtkWarpTransform
+class VTK_COMMON_EXPORT vtkCylindricalTransform : public vtkWarpTransform
 {
 public:
   static vtkCylindricalTransform *New();

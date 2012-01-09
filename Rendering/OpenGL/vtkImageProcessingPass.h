@@ -25,7 +25,6 @@
 #ifndef __vtkImageProcessingPass_h
 #define __vtkImageProcessingPass_h
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkRenderPass.h"
 
 class vtkOpenGLRenderWindow;
@@ -35,7 +34,7 @@ class vtkShader2;
 class vtkFrameBufferObject;
 class vtkTextureObject;
 
-class VTKRENDERINGOPENGL_EXPORT vtkImageProcessingPass : public vtkRenderPass
+class VTK_RENDERING_EXPORT vtkImageProcessingPass : public vtkRenderPass
 {
 public:
   vtkTypeMacro(vtkImageProcessingPass,vtkRenderPass);

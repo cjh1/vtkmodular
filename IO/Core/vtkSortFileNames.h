@@ -28,7 +28,6 @@
 #ifndef __vtkSortFileNames_h
 #define __vtkSortFileNames_h
 
-#include "vtkIOCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkStringArray;
@@ -38,7 +37,7 @@ class vtkStringArray;
 class vtkStringArrayVector;
 //ETX
 
-class VTKIOCORE_EXPORT vtkSortFileNames : public vtkObject
+class VTK_IO_EXPORT vtkSortFileNames : public vtkObject
 {
 public:
   

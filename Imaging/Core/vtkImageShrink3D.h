@@ -21,10 +21,9 @@
 #define __vtkImageShrink3D_h
 
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkThreadedImageAlgorithm.h"
 
-class VTKIMAGINGCORE_EXPORT vtkImageShrink3D : public vtkThreadedImageAlgorithm
+class VTK_IMAGING_EXPORT vtkImageShrink3D : public vtkThreadedImageAlgorithm
 {
 public:
   static vtkImageShrink3D *New();

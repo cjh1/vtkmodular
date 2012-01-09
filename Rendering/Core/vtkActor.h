@@ -29,7 +29,6 @@
 #ifndef __vtkActor_h
 #define __vtkActor_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkProp3D.h"
 
 class vtkRenderer;
@@ -39,7 +38,7 @@ class vtkTexture;
 class vtkMapper;
 class vtkProperty;
 
-class VTKRENDERINGCORE_EXPORT vtkActor : public vtkProp3D
+class VTK_RENDERING_EXPORT vtkActor : public vtkProp3D
 {
 public:
   vtkTypeMacro(vtkActor,vtkProp3D);

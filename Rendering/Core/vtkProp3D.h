@@ -30,14 +30,13 @@
 #ifndef __vtkProp3D_h
 #define __vtkProp3D_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkProp.h"
 
 class vtkRenderer;
 class vtkTransform;
 class vtkLinearTransform;
 
-class VTKRENDERINGCORE_EXPORT vtkProp3D : public vtkProp
+class VTK_RENDERING_EXPORT vtkProp3D : public vtkProp
 {
 public:
   vtkTypeMacro(vtkProp3D,vtkProp);

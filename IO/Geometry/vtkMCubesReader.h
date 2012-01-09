@@ -47,7 +47,6 @@
 #ifndef __vtkMCubesReader_h
 #define __vtkMCubesReader_h
 
-#include "vtkIOGeometryExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
 #define VTK_FILE_BYTE_ORDER_BIG_ENDIAN 0
@@ -55,7 +54,7 @@
 
 class vtkIncrementalPointLocator;
 
-class VTKIOGEOMETRY_EXPORT vtkMCubesReader : public vtkPolyDataAlgorithm
+class VTK_IO_EXPORT vtkMCubesReader : public vtkPolyDataAlgorithm 
 {
 public:
   vtkTypeMacro(vtkMCubesReader,vtkPolyDataAlgorithm);

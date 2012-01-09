@@ -22,7 +22,6 @@
 #ifndef __vtkOpenGLRenderWindow_h
 #define __vtkOpenGLRenderWindow_h
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkRenderWindow.h"
 
 #include "vtkOpenGL.h" // Needed for GLuint.
@@ -32,7 +31,7 @@ class vtkOpenGLExtensionManager;
 class vtkOpenGLHardwareSupport;
 class vtkTextureUnitManager;
 
-class VTKRENDERINGOPENGL_EXPORT vtkOpenGLRenderWindow : public vtkRenderWindow
+class VTK_RENDERING_EXPORT vtkOpenGLRenderWindow : public vtkRenderWindow
 {
 protected:
   long OldMonitorSetting;
@@ -170,11 +169,9 @@ public:
   // Return a string matching the last graphic error status.
   virtual const char *GetLastGraphicErrorString();
 
-//BTX
   // Description:
   // Get the time when the OpenGL context was created.
-  vtkGetMacro(ContextCreationTime, vtkTimeStamp);
-//ETX
+  virtual unsigned long GetContextCreationTime();
 
   // Description:
   // Returns the extension manager. A new one will be created if one hasn't

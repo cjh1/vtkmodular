@@ -21,10 +21,9 @@
 #define __vtkImageMagnitude_h
 
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkThreadedImageAlgorithm.h"
 
-class VTKIMAGINGCORE_EXPORT vtkImageMagnitude : public vtkThreadedImageAlgorithm
+class VTK_IMAGING_EXPORT vtkImageMagnitude : public vtkThreadedImageAlgorithm
 {
 public:
   static vtkImageMagnitude *New();

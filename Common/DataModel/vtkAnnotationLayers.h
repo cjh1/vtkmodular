@@ -30,13 +30,12 @@
 #ifndef __vtkAnnotationLayers_h
 #define __vtkAnnotationLayers_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkDataObject.h"
 
 class vtkAnnotation;
 class vtkSelection;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkAnnotationLayers : public vtkDataObject
+class VTK_FILTERING_EXPORT vtkAnnotationLayers : public vtkDataObject
 {
 public:
   vtkTypeMacro(vtkAnnotationLayers, vtkDataObject);

@@ -54,7 +54,6 @@
 #ifndef __vtkVisibleCellSelector_h
 #define __vtkVisibleCellSelector_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkRenderer;
@@ -64,7 +63,7 @@ class vtkSelection;
 class vtkProp;
 class vtkIdentColoredPainter;
 
-class VTKRENDERINGCORE_EXPORT vtkVisibleCellSelector  : public vtkObject
+class VTK_RENDERING_EXPORT vtkVisibleCellSelector  : public vtkObject
 {
 public:
   vtkTypeMacro(vtkVisibleCellSelector, vtkObject);

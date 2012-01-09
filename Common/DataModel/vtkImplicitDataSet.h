@@ -37,12 +37,11 @@
 #ifndef __vtkImplicitDataSet_h
 #define __vtkImplicitDataSet_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkImplicitFunction.h"
 
 class vtkDataSet;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkImplicitDataSet : public vtkImplicitFunction
+class VTK_FILTERING_EXPORT vtkImplicitDataSet : public vtkImplicitFunction
 {
 public:
   vtkTypeMacro(vtkImplicitDataSet,vtkImplicitFunction);

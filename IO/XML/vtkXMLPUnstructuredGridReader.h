@@ -26,12 +26,11 @@
 #ifndef __vtkXMLPUnstructuredGridReader_h
 #define __vtkXMLPUnstructuredGridReader_h
 
-#include "vtkIOXMLExport.h" // For export macro
 #include "vtkXMLPUnstructuredDataReader.h"
 
 class vtkUnstructuredGrid;
 
-class VTKIOXML_EXPORT vtkXMLPUnstructuredGridReader : public vtkXMLPUnstructuredDataReader
+class VTK_IO_EXPORT vtkXMLPUnstructuredGridReader : public vtkXMLPUnstructuredDataReader
 {
 public:
   vtkTypeMacro(vtkXMLPUnstructuredGridReader,vtkXMLPUnstructuredDataReader);

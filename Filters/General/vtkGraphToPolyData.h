@@ -32,10 +32,9 @@
 #ifndef __vtkGraphToPolyData_h
 #define __vtkGraphToPolyData_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
-class VTKFILTERSGENERAL_EXPORT vtkGraphToPolyData : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkGraphToPolyData : public vtkPolyDataAlgorithm 
 {
 public:
   static vtkGraphToPolyData *New();

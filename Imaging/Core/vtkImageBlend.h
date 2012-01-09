@@ -72,7 +72,6 @@
 #define __vtkImageBlend_h
 
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkThreadedImageAlgorithm.h"
 
 class vtkImageStencilData;
@@ -80,7 +79,7 @@ class vtkImageStencilData;
 #define VTK_IMAGE_BLEND_MODE_NORMAL   0
 #define VTK_IMAGE_BLEND_MODE_COMPOUND 1
 
-class VTKIMAGINGCORE_EXPORT vtkImageBlend : public vtkThreadedImageAlgorithm
+class VTK_IMAGING_EXPORT vtkImageBlend : public vtkThreadedImageAlgorithm
 {
 public:
   static vtkImageBlend *New();

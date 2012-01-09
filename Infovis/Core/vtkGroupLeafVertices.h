@@ -26,10 +26,9 @@
 #ifndef __vtkGroupLeafVertices_h
 #define __vtkGroupLeafVertices_h
 
-#include "vtkInfovisCoreExport.h" // For export macro
 #include "vtkTreeAlgorithm.h"
 
-class VTKINFOVISCORE_EXPORT vtkGroupLeafVertices : public vtkTreeAlgorithm
+class VTK_INFOVIS_EXPORT vtkGroupLeafVertices : public vtkTreeAlgorithm
 {
 public:
   static vtkGroupLeafVertices* New();

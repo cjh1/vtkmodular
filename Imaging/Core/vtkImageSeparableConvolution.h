@@ -27,12 +27,11 @@
 #define __vtkImageSeparableConvolution_h
 
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkImageDecomposeFilter.h"
 
 class vtkFloatArray;
 
-class VTKIMAGINGCORE_EXPORT vtkImageSeparableConvolution : public vtkImageDecomposeFilter
+class VTK_IMAGING_EXPORT vtkImageSeparableConvolution : public vtkImageDecomposeFilter
 {
 public:
   static vtkImageSeparableConvolution *New();

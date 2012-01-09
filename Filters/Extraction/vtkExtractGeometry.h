@@ -35,12 +35,11 @@
 #ifndef __vtkExtractGeometry_h
 #define __vtkExtractGeometry_h
 
-#include "vtkFiltersExtractionExport.h" // For export macro
 #include "vtkUnstructuredGridAlgorithm.h"
 
 class vtkImplicitFunction;
 
-class VTKFILTERSEXTRACTION_EXPORT vtkExtractGeometry : public vtkUnstructuredGridAlgorithm
+class VTK_GRAPHICS_EXPORT vtkExtractGeometry : public vtkUnstructuredGridAlgorithm
 {
 public:
   vtkTypeMacro(vtkExtractGeometry,vtkUnstructuredGridAlgorithm);

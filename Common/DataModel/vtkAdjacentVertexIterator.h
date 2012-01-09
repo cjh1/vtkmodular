@@ -33,14 +33,13 @@
 #ifndef __vtkAdjacentVertexIterator_h
 #define __vtkAdjacentVertexIterator_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkObject.h"
 
 #include "vtkGraph.h" // For edge type definitions
 
 class vtkGraphEdge;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkAdjacentVertexIterator : public vtkObject
+class VTK_FILTERING_EXPORT vtkAdjacentVertexIterator : public vtkObject
 {
 public:
   static vtkAdjacentVertexIterator *New();

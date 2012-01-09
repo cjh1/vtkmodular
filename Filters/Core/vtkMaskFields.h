@@ -27,14 +27,13 @@
 #ifndef __vtkMaskFields_h
 #define __vtkMaskFields_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkDataSetAlgorithm.h"
 
 #include "vtkDataSetAttributes.h" // Needed for NUM_ATTRIBUTES
 
 class vtkDataSet;
 
-class VTKFILTERSCORE_EXPORT vtkMaskFields : public vtkDataSetAlgorithm
+class VTK_GRAPHICS_EXPORT vtkMaskFields : public vtkDataSetAlgorithm
 {
 public:
   vtkTypeMacro(vtkMaskFields,vtkDataSetAlgorithm);

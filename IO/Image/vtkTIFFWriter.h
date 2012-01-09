@@ -24,10 +24,9 @@
 #ifndef __vtkTIFFWriter_h
 #define __vtkTIFFWriter_h
 
-#include "vtkIOImageExport.h" // For export macro
 #include "vtkImageWriter.h"
 
-class VTKIOIMAGE_EXPORT vtkTIFFWriter : public vtkImageWriter
+class VTK_IO_EXPORT vtkTIFFWriter : public vtkImageWriter
 {
 public:
   static vtkTIFFWriter *New();

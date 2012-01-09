@@ -28,13 +28,12 @@
 #ifndef __vtkSynchronizedTemplates3D_h
 #define __vtkSynchronizedTemplates3D_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 #include "vtkContourValues.h" // Passes calls through
 
 class vtkImageData;
 
-class VTKFILTERSCORE_EXPORT vtkSynchronizedTemplates3D : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkSynchronizedTemplates3D : public vtkPolyDataAlgorithm
 {
 public:
   static vtkSynchronizedTemplates3D *New();
@@ -162,8 +161,8 @@ private:
 // template table.
 //BTX
 
-extern int VTKFILTERSCORE_EXPORT VTK_SYNCHRONIZED_TEMPLATES_3D_TABLE_1[];
-extern int VTKFILTERSCORE_EXPORT VTK_SYNCHRONIZED_TEMPLATES_3D_TABLE_2[];
+extern int VTK_GRAPHICS_EXPORT VTK_SYNCHRONIZED_TEMPLATES_3D_TABLE_1[];
+extern int VTK_GRAPHICS_EXPORT VTK_SYNCHRONIZED_TEMPLATES_3D_TABLE_2[];
 
 //ETX
 

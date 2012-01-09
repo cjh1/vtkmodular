@@ -1,6 +1,3 @@
-vtk_module(vtkCommonExecutionModel
-  DEPENDS
-    vtkCommonCore
-    vtkCommonMath
-    vtkCommonDataModel
+vtk_module(CommonExecutionModel
+  DEPENDS CommonCore CommonMath
   DEFAULT ON)

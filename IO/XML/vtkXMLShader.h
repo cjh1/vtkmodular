@@ -24,12 +24,11 @@
 #ifndef __vtkXMLShader_h
 #define __vtkXMLShader_h
 
-#include "vtkIOXMLExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkXMLDataElement;
 
-class VTKIOXML_EXPORT vtkXMLShader : public vtkObject
+class VTK_IO_EXPORT vtkXMLShader : public vtkObject
 {
 public:
   static vtkXMLShader* New();

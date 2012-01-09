@@ -24,10 +24,9 @@
 #ifndef __vtkOutputStream_h
 #define __vtkOutputStream_h
 
-#include "vtkIOCoreExport.h" // For export macro
 #include "vtkObject.h"
 
-class VTKIOCORE_EXPORT vtkOutputStream : public vtkObject
+class VTK_IO_EXPORT vtkOutputStream : public vtkObject
 {
 public:
   vtkTypeMacro(vtkOutputStream,vtkObject);

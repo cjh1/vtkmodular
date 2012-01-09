@@ -25,10 +25,9 @@
 #define __vtkImageMedian3D_h
 
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkImageSpatialAlgorithm.h"
 
-class VTKIMAGINGCORE_EXPORT vtkImageMedian3D : public vtkImageSpatialAlgorithm
+class VTK_IMAGING_EXPORT vtkImageMedian3D : public vtkImageSpatialAlgorithm
 {
 public:
   static vtkImageMedian3D *New();

@@ -23,10 +23,9 @@
 #ifndef __vtkTDxMotionEventInfo_h
 #define __vtkTDxMotionEventInfo_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkObject.h" // for the export macro
 
-class VTKRENDERINGCORE_EXPORT vtkTDxMotionEventInfo
+class VTK_RENDERING_EXPORT vtkTDxMotionEventInfo
 {
 public:
   // Description:

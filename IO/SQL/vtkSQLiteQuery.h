@@ -41,7 +41,6 @@
 #ifndef __vtkSQLiteQuery_h
 #define __vtkSQLiteQuery_h
 
-#include "vtkIOSQLExport.h" // For export macro
 #include "vtkSQLQuery.h"
 
 class vtkSQLiteDatabase;
@@ -49,7 +48,7 @@ class vtkVariant;
 class vtkVariantArray;
 struct vtk_sqlite3_stmt;
 
-class VTKIOSQL_EXPORT vtkSQLiteQuery : public vtkSQLQuery
+class VTK_IO_EXPORT vtkSQLiteQuery : public vtkSQLQuery
 {
   //BTX
   friend class vtkSQLiteDatabase;

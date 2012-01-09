@@ -23,13 +23,12 @@
 #ifndef __vtkKdTreePointLocator_h
 #define __vtkKdTreePointLocator_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkAbstractPointLocator.h"
 
 class vtkIdList;
 class vtkKdTree;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkKdTreePointLocator : public vtkAbstractPointLocator
+class VTK_FILTERING_EXPORT vtkKdTreePointLocator : public vtkAbstractPointLocator
 {
 public:
   vtkTypeMacro(vtkKdTreePointLocator,vtkAbstractPointLocator);

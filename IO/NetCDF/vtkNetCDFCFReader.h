@@ -31,7 +31,6 @@
 #ifndef __vtkNetCDFCFReader_h
 #define __vtkNetCDFCFReader_h
 
-#include "vtkIONetCDFExport.h" // For export macro
 #include "vtkNetCDFReader.h"
 
 #include <vtkStdString.h> // Used for ivars.
@@ -42,7 +41,7 @@ class vtkRectilinearGrid;
 class vtkStructuredGrid;
 class vtkUnstructuredGrid;
 
-class VTKIONETCDF_EXPORT vtkNetCDFCFReader : public vtkNetCDFReader
+class VTK_IO_EXPORT vtkNetCDFCFReader : public vtkNetCDFReader
 {
 public:
   vtkTypeMacro(vtkNetCDFCFReader, vtkNetCDFReader);

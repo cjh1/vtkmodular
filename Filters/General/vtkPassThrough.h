@@ -20,10 +20,9 @@
 #ifndef __vtkPassThrough_h
 #define __vtkPassThrough_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkPassInputTypeAlgorithm.h"
 
-class VTKFILTERSGENERAL_EXPORT vtkPassThrough : public vtkPassInputTypeAlgorithm
+class VTK_INFOVIS_EXPORT vtkPassThrough : public vtkPassInputTypeAlgorithm
 {
 public:
   static vtkPassThrough* New();

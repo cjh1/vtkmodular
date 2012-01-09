@@ -35,10 +35,9 @@
 #ifndef __vtkDirectedGraph_h
 #define __vtkDirectedGraph_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkGraph.h"
 
-class VTKCOMMONDATAMODEL_EXPORT vtkDirectedGraph : public vtkGraph
+class VTK_FILTERING_EXPORT vtkDirectedGraph : public vtkGraph
 {
 public:
   static vtkDirectedGraph *New();

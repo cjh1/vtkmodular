@@ -41,12 +41,11 @@
 #ifndef __vtkStrahlerMetric_h
 #define __vtkStrahlerMetric_h
 
-#include "vtkFiltersStatisticsExport.h" // For export macro
 #include "vtkTreeAlgorithm.h"
 
 class vtkFloatArray;
 
-class VTKFILTERSSTATISTICS_EXPORT vtkStrahlerMetric : public vtkTreeAlgorithm
+class VTK_INFOVIS_EXPORT vtkStrahlerMetric : public vtkTreeAlgorithm
 {
 public:
   static vtkStrahlerMetric *New();

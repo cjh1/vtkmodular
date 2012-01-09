@@ -19,7 +19,6 @@
 
 =========================================================================*/
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include <vtkDenseArray.h>
 #include <vtkSmartPointer.h>
 #include <vtkSparseArray.h>

@@ -27,13 +27,12 @@
 #ifndef __vtkSampleFunction_h
 #define __vtkSampleFunction_h
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkImageAlgorithm.h"
 
 class vtkImplicitFunction;
 class vtkDataArray;
 
-class VTKIMAGINGCORE_EXPORT vtkSampleFunction : public vtkImageAlgorithm
+class VTK_IMAGING_EXPORT vtkSampleFunction : public vtkImageAlgorithm
 {
 public:
   vtkTypeMacro(vtkSampleFunction,vtkImageAlgorithm);

@@ -42,10 +42,9 @@
 #ifndef __vtkRandomAttributeGenerator_h
 #define __vtkRandomAttributeGenerator_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkDataSetAlgorithm.h"
 
-class VTKFILTERSGENERAL_EXPORT vtkRandomAttributeGenerator : public vtkDataSetAlgorithm
+class VTK_GRAPHICS_EXPORT vtkRandomAttributeGenerator : public vtkDataSetAlgorithm
 {
 public:
   // Description:

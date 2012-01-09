@@ -21,13 +21,12 @@
 #ifndef __vtkXMLPUnstructuredDataWriter_h
 #define __vtkXMLPUnstructuredDataWriter_h
 
-#include "vtkIOXMLExport.h" // For export macro
 #include "vtkXMLPDataWriter.h"
 
 class vtkPointSet;
 class vtkXMLUnstructuredDataWriter;
 
-class VTKIOXML_EXPORT vtkXMLPUnstructuredDataWriter : public vtkXMLPDataWriter
+class VTK_IO_EXPORT vtkXMLPUnstructuredDataWriter : public vtkXMLPDataWriter
 {
 public:
   vtkTypeMacro(vtkXMLPUnstructuredDataWriter,vtkXMLPDataWriter);

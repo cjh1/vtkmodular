@@ -22,12 +22,11 @@
 #ifndef __vtkHierarchicalDataSetGeometryFilter_h
 #define __vtkHierarchicalDataSetGeometryFilter_h
 
-#include "vtkFiltersGeometryExport.h" // For export macro
 #include "vtkCompositeDataGeometryFilter.h"
 
 class vtkPolyData;
 
-class VTKFILTERSGEOMETRY_EXPORT vtkHierarchicalDataSetGeometryFilter :
+class VTK_GRAPHICS_EXPORT vtkHierarchicalDataSetGeometryFilter : 
   public vtkCompositeDataGeometryFilter
 {
 public:

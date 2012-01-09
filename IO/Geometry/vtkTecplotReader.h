@@ -73,12 +73,11 @@
 #ifndef __vtkTecplotReader_h
 #define __vtkTecplotReader_h
 
-#include "vtkIOGeometryExport.h" // For export macro
 #include "vtkMultiBlockDataSetAlgorithm.h"
 
 //BTX
-#include <vtkstd/vector> // STL Header; Required for vector
-#include <vtkstd/string> // STL Header; Required for string
+#include <vector> // STL Header; Required for vector
+#include <string> // STL Header; Required for string
 //ETX
 
 class vtkPoints;
@@ -90,7 +89,7 @@ class vtkMultiBlockDataSet;
 class vtkDataArraySelection;
 class vtkTecplotReaderInternal;
 
-class VTKIOGEOMETRY_EXPORT vtkTecplotReader : public vtkMultiBlockDataSetAlgorithm
+class VTK_IO_EXPORT vtkTecplotReader : public vtkMultiBlockDataSetAlgorithm
 {
 public:
   static vtkTecplotReader * New();
@@ -259,10 +258,10 @@ protected:
   vtkTecplotReaderInternal *        Internal;
   
   //BTX
-  vtkstd::string                    DataTitle;
-  vtkstd::vector< int >             CellBased;
-  vtkstd::vector< vtkstd::string >  ZoneNames;
-  vtkstd::vector< vtkstd::string >  Variables;
+  std::string                    DataTitle;
+  std::vector< int >             CellBased;
+  std::vector< std::string >  ZoneNames;
+  std::vector< std::string >  Variables;
   //ETX
   
 private:

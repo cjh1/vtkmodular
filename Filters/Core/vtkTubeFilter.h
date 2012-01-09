@@ -50,7 +50,6 @@
 #ifndef __vtkTubeFilter_h
 #define __vtkTubeFilter_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
 #define VTK_VARY_RADIUS_OFF 0
@@ -70,7 +69,7 @@ class vtkFloatArray;
 class vtkPointData;
 class vtkPoints;
 
-class VTKFILTERSCORE_EXPORT vtkTubeFilter : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkTubeFilter : public vtkPolyDataAlgorithm
 {
 public:
   vtkTypeMacro(vtkTubeFilter,vtkPolyDataAlgorithm);

@@ -26,13 +26,12 @@
 # define VTK_DATA_ARRAY_TEMPLATE_TYPE char
 #endif
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkDataArray.h"
 #include "vtkDataArrayTemplate.h" // Real Superclass
 
 // Fake the superclass for the wrappers.
 #define vtkDataArray vtkDataArrayTemplate<char>
-class VTKCOMMONCORE_EXPORT vtkCharArray : public vtkDataArray
+class VTK_COMMON_EXPORT vtkCharArray : public vtkDataArray
 #undef vtkDataArray
 {
 public:

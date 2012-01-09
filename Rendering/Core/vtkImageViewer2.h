@@ -55,7 +55,6 @@
 #ifndef __vtkImageViewer2_h
 #define __vtkImageViewer2_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkAlgorithm;
@@ -69,7 +68,7 @@ class vtkRenderWindow;
 class vtkRenderer;
 class vtkRenderWindowInteractor;
 
-class VTKRENDERINGCORE_EXPORT vtkImageViewer2 : public vtkObject
+class VTK_RENDERING_EXPORT vtkImageViewer2 : public vtkObject 
 {
 public:
   static vtkImageViewer2 *New();

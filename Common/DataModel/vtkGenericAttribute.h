@@ -27,7 +27,6 @@
 #ifndef __vtkGenericAttribute_h
 #define __vtkGenericAttribute_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkGenericCellIterator;
@@ -41,7 +40,7 @@ enum
   vtkBoundaryCentered
 };
 
-class VTKCOMMONDATAMODEL_EXPORT vtkGenericAttribute : public vtkObject
+class VTK_FILTERING_EXPORT vtkGenericAttribute : public vtkObject
 {
  public:
   vtkTypeMacro(vtkGenericAttribute,vtkObject);

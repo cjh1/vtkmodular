@@ -26,12 +26,11 @@
 #ifndef __vtkXMLPolyDataReader_h
 #define __vtkXMLPolyDataReader_h
 
-#include "vtkIOXMLExport.h" // For export macro
 #include "vtkXMLUnstructuredDataReader.h"
 
 class vtkPolyData;
 
-class VTKIOXML_EXPORT vtkXMLPolyDataReader : public vtkXMLUnstructuredDataReader
+class VTK_IO_EXPORT vtkXMLPolyDataReader : public vtkXMLUnstructuredDataReader
 {
 public:
   vtkTypeMacro(vtkXMLPolyDataReader,vtkXMLUnstructuredDataReader);

@@ -23,12 +23,11 @@
 #ifndef __vtkDataArraySelection_h
 #define __vtkDataArraySelection_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkDataArraySelectionInternals;
 
-class VTKCOMMONCORE_EXPORT vtkDataArraySelection : public vtkObject
+class VTK_COMMON_EXPORT vtkDataArraySelection : public vtkObject
 {
 public:
   vtkTypeMacro(vtkDataArraySelection,vtkObject);

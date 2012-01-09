@@ -31,10 +31,9 @@
 #ifndef _vtkXGMLReader_h
 #define _vtkXGMLReader_h
 
-#include "vtkIOInfovisExport.h" // For export macro
 #include "vtkUndirectedGraphAlgorithm.h"
 
-class VTKIOINFOVIS_EXPORT vtkXGMLReader : public vtkUndirectedGraphAlgorithm
+class VTK_INFOVIS_EXPORT vtkXGMLReader : public vtkUndirectedGraphAlgorithm
 {
 public:
   static vtkXGMLReader *New();

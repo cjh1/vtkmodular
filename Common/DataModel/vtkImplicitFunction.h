@@ -47,12 +47,11 @@
 #ifndef __vtkImplicitFunction_h
 #define __vtkImplicitFunction_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkAbstractTransform;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkImplicitFunction : public vtkObject
+class VTK_COMMON_EXPORT vtkImplicitFunction : public vtkObject
 {
 public:
   vtkTypeMacro(vtkImplicitFunction,vtkObject);

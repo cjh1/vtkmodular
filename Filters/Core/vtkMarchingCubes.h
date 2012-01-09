@@ -30,14 +30,13 @@
 #ifndef __vtkMarchingCubes_h
 #define __vtkMarchingCubes_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
 #include "vtkContourValues.h" // Needed for direct access to ContourValues
 
 class vtkIncrementalPointLocator;
 
-class VTKFILTERSCORE_EXPORT vtkMarchingCubes : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkMarchingCubes : public vtkPolyDataAlgorithm
 {
 public:
   static vtkMarchingCubes *New();

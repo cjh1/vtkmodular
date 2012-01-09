@@ -38,7 +38,6 @@
 #ifndef __vtkShadowMapPass_h
 #define __vtkShadowMapPass_h
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkRenderPass.h"
 
 class vtkOpenGLRenderWindow;
@@ -56,7 +55,7 @@ class vtkImplicitHalo;
 class vtkSampleFunction;
 class vtkShadowMapBakerPass;
 
-class VTKRENDERINGOPENGL_EXPORT vtkShadowMapPass : public vtkRenderPass
+class VTK_RENDERING_EXPORT vtkShadowMapPass : public vtkRenderPass
 {
 public:
   static vtkShadowMapPass *New();

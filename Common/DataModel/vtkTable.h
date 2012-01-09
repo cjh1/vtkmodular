@@ -47,7 +47,6 @@
 #ifndef __vtkTable_h
 #define __vtkTable_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkDataObject.h"
 
 class vtkAbstractArray;
@@ -55,7 +54,7 @@ class vtkDataSetAttributes;
 class vtkVariant;
 class vtkVariantArray;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkTable : public vtkDataObject
+class VTK_FILTERING_EXPORT vtkTable : public vtkDataObject
 {
 public:
   static vtkTable* New();

@@ -25,10 +25,9 @@
 #ifndef __vtkExtractDataOverTime_h
 #define __vtkExtractDataOverTime_h
 
-#include "vtkFiltersExtractionExport.h" // For export macro
 #include "vtkPointSetAlgorithm.h"
 
-class VTKFILTERSEXTRACTION_EXPORT vtkExtractDataOverTime : public vtkPointSetAlgorithm
+class VTK_GRAPHICS_EXPORT vtkExtractDataOverTime : public vtkPointSetAlgorithm
 {
 public:
   static vtkExtractDataOverTime *New();

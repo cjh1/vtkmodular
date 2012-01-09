@@ -25,7 +25,6 @@
 #ifndef __vtkGraphInternals_h
 #define __vtkGraphInternals_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkGraph.h"
 
 #include <vtksys/stl/vector> // STL Header
@@ -46,7 +45,7 @@ public:
 //----------------------------------------------------------------------------
 // class vtkGraphInternals
 //----------------------------------------------------------------------------
-class VTKCOMMONDATAMODEL_EXPORT vtkGraphInternals : public vtkObject
+class VTK_FILTERING_EXPORT vtkGraphInternals : public vtkObject
 {
 public:
   static vtkGraphInternals *New();

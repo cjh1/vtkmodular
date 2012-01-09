@@ -25,12 +25,11 @@
 #ifndef __vtkImageProperty_h
 #define __vtkImageProperty_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkScalarsToColors;
 
-class VTKRENDERINGCORE_EXPORT vtkImageProperty : public vtkObject
+class VTK_RENDERING_EXPORT vtkImageProperty : public vtkObject
 {
 public:
   vtkTypeMacro(vtkImageProperty,vtkObject);

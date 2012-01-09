@@ -30,7 +30,6 @@
 #ifndef __vtkQuadraticTetra_h
 #define __vtkQuadraticTetra_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkNonLinearCell.h"
 
 class vtkQuadraticEdge;
@@ -38,7 +37,7 @@ class vtkQuadraticTriangle;
 class vtkTetra;
 class vtkDoubleArray;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkQuadraticTetra : public vtkNonLinearCell
+class VTK_FILTERING_EXPORT vtkQuadraticTetra : public vtkNonLinearCell
 {
 public:
   static vtkQuadraticTetra *New();

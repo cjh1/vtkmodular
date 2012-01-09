@@ -28,7 +28,6 @@
 #ifndef __vtkPyramid_h
 #define __vtkPyramid_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkCell3D.h"
 
 class vtkLine;
@@ -37,7 +36,7 @@ class vtkTriangle;
 class vtkUnstructuredGrid;
 class vtkIncrementalPointLocator;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkPyramid : public vtkCell3D
+class VTK_FILTERING_EXPORT vtkPyramid : public vtkCell3D
 {
 public:
   static vtkPyramid *New();

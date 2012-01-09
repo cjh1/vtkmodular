@@ -23,10 +23,9 @@
 #ifndef __vtkSimpleImageFilterExample_h
 #define __vtkSimpleImageFilterExample_h
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkSimpleImageToImageFilter.h"
 
-class VTKIMAGINGCORE_EXPORT vtkSimpleImageFilterExample : public vtkSimpleImageToImageFilter
+class VTK_IMAGING_EXPORT vtkSimpleImageFilterExample : public vtkSimpleImageToImageFilter
 {
 public:
   static vtkSimpleImageFilterExample *New();

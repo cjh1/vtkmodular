@@ -18,10 +18,9 @@
 #ifndef __vtkImagingFactory_h
 #define __vtkImagingFactory_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkObject.h"
 
-class VTKRENDERINGCORE_EXPORT vtkImagingFactory : public vtkObject
+class VTK_RENDERING_EXPORT vtkImagingFactory : public vtkObject
 {
 public:
   static vtkImagingFactory *New();

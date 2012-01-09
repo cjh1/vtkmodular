@@ -32,10 +32,9 @@
 #ifndef __vtkTessellatedBoxSource_h
 #define __vtkTessellatedBoxSource_h
 
-#include "vtkFiltersSourcesExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
-class VTKFILTERSSOURCES_EXPORT vtkTessellatedBoxSource : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkTessellatedBoxSource : public vtkPolyDataAlgorithm
 {
 public:
   static vtkTessellatedBoxSource *New();

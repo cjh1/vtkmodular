@@ -27,11 +27,10 @@
 #ifndef __vtkStructuredPoints_h
 #define __vtkStructuredPoints_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkImageData.h"
 
   
-class VTKCOMMONDATAMODEL_EXPORT vtkStructuredPoints : public vtkImageData
+class VTK_FILTERING_EXPORT vtkStructuredPoints : public vtkImageData
 {
 public:
   static vtkStructuredPoints *New();

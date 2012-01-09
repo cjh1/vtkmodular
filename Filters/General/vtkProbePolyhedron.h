@@ -49,7 +49,6 @@
 #ifndef __vtkProbePolyhedron_h
 #define __vtkProbePolyhedron_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkDataSetAlgorithm.h"
 #include "vtkDataSetAttributes.h" // needed for vtkDataSetAttributes::FieldList
 
@@ -57,7 +56,7 @@ class vtkIdTypeArray;
 class vtkCharArray;
 class vtkMaskPoints;
 
-class VTKFILTERSGENERAL_EXPORT vtkProbePolyhedron : public vtkDataSetAlgorithm
+class VTK_GRAPHICS_EXPORT vtkProbePolyhedron : public vtkDataSetAlgorithm
 {
 public:
   // Description:

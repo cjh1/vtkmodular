@@ -39,7 +39,7 @@
 
 #include <vtkStreamingDemandDrivenPipeline.h>
 
-#include <vtkstd/vector>
+#include <vector>
 
 vtkStandardNewMacro(vtkDataObjectGenerator);
 
@@ -110,7 +110,7 @@ public:
   }
   ~vtkInternalStructureCache()
   {
-    vtkstd::vector<vtkInternalStructureCache *>::iterator it;
+    std::vector<vtkInternalStructureCache *>::iterator it;
     for (it = this->children.begin();
          it != this->children.end();
          it++)
@@ -140,7 +140,7 @@ public:
       {
       cerr << "HOLDER" << endl;
       }
-    vtkstd::vector<vtkInternalStructureCache *>::iterator it;
+    std::vector<vtkInternalStructureCache *>::iterator it;
     for (it = this->children.begin();
          it != this->children.end();
          it++)
@@ -170,7 +170,7 @@ public:
 
   int type;
   vtkInternalStructureCache *parent;
-  vtkstd::vector<vtkInternalStructureCache *> children;
+  std::vector<vtkInternalStructureCache *> children;
 };
 
 
@@ -692,7 +692,7 @@ vtkDataObject * vtkDataObjectGenerator::FillOutputDataObjects(
 
     hbo->SetNumberOfLevels(
                          static_cast<unsigned int>(structure->children.size()));
-    vtkstd::vector<vtkInternalStructureCache *>::iterator git;
+    std::vector<vtkInternalStructureCache *>::iterator git;
     vtkIdType gcnt = 0;
     for (git = structure->children.begin();
          git != structure->children.end();
@@ -712,7 +712,7 @@ vtkDataObject * vtkDataObjectGenerator::FillOutputDataObjects(
       int refinement = 2; 
       hbo->SetRefinementRatio(gcnt,refinement);       
 
-      vtkstd::vector<vtkInternalStructureCache *>::iterator dit;
+      std::vector<vtkInternalStructureCache *>::iterator dit;
       vtkIdType dcnt = 0; //TODO: read in a location to create sparse trees
 
       int maxchildren = static_cast<int>(pow(8.0,static_cast<double>(gcnt)));
@@ -794,7 +794,7 @@ vtkDataObject * vtkDataObjectGenerator::FillOutputDataObjects(
     //by iterating over the children of all my children (which must be groups)
     mbo->SetNumberOfBlocks(
                          static_cast<unsigned int>(structure->children.size()));
-    vtkstd::vector<vtkInternalStructureCache *>::iterator git;
+    std::vector<vtkInternalStructureCache *>::iterator git;
     vtkIdType gcnt = 0;
 
     for (git = structure->children.begin();
@@ -1068,6 +1068,7 @@ void vtkDataObjectGenerator::MakePolyData1(vtkDataSet *ids)
   ds->Allocate();
   vtkIdType verts[3] = {0,1,2};
   ds->InsertNextCell(VTK_TRIANGLE, 3, verts);
+  ds->Squeeze();
 
   this->MakeValues(ds);
 }
@@ -1098,6 +1099,7 @@ void vtkDataObjectGenerator::MakePolyData2(vtkDataSet *ids)
   ds->InsertNextCell(VTK_TRIANGLE, 3, verts);
   vtkIdType points[1] = {3};
   ds->InsertNextCell(VTK_VERTEX, 1, points);
+  ds->Squeeze();
 
   this->MakeValues(ds);
 }
@@ -1124,6 +1126,7 @@ void vtkDataObjectGenerator::MakeUnstructuredGrid1(vtkDataSet *ids)
   ds->Allocate();
   vtkIdType verts[3] = {0,1,2};
   ds->InsertNextCell(VTK_TRIANGLE, 3, verts);
+  ds->Squeeze();
 
   this->MakeValues(ds);
 }
@@ -1152,6 +1155,7 @@ void vtkDataObjectGenerator::MakeUnstructuredGrid2(vtkDataSet *ids)
   vtkIdType verts[6] = {0,1,2,  2,1,3};
   ds->InsertNextCell(VTK_TRIANGLE, 3, &verts[0]);
   ds->InsertNextCell(VTK_TRIANGLE, 3, &verts[3]);
+  ds->Squeeze();
 
   this->MakeValues(ds);
 }
@@ -1179,6 +1183,7 @@ void vtkDataObjectGenerator::MakeUnstructuredGrid3(vtkDataSet *ids)
   ds->Allocate();
   vtkIdType verts[6] = {0,1,2,3};
   ds->InsertNextCell(VTK_TETRA, 4, &verts[0]);
+  ds->Squeeze();
 
   this->MakeValues(ds);
 }
@@ -1213,6 +1218,8 @@ void vtkDataObjectGenerator::MakeUnstructuredGrid4(vtkDataSet *ids)
   ds->InsertNextCell(VTK_TRIANGLE, 3, &verts[0]);
   ds->InsertNextCell(VTK_TRIANGLE, 3, &verts[3]);
   ds->InsertNextCell(VTK_TETRA, 4, &verts[6]);
+
+  ds->Squeeze();
 
   this->MakeValues(ds);
 }

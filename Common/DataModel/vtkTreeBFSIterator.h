@@ -28,13 +28,12 @@
 #ifndef __vtkTreeBFSIterator_h
 #define __vtkTreeBFSIterator_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkTreeIterator.h"
 
 class vtkTreeBFSIteratorInternals;
 class vtkIntArray;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkTreeBFSIterator : public vtkTreeIterator
+class VTK_FILTERING_EXPORT vtkTreeBFSIterator : public vtkTreeIterator
 {
 public:
   static vtkTreeBFSIterator* New();

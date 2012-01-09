@@ -20,12 +20,11 @@
 #ifndef __vtkSQLiteToTableReader_h
 #define __vtkSQLiteToTableReader_h
 
-#include "vtkIOSQLExport.h" // For export macro
 #include "vtkDatabaseToTableReader.h"
 
 class vtkSQLiteDatabase;
 
-class VTKIOSQL_EXPORT vtkSQLiteToTableReader :
+class VTK_IO_EXPORT vtkSQLiteToTableReader :
   public vtkDatabaseToTableReader
 {
 public:

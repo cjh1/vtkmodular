@@ -23,11 +23,10 @@
 #ifndef __vtkPDBReader_h
 #define __vtkPDBReader_h
 
-#include "vtkIOGeometryExport.h" // For export macro
 #include "vtkMoleculeReaderBase.h"
 
 
-class VTKIOGEOMETRY_EXPORT vtkPDBReader : public vtkMoleculeReaderBase
+class VTK_IO_EXPORT vtkPDBReader : public vtkMoleculeReaderBase
 {
 public:
   vtkTypeMacro(vtkPDBReader,vtkMoleculeReaderBase);

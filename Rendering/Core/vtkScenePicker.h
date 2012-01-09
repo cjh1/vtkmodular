@@ -40,7 +40,6 @@
 #ifndef __vtkScenePicker_h
 #define __vtkScenePicker_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkRenderer;
@@ -49,7 +48,7 @@ class vtkHardwareSelector;
 class vtkRenderWindowInteractor;
 class vtkScenePickerSelectionRenderCommand;
 
-class VTKRENDERINGCORE_EXPORT vtkScenePicker : public vtkObject
+class VTK_RENDERING_EXPORT vtkScenePicker : public vtkObject
 {
   //BTX
   friend class vtkRenderer;

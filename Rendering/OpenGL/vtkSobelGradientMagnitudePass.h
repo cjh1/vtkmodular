@@ -56,7 +56,6 @@
 #ifndef __vtkSobelGradientMagnitudePass_h
 #define __vtkSobelGradientMagnitudePass_h
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkImageProcessingPass.h"
 
 class vtkOpenGLRenderWindow;
@@ -66,7 +65,7 @@ class vtkShader2;
 class vtkFrameBufferObject;
 class vtkTextureObject;
 
-class VTKRENDERINGOPENGL_EXPORT vtkSobelGradientMagnitudePass : public vtkImageProcessingPass
+class VTK_RENDERING_EXPORT vtkSobelGradientMagnitudePass : public vtkImageProcessingPass
 {
 public:
   static vtkSobelGradientMagnitudePass *New();

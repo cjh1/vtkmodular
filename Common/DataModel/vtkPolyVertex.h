@@ -20,13 +20,12 @@
 #ifndef __vtkPolyVertex_h
 #define __vtkPolyVertex_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkCell.h"
 
 class vtkVertex;
 class vtkIncrementalPointLocator;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkPolyVertex : public vtkCell
+class VTK_FILTERING_EXPORT vtkPolyVertex : public vtkCell
 {
 public:
   static vtkPolyVertex *New();

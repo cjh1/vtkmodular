@@ -46,7 +46,6 @@
 #ifndef __vtkCoordinate_h
 #define __vtkCoordinate_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkObject.h"
 class vtkViewport;
 
@@ -58,7 +57,7 @@ class vtkViewport;
 #define VTK_WORLD               5
 #define VTK_USERDEFINED         6
 
-class VTKRENDERINGCORE_EXPORT vtkCoordinate : public vtkObject
+class VTK_FILTERING_EXPORT vtkCoordinate : public vtkObject
 {
 public:
   vtkTypeMacro(vtkCoordinate,vtkObject);

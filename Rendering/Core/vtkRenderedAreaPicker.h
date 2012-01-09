@@ -28,12 +28,11 @@
 #ifndef __vtkRenderedAreaPicker_h
 #define __vtkRenderedAreaPicker_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkAreaPicker.h"
 
 class vtkRenderer;
 
-class VTKRENDERINGCORE_EXPORT vtkRenderedAreaPicker : public vtkAreaPicker
+class VTK_RENDERING_EXPORT vtkRenderedAreaPicker : public vtkAreaPicker
 {
 public:
   static vtkRenderedAreaPicker *New();

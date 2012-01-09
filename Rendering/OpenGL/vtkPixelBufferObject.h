@@ -27,14 +27,13 @@
 #ifndef __vtkPixelBufferObject_h
 #define __vtkPixelBufferObject_h
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkObject.h"
 #include "vtkWeakPointer.h" // needed for vtkWeakPointer.
 
 class vtkRenderWindow;
 class vtkOpenGLExtensionManager;
 
-class VTKRENDERINGOPENGL_EXPORT vtkPixelBufferObject : public vtkObject
+class VTK_RENDERING_EXPORT vtkPixelBufferObject : public vtkObject
 {
 public:
   

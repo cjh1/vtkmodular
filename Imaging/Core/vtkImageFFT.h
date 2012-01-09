@@ -28,10 +28,9 @@
 #define __vtkImageFFT_h
 
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkImageFourierFilter.h"
 
-class VTKIMAGINGCORE_EXPORT vtkImageFFT : public vtkImageFourierFilter
+class VTK_IMAGING_EXPORT vtkImageFFT : public vtkImageFourierFilter
 {
 public:
   static vtkImageFFT *New();

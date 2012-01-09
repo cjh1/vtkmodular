@@ -24,12 +24,11 @@
 #ifndef __vtkExplicitCell_h
 #define __vtkExplicitCell_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkNonLinearCell.h"
 
 class vtkDataSet;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkExplicitCell : public vtkNonLinearCell
+class VTK_FILTERING_EXPORT vtkExplicitCell : public vtkNonLinearCell
 {
 public:
   vtkTypeMacro(vtkExplicitCell,vtkNonLinearCell);

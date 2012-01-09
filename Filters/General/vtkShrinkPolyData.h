@@ -36,10 +36,9 @@
 #ifndef __vtkShrinkPolyData_h
 #define __vtkShrinkPolyData_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
-class VTKFILTERSGENERAL_EXPORT vtkShrinkPolyData : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkShrinkPolyData : public vtkPolyDataAlgorithm 
 {
 public:
   static vtkShrinkPolyData *New();

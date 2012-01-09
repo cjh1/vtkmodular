@@ -20,10 +20,9 @@
 #ifndef __vtkXMLMultiGroupDataReader_h
 #define __vtkXMLMultiGroupDataReader_h
 
-#include "vtkIOXMLExport.h" // For export macro
 #include "vtkXMLMultiBlockDataReader.h"
 
-class VTKIOXML_EXPORT vtkXMLMultiGroupDataReader : public vtkXMLMultiBlockDataReader
+class VTK_IO_EXPORT vtkXMLMultiGroupDataReader : public vtkXMLMultiBlockDataReader
 {
 public:
   static vtkXMLMultiGroupDataReader* New();

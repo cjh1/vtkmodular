@@ -21,7 +21,6 @@
 #ifndef __vtkXMLReader_h
 #define __vtkXMLReader_h
 
-#include "vtkIOXMLExport.h" // For export macro
 #include "vtkAlgorithm.h"
 
 class vtkAbstractArray;
@@ -34,7 +33,7 @@ class vtkXMLDataParser;
 class vtkInformationVector;
 class vtkInformation;
 
-class VTKIOXML_EXPORT vtkXMLReader : public vtkAlgorithm
+class VTK_IO_EXPORT vtkXMLReader : public vtkAlgorithm
 {
 public:
   vtkTypeMacro(vtkXMLReader,vtkAlgorithm);

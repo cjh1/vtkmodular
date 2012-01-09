@@ -90,12 +90,11 @@
 #ifndef __vtkSmoothPolyDataFilter_h
 #define __vtkSmoothPolyDataFilter_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
 class vtkSmoothPoints;
 
-class VTKFILTERSCORE_EXPORT vtkSmoothPolyDataFilter : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkSmoothPolyDataFilter : public vtkPolyDataAlgorithm
 {
 public:
   vtkTypeMacro(vtkSmoothPolyDataFilter,vtkPolyDataAlgorithm);

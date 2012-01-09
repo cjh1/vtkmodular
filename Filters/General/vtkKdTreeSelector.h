@@ -28,12 +28,11 @@
 #ifndef __vtkKdTreeSelector_h
 #define __vtkKdTreeSelector_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkSelectionAlgorithm.h"
 
 class vtkKdTree;
 
-class VTKFILTERSGENERAL_EXPORT vtkKdTreeSelector : public vtkSelectionAlgorithm
+class VTK_GRAPHICS_EXPORT vtkKdTreeSelector : public vtkSelectionAlgorithm
 {
 public:
   static vtkKdTreeSelector* New();

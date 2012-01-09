@@ -33,10 +33,9 @@
 #ifndef __vtkMassProperties_h
 #define __vtkMassProperties_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
-class VTKFILTERSCORE_EXPORT vtkMassProperties : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkMassProperties : public vtkPolyDataAlgorithm
 {
 public:
   // Description:

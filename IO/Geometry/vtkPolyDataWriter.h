@@ -22,12 +22,11 @@
 #ifndef __vtkPolyDataWriter_h
 #define __vtkPolyDataWriter_h
 
-#include "vtkIOGeometryExport.h" // For export macro
 #include "vtkDataWriter.h"
 
 class vtkPolyData;
 
-class VTKIOGEOMETRY_EXPORT vtkPolyDataWriter : public vtkDataWriter
+class VTK_IO_EXPORT vtkPolyDataWriter : public vtkDataWriter
 {
 public:
   static vtkPolyDataWriter *New();

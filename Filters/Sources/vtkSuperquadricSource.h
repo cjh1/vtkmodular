@@ -45,14 +45,13 @@
 #ifndef __vtkSuperquadricSource_h
 #define __vtkSuperquadricSource_h
 
-#include "vtkFiltersSourcesExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
 #define VTK_MAX_SUPERQUADRIC_RESOLUTION 1024
 #define VTK_MIN_SUPERQUADRIC_THICKNESS  1e-4
 #define VTK_MIN_SUPERQUADRIC_ROUNDNESS  1e-24
 
-class VTKFILTERSSOURCES_EXPORT vtkSuperquadricSource : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkSuperquadricSource : public vtkPolyDataAlgorithm
 {
 public:
   // Description:

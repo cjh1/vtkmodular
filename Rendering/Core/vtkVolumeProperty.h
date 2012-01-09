@@ -41,14 +41,13 @@
 #ifndef __vtkVolumeProperty_h
 #define __vtkVolumeProperty_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkPiecewiseFunction;
 class vtkTimeStamp;
 class vtkColorTransferFunction;
 
-class VTKRENDERINGCORE_EXPORT vtkVolumeProperty : public vtkObject
+class VTK_RENDERING_EXPORT vtkVolumeProperty : public vtkObject
 {
 public:
   static vtkVolumeProperty *New();

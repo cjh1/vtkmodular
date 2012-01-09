@@ -26,12 +26,11 @@
 #ifndef __vtkNetCDFCAMReader_h
 #define __vtkNetCDFCAMReader_h
 
-#include "vtkIONetCDFExport.h" // For export macro
 #include "vtkUnstructuredGridAlgorithm.h"
 
 class NcFile;
 
-class VTKIONETCDF_EXPORT vtkNetCDFCAMReader : public vtkUnstructuredGridAlgorithm
+class VTK_IO_EXPORT vtkNetCDFCAMReader : public vtkUnstructuredGridAlgorithm
 {
 public:
   static vtkNetCDFCAMReader *New();

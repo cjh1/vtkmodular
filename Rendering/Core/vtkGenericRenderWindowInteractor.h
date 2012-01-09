@@ -25,10 +25,9 @@
 #ifndef __vtkGenericRenderWindowInteractor_h
 #define __vtkGenericRenderWindowInteractor_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkRenderWindowInteractor.h"
 
-class VTKRENDERINGCORE_EXPORT vtkGenericRenderWindowInteractor : public vtkRenderWindowInteractor
+class VTK_RENDERING_EXPORT vtkGenericRenderWindowInteractor : public vtkRenderWindowInteractor
 {
 public:
   static vtkGenericRenderWindowInteractor *New();

@@ -37,17 +37,16 @@
 #ifndef __vtkPContingencyStatistics_h
 #define __vtkPContingencyStatistics_h
 
-#include "vtkFiltersParallelStatisticsExport.h" // For export macro
 #include "vtkContingencyStatistics.h"
 
 //BTX
-#include <vtkstd/vector> // STL Header
+#include <vector> // STL Header
 //ETX
 
 class vtkMultiBlockDataSet;
 class vtkMultiProcessController;
 
-class VTKFILTERSPARALLELSTATISTICS_EXPORT vtkPContingencyStatistics : public vtkContingencyStatistics
+class VTK_INFOVIS_EXPORT vtkPContingencyStatistics : public vtkContingencyStatistics
 {
 public:
   static vtkPContingencyStatistics* New();
@@ -78,15 +77,15 @@ protected:
                vtkStdString&,
                vtkIdType&,
                vtkIdType*,
-               vtkstd::vector<vtkIdType>& );
+               std::vector<vtkIdType>& );
 
   // Description:
   // Broadcast reduced contingency table to all processes
   bool Broadcast( vtkIdType,
                   vtkStdString&,
-                  vtkstd::vector<vtkStdString>&,
+                  std::vector<vtkStdString>&,
                   vtkIdType,
-                  vtkstd::vector<vtkIdType>&,
+                  std::vector<vtkIdType>&,
                   vtkIdType );
 //ETX
 

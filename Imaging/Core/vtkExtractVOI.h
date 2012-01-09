@@ -36,10 +36,9 @@
 #ifndef __vtkExtractVOI_h
 #define __vtkExtractVOI_h
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkImageAlgorithm.h"
 
-class VTKIMAGINGCORE_EXPORT vtkExtractVOI : public vtkImageAlgorithm
+class VTK_IMAGING_EXPORT vtkExtractVOI : public vtkImageAlgorithm
 {
 public:
   vtkTypeMacro(vtkExtractVOI,vtkImageAlgorithm);

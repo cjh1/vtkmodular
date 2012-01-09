@@ -49,7 +49,6 @@
 #ifndef __vtkDistributedGraphHelper_h
 #define __vtkDistributedGraphHelper_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkDistributedGraphHelperInternals;
@@ -70,7 +69,7 @@ class vtkInformationIntegerKey;
 typedef vtkIdType (*vtkVertexPedigreeIdDistribution)
           (const vtkVariant& pedigreeId, void* userData);
 
-class VTKCOMMONDATAMODEL_EXPORT vtkDistributedGraphHelper : public vtkObject
+class VTK_FILTERING_EXPORT vtkDistributedGraphHelper : public vtkObject
 {
  public:
   vtkTypeMacro(vtkDistributedGraphHelper,vtkObject);

@@ -22,11 +22,10 @@
 #ifndef __vtkUnstructuredGridWriter_h
 #define __vtkUnstructuredGridWriter_h
 
-#include "vtkIOGeometryExport.h" // For export macro
 #include "vtkDataWriter.h"
 class vtkUnstructuredGrid;
 
-class VTKIOGEOMETRY_EXPORT vtkUnstructuredGridWriter : public vtkDataWriter
+class VTK_IO_EXPORT vtkUnstructuredGridWriter : public vtkDataWriter
 {
 public:
   static vtkUnstructuredGridWriter *New();

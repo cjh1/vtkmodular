@@ -32,14 +32,13 @@
 #ifndef __vtkOutEdgeIterator_h
 #define __vtkOutEdgeIterator_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkObject.h"
 
 #include "vtkGraph.h" // For edge type definitions
 
 class vtkGraphEdge;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkOutEdgeIterator : public vtkObject
+class VTK_FILTERING_EXPORT vtkOutEdgeIterator : public vtkObject
 {
 public:
   static vtkOutEdgeIterator *New();

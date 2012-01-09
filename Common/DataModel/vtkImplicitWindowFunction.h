@@ -30,10 +30,9 @@
 #ifndef __vtkImplicitWindowFunction_h
 #define __vtkImplicitWindowFunction_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkImplicitFunction.h"
 
-class VTKCOMMONDATAMODEL_EXPORT vtkImplicitWindowFunction : public vtkImplicitFunction
+class VTK_FILTERING_EXPORT vtkImplicitWindowFunction : public vtkImplicitFunction
 {
 public:
   vtkTypeMacro(vtkImplicitWindowFunction,vtkImplicitFunction);

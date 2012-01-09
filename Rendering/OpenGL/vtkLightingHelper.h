@@ -26,13 +26,12 @@
 #ifndef __vtkLightingHelper_h
 #define __vtkLightingHelper_h
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkObject.h"
 #include "vtkShader2.h" // for vtkShader2Type
 
 class vtkShaderProgram2;
 
-class VTKRENDERINGOPENGL_EXPORT vtkLightingHelper : public vtkObject
+class VTK_RENDERING_EXPORT vtkLightingHelper : public vtkObject
 {
 public:
   static vtkLightingHelper* New();

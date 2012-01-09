@@ -27,10 +27,9 @@
 #ifndef __vtkParametricRoman_h
 #define __vtkParametricRoman_h
 
-#include "vtkCommonComputationalGeometryExport.h" // For export macro
 #include "vtkParametricFunction.h"
 
-class VTKCOMMONCOMPUTATIONALGEOMETRY_EXPORT vtkParametricRoman : public vtkParametricFunction
+class VTK_COMMON_EXPORT vtkParametricRoman : public vtkParametricFunction
 {
 
 public:

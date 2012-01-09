@@ -21,11 +21,10 @@
 #ifndef __vtkOpenGLRepresentationPainter_h
 #define __vtkOpenGLRepresentationPainter_h
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkRepresentationPainter.h"
 class vtkInformationIntegerKey;
 
-class VTKRENDERINGOPENGL_EXPORT vtkOpenGLRepresentationPainter :
+class VTK_RENDERING_EXPORT vtkOpenGLRepresentationPainter : 
   public vtkRepresentationPainter
 {
 public:

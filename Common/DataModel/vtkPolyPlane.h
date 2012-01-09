@@ -26,13 +26,12 @@
 #ifndef __vtkPolyPlane_h
 #define __vtkPolyPlane_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkImplicitFunction.h"
 
 class vtkPolyLine;
 class vtkDoubleArray;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkPolyPlane : public vtkImplicitFunction
+class VTK_FILTERING_EXPORT vtkPolyPlane : public vtkImplicitFunction
 {
 public:
   // Description

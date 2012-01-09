@@ -34,7 +34,6 @@
 #ifndef __vtkImageMarchingCubes_h
 #define __vtkImageMarchingCubes_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
 #include "vtkContourValues.h" // Needed for direct access to ContourValues
@@ -44,7 +43,7 @@ class vtkFloatArray;
 class vtkImageData;
 class vtkPoints;
 
-class VTKFILTERSGENERAL_EXPORT vtkImageMarchingCubes : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkImageMarchingCubes : public vtkPolyDataAlgorithm
 {
 public:
   static vtkImageMarchingCubes *New();

@@ -37,7 +37,6 @@
 #ifndef __vtkAbstractTransform_h
 #define __vtkAbstractTransform_h
 
-#include "vtkCommonTransformsExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkDataArray;
@@ -45,7 +44,7 @@ class vtkMatrix4x4;
 class vtkPoints;
 class vtkSimpleCriticalSection;
 
-class VTKCOMMONTRANSFORMS_EXPORT vtkAbstractTransform : public vtkObject
+class VTK_COMMON_EXPORT vtkAbstractTransform : public vtkObject
 {
 public:
 
@@ -312,7 +311,7 @@ public:
 // .SECTION Description
 // A helper class (not derived from vtkObject) to store a series of
 // transformations in a pipelined concatenation.
-class VTKCOMMONTRANSFORMS_EXPORT vtkTransformConcatenation
+class VTK_COMMON_EXPORT vtkTransformConcatenation
 {
 public:
   static vtkTransformConcatenation *New() {
@@ -400,7 +399,7 @@ protected:
 // .SECTION Description
 // A helper class (not derived from vtkObject) to store a stack of
 // concatenations.
-class VTKCOMMONTRANSFORMS_EXPORT vtkTransformConcatenationStack
+class VTK_COMMON_EXPORT vtkTransformConcatenationStack
 {
 public:
   static vtkTransformConcatenationStack *New()

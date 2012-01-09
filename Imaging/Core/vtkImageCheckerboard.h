@@ -23,11 +23,10 @@
 #ifndef __vtkImageCheckerboard_h
 #define __vtkImageCheckerboard_h
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkThreadedImageAlgorithm.h"
 
 
-class VTKIMAGINGCORE_EXPORT vtkImageCheckerboard : public vtkThreadedImageAlgorithm
+class VTK_IMAGING_EXPORT vtkImageCheckerboard : public vtkThreadedImageAlgorithm
 {
 public:
   static vtkImageCheckerboard *New();

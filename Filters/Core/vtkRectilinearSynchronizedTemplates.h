@@ -28,7 +28,6 @@
 #ifndef __vtkRectilinearSynchronizedTemplates_h
 #define __vtkRectilinearSynchronizedTemplates_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 #include "vtkContourValues.h" // Passes calls through
 
@@ -36,7 +35,7 @@ class vtkRectilinearGrid;
 class vtkKitwareContourFilter;
 class vtkDataArray;
 
-class VTKFILTERSCORE_EXPORT vtkRectilinearSynchronizedTemplates : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkRectilinearSynchronizedTemplates : public vtkPolyDataAlgorithm
 {
 public:
   static vtkRectilinearSynchronizedTemplates *New();

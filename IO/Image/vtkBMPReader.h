@@ -38,11 +38,10 @@
 #ifndef __vtkBMPReader_h
 #define __vtkBMPReader_h
 
-#include "vtkIOImageExport.h" // For export macro
 #include "vtkImageReader.h"
 class vtkLookupTable;
 
-class VTKIOIMAGE_EXPORT vtkBMPReader : public vtkImageReader
+class VTK_IO_EXPORT vtkBMPReader : public vtkImageReader
 {
 public:
   static vtkBMPReader *New();

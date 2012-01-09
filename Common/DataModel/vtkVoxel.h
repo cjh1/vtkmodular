@@ -25,14 +25,13 @@
 #ifndef __vtkVoxel_h
 #define __vtkVoxel_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkCell3D.h"
 
 class vtkLine;
 class vtkPixel;
 class vtkIncrementalPointLocator;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkVoxel : public vtkCell3D
+class VTK_FILTERING_EXPORT vtkVoxel : public vtkCell3D
 {
 public:
   static vtkVoxel *New();

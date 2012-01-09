@@ -33,7 +33,6 @@
 #ifndef __vtkCriticalSection_h
 #define __vtkCriticalSection_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 //BTX
@@ -62,7 +61,7 @@ typedef int vtkCritSecType;
 #endif
 
 // Critical Section object that is not a vtkObject.
-class VTKCOMMONCORE_EXPORT vtkSimpleCriticalSection
+class VTK_COMMON_EXPORT vtkSimpleCriticalSection
 {
 public:
   // Default cstor
@@ -105,7 +104,7 @@ protected:
 
 //ETX
 
-class VTKCOMMONCORE_EXPORT vtkCriticalSection : public vtkObject
+class VTK_COMMON_EXPORT vtkCriticalSection : public vtkObject
 {
 public:
   static vtkCriticalSection *New();

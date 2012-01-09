@@ -25,10 +25,9 @@
 #ifndef __vtkEventForwarderCommand_h
 #define __vtkEventForwarderCommand_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkCommand.h"
 
-class VTKCOMMONCORE_EXPORT vtkEventForwarderCommand : public vtkCommand
+class VTK_COMMON_EXPORT vtkEventForwarderCommand : public vtkCommand
 {
 public:
   vtkTypeMacro(vtkEventForwarderCommand,vtkCommand);

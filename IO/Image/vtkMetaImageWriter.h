@@ -60,14 +60,13 @@
 #ifndef __vtkMetaImageWriter_h
 #define __vtkMetaImageWriter_h
 
-#include "vtkIOImageExport.h" // For export macro
 #include "vtkImageWriter.h"
 
 //BTX
 namespace vtkmetaio { class MetaImage; } // forward declaration
 //ETX
 
-class VTKIOIMAGE_EXPORT vtkMetaImageWriter : public vtkImageWriter
+class VTK_IO_EXPORT vtkMetaImageWriter : public vtkImageWriter
 {
 public:
   vtkTypeMacro(vtkMetaImageWriter,vtkImageWriter);

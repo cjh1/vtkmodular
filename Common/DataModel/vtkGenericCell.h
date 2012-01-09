@@ -27,10 +27,9 @@
 #ifndef __vtkGenericCell_h
 #define __vtkGenericCell_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkCell.h"
 
-class VTKCOMMONDATAMODEL_EXPORT vtkGenericCell : public vtkCell
+class VTK_FILTERING_EXPORT vtkGenericCell : public vtkCell
 {
 public:
   // Description:

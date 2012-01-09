@@ -42,7 +42,6 @@
 #ifndef __vtkMergeCells_h
 #define __vtkMergeCells_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkObject.h"
 #include "vtkDataSetAttributes.h" // Needed for FieldList
 
@@ -52,7 +51,7 @@ class vtkPointData;
 class vtkCellData;
 class vtkMergeCellsSTLCloak;
 
-class VTKFILTERSGENERAL_EXPORT vtkMergeCells : public vtkObject
+class VTK_GRAPHICS_EXPORT vtkMergeCells : public vtkObject
 { 
 public:
   vtkTypeMacro(vtkMergeCells, vtkObject);

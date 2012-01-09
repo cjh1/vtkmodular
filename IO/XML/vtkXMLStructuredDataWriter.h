@@ -20,7 +20,6 @@
 #ifndef __vtkXMLStructuredDataWriter_h
 #define __vtkXMLStructuredDataWriter_h
 
-#include "vtkIOXMLExport.h" // For export macro
 #include "vtkXMLWriter.h"
 
 class vtkAbstractArray;
@@ -28,7 +27,7 @@ class vtkExtentTranslator;
 class vtkInformation;
 class vtkInformationVector;
 
-class VTKIOXML_EXPORT vtkXMLStructuredDataWriter : public vtkXMLWriter
+class VTK_IO_EXPORT vtkXMLStructuredDataWriter : public vtkXMLWriter
 {
 public:
   vtkTypeMacro(vtkXMLStructuredDataWriter,vtkXMLWriter);

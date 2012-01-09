@@ -90,7 +90,6 @@
 #ifndef __vtkInteractorStyle_h
 #define __vtkInteractorStyle_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkInteractorObserver.h"
 
 // Motion flags
@@ -121,7 +120,7 @@ class vtkProp3D;
 class vtkProp;
 class vtkTDxInteractorStyle;
 
-class VTKRENDERINGCORE_EXPORT vtkInteractorStyle : public vtkInteractorObserver
+class VTK_RENDERING_EXPORT vtkInteractorStyle : public vtkInteractorObserver
 {
 public:
   // Description:

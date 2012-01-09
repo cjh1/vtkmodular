@@ -34,7 +34,6 @@
 #ifndef __vtkDataArray_h
 #define __vtkDataArray_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkAbstractArray.h"
 
 class vtkDoubleArray;
@@ -43,7 +42,7 @@ class vtkInformationDoubleVectorKey;
 class vtkInformationInformationVectorKey;
 class vtkLookupTable;
 
-class VTKCOMMONCORE_EXPORT vtkDataArray : public vtkAbstractArray
+class VTK_COMMON_EXPORT vtkDataArray : public vtkAbstractArray
 {
 public:
   vtkTypeMacro(vtkDataArray,vtkAbstractArray);

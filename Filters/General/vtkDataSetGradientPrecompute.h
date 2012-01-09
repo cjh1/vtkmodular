@@ -28,10 +28,9 @@
 #ifndef __vtkDataSetGradientPrecompute_h
 #define __vtkDataSetGradientPrecompute_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkDataSetAlgorithm.h"
 
-class VTKFILTERSGENERAL_EXPORT vtkDataSetGradientPrecompute : public vtkDataSetAlgorithm
+class VTK_GRAPHICS_EXPORT vtkDataSetGradientPrecompute : public vtkDataSetAlgorithm
 {
  public:
   static vtkDataSetGradientPrecompute* New();

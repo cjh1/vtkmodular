@@ -20,11 +20,10 @@
 #ifndef __vtkSocket_h
 #define __vtkSocket_h
 
-#include "vtkCommonSystemExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkSocketCollection;
-class VTKCOMMONSYSTEM_EXPORT vtkSocket : public vtkObject
+class VTK_COMMON_EXPORT vtkSocket : public vtkObject
 {
 public:
   vtkTypeMacro(vtkSocket, vtkObject);

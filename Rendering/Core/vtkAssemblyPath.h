@@ -27,7 +27,6 @@
 #ifndef __vtkAssemblyPath_h
 #define __vtkAssemblyPath_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkCollection.h"
 #include "vtkAssemblyNode.h" // used for inlines
 
@@ -35,7 +34,7 @@ class vtkMatrix4x4;
 class vtkTransform;
 class vtkProp;
 
-class VTKRENDERINGCORE_EXPORT vtkAssemblyPath : public vtkCollection
+class VTK_COMMON_EXPORT vtkAssemblyPath : public vtkCollection
 {
 public:
   vtkTypeMacro(vtkAssemblyPath,vtkCollection);

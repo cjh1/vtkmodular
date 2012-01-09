@@ -58,7 +58,6 @@
 #ifndef __vtkClipVolume_h
 #define __vtkClipVolume_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkUnstructuredGridAlgorithm.h"
 
 class vtkCellData;
@@ -77,7 +76,7 @@ class vtkCellArray;
 class vtkIdTypeArray;
 class vtkUnsignedCharArray;
 
-class VTKFILTERSGENERAL_EXPORT vtkClipVolume : public vtkUnstructuredGridAlgorithm
+class VTK_GRAPHICS_EXPORT vtkClipVolume : public vtkUnstructuredGridAlgorithm
 {
 public:
   vtkTypeMacro(vtkClipVolume,vtkUnstructuredGridAlgorithm);

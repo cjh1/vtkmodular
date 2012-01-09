@@ -22,12 +22,11 @@
 #ifndef __vtkCompositeDataGeometryFilter_h
 #define __vtkCompositeDataGeometryFilter_h
 
-#include "vtkFiltersGeometryExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
 class vtkPolyData;
 
-class VTKFILTERSGEOMETRY_EXPORT vtkCompositeDataGeometryFilter : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkCompositeDataGeometryFilter : public vtkPolyDataAlgorithm
 {
 public:
   static vtkCompositeDataGeometryFilter *New();

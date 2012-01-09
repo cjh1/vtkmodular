@@ -36,10 +36,9 @@
 #ifndef __vtkMergeTables_h
 #define __vtkMergeTables_h
 
-#include "vtkInfovisCoreExport.h" // For export macro
 #include "vtkTableAlgorithm.h"
 
-class VTKINFOVISCORE_EXPORT vtkMergeTables : public vtkTableAlgorithm
+class VTK_INFOVIS_EXPORT vtkMergeTables : public vtkTableAlgorithm
 {
 public:
   static vtkMergeTables* New();

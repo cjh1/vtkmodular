@@ -33,10 +33,9 @@
 #ifndef __vtkTextSource_h
 #define __vtkTextSource_h
 
-#include "vtkFiltersSourcesExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
-class VTKFILTERSSOURCES_EXPORT vtkTextSource : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkTextSource : public vtkPolyDataAlgorithm 
 {
 public:
   vtkTypeMacro(vtkTextSource,vtkPolyDataAlgorithm);

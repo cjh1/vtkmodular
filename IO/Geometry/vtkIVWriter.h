@@ -24,10 +24,9 @@
 #ifndef __vtkIVWriter_h
 #define __vtkIVWriter_h
 
-#include "vtkIOGeometryExport.h" // For export macro
 #include "vtkPolyDataWriter.h"
 
-class VTKIOGEOMETRY_EXPORT vtkIVWriter : public vtkPolyDataWriter
+class VTK_IO_EXPORT vtkIVWriter : public vtkPolyDataWriter
 {
 public:
   static vtkIVWriter *New();

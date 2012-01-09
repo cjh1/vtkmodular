@@ -29,10 +29,9 @@
 #ifndef __vtkSphericalTransform_h
 #define __vtkSphericalTransform_h
 
-#include "vtkCommonTransformsExport.h" // For export macro
 #include "vtkWarpTransform.h"
 
-class VTKCOMMONTRANSFORMS_EXPORT vtkSphericalTransform : public vtkWarpTransform
+class VTK_COMMON_EXPORT vtkSphericalTransform : public vtkWarpTransform
 {
 public:
   static vtkSphericalTransform *New();

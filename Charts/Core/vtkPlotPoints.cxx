@@ -17,6 +17,7 @@
 
 #include "vtkContext2D.h"
 #include "vtkPen.h"
+#include "vtkBrush.h"
 #include "vtkAxis.h"
 #include "vtkContextMapper2D.h"
 #include "vtkPoints2D.h"
@@ -681,6 +682,10 @@ bool vtkPlotPoints::UpdateTableCache(vtkTable *table)
       if (!this->LookupTable)
         {
         this->CreateDefaultLookupTable();
+        }
+      if (this->Colors)
+        {
+        this->Colors->UnRegister(this);
         }
       this->Colors = this->LookupTable->MapScalars(c, VTK_COLOR_MODE_MAP_SCALARS, -1);
       // Consistent register and unregisters

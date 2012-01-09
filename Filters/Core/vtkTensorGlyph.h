@@ -76,10 +76,9 @@
 #ifndef __vtkTensorGlyph_h
 #define __vtkTensorGlyph_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
-class VTKFILTERSCORE_EXPORT vtkTensorGlyph : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkTensorGlyph : public vtkPolyDataAlgorithm
 {
 public:
   vtkTypeMacro(vtkTensorGlyph,vtkPolyDataAlgorithm);

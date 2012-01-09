@@ -23,10 +23,9 @@
 #ifndef __vtkHardwareSelectionPolyDataPainter_h
 #define __vtkHardwareSelectionPolyDataPainter_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkStandardPolyDataPainter.h"
 
-class VTKRENDERINGCORE_EXPORT vtkHardwareSelectionPolyDataPainter :
+class VTK_RENDERING_EXPORT vtkHardwareSelectionPolyDataPainter :
   public vtkStandardPolyDataPainter
 {
 public:

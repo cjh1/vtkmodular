@@ -21,10 +21,9 @@
 #ifndef __vtkVoidArray_h
 #define __vtkVoidArray_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkObject.h"
 
-class VTKCOMMONCORE_EXPORT vtkVoidArray : public vtkObject
+class VTK_COMMON_EXPORT vtkVoidArray : public vtkObject
 {
 public:
   // Description:

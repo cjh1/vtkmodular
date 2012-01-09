@@ -28,10 +28,9 @@
 #ifndef __vtkGraphToPoints_h
 #define __vtkGraphToPoints_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
-class VTKFILTERSGENERAL_EXPORT vtkGraphToPoints : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkGraphToPoints : public vtkPolyDataAlgorithm 
 {
 public:
   static vtkGraphToPoints *New();

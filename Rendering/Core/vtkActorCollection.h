@@ -24,13 +24,12 @@
 #ifndef __vtkActorCollection_h
 #define __vtkActorCollection_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkPropCollection.h"
 #include "vtkActor.h" // For inline methods
 
 class vtkProperty;
 
-class VTKRENDERINGCORE_EXPORT vtkActorCollection : public vtkPropCollection
+class VTK_RENDERING_EXPORT vtkActorCollection : public vtkPropCollection
 {
 public:
   static vtkActorCollection *New();

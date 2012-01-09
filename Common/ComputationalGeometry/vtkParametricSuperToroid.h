@@ -40,10 +40,9 @@
 #ifndef __vtkParametricSuperToroid_h
 #define __vtkParametricSuperToroid_h
 
-#include "vtkCommonComputationalGeometryExport.h" // For export macro
 #include "vtkParametricFunction.h"
 
-class VTKCOMMONCOMPUTATIONALGEOMETRY_EXPORT vtkParametricSuperToroid : public vtkParametricFunction
+class VTK_COMMON_EXPORT vtkParametricSuperToroid : public vtkParametricFunction
 {
 public:
   vtkTypeMacro(vtkParametricSuperToroid,vtkParametricFunction);

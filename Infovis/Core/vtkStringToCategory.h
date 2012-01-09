@@ -36,10 +36,9 @@
 #ifndef __vtkStringToCategory_h
 #define __vtkStringToCategory_h
 
-#include "vtkInfovisCoreExport.h" // For export macro
 #include "vtkDataObjectAlgorithm.h"
 
-class VTKINFOVISCORE_EXPORT vtkStringToCategory : public vtkDataObjectAlgorithm
+class VTK_INFOVIS_EXPORT vtkStringToCategory : public vtkDataObjectAlgorithm
 {
 public:
   static vtkStringToCategory* New();

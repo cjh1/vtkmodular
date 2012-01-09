@@ -24,13 +24,12 @@
 #ifndef __vtkDataSetMapper_h
 #define __vtkDataSetMapper_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkMapper.h"
 
 class vtkPolyDataMapper;
 class vtkDataSetSurfaceFilter;
 
-class VTKRENDERINGCORE_EXPORT vtkDataSetMapper : public vtkMapper
+class VTK_RENDERING_EXPORT vtkDataSetMapper : public vtkMapper 
 {
 public:
   static vtkDataSetMapper *New();

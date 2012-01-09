@@ -37,7 +37,6 @@
 #ifndef __vtkBiQuadraticQuad_h
 #define __vtkBiQuadraticQuad_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkNonLinearCell.h"
 
 class vtkQuadraticEdge;
@@ -45,7 +44,7 @@ class vtkQuad;
 class vtkTriangle;
 class vtkDoubleArray;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkBiQuadraticQuad : public vtkNonLinearCell
+class VTK_FILTERING_EXPORT vtkBiQuadraticQuad : public vtkNonLinearCell
 {
 public:
   static vtkBiQuadraticQuad *New ();

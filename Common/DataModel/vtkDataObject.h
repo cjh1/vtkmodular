@@ -32,7 +32,6 @@
 #ifndef __vtkDataObject_h
 #define __vtkDataObject_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkAbstractArray;
@@ -53,7 +52,7 @@ class vtkInformationInformationVectorKey;
 #define VTK_3D_EXTENT       1
 #define VTK_TIME_EXTENT     2
 
-class VTKCOMMONDATAMODEL_EXPORT vtkDataObject : public vtkObject
+class VTK_FILTERING_EXPORT vtkDataObject : public vtkObject
 {
 public:
   static vtkDataObject *New();
@@ -126,7 +125,7 @@ public:
 
   // Description:
   // By default, there is no type specific information
-  virtual void CopyTypeSpecificInformation( vtkDataObject *data ) 
+  virtual void CopyTypeSpecificInformation( vtkDataObject*)
     {}
 
    // Description:

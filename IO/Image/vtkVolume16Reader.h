@@ -45,7 +45,6 @@
 #ifndef __vtkVolume16Reader_h
 #define __vtkVolume16Reader_h
 
-#include "vtkIOImageExport.h" // For export macro
 #include "vtkVolumeReader.h"
 
 class vtkTransform;
@@ -55,7 +54,7 @@ class vtkUnsignedShortArray;
 #define VTK_FILE_BYTE_ORDER_BIG_ENDIAN 0
 #define VTK_FILE_BYTE_ORDER_LITTLE_ENDIAN 1
 
-class VTKIOIMAGE_EXPORT vtkVolume16Reader : public vtkVolumeReader
+class VTK_IO_EXPORT vtkVolume16Reader : public vtkVolumeReader
 {
 public:
   vtkTypeMacro(vtkVolume16Reader,vtkVolumeReader);

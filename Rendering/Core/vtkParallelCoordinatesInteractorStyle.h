@@ -43,12 +43,11 @@
 #ifndef __vtkParallelCoordinatesInteractorStyle_h
 #define __vtkParallelCoordinatesInteractorStyle_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkInteractorStyleTrackballCamera.h"
 
 class vtkViewport;
 
-class VTKRENDERINGCORE_EXPORT vtkParallelCoordinatesInteractorStyle : public vtkInteractorStyleTrackballCamera
+class VTK_RENDERING_EXPORT vtkParallelCoordinatesInteractorStyle : public vtkInteractorStyleTrackballCamera
 {
 public:
   static vtkParallelCoordinatesInteractorStyle *New();

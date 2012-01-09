@@ -21,10 +21,9 @@
 #ifndef __vtkTableToPolyData_h
 #define __vtkTableToPolyData_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
-class VTKFILTERSGENERAL_EXPORT vtkTableToPolyData : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkTableToPolyData : public vtkPolyDataAlgorithm
 {
 public:
   static vtkTableToPolyData* New();

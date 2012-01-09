@@ -29,10 +29,9 @@
 #ifndef __vtkParametricDini_h
 #define __vtkParametricDini_h
 
-#include "vtkCommonComputationalGeometryExport.h" // For export macro
 #include "vtkParametricFunction.h"
 
-class VTKCOMMONCOMPUTATIONALGEOMETRY_EXPORT vtkParametricDini : public vtkParametricFunction
+class VTK_COMMON_EXPORT vtkParametricDini : public vtkParametricFunction
 {
 public:
 

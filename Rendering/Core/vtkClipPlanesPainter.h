@@ -18,13 +18,12 @@
 #ifndef __vtkClipPlanesPainter_h
 #define __vtkClipPlanesPainter_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkPainter.h"
 
 class vtkInformationObjectBaseKey;
 class vtkPlaneCollection;
 
-class VTKRENDERINGCORE_EXPORT vtkClipPlanesPainter : public vtkPainter
+class VTK_RENDERING_EXPORT vtkClipPlanesPainter : public vtkPainter
 {
 public:
   static vtkClipPlanesPainter* New();

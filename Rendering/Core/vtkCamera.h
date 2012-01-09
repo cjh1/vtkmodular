@@ -26,7 +26,6 @@
 #ifndef __vtkCamera_h
 #define __vtkCamera_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkHomogeneousTransform;
@@ -37,7 +36,7 @@ class vtkTransform;
 class vtkCallbackCommand;
 class vtkCameraCallbackCommand;
 
-class VTKRENDERINGCORE_EXPORT vtkCamera : public vtkObject
+class VTK_RENDERING_EXPORT vtkCamera : public vtkObject
 {
  public:
   void PrintSelf(ostream& os, vtkIndent indent);

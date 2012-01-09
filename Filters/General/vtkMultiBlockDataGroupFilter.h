@@ -23,10 +23,9 @@
 #ifndef __vtkMultiBlockDataGroupFilter_h
 #define __vtkMultiBlockDataGroupFilter_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkMultiBlockDataSetAlgorithm.h"
 
-class VTKFILTERSGENERAL_EXPORT vtkMultiBlockDataGroupFilter : public vtkMultiBlockDataSetAlgorithm
+class VTK_GRAPHICS_EXPORT vtkMultiBlockDataGroupFilter : public vtkMultiBlockDataSetAlgorithm 
 {
 public:
   vtkTypeMacro(vtkMultiBlockDataGroupFilter,vtkMultiBlockDataSetAlgorithm);

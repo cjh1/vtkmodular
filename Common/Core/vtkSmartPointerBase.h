@@ -23,10 +23,9 @@
 #ifndef __vtkSmartPointerBase_h
 #define __vtkSmartPointerBase_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkObjectBase.h"
 
-class VTKCOMMONCORE_EXPORT vtkSmartPointerBase
+class VTK_COMMON_EXPORT vtkSmartPointerBase
 {
 public:
   // Description:
@@ -117,7 +116,7 @@ VTK_SMART_POINTER_BASE_DEFINE_OPERATOR(>=)
 
 // Description:
 // Streaming operator to print smart pointer like regular pointers.
-VTKCOMMONCORE_EXPORT ostream& operator << (ostream& os,
+VTK_COMMON_EXPORT ostream& operator << (ostream& os,
                                         const vtkSmartPointerBase& p);
 
 #endif

@@ -140,7 +140,6 @@
 #ifndef _vtkModifiedBSPTree_h
 #define _vtkModifiedBSPTree_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkAbstractCellLocator.h"
 #include "vtkSmartPointer.h"     // required because it is nice
 
@@ -152,7 +151,7 @@ class vtkIdList;
 class vtkIdListCollection;
 //ETX
 
-class VTKFILTERSGENERAL_EXPORT vtkModifiedBSPTree : public vtkAbstractCellLocator {
+class VTK_GRAPHICS_EXPORT vtkModifiedBSPTree : public vtkAbstractCellLocator {
   public:
   // Description:
   // Standard Type-Macro
@@ -340,9 +339,9 @@ class BSPNode {
     friend class vtkModifiedBSPTree;
     friend class vtkParticleBoxTree;
   public:
-  static bool VTKFILTERSGENERAL_EXPORT RayMinMaxT(
+  static bool VTK_GRAPHICS_EXPORT RayMinMaxT(
     const double bounds[6], const double origin[3], const double dir[3], double &rTmin, double &rTmax);
-  static int  VTKFILTERSGENERAL_EXPORT getDominantAxis(const double dir[3]);
+  static int  VTK_GRAPHICS_EXPORT getDominantAxis(const double dir[3]);
 };
 
 #endif /* DOXYGEN_SHOULD_SKIP_THIS */

@@ -35,7 +35,6 @@
 #ifndef __vtkProbeFilter_h
 #define __vtkProbeFilter_h
 
-#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkDataSetAlgorithm.h"
 #include "vtkDataSetAttributes.h" // needed for vtkDataSetAttributes::FieldList
 
@@ -43,7 +42,7 @@ class vtkIdTypeArray;
 class vtkCharArray;
 class vtkMaskPoints;
 
-class VTKFILTERSCORE_EXPORT vtkProbeFilter : public vtkDataSetAlgorithm
+class VTK_GRAPHICS_EXPORT vtkProbeFilter : public vtkDataSetAlgorithm
 {
 public:
   static vtkProbeFilter *New();

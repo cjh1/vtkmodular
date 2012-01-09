@@ -25,10 +25,9 @@
 #ifndef __vtkDEMReader_h
 #define __vtkDEMReader_h
 
-#include "vtkIOImageExport.h" // For export macro
 #include "vtkImageAlgorithm.h"
 
-class VTKIOIMAGE_EXPORT vtkDEMReader : public vtkImageAlgorithm
+class VTK_IO_EXPORT vtkDEMReader : public vtkImageAlgorithm
 {
 public:
   static vtkDEMReader *New();

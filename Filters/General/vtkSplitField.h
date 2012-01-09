@@ -51,14 +51,13 @@
 #ifndef __vtkSplitField_h
 #define __vtkSplitField_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkDataSetAlgorithm.h"
 
 #include "vtkDataSetAttributes.h" // Needed for NUM_ATTRIBUTES
 
 class vtkFieldData;
 
-class VTKFILTERSGENERAL_EXPORT vtkSplitField : public vtkDataSetAlgorithm
+class VTK_GRAPHICS_EXPORT vtkSplitField : public vtkDataSetAlgorithm
 {
 public:
   vtkTypeMacro(vtkSplitField,vtkDataSetAlgorithm);

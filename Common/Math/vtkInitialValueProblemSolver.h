@@ -29,12 +29,11 @@
 #ifndef __vtkInitialValueProblemSolver_h
 #define __vtkInitialValueProblemSolver_h
 
-#include "vtkCommonMathExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkFunctionSet;
 
-class VTKCOMMONMATH_EXPORT vtkInitialValueProblemSolver : public vtkObject
+class VTK_COMMON_EXPORT vtkInitialValueProblemSolver : public vtkObject
 {
 public:
   vtkTypeMacro(vtkInitialValueProblemSolver,vtkObject);

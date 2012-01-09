@@ -21,10 +21,9 @@
 #ifndef __vtkImageGaussianSource_h
 #define __vtkImageGaussianSource_h
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkImageAlgorithm.h"
 
-class VTKIMAGINGCORE_EXPORT vtkImageGaussianSource : public vtkImageAlgorithm
+class VTK_IMAGING_EXPORT vtkImageGaussianSource : public vtkImageAlgorithm
 {
 public:
   static vtkImageGaussianSource *New();

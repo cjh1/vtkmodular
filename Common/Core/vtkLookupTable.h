@@ -29,7 +29,6 @@
 #ifndef __vtkLookupTable_h
 #define __vtkLookupTable_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkScalarsToColors.h"
 
 #include "vtkUnsignedCharArray.h" // Needed for inline method
@@ -40,7 +39,7 @@
 #define VTK_SCALE_LINEAR 0
 #define VTK_SCALE_LOG10 1
 
-class VTKCOMMONCORE_EXPORT vtkLookupTable : public vtkScalarsToColors
+class VTK_COMMON_EXPORT vtkLookupTable : public vtkScalarsToColors
 {
 public:
   // Description:

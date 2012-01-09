@@ -36,12 +36,11 @@
 #ifndef __vtkExtractUnstructuredGrid_h
 #define __vtkExtractUnstructuredGrid_h
 
-#include "vtkFiltersExtractionExport.h" // For export macro
 #include "vtkUnstructuredGridAlgorithm.h"
 
 class vtkIncrementalPointLocator;
 
-class VTKFILTERSEXTRACTION_EXPORT vtkExtractUnstructuredGrid : public vtkUnstructuredGridAlgorithm
+class VTK_GRAPHICS_EXPORT vtkExtractUnstructuredGrid : public vtkUnstructuredGridAlgorithm
 {
 public:
   vtkTypeMacro(vtkExtractUnstructuredGrid,vtkUnstructuredGridAlgorithm);

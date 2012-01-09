@@ -28,10 +28,9 @@
 #ifndef __vtkCursor2D_h
 #define __vtkCursor2D_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
-class VTKFILTERSGENERAL_EXPORT vtkCursor2D : public vtkPolyDataAlgorithm
+class VTK_GRAPHICS_EXPORT vtkCursor2D : public vtkPolyDataAlgorithm 
 {
 public:
   vtkTypeMacro(vtkCursor2D,vtkPolyDataAlgorithm);

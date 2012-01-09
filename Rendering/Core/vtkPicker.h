@@ -38,7 +38,6 @@
 #ifndef __vtkPicker_h
 #define __vtkPicker_h
 
-#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkAbstractPropPicker.h"
 
 class vtkAbstractMapper3D;
@@ -48,7 +47,7 @@ class vtkActorCollection;
 class vtkProp3DCollection;
 class vtkPoints;
 
-class VTKRENDERINGCORE_EXPORT vtkPicker : public vtkAbstractPropPicker
+class VTK_RENDERING_EXPORT vtkPicker : public vtkAbstractPropPicker
 {
 public:
   static vtkPicker *New();

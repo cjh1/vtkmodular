@@ -28,7 +28,6 @@
 #ifndef __vtkWedge_h
 #define __vtkWedge_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkCell3D.h"
 
 class vtkLine;
@@ -37,7 +36,7 @@ class vtkQuad;
 class vtkUnstructuredGrid;
 class vtkIncrementalPointLocator;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkWedge : public vtkCell3D
+class VTK_FILTERING_EXPORT vtkWedge : public vtkCell3D
 {
 public:
   static vtkWedge *New();

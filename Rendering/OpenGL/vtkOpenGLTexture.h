@@ -20,7 +20,6 @@
 #ifndef __vtkOpenGLTexture_h
 #define __vtkOpenGLTexture_h
 
-#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkTexture.h"
 //BTX
 #include "vtkWeakPointer.h" // needed for vtkWeakPointer.
@@ -31,7 +30,7 @@ class vtkOpenGLRenderer;
 class vtkRenderWindow;
 class vtkPixelBufferObject;
 
-class VTKRENDERINGOPENGL_EXPORT vtkOpenGLTexture : public vtkTexture
+class VTK_RENDERING_EXPORT vtkOpenGLTexture : public vtkTexture
 {
 public:
   static vtkOpenGLTexture *New();

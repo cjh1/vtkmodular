@@ -54,7 +54,6 @@
 #ifndef __vtkSQLQuery_h
 #define __vtkSQLQuery_h
 
-#include "vtkIOSQLExport.h" // For export macro
 #include "vtkRowQuery.h"
 #include "vtkStdString.h" // for EscapeString()
 
@@ -62,7 +61,7 @@ class vtkSQLDatabase;
 class vtkVariant;
 class vtkVariantArray;
 
-class VTKIOSQL_EXPORT vtkSQLQuery : public vtkRowQuery
+class VTK_IO_EXPORT vtkSQLQuery : public vtkRowQuery
 {
 public:
   vtkTypeMacro(vtkSQLQuery, vtkRowQuery);

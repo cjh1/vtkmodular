@@ -55,7 +55,6 @@ http://msdn.microsoft.com/library/en-us/vccore/html/_core_faster_builds_and_smal
 #endif
 
 /* Include the real windows header. */
-#include "vtkCommonCoreExport.h" // For export macro
 #include <windows.h>
 
 /* Undefine any macros we defined to shorten the windows header.

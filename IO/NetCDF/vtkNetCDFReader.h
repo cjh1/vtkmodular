@@ -32,7 +32,6 @@
 #ifndef __vtkNetCDFReader_h
 #define __vtkNetCDFReader_h
 
-#include "vtkIONetCDFExport.h" // For export macro
 #include "vtkDataObjectAlgorithm.h"
 
 #include "vtkSmartPointer.h"    // For ivars
@@ -45,7 +44,7 @@ class vtkIntArray;
 class vtkStdString;
 class vtkStringArray;
 
-class VTKIONETCDF_EXPORT vtkNetCDFReader : public vtkDataObjectAlgorithm
+class VTK_IO_EXPORT vtkNetCDFReader : public vtkDataObjectAlgorithm
 {
 public:
   vtkTypeMacro(vtkNetCDFReader, vtkDataObjectAlgorithm);

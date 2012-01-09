@@ -45,7 +45,6 @@
 #ifndef __vtkIncrementalOctreePointLocator_h
 #define __vtkIncrementalOctreePointLocator_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkIncrementalPointLocator.h"
 
 class vtkPoints;
@@ -54,7 +53,7 @@ class vtkPolyData;
 class vtkCellArray;
 class vtkIncrementalOctreeNode;
 
-class VTKCOMMONDATAMODEL_EXPORT vtkIncrementalOctreePointLocator : public vtkIncrementalPointLocator
+class VTK_FILTERING_EXPORT vtkIncrementalOctreePointLocator : public vtkIncrementalPointLocator
 {
 public:
  

@@ -90,9 +90,8 @@ INCLUDE(vtkDependentOption)
 #INCLUDE(vtkThirdParty)
 
 #-----------------------------------------------------------------------------
-# Add supplemental compiler warnings, and GCC visibility support.
-INCLUDE(vtkCompilerExtras)
-#include(vtkBuildPath)
+include(vtkCompilerExtras)
+include(vtkBuildPath)
 
 #-----------------------------------------------------------------------------
 # Does VTK require support for 64 bit file systems
@@ -607,9 +606,6 @@ foreach(vtk-module ${VTK_MODULES_ENABLED})
   endif()
   if(NOT EXISTS ${${vtk-module}_SOURCE_DIR})
     message("Module directory does not exist! '${${vtk-module}_SOURCE_DIR}'")
-  endif()
-  if(NOT DEFINED ${vtk-module}_SOURCE_DIR)
-    message(FATAL_ERROR "${vtk-module} has no defined source directory.")
   endif()
   add_subdirectory("${${vtk-module}_SOURCE_DIR}" "${${vtk-module}_BINARY_DIR}")
 

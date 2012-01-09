@@ -37,7 +37,7 @@
 #include "vtkStringArray.h"
 #include "vtkTrivialProducer.h"
 
-#include <vtkstd/map>
+#include <map>
 
 //---------------------------------------------------------------------------
 // vtkDataRepresentation::Internals
@@ -50,13 +50,13 @@ public:
   // It is a map from (port index, connection index) to (original input data port, shallow copy port).
   // NOTE: The original input data port pointer is not reference counted, so it should
   // not be assumed to be a valid pointer. It is only used for pointer comparison.
-  vtkstd::map<vtkstd::pair<int, int>,
-              vtkstd::pair<vtkAlgorithmOutput*, vtkSmartPointer<vtkTrivialProducer> > >
+  std::map<std::pair<int, int>,
+           std::pair<vtkAlgorithmOutput*, vtkSmartPointer<vtkTrivialProducer> > >
     InputInternal;
 
   // This is a cache of vtkConvertSelectionDomain filters provided for convenience.
   // It is a map from (port index, connection index) to convert selection domain filter.
-  vtkstd::map<vtkstd::pair<int, int>, vtkSmartPointer<vtkConvertSelectionDomain> >
+  std::map<std::pair<int, int>, vtkSmartPointer<vtkConvertSelectionDomain> >
     ConvertDomainInternal;
 };
 
@@ -93,6 +93,22 @@ vtkStandardNewMacro(vtkDataRepresentation);
 vtkCxxSetObjectMacro(vtkDataRepresentation,
   AnnotationLinkInternal, vtkAnnotationLink);
 vtkCxxSetObjectMacro(vtkDataRepresentation, SelectionArrayNames, vtkStringArray);
+
+//----------------------------------------------------------------------------
+vtkTrivialProducer* vtkDataRepresentation::GetInternalInput(int port, int conn)
+{
+  return this->Implementation->InputInternal[
+    vtkstd::pair<int, int>(port, conn)].second.GetPointer();
+}
+
+//----------------------------------------------------------------------------
+void vtkDataRepresentation::SetInternalInput(int port, int conn,
+                                             vtkTrivialProducer* producer)
+{
+  this->Implementation->InputInternal[vtkstd::pair<int, int>(port, conn)] =
+    vtkstd::pair<vtkAlgorithmOutput*, vtkSmartPointer<vtkTrivialProducer> >(
+      producer->GetOutputPort(), producer);
+}
 
 //----------------------------------------------------------------------------
 vtkDataRepresentation::vtkDataRepresentation()
@@ -142,7 +158,7 @@ void vtkDataRepresentation::ProcessEvents(vtkObject *caller, unsigned long event
         if (dataObject && (dataObject->GetGlobalReleaseDataFlag() ||
             inInfo->Get(vtkDemandDrivenPipeline::RELEASE_DATA())))
           {
-          vtkstd::pair<int, int> p(i, j);
+          std::pair<int, int> p(i, j);
           this->Implementation->InputInternal.erase(p);
           this->Implementation->ConvertDomainInternal.erase(p);
           }
@@ -165,19 +181,20 @@ vtkAlgorithmOutput* vtkDataRepresentation::GetInternalOutputPort(int port, int c
   // The cached shallow copy is out of date when the input data object
   // changed, or the shallow copy modified time is less than the
   // input modified time.
-  vtkstd::pair<int, int> p(port, conn);
+  std::pair<int, int> p(port, conn);
   vtkAlgorithmOutput* input = this->GetInputConnection(port, conn);
+  vtkDataObject* inputDObj = this->GetInputDataObject(port, conn);
   if (this->Implementation->InputInternal.find(p) ==
-    this->Implementation->InputInternal.end() ||
-    this->Implementation->InputInternal[p].first != input ||
-    this->Implementation->InputInternal[p].second->GetMTime() < input->GetMTime())
+      this->Implementation->InputInternal.end() ||
+      this->Implementation->InputInternal[p].first != input ||
+      this->Implementation->InputInternal[p].second->GetMTime() < inputDObj->GetMTime())
     {
     this->Implementation->InputInternal[p].first = input;
-    vtkDataObject* input = this->GetInputDataObject(port, conn);
-    vtkDataObject* copy = input->NewInstance();
-    copy->ShallowCopy(input);
+    vtkDataObject* copy = inputDObj->NewInstance();
+    copy->ShallowCopy(inputDObj);
     vtkTrivialProducer* tp = vtkTrivialProducer::New();
     tp->SetOutput(copy);
+    copy->Delete();
     this->Implementation->InputInternal[p].second = tp;
     tp->Delete();
     }
@@ -198,7 +215,7 @@ vtkAlgorithmOutput* vtkDataRepresentation::GetInternalAnnotationOutputPort(
     }
 
   // Create a new filter in the cache if necessary.
-  vtkstd::pair<int, int> p(port, conn);
+  std::pair<int, int> p(port, conn);
   if (this->Implementation->ConvertDomainInternal.find(p) ==
     this->Implementation->ConvertDomainInternal.end())
     {
@@ -232,7 +249,7 @@ vtkAlgorithmOutput* vtkDataRepresentation::GetInternalSelectionOutputPort(
 
   // Output port 1 of the convert domain filter is the current selection
   // that was contained in the linked annotation.
-  vtkstd::pair<int, int> p(port, conn);
+  std::pair<int, int> p(port, conn);
   if (this->Implementation->ConvertDomainInternal.find(p) !=
     this->Implementation->ConvertDomainInternal.end())
     {

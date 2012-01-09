@@ -42,12 +42,11 @@
 #ifndef __vtkPerspectiveTransform_h
 #define __vtkPerspectiveTransform_h
 
-#include "vtkCommonTransformsExport.h" // For export macro
 #include "vtkHomogeneousTransform.h"
 
 #include "vtkMatrix4x4.h" // Needed for inline methods
 
-class VTKCOMMONTRANSFORMS_EXPORT vtkPerspectiveTransform : public vtkHomogeneousTransform
+class VTK_COMMON_EXPORT vtkPerspectiveTransform : public vtkHomogeneousTransform
 {
  public:
   static vtkPerspectiveTransform *New();

@@ -31,10 +31,9 @@
 #ifndef __vtkGenericPointIterator_h
 #define __vtkGenericPointIterator_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkObject.h"
 
-class VTKCOMMONDATAMODEL_EXPORT vtkGenericPointIterator : public vtkObject
+class VTK_FILTERING_EXPORT vtkGenericPointIterator : public vtkObject
 {
 public:
   // Description:

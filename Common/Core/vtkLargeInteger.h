@@ -17,10 +17,9 @@
 #ifndef __vtkLargeInteger_h
 #define __vtkLargeInteger_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkObject.h"
 
-class VTKCOMMONCORE_EXPORT vtkLargeInteger
+class VTK_COMMON_EXPORT vtkLargeInteger 
 {
 public:
   vtkLargeInteger(void);
