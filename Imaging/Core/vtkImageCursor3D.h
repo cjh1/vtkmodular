@@ -19,9 +19,10 @@
 #ifndef __vtkImageCursor3D_h
 #define __vtkImageCursor3D_h
 
+#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkImageInPlaceFilter.h"
 
-class VTK_IMAGING_EXPORT vtkImageCursor3D : public vtkImageInPlaceFilter
+class VTKIMAGINGCORE_EXPORT vtkImageCursor3D : public vtkImageInPlaceFilter
 {
 public:
   static vtkImageCursor3D *New();

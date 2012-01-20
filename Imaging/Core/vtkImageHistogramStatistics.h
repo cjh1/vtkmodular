@@ -29,12 +29,13 @@
 #ifndef __vtkImageHistogramStatistics_h
 #define __vtkImageHistogramStatistics_h
 
+#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkImageHistogram.h"
 
 class vtkImageStencilData;
 class vtkIdTypeArray;
 
-class VTK_IMAGING_EXPORT vtkImageHistogramStatistics : public vtkImageHistogram
+class VTKIMAGINGCORE_EXPORT vtkImageHistogramStatistics : public vtkImageHistogram
 {
 public:
   static vtkImageHistogramStatistics *New();

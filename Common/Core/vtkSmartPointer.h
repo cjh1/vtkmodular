@@ -20,6 +20,7 @@
 #ifndef __vtkSmartPointer_h
 #define __vtkSmartPointer_h
 
+#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkSmartPointerBase.h"
 
 template <class T>

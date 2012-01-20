@@ -26,9 +26,10 @@
 #ifndef __vtkExtractRectilinearGrid_h
 #define __vtkExtractRectilinearGrid_h
 
+#include "vtkFiltersExtractionExport.h" // For export macro
 #include "vtkRectilinearGridAlgorithm.h"
 
-class VTK_GRAPHICS_EXPORT vtkExtractRectilinearGrid : public vtkRectilinearGridAlgorithm
+class VTKFILTERSEXTRACTION_EXPORT vtkExtractRectilinearGrid : public vtkRectilinearGridAlgorithm
 {
 public:
   static vtkExtractRectilinearGrid *New();

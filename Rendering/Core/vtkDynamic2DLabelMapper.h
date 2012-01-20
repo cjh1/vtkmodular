@@ -50,9 +50,10 @@
 #ifndef __vtkDynamic2DLabelMapper_h
 #define __vtkDynamic2DLabelMapper_h
 
+#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkLabeledDataMapper.h"
 
-class VTK_RENDERING_EXPORT vtkDynamic2DLabelMapper : public vtkLabeledDataMapper
+class VTKRENDERINGCORE_EXPORT vtkDynamic2DLabelMapper : public vtkLabeledDataMapper
 {
 public:
   // Description:

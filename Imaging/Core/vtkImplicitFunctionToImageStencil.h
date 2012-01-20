@@ -24,11 +24,12 @@
 #define __vtkImplicitFunctionToImageStencil_h
 
 
+#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkImageStencilSource.h"
 
 class vtkImplicitFunction;
 
-class VTK_IMAGING_EXPORT vtkImplicitFunctionToImageStencil : public vtkImageStencilSource
+class VTKIMAGINGCORE_EXPORT vtkImplicitFunctionToImageStencil : public vtkImageStencilSource
 {
 public:
   static vtkImplicitFunctionToImageStencil *New();

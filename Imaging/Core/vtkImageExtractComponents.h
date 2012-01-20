@@ -24,9 +24,10 @@
 #define __vtkImageExtractComponents_h
 
 
+#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkThreadedImageAlgorithm.h"
 
-class VTK_IMAGING_EXPORT vtkImageExtractComponents : public vtkThreadedImageAlgorithm
+class VTKIMAGINGCORE_EXPORT vtkImageExtractComponents : public vtkThreadedImageAlgorithm
 {
 public:
   static vtkImageExtractComponents *New();

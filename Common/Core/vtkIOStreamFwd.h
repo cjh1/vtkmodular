@@ -21,6 +21,7 @@
 #ifndef __vtkIOStreamFwd_h
 #define __vtkIOStreamFwd_h
 
+#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkConfigure.h"
 
 #ifdef VTK_USE_ANSI_STDLIB

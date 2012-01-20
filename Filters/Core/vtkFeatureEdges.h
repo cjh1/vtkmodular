@@ -35,11 +35,12 @@
 #ifndef __vtkFeatureEdges_h
 #define __vtkFeatureEdges_h
 
+#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
 class vtkIncrementalPointLocator;
 
-class VTK_GRAPHICS_EXPORT vtkFeatureEdges : public vtkPolyDataAlgorithm
+class VTKFILTERSCORE_EXPORT vtkFeatureEdges : public vtkPolyDataAlgorithm
 {
 public:
   vtkTypeMacro(vtkFeatureEdges,vtkPolyDataAlgorithm);

@@ -49,11 +49,12 @@
 #ifndef __vtkRRandomTableSource_h
 #define __vtkRRandomTableSource_h
 
+#include "vtkFiltersSourcesExport.h" // For export macro
 #include "vtkTableAlgorithm.h"
 
 class vtkRrtsimplementation;
 
-class VTK_GRAPHICS_EXPORT vtkRRandomTableSource : public vtkTableAlgorithm
+class VTKFILTERSSOURCES_EXPORT vtkRRandomTableSource : public vtkTableAlgorithm
 {
 
 public:

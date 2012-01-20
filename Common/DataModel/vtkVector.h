@@ -25,6 +25,7 @@
 #ifndef __vtkVector_h
 #define __vtkVector_h
 
+#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkVectorBase.h"
 
 #include <cmath>   // For math functions

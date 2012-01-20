@@ -35,9 +35,10 @@
 #ifndef __vtkShepardMethod_h
 #define __vtkShepardMethod_h
 
+#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkImageAlgorithm.h"
 
-class VTK_IMAGING_EXPORT vtkShepardMethod : public vtkImageAlgorithm 
+class VTKIMAGINGCORE_EXPORT vtkShepardMethod : public vtkImageAlgorithm
 {
 public:
   vtkTypeMacro(vtkShepardMethod,vtkImageAlgorithm);

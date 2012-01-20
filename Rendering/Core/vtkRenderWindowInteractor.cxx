@@ -65,7 +65,8 @@ vtkRenderWindowInteractor::vtkRenderWindowInteractor()
 {
   this->RenderWindow    = NULL;
   this->InteractorStyle = NULL;
-  this->SetInteractorStyle(vtkInteractorStyleSwitch::New()); 
+  // FIXME: Removed this for now - pulls in pretty much every interactor
+  //this->SetInteractorStyle(vtkInteractorStyleSwitch::New()); 
   this->InteractorStyle->Delete();
   
   this->LightFollowCamera = 1;

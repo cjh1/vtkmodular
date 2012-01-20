@@ -43,6 +43,7 @@
 #ifndef __vtkDenseArray_h
 #define __vtkDenseArray_h
 
+#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkArrayCoordinates.h"
 #include "vtkObjectFactory.h"
 #include "vtkTypedArray.h"

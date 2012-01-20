@@ -28,6 +28,7 @@ set(Kit_SRCS
   vtkProbeSelectedLocations.cxx
   vtkHierarchicalDataExtractDataSets.cxx
   vtkHierarchicalDataExtractLevel.cxx
+  vtkLinearExtractor.cxx
   )
 
 include_directories(

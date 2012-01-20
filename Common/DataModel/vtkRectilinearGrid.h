@@ -33,6 +33,7 @@
 #ifndef __vtkRectilinearGrid_h
 #define __vtkRectilinearGrid_h
 
+#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkDataSet.h"
 #include "vtkStructuredData.h" // For inline methods
 
@@ -42,7 +43,7 @@ class vtkPixel;
 class vtkVoxel;
 class vtkDataArray;
 
-class VTK_FILTERING_EXPORT vtkRectilinearGrid : public vtkDataSet
+class VTKCOMMONDATAMODEL_EXPORT vtkRectilinearGrid : public vtkDataSet
 {
 public:
   static vtkRectilinearGrid *New();

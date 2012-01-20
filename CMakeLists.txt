@@ -607,6 +607,9 @@ foreach(vtk-module ${VTK_MODULES_ENABLED})
   if(NOT EXISTS ${${vtk-module}_SOURCE_DIR})
     message("Module directory does not exist! '${${vtk-module}_SOURCE_DIR}'")
   endif()
+  if(NOT DEFINED ${vtk-module}_SOURCE_DIR)
+    message(FATAL_ERROR "${vtk-module} has no defined source directory.")
+  endif()
   add_subdirectory("${${vtk-module}_SOURCE_DIR}" "${${vtk-module}_BINARY_DIR}")
 
   # These two variables are combined into VTK_INCLUDE_DIRS_CONFIG which is used

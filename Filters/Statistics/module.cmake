@@ -3,6 +3,7 @@ vtk_module(vtkFiltersStatistics
     vtkCommonCore
     vtkCommonMath
     vtkCommonDataModel
+    vtkCommonExecutionModel
     vtkCommonTransforms
     vtkCommonMisc
     vtkalglib

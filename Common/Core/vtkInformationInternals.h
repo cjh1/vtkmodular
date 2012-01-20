@@ -21,6 +21,7 @@
 #ifndef __vtkInformationInternals_h
 #define __vtkInformationInternals_h
 
+#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkInformationKey.h"
 #include "vtkObjectBase.h"
 

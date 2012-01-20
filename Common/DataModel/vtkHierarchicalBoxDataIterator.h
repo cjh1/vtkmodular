@@ -19,9 +19,10 @@
 #ifndef __vtkHierarchicalBoxDataIterator_h
 #define __vtkHierarchicalBoxDataIterator_h
 
+#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkCompositeDataIterator.h"
 
-class VTK_FILTERING_EXPORT vtkHierarchicalBoxDataIterator : public vtkCompositeDataIterator
+class VTKCOMMONDATAMODEL_EXPORT vtkHierarchicalBoxDataIterator : public vtkCompositeDataIterator
 {
 public:
   static vtkHierarchicalBoxDataIterator* New();

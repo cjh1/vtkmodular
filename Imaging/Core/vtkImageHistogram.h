@@ -28,12 +28,13 @@
 #ifndef __vtkImageHistogram_h
 #define __vtkImageHistogram_h
 
+#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkThreadedImageAlgorithm.h"
 
 class vtkImageStencilData;
 class vtkIdTypeArray;
 
-class VTK_IMAGING_EXPORT vtkImageHistogram : public vtkThreadedImageAlgorithm
+class VTKIMAGINGCORE_EXPORT vtkImageHistogram : public vtkThreadedImageAlgorithm
 {
 public:
   static vtkImageHistogram *New();
@@ -100,8 +101,12 @@ public:
 
   // Description:
   // Use a stencil to compute the histogram for just a part of the image.
-  void SetStencil(vtkImageStencilData *stencil);
+  void SetStencilData(vtkImageStencilData *stencil);
   vtkImageStencilData *GetStencil();
+
+  // Description:
+  // Equivalent to SetInputConnection(1, algOutput).
+  void SetStencilConnection(vtkAlgorithmOutput* algOutput);
 
   // Description:
   // If this is On, then a histogram image will be produced as the output.

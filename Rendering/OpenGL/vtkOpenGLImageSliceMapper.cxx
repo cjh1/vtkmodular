@@ -978,9 +978,7 @@ void vtkOpenGLImageSliceMapper::Render(vtkRenderer *ren, vtkImageSlice *prop)
   vtkImageData *input = this->GetInput();
   input->GetSpacing(this->DataSpacing);
   input->GetOrigin(this->DataOrigin);
-  vtkInformation *inputInfo =
-          this->GetInputExecutive()->GetInputInformation(0)->GetInformationObject(0);
-
+  vtkInformation *inputInfo = this->GetInputInformation(0, 0);
   inputInfo->Get(vtkStreamingDemandDrivenPipeline::WHOLE_EXTENT(),
                  this->DataWholeExtent);
 
