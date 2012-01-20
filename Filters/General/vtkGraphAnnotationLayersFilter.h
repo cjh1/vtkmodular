@@ -46,6 +46,7 @@
 #ifndef __vtkGraphAnnotationLayersFilter_h
 #define __vtkGraphAnnotationLayersFilter_h
 
+#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 #include "vtkSmartPointer.h" // needed for ivars
 
@@ -54,7 +55,7 @@ class vtkConvexHull2D;
 class vtkRenderer;
 
 
-class VTK_INFOVIS_EXPORT vtkGraphAnnotationLayersFilter: public vtkPolyDataAlgorithm
+class VTKFILTERSGENERAL_EXPORT vtkGraphAnnotationLayersFilter: public vtkPolyDataAlgorithm
 {
 public:
   static vtkGraphAnnotationLayersFilter *New();

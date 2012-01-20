@@ -28,6 +28,7 @@
 #ifndef __vtkAbstractImageInterpolator_h
 #define __vtkAbstractImageInterpolator_h
 
+#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkObject.h"
 
 #define VTK_IMAGE_BORDER_CLAMP 0
@@ -40,7 +41,7 @@ class vtkDataArray;
 struct vtkInterpolationInfo;
 struct vtkInterpolationWeights;
 
-class VTK_FILTERING_EXPORT vtkAbstractImageInterpolator : public vtkObject
+class VTKFILTERSGENERAL_EXPORT vtkAbstractImageInterpolator : public vtkObject
 {
 public:
   vtkTypeMacro(vtkAbstractImageInterpolator, vtkObject);

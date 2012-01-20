@@ -19,6 +19,7 @@
 #ifndef __vtkTypeTraits_h
 #define __vtkTypeTraits_h
 
+#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkSystemIncludes.h"
 
 // Forward-declare template.  There is no primary template.

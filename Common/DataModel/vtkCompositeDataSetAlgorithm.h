@@ -22,11 +22,12 @@
 #ifndef __vtkCompositeDataSetAlgorithm_h
 #define __vtkCompositeDataSetAlgorithm_h
 
+#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkAlgorithm.h"
 
 class vtkCompositeDataSet;
 
-class VTK_FILTERING_EXPORT vtkCompositeDataSetAlgorithm : public vtkAlgorithm
+class VTKCOMMONDATAMODEL_EXPORT vtkCompositeDataSetAlgorithm : public vtkAlgorithm
 {
 public:
   static vtkCompositeDataSetAlgorithm *New();

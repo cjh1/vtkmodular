@@ -25,11 +25,12 @@
 #ifndef __vtkAlgorithmOutput_h
 #define __vtkAlgorithmOutput_h
 
+#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkAlgorithm;
 
-class VTK_FILTERING_EXPORT vtkAlgorithmOutput : public vtkObject
+class VTKCOMMONDATAMODEL_EXPORT vtkAlgorithmOutput : public vtkObject
 {
 public:
   static vtkAlgorithmOutput *New();

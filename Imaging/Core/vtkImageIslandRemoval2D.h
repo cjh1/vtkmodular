@@ -24,6 +24,7 @@
 #define __vtkImageIslandRemoval2D_h
 
 
+#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkImageAlgorithm.h"
 
 //BTX
@@ -35,7 +36,7 @@ typedef struct{
   } vtkImage2DIslandPixel;
 //ETX
 
-class VTK_IMAGING_EXPORT vtkImageIslandRemoval2D : public vtkImageAlgorithm
+class VTKIMAGINGCORE_EXPORT vtkImageIslandRemoval2D : public vtkImageAlgorithm
 {
 public:
   // Description:

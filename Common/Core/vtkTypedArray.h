@@ -44,6 +44,7 @@
 #ifndef __vtkTypedArray_h
 #define __vtkTypedArray_h
 
+#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkArray.h"
 #include "vtkTypeTemplate.h"
 

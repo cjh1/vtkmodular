@@ -32,6 +32,7 @@
 #ifndef __vtkScalarTree_h
 #define __vtkScalarTree_h
 
+#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkCell;
@@ -40,7 +41,7 @@ class vtkDataSet;
 class vtkIdList;
 class vtkTimeStamp;
 
-class VTK_FILTERING_EXPORT vtkScalarTree : public vtkObject
+class VTKCOMMONDATAMODEL_EXPORT vtkScalarTree : public vtkObject
 {
 public:
   vtkTypeMacro(vtkScalarTree,vtkObject);

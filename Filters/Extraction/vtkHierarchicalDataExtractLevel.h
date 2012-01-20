@@ -19,9 +19,10 @@
 #ifndef __vtkHierarchicalDataExtractLevel_h
 #define __vtkHierarchicalDataExtractLevel_h
 
+#include "vtkFiltersExtractionExport.h" // For export macro
 #include "vtkExtractLevel.h"
 
-class VTK_GRAPHICS_EXPORT vtkHierarchicalDataExtractLevel : public vtkExtractLevel 
+class VTKFILTERSEXTRACTION_EXPORT vtkHierarchicalDataExtractLevel : public vtkExtractLevel
 {
 public:
   vtkTypeMacro(vtkHierarchicalDataExtractLevel,vtkExtractLevel);

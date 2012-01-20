@@ -21,9 +21,10 @@
 #define __vtkImageEuclideanToPolar_h
 
 
+#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkThreadedImageAlgorithm.h"
 
-class VTK_IMAGING_EXPORT vtkImageEuclideanToPolar : public vtkThreadedImageAlgorithm
+class VTKIMAGINGCORE_EXPORT vtkImageEuclideanToPolar : public vtkThreadedImageAlgorithm
 {
 public:
   static vtkImageEuclideanToPolar *New();

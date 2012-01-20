@@ -42,13 +42,14 @@
 #ifndef __vtkRenderPass_h
 #define __vtkRenderPass_h
 
+#include "vtkRenderingOpenGLExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkRenderState;
 class vtkWindow;
 class vtkRenderer;
 
-class VTK_RENDERING_EXPORT vtkRenderPass : public vtkObject
+class VTKRENDERINGOPENGL_EXPORT vtkRenderPass : public vtkObject
 {
  public:
   vtkTypeMacro(vtkRenderPass,vtkObject);

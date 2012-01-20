@@ -26,10 +26,11 @@
 #ifndef __vtkExecutionSchedulerManager_h
 #define __vtkExecutionSchedulerManager_h
 
+#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkSystemIncludes.h"
 #include "vtkDebugLeaksManager.h" // DebugLeaks exists longer than us.
 
-class VTK_FILTERING_EXPORT vtkExecutionSchedulerManager
+class VTKCOMMONDATAMODEL_EXPORT vtkExecutionSchedulerManager
 {
 public:
   vtkExecutionSchedulerManager();

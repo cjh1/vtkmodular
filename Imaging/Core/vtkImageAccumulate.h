@@ -35,11 +35,12 @@
 #ifndef __vtkImageAccumulate_h
 #define __vtkImageAccumulate_h
 
+#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkImageAlgorithm.h"
 
 class vtkImageStencilData;
 
-class VTK_IMAGING_EXPORT vtkImageAccumulate : public vtkImageAlgorithm
+class VTKIMAGINGCORE_EXPORT vtkImageAccumulate : public vtkImageAlgorithm
 {
 public:
   static vtkImageAccumulate *New();

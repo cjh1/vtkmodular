@@ -26,9 +26,10 @@
 #ifndef __vtkImageInterpolator_h
 #define __vtkImageInterpolator_h
 
+#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkAbstractImageInterpolator.h"
 
-class VTK_FILTERING_EXPORT vtkImageInterpolator :
+class VTKFILTERSGENERAL_EXPORT vtkImageInterpolator :
   public vtkAbstractImageInterpolator
 {
 public:

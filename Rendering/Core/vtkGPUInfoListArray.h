@@ -19,6 +19,7 @@
 #ifndef __vtkGPUInfoListArray_h
 #define __vtkGPUInfoListArray_h
 
+#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkGPUInfo.h"
 #include <vector> // STL Header
 

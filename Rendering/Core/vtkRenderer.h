@@ -29,6 +29,7 @@
 #ifndef __vtkRenderer_h
 #define __vtkRenderer_h
 
+#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkViewport.h"
 
 #include "vtkVolumeCollection.h" // Needed for access in inline members
@@ -55,7 +56,7 @@ class vtkVisibleCellSelector;
 #endif
 
 
-class VTK_RENDERING_EXPORT vtkRenderer : public vtkViewport
+class VTKRENDERINGCORE_EXPORT vtkRenderer : public vtkViewport
 {
 public:
   vtkTypeMacro(vtkRenderer,vtkViewport);

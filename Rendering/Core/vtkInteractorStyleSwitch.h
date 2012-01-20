@@ -26,6 +26,7 @@
 #ifndef __vtkInteractorStyleSwitch_h
 #define __vtkInteractorStyleSwitch_h
 
+#include "vtkRenderingCoreExport.h" // For export macro
 #include "vtkInteractorStyle.h"
 
 #define VTKIS_JOYSTICK  0
@@ -39,7 +40,7 @@ class vtkInteractorStyleJoystickCamera;
 class vtkInteractorStyleTrackballActor;
 class vtkInteractorStyleTrackballCamera;
 
-class VTK_RENDERING_EXPORT vtkInteractorStyleSwitch : public vtkInteractorStyle
+class VTKRENDERINGCORE_EXPORT vtkInteractorStyleSwitch : public vtkInteractorStyle
 {
 public:
   static vtkInteractorStyleSwitch *New();

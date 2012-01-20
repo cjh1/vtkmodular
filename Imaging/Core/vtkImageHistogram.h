@@ -28,12 +28,13 @@
 #ifndef __vtkImageHistogram_h
 #define __vtkImageHistogram_h
 
+#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkThreadedImageAlgorithm.h"
 
 class vtkImageStencilData;
 class vtkIdTypeArray;
 
-class VTK_IMAGING_EXPORT vtkImageHistogram : public vtkThreadedImageAlgorithm
+class VTKIMAGINGCORE_EXPORT vtkImageHistogram : public vtkThreadedImageAlgorithm
 {
 public:
   static vtkImageHistogram *New();

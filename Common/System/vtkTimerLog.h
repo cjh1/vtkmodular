@@ -25,6 +25,7 @@
 #ifndef __vtkTimerLog_h
 #define __vtkTimerLog_h
 
+#include "vtkCommonSystemExport.h" // For export macro
 #include "vtkObject.h"
 
 #ifdef _WIN32
@@ -71,7 +72,7 @@ typedef struct
 } vtkTimerLogEntry;
 //ETX
 
-class VTK_COMMON_EXPORT vtkTimerLog : public vtkObject 
+class VTKCOMMONSYSTEM_EXPORT vtkTimerLog : public vtkObject
 {
 public:
   static vtkTimerLog *New();

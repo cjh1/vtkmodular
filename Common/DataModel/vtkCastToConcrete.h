@@ -38,9 +38,10 @@
 #ifndef __vtkCastToConcrete_h
 #define __vtkCastToConcrete_h
 
+#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkDataSetAlgorithm.h"
 
-class VTK_FILTERING_EXPORT vtkCastToConcrete : public vtkDataSetAlgorithm
+class VTKCOMMONDATAMODEL_EXPORT vtkCastToConcrete : public vtkDataSetAlgorithm
 {
 
 public:

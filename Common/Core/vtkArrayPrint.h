@@ -27,6 +27,7 @@
 #ifndef __vtkArrayPrint_h
 #define __vtkArrayPrint_h
 
+#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkTypedArray.h"
 
 /// \relates vtkArrayPrint

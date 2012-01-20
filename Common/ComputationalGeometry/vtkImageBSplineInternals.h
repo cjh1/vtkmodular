@@ -33,9 +33,10 @@
 #ifndef __vtkImageBSplineInternals_h
 #define __vtkImageBSplineInternals_h
 
+#include "vtkCommonComputationalGeometryExport.h" // For export macro
 #include "vtkSystemIncludes.h"
 
-class VTK_FILTERING_EXPORT vtkImageBSplineInternals
+class VTKCOMMONCOMPUTATIONALGEOMETRY_EXPORT vtkImageBSplineInternals
 {
 public:
   // Description:

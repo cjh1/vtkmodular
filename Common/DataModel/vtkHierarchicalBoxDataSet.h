@@ -40,6 +40,7 @@
 #ifndef __vtkHierarchicalBoxDataSet_h
 #define __vtkHierarchicalBoxDataSet_h
 
+#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkCompositeDataSet.h"
 
 class vtkAMRBox;
@@ -48,7 +49,7 @@ class vtkInformationIntegerKey;
 class vtkInformationIntegerVectorKey;
 class vtkUniformGrid;
 
-class VTK_FILTERING_EXPORT vtkHierarchicalBoxDataSet : public vtkCompositeDataSet
+class VTKCOMMONDATAMODEL_EXPORT vtkHierarchicalBoxDataSet : public vtkCompositeDataSet
 {
 public:
   static vtkHierarchicalBoxDataSet *New();

@@ -92,6 +92,7 @@ PURPOSE.  See the above copyright notice for more information.
 #ifndef __vtkKMeansStatistics_h
 #define __vtkKMeansStatistics_h
 
+#include "vtkFiltersStatisticsExport.h" // For export macro
 #include "vtkStatisticsAlgorithm.h"
 
 class vtkIdTypeArray;
@@ -100,7 +101,7 @@ class vtkDoubleArray;
 class vtkKMeansDistanceFunctor;
 class vtkMultiBlockDataSet;
 
-class VTK_INFOVIS_EXPORT vtkKMeansStatistics : public vtkStatisticsAlgorithm
+class VTKFILTERSSTATISTICS_EXPORT vtkKMeansStatistics : public vtkStatisticsAlgorithm
 {
 public:
   vtkTypeMacro(vtkKMeansStatistics, vtkStatisticsAlgorithm);

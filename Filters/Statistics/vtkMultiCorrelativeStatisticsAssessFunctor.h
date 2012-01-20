@@ -1,6 +1,7 @@
 #ifndef __vtkMultiCorrelativeStatisticsAssessFunctor_h
 #define __vtkMultiCorrelativeStatisticsAssessFunctor_h
 
+#include "vtkFiltersStatisticsExport.h" // For export macro
 #include "vtkStatisticsAlgorithm.h"
 
 #include <vector>

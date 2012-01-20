@@ -20,13 +20,14 @@
 #ifndef __vtkSelectionSource_h
 #define __vtkSelectionSource_h
 
+#include "vtkFiltersSourcesExport.h" // For export macro
 #include "vtkSelectionAlgorithm.h"
 
 //BTX
 class vtkSelectionSourceInternals;
 //ETX
 
-class VTK_GRAPHICS_EXPORT vtkSelectionSource : public vtkSelectionAlgorithm
+class VTKFILTERSSOURCES_EXPORT vtkSelectionSource : public vtkSelectionAlgorithm
 {
 public:
   static vtkSelectionSource *New();

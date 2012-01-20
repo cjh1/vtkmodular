@@ -30,11 +30,12 @@
 #ifndef __vtkGenericCellIterator_h
 #define __vtkGenericCellIterator_h
 
+#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkGenericAdaptorCell;
 
-class VTK_FILTERING_EXPORT vtkGenericCellIterator : public vtkObject
+class VTKCOMMONDATAMODEL_EXPORT vtkGenericCellIterator : public vtkObject
 {
 public:
   // Description:

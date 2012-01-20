@@ -28,11 +28,12 @@
 #ifndef __vtkStructuredPointsReader_h
 #define __vtkStructuredPointsReader_h
 
+#include "vtkIOGeometryExport.h" // For export macro
 #include "vtkDataReader.h"
 
 class vtkStructuredPoints;
 
-class VTK_IO_EXPORT vtkStructuredPointsReader : public vtkDataReader
+class VTKIOGEOMETRY_EXPORT vtkStructuredPointsReader : public vtkDataReader
 {
 public:
   static vtkStructuredPointsReader *New();

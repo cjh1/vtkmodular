@@ -23,11 +23,12 @@
 #ifndef __vtkTrivialProducer_h
 #define __vtkTrivialProducer_h
 
+#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkAlgorithm.h"
 
 class vtkDataObject;
 
-class VTK_FILTERING_EXPORT vtkTrivialProducer : public vtkAlgorithm
+class VTKCOMMONDATAMODEL_EXPORT vtkTrivialProducer : public vtkAlgorithm
 {
 public:
   static vtkTrivialProducer *New();

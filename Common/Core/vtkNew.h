@@ -50,6 +50,7 @@
 #ifndef __vtkNew_h
 #define __vtkNew_h
 
+#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkIOStream.h"
 
 class vtkObjectBase;

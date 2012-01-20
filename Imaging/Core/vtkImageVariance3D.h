@@ -26,11 +26,12 @@
 #define __vtkImageVariance3D_h
 
 
+#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkImageSpatialAlgorithm.h"
 
 class vtkImageEllipsoidSource;
 
-class VTK_IMAGING_EXPORT vtkImageVariance3D : public vtkImageSpatialAlgorithm
+class VTKIMAGINGCORE_EXPORT vtkImageVariance3D : public vtkImageSpatialAlgorithm
 {
 public:
   static vtkImageVariance3D *New();

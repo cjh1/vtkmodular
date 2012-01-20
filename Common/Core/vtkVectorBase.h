@@ -22,6 +22,7 @@
 #ifndef __vtkVectorBase_h
 #define __vtkVectorBase_h
 
+#include "vtkCommonCoreExport.h" // For export macro
 #include <cassert> // For inline assert for bounds checked methods.
 
 template<typename T, int Size>

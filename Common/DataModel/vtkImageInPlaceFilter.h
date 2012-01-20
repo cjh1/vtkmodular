@@ -23,9 +23,10 @@
 #ifndef __vtkImageInPlaceFilter_h
 #define __vtkImageInPlaceFilter_h
 
+#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkImageAlgorithm.h"
 
-class VTK_FILTERING_EXPORT vtkImageInPlaceFilter : public vtkImageAlgorithm
+class VTKCOMMONDATAMODEL_EXPORT vtkImageInPlaceFilter : public vtkImageAlgorithm
 {
 public:
   vtkTypeMacro(vtkImageInPlaceFilter,vtkImageAlgorithm);

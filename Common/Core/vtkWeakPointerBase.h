@@ -22,11 +22,12 @@
 #ifndef __vtkWeakPointerBase_h
 #define __vtkWeakPointerBase_h
 
+#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkObjectBase.h"
 
 class vtkObjectBaseToWeakPointerBaseFriendship;
 
-class VTK_COMMON_EXPORT vtkWeakPointerBase
+class VTKCOMMONCORE_EXPORT vtkWeakPointerBase
 {
 public:
   // Description:
@@ -108,7 +109,7 @@ VTK_WEAK_POINTER_BASE_DEFINE_OPERATOR(>=)
 
 // Description:
 // Streaming operator to print smart pointer like regular pointers.
-VTK_COMMON_EXPORT ostream& operator << (ostream& os,
+VTKCOMMONCORE_EXPORT ostream& operator << (ostream& os,
                                         const vtkWeakPointerBase& p);
 
 #endif

@@ -25,10 +25,11 @@
 #ifndef __vtkExtentTranslator_h
 #define __vtkExtentTranslator_h
 
+#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkObject.h"
 
 
-class VTK_COMMON_EXPORT vtkExtentTranslator : public vtkObject
+class VTKCOMMONDATAMODEL_EXPORT vtkExtentTranslator : public vtkObject
 {
 public:
   static vtkExtentTranslator *New();

@@ -22,9 +22,10 @@
 #ifndef __vtkExtractDataSets_h
 #define __vtkExtractDataSets_h
 
+#include "vtkFiltersExtractionExport.h" // For export macro
 #include "vtkHierarchicalBoxDataSetAlgorithm.h"
 
-class VTK_GRAPHICS_EXPORT vtkExtractDataSets : public vtkHierarchicalBoxDataSetAlgorithm
+class VTKFILTERSEXTRACTION_EXPORT vtkExtractDataSets : public vtkHierarchicalBoxDataSetAlgorithm
 {
 public:
   static vtkExtractDataSets* New();

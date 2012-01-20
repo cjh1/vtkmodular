@@ -34,12 +34,13 @@
 #ifndef __vtkAnnotationLayersAlgorithm_h
 #define __vtkAnnotationLayersAlgorithm_h
 
+#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkAlgorithm.h"
 #include "vtkAnnotationLayers.h" // makes things a bit easier
 
 class vtkDataSet;
 
-class VTK_FILTERING_EXPORT vtkAnnotationLayersAlgorithm : public vtkAlgorithm
+class VTKCOMMONDATAMODEL_EXPORT vtkAnnotationLayersAlgorithm : public vtkAlgorithm
 {
 public:
   static vtkAnnotationLayersAlgorithm *New();

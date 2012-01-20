@@ -17,10 +17,11 @@
 //
 // marching cubes case table for generating isosurfaces
 //
+#include "vtkFiltersCoreExport.h" // For export macro
 #include "vtkSystemIncludes.h"
 
 typedef int EDGE_LIST;
-struct VTK_FILTERING_EXPORT vtkMarchingCubesTriangleCases
+struct VTKFILTERSCORE_EXPORT vtkMarchingCubesTriangleCases
 {
   EDGE_LIST edges[16];
   static vtkMarchingCubesTriangleCases* GetCases();

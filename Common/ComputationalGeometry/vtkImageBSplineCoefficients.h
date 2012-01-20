@@ -43,10 +43,11 @@
 #define __vtkImageBSplineCoefficients_h
 
 
+#include "vtkCommonComputationalGeometryExport.h" // For export macro
 #include "vtkThreadedImageAlgorithm.h"
 #include "vtkImageBSplineInterpolator.h" // for constants
 
-class VTK_IMAGING_EXPORT vtkImageBSplineCoefficients :
+class VTKCOMMONCOMPUTATIONALGEOMETRY_EXPORT vtkImageBSplineCoefficients :
   public vtkThreadedImageAlgorithm
 {
 public:

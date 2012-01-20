@@ -37,12 +37,13 @@
 #ifndef __vtkImplicitPolyDataDistance_h
 #define __vtkImplicitPolyDataDistance_h
 
+#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkImplicitFunction.h"
 
 class vtkCellLocator;
 class vtkPolyData;
 
-class VTK_GRAPHICS_EXPORT vtkImplicitPolyDataDistance : public vtkImplicitFunction
+class VTKCOMMONDATAMODEL_EXPORT vtkImplicitPolyDataDistance : public vtkImplicitFunction
 {
 public:
   static vtkImplicitPolyDataDistance *New();

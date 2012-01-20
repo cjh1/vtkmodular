@@ -22,11 +22,12 @@
 #ifndef __vtkMultiBlockDataSetAlgorithm_h
 #define __vtkMultiBlockDataSetAlgorithm_h
 
+#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkAlgorithm.h"
 
 class vtkMultiBlockDataSet;
 
-class VTK_FILTERING_EXPORT vtkMultiBlockDataSetAlgorithm : public vtkAlgorithm
+class VTKCOMMONDATAMODEL_EXPORT vtkMultiBlockDataSetAlgorithm : public vtkAlgorithm
 {
 public:
   static vtkMultiBlockDataSetAlgorithm *New();

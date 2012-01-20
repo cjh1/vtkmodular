@@ -36,12 +36,13 @@
 #ifndef __vtkTableAlgorithm_h
 #define __vtkTableAlgorithm_h
 
+#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkAlgorithm.h"
 
 class vtkDataSet;
 class vtkTable;
 
-class VTK_FILTERING_EXPORT vtkTableAlgorithm : public vtkAlgorithm
+class VTKCOMMONDATAMODEL_EXPORT vtkTableAlgorithm : public vtkAlgorithm
 {
 public:
   static vtkTableAlgorithm *New();

@@ -25,12 +25,13 @@
 #ifndef __vtkThreadedImageAlgorithm_h
 #define __vtkThreadedImageAlgorithm_h
 
+#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkImageAlgorithm.h"
 
 class vtkImageData;
 class vtkMultiThreader;
 
-class VTK_FILTERING_EXPORT vtkThreadedImageAlgorithm : public vtkImageAlgorithm
+class VTKCOMMONDATAMODEL_EXPORT vtkThreadedImageAlgorithm : public vtkImageAlgorithm
 {
 public:
   vtkTypeMacro(vtkThreadedImageAlgorithm,vtkImageAlgorithm);

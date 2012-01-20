@@ -24,9 +24,10 @@
 #define __vtkImageFourierCenter_h
 
 
+#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkImageDecomposeFilter.h"
 
-class VTK_IMAGING_EXPORT vtkImageFourierCenter : public vtkImageDecomposeFilter
+class VTKIMAGINGCORE_EXPORT vtkImageFourierCenter : public vtkImageDecomposeFilter
 {
 public:
   static vtkImageFourierCenter *New();

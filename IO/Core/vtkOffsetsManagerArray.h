@@ -43,6 +43,7 @@
 #ifndef __vtkOffsetsManagerArray_h
 #define __vtkOffsetsManagerArray_h
 
+#include "vtkIOCoreExport.h" // For export macro
 #include "vtkSystemIncludes.h"
 #include <vector>
 #include <assert.h>

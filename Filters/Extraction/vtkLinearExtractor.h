@@ -27,6 +27,7 @@ PURPOSE.  See the above copyright notice for more information.
 #ifndef VTK_LINEAR_EXTRACTOR_H
 #define VTK_LINEAR_EXTRACTOR_H
 
+#include "vtkFiltersExtractionExport.h" // For export macro
 #include <vtkSelectionAlgorithm.h>
 
 class vtkAlgorithmOutput;
@@ -35,7 +36,7 @@ class vtkDoubleArray;
 class vtkIdTypeArray;
 class vtkPoints;
 
-class VTK_FILTERING_EXPORT vtkLinearExtractor: public vtkSelectionAlgorithm
+class VTKFILTERSEXTRACTION_EXPORT vtkLinearExtractor: public vtkSelectionAlgorithm
 {
  public:
   vtkTypeMacro(vtkLinearExtractor,vtkSelectionAlgorithm);
