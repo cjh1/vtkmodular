@@ -98,8 +98,6 @@ vtkImageSincInterpolator              GetBlurFactors                    307  3
 vtkImageSource                        GetExecuteExtent                  304  6
 vtkImageSpatialAlgorithm              GetKernelMiddle                   304  3
 vtkImageSpatialAlgorithm              GetKernelSize                     304  3
-vtkImageSpatialFilter                 GetKernelMiddle                   304  3
-vtkImageSpatialFilter                 GetKernelSize                     304  3
 vtkImageTracerWidget                  GetHandlePosition                 307  3
 vtkImageVectorConvolve                GetKernel                         301  3
 vtkImageViewer                        GetPosition                       304  2
