@@ -102,6 +102,16 @@ set(Kit_SRCS
 
   # Move to FiltersGeometry
   #vtkDataSetSurfaceFilter.cxx # Needs vtkStructuredGridGeometryFilter - Geometry
+
+  vtkRectilinearGridToPointSet.cxx
+  vtkGraphWeightEuclideanDistanceFilter.cxx
+  vtkGraphWeightFilter.cxx
+  vtkImageSincInterpolator.cxx
+  vtkGraphAnnotationLayersFilter.cxx
+  vtkImageDataToPointSet.cxx
+  vtkIntersectionPolyDataFilter.cxx
+  vtkBooleanOperationPolyDataFilter.cxx
+  vtkDistancePolyDataFilter.cxx
   )
 
 include_directories(

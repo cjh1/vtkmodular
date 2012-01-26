@@ -1,0 +1,46 @@
+From b055b248d4fdadc677fad2da11815c8c4bdfa1b7 Mon Sep 17 00:00:00 2001
+From: Chris Harris <chris.harris@kitware.com>
+Date: Thu, 26 Jan 2012 13:32:39 -0500
+Subject: [PATCH] Remove duplicate export header from vtkXMLWriterC.h
+
+---
+ IO/XML/vtkXMLWriterC.h |   16 ----------------
+ 1 files changed, 0 insertions(+), 16 deletions(-)
+
+diff --git a/IO/XML/vtkXMLWriterC.h b/IO/XML/vtkXMLWriterC.h
+index e1bf2b6..8983580 100644
+--- a/IO/XML/vtkXMLWriterC.h
++++ b/IO/XML/vtkXMLWriterC.h
+@@ -15,20 +15,8 @@
+ #ifndef __vtkXMLWriterC_h
+ #define __vtkXMLWriterC_h
+ 
+-#include "vtkIOXMLExport.h" // For export macro
+ #include "vtkType.h" /* For scalar and vtkDataObject type enumerations.  */
+ 
+-/* Define the export macro.  */
+-#if defined(_WIN32) && defined(VTK_BUILD_SHARED_LIBS)
+-# if defined(vtkIO_EXPORTS)
+-#  define VTKIOXML_EXPORT __declspec(dllexport)
+-# else
+-#  define VTKIOXML_EXPORT __declspec(dllimport)
+-# endif
+-#else
+-# define VTKIOXML_EXPORT
+-#endif
+-
+ #ifdef __cplusplus
+ extern "C"
+ {
+@@ -276,8 +264,4 @@ void vtkXMLWriterC_Stop(vtkXMLWriterC* self);
+ #ifdef __cplusplus
+ } /* extern "C" */
+ #endif /*cplusplus*/
+-
+-/* Done with export macro.  */
+-#undef VTKIOXML_EXPORT
+-
+ #endif
+-- 
+1.7.5.4
+

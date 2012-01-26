@@ -34,6 +34,7 @@ set(Kit_SRCS
   vtkTreeFieldAggregator.cxx
   vtkTreeLevelsFilter.cxx
   vtkVertexDegree.cxx
+  vtkConvexHull2D.cxx
   )
 
 include_directories(

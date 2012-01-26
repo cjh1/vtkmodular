@@ -70,6 +70,8 @@ set(Kit_SRCS
   vtkRectilinearSynchronizedTemplates.cxx
   vtkEdgeSubdivisionCriterion.cxx
   vtkStreamingTessellator.cxx
+  vtkImplicitPolyDataDistance.cxx
+  vtkStreamerBase.cxx
 
   #vtkOutlineFilter.cxx # Needs vtkOutlineSource
   )

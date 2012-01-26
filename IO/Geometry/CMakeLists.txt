@@ -26,7 +26,6 @@ SET(Kit_SRCS
   vtkOpenFOAMReader.cxx
   vtkParticleReader.cxx
   vtkPDBReader.cxx
-  vtkPLOT3DReader.cxx
   vtkPolyDataReader.cxx
   vtkPolyDataWriter.cxx
   vtkProStarReader.cxx

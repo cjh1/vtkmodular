@@ -1,7 +1,7 @@
 /*=========================================================================
 
   Program:   Visualization Toolkit
-  Module:    vtkMarchingSquaresLineCases.h
+  Module:    vtkMarchingCubesTriangleCases.h
 
   Copyright (c) Ken Martin, Will Schroeder, Bill Lorensen
   All rights reserved.
@@ -12,19 +12,19 @@
      PURPOSE.  See the above copyright notice for more information.
 
 =========================================================================*/
-#ifndef __vtkMarchingSquaresLineCases_h
-#define __vtkMarchingSquaresLineCases_h
+#ifndef __vtkMarchingCubesCases_h
+#define __vtkMarchingCubesCases_h
 //
-// Marching squares cases for generating isolines.
+// marching cubes case table for generating isosurfaces
 //
-#include "vtkFiltersCoreExport.h" // For export macro
+#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkSystemIncludes.h"
 
 typedef int EDGE_LIST;
-struct VTKFILTERSCORE_EXPORT vtkMarchingSquaresLineCases
+struct VTKCOMMONDATAMODEL_EXPORT vtkMarchingCubesTriangleCases
 {
-  EDGE_LIST edges[5];
-  static vtkMarchingSquaresLineCases* GetCases();
+  EDGE_LIST edges[16];
+  static vtkMarchingCubesTriangleCases* GetCases();
 };
 
 #endif
