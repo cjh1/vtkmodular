@@ -15,19 +15,7 @@
 #ifndef __vtkXMLWriterC_h
 #define __vtkXMLWriterC_h
 
-#include "vtkIOXMLExport.h" // For export macro
 #include "vtkType.h" /* For scalar and vtkDataObject type enumerations.  */
-
-/* Define the export macro.  */
-#if defined(_WIN32) && defined(VTK_BUILD_SHARED_LIBS)
-# if defined(vtkIO_EXPORTS)
-#  define VTKIOXML_EXPORT __declspec(dllexport)
-# else
-#  define VTKIOXML_EXPORT __declspec(dllimport)
-# endif
-#else
-# define VTKIOXML_EXPORT
-#endif
 
 #ifdef __cplusplus
 extern "C"
@@ -276,8 +264,4 @@ void vtkXMLWriterC_Stop(vtkXMLWriterC* self);
 #ifdef __cplusplus
 } /* extern "C" */
 #endif /*cplusplus*/
-
-/* Done with export macro.  */
-#undef VTKIOXML_EXPORT
-
 #endif
