@@ -6,5 +6,5 @@ vtk_module(vtkParallelCore
     vtkIOCore
     vtkIOGeometry
   COMPILE_DEPENDS
-    HashSource
+    vtkHashSource
   DEFAULT ON)

@@ -10,7 +10,7 @@
 # See the License for more information.
 #=============================================================================
 set(METAIO_FOR_VTK ON)
-include_directories(${VTK_SOURCE_DIR}/Utilities)
+include_directories(${VTK_METAIO_INCLUDES})
 if(METAIO_FOR_VTK)
   set(METAIO_NAMESPACE "vtkmetaio")
   set(METAIO_ZLIB_LIBRARIES vtkzlib)

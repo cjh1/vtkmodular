@@ -3,7 +3,7 @@ INCLUDE_REGULAR_EXPRESSION("^(tif|fax|port|uv|vtk|tconf|t4|mk|z).*$")
 
 INCLUDE_DIRECTORIES(BEFORE ${VTKTIFF_SOURCE_DIR})
 INCLUDE_DIRECTORIES(BEFORE ${VTKTIFF_BINARY_DIR})
-include_directories(${VTK_SOURCE_DIR}/Utilities)
+include_directories(${VTK_SOURCE_DIR}/TPL)
 
 # library object files common to compression and decompression
 SET(common_SRCS

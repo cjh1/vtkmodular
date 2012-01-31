@@ -9,7 +9,7 @@ set(Kit_SRCS
   )
 
 include_directories(
-  ${VTK_SOURCE_DIR}/Utilities
+  ${VTK_SOURCE_DIR}/TPL
   )
 
 vtk_add_library(vtkIONetCDF ${Kit_SRCS})

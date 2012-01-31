@@ -4,6 +4,7 @@ project(VTK)
 
 set(VTK_CMAKE_DIR "${VTK_SOURCE_DIR}/CMake")
 set(CMAKE_MODULE_PATH ${VTK_CMAKE_DIR} ${CMAKE_MODULE_PATH})
+SET(VTK_ENCODESTRING_EXE vtkEncodeString)
 
 # Set a default build type if none was specified
 if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
@@ -453,24 +454,39 @@ foreach(f ${meta})
 endforeach()
 
 # Add the third party libraries
-set(vtk_tpl_modules kwsys vtkalglib vtkzlib vtksqlite vtkexpat vtklibxml2 vtknetcdf
-  HashSource MaterialLibrary verdict DICOMParser vtkjpeg vtkpng vtktiff vtkmetaio
-  vtkoggtheora ParseOGLExt EncodeString)
+set(vtk_tpl_modules vtkalglib vtkzlib vtksqlite vtkexpat vtklibxml2 vtknetcdf
+    vtkjpeg vtkpng vtktiff vtkmetaio vtkoggtheora vtkexodus2 TclTk Cosmo 
+    mrmpi octree utf8 VPIC vtkgl2ps vtkfreetype ftgl vtkhdf5 vtklibproj4 vtksqlite
+    verdict)
 # Some TPLs have multiple libraries, or different library names from the TPL
 # Provide a mapping here, may be better to make them into a real module.
-set(kwsys_TPL_LIBRARIES "vtksys")
-set(DICOMParser_TPL_LIBRARIES "vtkDICOMParser")
-set(HashSource_TPL_LIBRARIES "")
-set(MaterialLibrary_TPL_LIBRARIES "vtkHashSource")
 set(vtknetcdf_TPL_LIBRARIES vtkNetCDF vtkNetCDF_cxx)
-set(ParseOGLExt_TPL_LIBRARIES vtkParseOGLExt)
-set(EncodeString_TPL_LIBRARIES "")
+set(vtkexodus2_TPL_LIBRARIES "vtkexoIIc")
+set(ftgl_TPL_LIBRARIES "vtkftgl")
+
 foreach(tpl ${vtk_tpl_modules})
-  set(${tpl}_SOURCE_DIR ${VTK_SOURCE_DIR}/Utilities/${tpl})
-  set(${tpl}_BINARY_DIR ${VTK_BINARY_DIR}/Utilities/${tpl})
+  set(${tpl}_SOURCE_DIR ${VTK_SOURCE_DIR}/TPL/${tpl})
+  set(${tpl}_BINARY_DIR ${VTK_BINARY_DIR}/TPL/${tpl})
   set(${tpl}_IS_TPL 1)
   #message("${tpl}_SOURCE_DIR: ${${tpl}_SOURCE_DIR}")
 endforeach()
+
+set(VTK_METAIO_INCLUDES ${VTK_SOURCE_DIR}/TPL)
+# Add the utilities
+set(vtk_utils_modules kwsys vtkmetaio DICOMParser MaterialLibrary)
+
+set(kwsys_TPL_LIBRARIES "vtksys")
+set(MaterialLibrary_TPL_LIBRARIES "ProcessShader")
+set(DICOMParser_TPL_LIBRARIES "vtkDICOMParser")
+
+foreach(util ${vtk_utils_modules})
+  list(APPEND vtk_tpl_modules ${util})
+  set(${util}_SOURCE_DIR ${VTK_SOURCE_DIR}/Utilities/${util})
+  set(${util}_BINARY_DIR ${VTK_BINARY_DIR}/Utilities/${util})
+  set(${util}_IS_TPL 1)
+  #message("${tpl}_SOURCE_DIR: ${${tpl}_SOURCE_DIR}")
+endforeach()
+
 
 set(VTK_BUILD_ALL_MODULES_DEFAULT OFF)
 option(VTK_BUILD_ALL_MODULES "Request to build all modules"
@@ -610,6 +626,8 @@ foreach(vtk-module ${VTK_MODULES_ENABLED})
   if(NOT DEFINED ${vtk-module}_SOURCE_DIR)
     message(FATAL_ERROR "${vtk-module} has no defined source directory.")
   endif()
+  message("${vtk-module}")
+  message("${${vtk-module}_SOURCE_DIR}")
   add_subdirectory("${${vtk-module}_SOURCE_DIR}" "${${vtk-module}_BINARY_DIR}")
 
   # These two variables are combined into VTK_INCLUDE_DIRS_CONFIG which is used

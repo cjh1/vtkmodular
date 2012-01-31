@@ -41,6 +41,7 @@ endif()
 
 include_directories(
   ${CMAKE_CURRENT_BINARY_DIR}
+  ${VTK_SOURCE_DIR}/TPL
   ${VTK_SOURCE_DIR}/Utilities
   )
 

@@ -10,7 +10,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}
   ${CMAKE_CURRENT_BINARY_DIR}
   ${VTK_BINARY_DIR}/Common/DataModel
   ${VTK_BINARY_DIR}/Common/ExecutionModel
-  ${VTK_SOURCE_DIR}/Utilities/utf8/source)
+  ${VTK_SOURCE_DIR}/TPL/utf8/source)
 
 SET(Kit_SRCS
   vtkAbstractArray.cxx

@@ -57,7 +57,7 @@ include_directories(
   ${CMAKE_CURRENT_BINARY_DIR}
   ${VTK_SOURCE_DIR}/Common/Core
   ${VTK_BINARY_DIR}/Common/Core
-  ${VTK_SOURCE_DIR}/Utilities
+  ${VTK_SOURCE_DIR}/TPL
   )
 
 vtk_add_library(vtkIOGeometry ${Kit_SRCS})
