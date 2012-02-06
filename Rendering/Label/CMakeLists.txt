@@ -13,4 +13,3 @@ set(Kit_SRCS
   )
 
 vtk_add_library(vtkRenderingLabel ${Kit_SRCS})
-

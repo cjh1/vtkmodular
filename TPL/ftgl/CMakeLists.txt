@@ -146,7 +146,7 @@ ENDIF (VTK_OPENGL_HAS_OSMESA AND OSMESA_LIBRARY)
 #
 # We obviously need FreeType
 #
-SET (VTKFTGL_LIBS "${VTKFTGL_LIBS};${VTK_FREETYPE_LIBRARIES}")
+SET (VTKFTGL_LIBS "${VTKFTGL_LIBS};vtkfreetype")
 
 #
 # Define the library (and install it)

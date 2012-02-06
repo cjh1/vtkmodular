@@ -28,7 +28,7 @@
 
 // The embedded fonts
 
-#include "fonts/vtkEmbeddedFonts.h"
+#include "vtkEmbeddedFonts.h"
 
 #include <sys/stat.h>
 

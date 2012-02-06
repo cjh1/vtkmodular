@@ -29,7 +29,7 @@
 #include "FTLibrary.h"
 
 // The embedded fonts
-#include "fonts/vtkEmbeddedFonts.h"
+#include "vtkEmbeddedFonts.h"
 
 #ifdef FTGL_USE_NAMESPACE
 using namespace ftgl;

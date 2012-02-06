@@ -4,4 +4,5 @@ vtk_module(vtkIOExport
     vtkRenderingCore
     vtkRenderingText
     vtkImagingCore
-  DEFAULT OFF)
+    vtkIOCore
+  DEFAULT ON)

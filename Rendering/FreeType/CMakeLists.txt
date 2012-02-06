@@ -18,4 +18,3 @@ include_directories(
   ${VTK_SOURCE_DIR}/TPL/vtkfreetype/include)
 
 vtk_add_library(vtkRenderingFreeType ${Kit_SRCS})
-

@@ -94,7 +94,6 @@ set(Kit_SRCS
   #vtkStreamTracer.cxx # Needs vtkModifiedBSPTree
   #vtkModifiedBSPTree.cxx # Needs vtkCubeSource.h
   #vtkCellLocatorInterpolatedVelocityField.cxx # Needs vtkModifiedBSPTree
-  #vtkGraphToPolyData.cxx # Needs vtkGlyphSource2D
   #vtkOutlineCornerFilter.cxx # Needs vtkOutlineCornerSource
 
   # Depend upon IO/Image

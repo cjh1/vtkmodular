@@ -5,4 +5,3 @@ set(Kit_SRCS
 )
 
 vtk_add_library(vtkIOImport ${Kit_SRCS})
-

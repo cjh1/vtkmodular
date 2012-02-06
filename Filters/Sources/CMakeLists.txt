@@ -29,6 +29,7 @@ set(Kit_SRCS
   vtkTessellatedBoxSource.cxx
   vtkTextSource.cxx
   vtkTexturedSphereSource.cxx
+  vtkGraphToPolyData.cxx
   )
 
 include_directories(

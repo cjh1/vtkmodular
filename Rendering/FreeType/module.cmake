@@ -1,4 +1,5 @@
 vtk_module(vtkRenderingFreeType
   DEPENDS
     vtkRenderingCore
-  DEFAULT OFF)
+    vtkfreetype
+  DEFAULT ON)
