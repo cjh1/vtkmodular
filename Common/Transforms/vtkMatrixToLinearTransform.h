@@ -27,7 +27,6 @@
 #define __vtkMatrixToLinearTransform_h
 
 #include "vtkCommonTransformsExport.h" // For export macro
-#include "vtkCommonTransformsExport.h" // For export macro
 #include "vtkLinearTransform.h"
 
 class vtkMatrix4x4;

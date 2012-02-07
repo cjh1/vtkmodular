@@ -28,12 +28,13 @@
 #ifndef __vtkViewUpdater_h
 #define __vtkViewUpdater_h
 
+#include "vtkViewsCoreExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkAnnotationLink;
 class vtkView;
 
-class VTK_VIEWS_EXPORT vtkViewUpdater : public vtkObject
+class VTKVIEWSCORE_EXPORT vtkViewUpdater : public vtkObject
 {
 public:
   static vtkViewUpdater *New();

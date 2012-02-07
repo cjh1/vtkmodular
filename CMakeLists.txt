@@ -407,7 +407,7 @@ CONFIGURE_FILE(${VTK_SOURCE_DIR}/UseVTK.cmake.in
 include(VTKParallelCMakeTests)
 
 # Add the VTK binary dir to the include path to pick up the vtkConfigure.h
-set(VTK_INCLUDE_DIRS_BUILD_TREE ${VTK_BINARY_DIR} ${VTK_BINARY_DIR}/Utilities)
+set(VTK_INCLUDE_DIRS_BUILD_TREE ${VTK_BINARY_DIR} ${VTK_BINARY_DIR}/Utilities ${VTK_BINARY_DIR}/TPL)
 include_directories(${VTK_INCLUDE_DIRS_BUILD_TREE})
 
 include(vtkModular)

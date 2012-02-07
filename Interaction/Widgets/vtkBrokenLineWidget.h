@@ -83,6 +83,7 @@
 #ifndef __vtkBrokenLineWidget_h
 #define __vtkBrokenLineWidget_h
 
+#include "vtkInteractionWidgetsExport.h" // For export macro
 #include "vtk3DWidget.h"
 
 class vtkActor;
@@ -102,7 +103,7 @@ class vtkTransform;
 #define VTK_PROJECTION_XY 2
 #define VTK_PROJECTION_OBLIQUE 3
 
-class VTK_WIDGETS_EXPORT vtkBrokenLineWidget : public vtk3DWidget
+class VTKINTERACTIONWIDGETS_EXPORT vtkBrokenLineWidget : public vtk3DWidget
 {
 public:
   // Description:

@@ -12,5 +12,5 @@ vtk_module(vtkRenderingOpenGL
     vtkImagingCore # For vtkSampleFunction
   COMPILE_DEPENDS
     vtkParseOGLExt
-    vtkEncodeString
+    vtkUtilitiesEncodeString
   DEFAULT ON)

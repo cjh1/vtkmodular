@@ -28,6 +28,7 @@
 #ifndef __vtkODBCInternals_h
 #define __vtkODBCInternals_h
 
+#include "vtkIOODBCExport.h" // For export macro
 #include <sql.h>
 
 class vtkODBCInternals {

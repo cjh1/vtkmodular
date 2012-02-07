@@ -27,10 +27,11 @@
 #ifndef __vtkSliderRepresentation_h
 #define __vtkSliderRepresentation_h
 
+#include "vtkInteractionWidgetsExport.h" // For export macro
 #include "vtkWidgetRepresentation.h"
 
 
-class VTK_WIDGETS_EXPORT vtkSliderRepresentation : public vtkWidgetRepresentation
+class VTKINTERACTIONWIDGETS_EXPORT vtkSliderRepresentation : public vtkWidgetRepresentation
 {
 public:
   // Description:

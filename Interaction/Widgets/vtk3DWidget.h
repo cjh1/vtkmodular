@@ -53,12 +53,13 @@
 #ifndef __vtk3DWidget_h
 #define __vtk3DWidget_h
 
+#include "vtkInteractionWidgetsExport.h" // For export macro
 #include "vtkInteractorObserver.h"
 
 class vtkDataSet;
 class vtkProp3D;
 
-class VTK_WIDGETS_EXPORT vtk3DWidget : public vtkInteractorObserver
+class VTKINTERACTIONWIDGETS_EXPORT vtk3DWidget : public vtkInteractorObserver
 {
 public:
   vtkTypeMacro(vtk3DWidget,vtkInteractorObserver);

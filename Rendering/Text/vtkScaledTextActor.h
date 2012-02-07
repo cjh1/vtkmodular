@@ -23,9 +23,10 @@
 #ifndef __vtkScaledTextActor_h
 #define __vtkScaledTextActor_h
 
+#include "vtkRenderingTextExport.h" // For export macro
 #include "vtkTextActor.h"
 
-class VTK_RENDERING_EXPORT vtkScaledTextActor : public vtkTextActor
+class VTKRENDERINGTEXT_EXPORT vtkScaledTextActor : public vtkTextActor
 {
 public:
   vtkTypeMacro(vtkScaledTextActor,vtkTextActor);

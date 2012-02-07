@@ -25,7 +25,6 @@
 #define __vtkTransformCollection_h
 
 #include "vtkCommonTransformsExport.h" // For export macro
-#include "vtkCommonTransformsExport.h" // For export macro
 #include "vtkCollection.h"
 
 #include "vtkTransform.h" // Needed for inline methods

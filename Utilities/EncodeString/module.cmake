@@ -1,2 +1,2 @@
-vtk_module(vtkEncodeString
+vtk_module(vtkUtilitiesEncodeString
   DEFAULT ON)

@@ -24,7 +24,6 @@
 #define __vtkLinearTransform_h
 
 #include "vtkCommonTransformsExport.h" // For export macro
-#include "vtkCommonTransformsExport.h" // For export macro
 #include "vtkHomogeneousTransform.h"
 
 class VTKCOMMONTRANSFORMS_EXPORT vtkLinearTransform : public vtkHomogeneousTransform

@@ -32,11 +32,12 @@
 #ifndef __vtkBoostBrandesCentrality_h
 #define __vtkBoostBrandesCentrality_h
 
+#include "vtkInfovisBoostGraphAlgorithmsExport.h" // For export macro
 #include "vtkVariant.h" // For variant type
 
 #include "vtkGraphAlgorithm.h"
 
-class VTK_INFOVIS_EXPORT vtkBoostBrandesCentrality : public vtkGraphAlgorithm
+class VTKINFOVISBOOSTGRAPHALGORITHMS_EXPORT vtkBoostBrandesCentrality : public vtkGraphAlgorithm
 {
 public:
   static vtkBoostBrandesCentrality *New();

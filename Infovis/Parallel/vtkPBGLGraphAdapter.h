@@ -25,6 +25,7 @@
 #ifndef __vtkPBGLGraphAdapter_h
 #define __vtkPBGLGraphAdapter_h
 
+#include "vtkInfovisParallelExport.h" // For export macro
 #include "vtkBoostGraphAdapter.h" // for the sequential BGL adapters
 
 //BTX

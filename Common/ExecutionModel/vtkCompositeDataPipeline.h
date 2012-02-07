@@ -41,6 +41,7 @@
 #ifndef __vtkCompositeDataPipeline_h
 #define __vtkCompositeDataPipeline_h
 
+#include "vtkCommonExecutionModelExport.h" // For export macro
 #include "vtkStreamingDemandDrivenPipeline.h"
 
 class vtkCompositeDataSet;
@@ -51,7 +52,7 @@ class vtkInformationStringKey;
 class vtkInformationDataObjectKey;
 class vtkInformationIntegerKey;
 
-class VTK_FILTERING_EXPORT vtkCompositeDataPipeline : public vtkStreamingDemandDrivenPipeline
+class VTKCOMMONEXECUTIONMODEL_EXPORT vtkCompositeDataPipeline : public vtkStreamingDemandDrivenPipeline
 {
 public:
   static vtkCompositeDataPipeline* New();

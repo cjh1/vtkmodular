@@ -1,2 +1,2 @@
-vtk_module(vtkHashSource
+vtk_module(vtkUtilitiesHashSource
   DEFAULT ON)

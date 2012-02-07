@@ -32,9 +32,10 @@
 #ifndef __vtkVectorText_h
 #define __vtkVectorText_h
 
+#include "vtkRenderingTextExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
-class VTK_HYBRID_EXPORT vtkVectorText : public vtkPolyDataAlgorithm 
+class VTKRENDERINGTEXT_EXPORT vtkVectorText : public vtkPolyDataAlgorithm
 {
 public:
   static vtkVectorText *New();

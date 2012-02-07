@@ -1,6 +1,7 @@
 #ifndef __vtkLabelHierarchyPrivate_h
 #define __vtkLabelHierarchyPrivate_h
 
+#include "vtkRenderingLabelExport.h" // For export macro
 #include "vtkObject.h" // for vtkstd
 #include <set>
 

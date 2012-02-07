@@ -6,5 +6,5 @@ vtk_module(vtkFiltersHybrid
     vtkRenderingOpenGL
     vtkFiltersGeneral
   COMPILE_DEPENDS
-    vtkEncodeString
+    vtkUtilitiesEncodeString
   DEFAULT ON)

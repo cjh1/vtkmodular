@@ -258,7 +258,9 @@ set(Kit_SRCS
   )
 
 include_directories(
-  ${vtkCommonExecutionModel_SOURCE_DIR})
+  ${vtkCommonExecutionModel_SOURCE_DIR}
+  ${vtkCommonExecutionModel_BINARY_DIR}
+  )
 
 set_source_files_properties(
   vtkAbstractCellLocator

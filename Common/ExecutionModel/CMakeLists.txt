@@ -54,4 +54,6 @@ SET(Kit_SRCS
   vtkUnstructuredGridAlgorithm.cxx
   )
 
+include_directories(${CMAKE_CURRENT_BINARY_DIR})
+
 vtk_add_library(vtkCommonExecutionModel ${Kit_SRCS})

@@ -38,7 +38,6 @@
 #define __vtkThinPlateSplineTransform_h
 
 #include "vtkCommonTransformsExport.h" // For export macro
-#include "vtkCommonTransformsExport.h" // For export macro
 #include "vtkWarpTransform.h"
 
 #define VTK_RBF_CUSTOM 0

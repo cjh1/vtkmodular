@@ -30,7 +30,6 @@
 #define __vtkLandmarkTransform_h
 
 #include "vtkCommonTransformsExport.h" // For export macro
-#include "vtkCommonTransformsExport.h" // For export macro
 #include "vtkLinearTransform.h"
 
 #define VTK_LANDMARK_RIGIDBODY 6

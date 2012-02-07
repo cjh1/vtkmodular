@@ -29,7 +29,6 @@
 #define __vtkTransform2D_h
 
 #include "vtkCommonTransformsExport.h" // For export macro
-#include "vtkCommonTransformsExport.h" // For export macro
 #include "vtkObject.h"
 
 #include "vtkMatrix3x3.h" // Needed for inline methods

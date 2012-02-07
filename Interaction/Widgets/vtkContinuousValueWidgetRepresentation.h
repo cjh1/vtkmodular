@@ -28,9 +28,10 @@
 #ifndef __vtkContinuousValueWidgetRepresentation_h
 #define __vtkContinuousValueWidgetRepresentation_h
 
+#include "vtkInteractionWidgetsExport.h" // For export macro
 #include "vtkWidgetRepresentation.h"
 
-class VTK_WIDGETS_EXPORT vtkContinuousValueWidgetRepresentation : 
+class VTKINTERACTIONWIDGETS_EXPORT vtkContinuousValueWidgetRepresentation :
   public vtkWidgetRepresentation
 {
 public:

@@ -32,6 +32,7 @@
 #ifndef __vtkBSplineTransform_h
 #define __vtkBSplineTransform_h
 
+#include "vtkFiltersHybridExport.h" // For export macro
 #include "vtkWarpTransform.h"
 
 class vtkImageData;
@@ -40,7 +41,7 @@ class vtkImageData;
 #define VTK_BSPLINE_ZERO 1
 #define VTK_BSPLINE_ZERO_AT_BORDER 2
 
-class VTK_HYBRID_EXPORT vtkBSplineTransform : public vtkWarpTransform
+class VTKFILTERSHYBRID_EXPORT vtkBSplineTransform : public vtkWarpTransform
 {
 public:
   static vtkBSplineTransform *New();

@@ -38,7 +38,6 @@
 #define __vtkAbstractTransform_h
 
 #include "vtkCommonTransformsExport.h" // For export macro
-#include "vtkCommonTransformsExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkDataArray;

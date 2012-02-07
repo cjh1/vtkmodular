@@ -1,6 +1,7 @@
 #ifndef __vtkExodusIIReaderVariableCheck_h
 #define __vtkExodusIIReaderVariableCheck_h
 
+#include "vtkIOExodusExport.h" // For export macro
 #include "vtkExodusIIReaderPrivate.h" // for ArrayInfoType
 
 #include <vtksys/RegularExpression.hxx> // for integration point names

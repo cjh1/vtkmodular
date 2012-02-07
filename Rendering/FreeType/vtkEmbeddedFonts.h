@@ -16,6 +16,7 @@
 #ifndef __vtkEmbeddedFonts_h
 #define __vtkEmbeddedFonts_h
 
+#include "vtkRenderingFreeTypeExport.h" // For export macro
 #include <stddef.h>
 
 // -----------------------------------------------------------------------
