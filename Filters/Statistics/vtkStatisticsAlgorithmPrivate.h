@@ -31,7 +31,6 @@ PURPOSE.  See the above copyright notice for more information.
 #ifndef __vtkStatisticsAlgorithmPrivate_h
 #define __vtkStatisticsAlgorithmPrivate_h
 
-#include "vtkFiltersStatisticsExport.h" // For export macro
 #include "vtkStdString.h"
 
 #include <vtksys/stl/set> // used to iterate over internal organs

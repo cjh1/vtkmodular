@@ -34,7 +34,6 @@
 #ifndef __vtkVariantCast_h
 #define __vtkVariantCast_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include <vtkUnicodeString.h>
 
 template<typename T>

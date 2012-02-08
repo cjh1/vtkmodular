@@ -24,7 +24,6 @@
 #ifndef __vtkMathUtilities_h
 #define __vtkMathUtilities_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include <cmath>
 #include <limits>
 

@@ -34,7 +34,6 @@
 #ifndef __vtkPostgreSQLDatabasePrivate_h
 #define __vtkPostgreSQLDatabasePrivate_h
 
-#include "vtkIOPostgreSQLExport.h" // For export macro
 #include "vtkStdString.h"
 #include "vtkType.h"
 #include "vtkTimeStamp.h"

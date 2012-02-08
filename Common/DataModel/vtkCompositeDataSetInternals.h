@@ -18,7 +18,6 @@
 #ifndef __vtkCompositeDataSetInternals_h
 #define __vtkCompositeDataSetInternals_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkDataObject.h"
 #include "vtkInformation.h"
 #include "vtkSmartPointer.h"

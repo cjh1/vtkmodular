@@ -23,7 +23,6 @@
 #ifndef __vtkImageStencilIterator_h
 #define __vtkImageStencilIterator_h
 
-#include "vtkImagingCoreExport.h" // For export macro
 #include "vtkSystemIncludes.h"
 class vtkImageData;
 class vtkImageStencilData;

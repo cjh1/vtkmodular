@@ -18,7 +18,6 @@
 #ifndef __vtkX3DExporterFIWriterHelper_h
 #define __vtkX3DExporterFIWriterHelper_h
 
-#include "vtkIOExportExport.h" // For export macro
 //#include "vtkX3DExporterFIByteWriter.h"
 #include "vtkZLibDataCompressor.h"
 #include <cassert>

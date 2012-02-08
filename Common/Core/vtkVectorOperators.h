@@ -18,7 +18,6 @@
 
 // This set of operators enhance the vtkVector classes, allowing various
 // operator overloads one might expect.
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkVector.h"
 #include "vtkIOStream.h"
 

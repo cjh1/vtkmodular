@@ -30,7 +30,6 @@
 #ifndef __vtkVariantBoostSerialization_h
 #define __vtkVariantBoostSerialization_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkSetGet.h"
 #include "vtkType.h"
 #include "vtkVariant.h"

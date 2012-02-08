@@ -13,7 +13,6 @@
 
 =========================================================================*/
 
-#include "vtkIOImportExport.h" // For export macro
 #include <ctype.h>
 
 class vtkLight;

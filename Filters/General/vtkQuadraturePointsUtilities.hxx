@@ -16,7 +16,6 @@
 #ifndef vtkQuadraturePointsUtilities_h
 #define vtkQuadraturePointsUtilities_h
 
-#include "vtkFiltersGeneralExport.h" // For export macro
 #include "vtkQuadratureSchemeDefinition.h"
 #include "vtkDoubleArray.h"
 #include "vtkFloatArray.h"

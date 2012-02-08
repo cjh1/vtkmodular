@@ -28,7 +28,6 @@
 #ifndef __vtkBoostGraphAdapter_h
 #define __vtkBoostGraphAdapter_h
 
-#include "vtkInfovisBoostGraphAlgorithmsExport.h" // For export macro
 #include "vtkAbstractArray.h"
 #include "vtkDirectedGraph.h"
 #include "vtkDistributedGraphHelper.h"

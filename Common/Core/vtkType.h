@@ -15,7 +15,6 @@
 #ifndef __vtkType_h
 #define __vtkType_h
 
-#include "vtkCommonCoreExport.h" // For export macro
 #include "vtkConfigure.h"
 
 /*--------------------------------------------------------------------------*/

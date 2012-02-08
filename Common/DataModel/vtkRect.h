@@ -24,7 +24,6 @@
 #ifndef __vtkRect_h
 #define __vtkRect_h
 
-#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkVector.h"
 
 template<typename T>
