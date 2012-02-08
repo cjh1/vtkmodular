@@ -1,7 +1,7 @@
-vtk_module(vtkIOParallelLSDyn
+vtk_module(vtkIOParallelLSDyna
   DEPENDS
    vtkParallelCore
-   vtkIOLSDyn
+   vtkIOLSDyna
    vtkCommonCore
    vtkCommonDataModel
   COMPILE_DEPENDS

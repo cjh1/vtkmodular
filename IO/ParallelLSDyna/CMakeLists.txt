@@ -3,8 +3,9 @@ set(Kit_SRCS
   )
 
 include_directories(
-  ${vtkIOLSDyn_SOURCE_DIR}/private
-  ${vtkIOLSDyn_BINARY_DIR}/private
+  ${CMAKE_CURRENT_BINARY_DIR}
+  ${vtkIOLSDyna_SOURCE_DIR}/private
+  ${vtkIOLSDyna_BINARY_DIR}/private
   )
 
-vtk_add_library(vtkIOParallelLSDyn ${Kit_SRCS})
+vtk_add_library(vtkIOParallelLSDyna ${Kit_SRCS})

@@ -1,4 +1,4 @@
-vtk_module(vtkIOLSDyn
+vtk_module(vtkIOLSDyna
   DEPENDS
     vtkCommonDataModel
     vtkCommonExecutionModel

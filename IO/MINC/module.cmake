@@ -1,4 +1,4 @@
-vtk_module(vtkMINC
+vtk_module(vtkIOMINC
   DEPENDS
     vtkIOImage
     vtkCommonExecutionModel

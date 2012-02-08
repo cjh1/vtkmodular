@@ -1,4 +1,4 @@
-vtk_module(vtkExodus
+vtk_module(vtkIOExodus
   DEPENDS
     vtkFiltersGeneral
     vtkIOXML

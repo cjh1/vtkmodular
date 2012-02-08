@@ -6,9 +6,10 @@ set(Kit_SRCS
   vtkExodusModel.cxx
   )
 
-vtk_add_library(vtkExodus ${Kit_SRCS})
+vtk_add_library(vtkIOExodus ${Kit_SRCS})
 
 include_directories(
+  ${CMAKE_CURRENT_BINARY_DIR}
   ${VTK_SOURCE_DIR}/TPL
   )
 set_source_files_properties(
