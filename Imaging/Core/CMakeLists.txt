@@ -122,6 +122,21 @@ set(Kit_SRCS
   vtkImageBSplineCoefficients.cxx
   )
 
+SET_SOURCE_FILES_PROPERTIES(
+  vtkImageDecomposeFilter
+  vtkImageFourierFilter
+  vtkImageIterateFilter
+  vtkImagePadFilter
+  vtkImageSpatialAlgorithm
+  vtkImageStencilIterator
+  ABSTRACT
+)
+
+SET_SOURCE_FILES_PROPERTIES(
+  vtkImageStencilIterator
+  WRAP_EXCLUDE
+)
+
 include_directories(
   ${CMAKE_CURRENT_BINARY_DIR}
   ${VTK_SOURCE_DIR}/Utilities
