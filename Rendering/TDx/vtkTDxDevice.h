@@ -26,11 +26,12 @@
 #ifndef __vtkTDxDevice_h
 #define __vtkTDxDevice_h
 
+#include "vtkRenderingTDxExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkRenderWindowInteractor;
 
-class VTK_RENDERING_EXPORT vtkTDxDevice : public vtkObject
+class VTKRENDERINGTDX_EXPORT vtkTDxDevice : public vtkObject
 {
 public:
   vtkTypeMacro(vtkTDxDevice,vtkObject);

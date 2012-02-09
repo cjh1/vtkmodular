@@ -25,11 +25,12 @@
 #ifndef __vtkTDxInteractorStyleGeo_h
 #define __vtkTDxInteractorStyleGeo_h
 
+#include "vtkRenderingTDxExport.h" // For export macro
 #include "vtkTDxInteractorStyle.h"
 
 class vtkTransform;
 
-class VTK_RENDERING_EXPORT vtkTDxInteractorStyleGeo : public vtkTDxInteractorStyle
+class VTKRENDERINGTDX_EXPORT vtkTDxInteractorStyleGeo : public vtkTDxInteractorStyle
 {
 public:
   static vtkTDxInteractorStyleGeo *New();

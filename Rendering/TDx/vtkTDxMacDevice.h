@@ -22,12 +22,13 @@
 #ifndef __vtkTDxMacDevice_h
 #define __vtkTDxMacDevice_h
 
+#include "vtkRenderingTDxExport.h" // For export macro
 #include "vtkTDxDevice.h"
 
 //class vtkRenderWindowInteractor;
 #include <3dConnexionClient/ConnexionClientAPI.h> // 3DxMacWare SDK
 
-class VTK_RENDERING_EXPORT vtkTDxMacDevice : public vtkTDxDevice
+class VTKRENDERINGTDX_EXPORT vtkTDxMacDevice : public vtkTDxDevice
 {
 public:
   static vtkTDxMacDevice *New();
