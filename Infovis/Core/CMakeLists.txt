@@ -36,9 +36,4 @@ set(Kit_SRCS
   vtkVertexDegree.cxx
   )
 
-include_directories(
-  ${CMAKE_CURRENT_BINARY_DIR}
-  ${VTK_SOURCE_DIR}/Utilities
-  )
-
-vtk_add_library(vtkInfovisCore ${Kit_SRCS})
+vtk_module_library(vtkInfovisCore ${Kit_SRCS})

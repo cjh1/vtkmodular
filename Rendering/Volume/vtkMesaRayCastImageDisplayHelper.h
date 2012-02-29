@@ -24,13 +24,14 @@
 #ifndef __vtkMesaRayCastImageDisplayHelper_h
 #define __vtkMesaRayCastImageDisplayHelper_h
 
+#include "vtkRenderingVolumeExport.h" // For export macro
 #include "vtkRayCastImageDisplayHelper.h"
 
 class vtkVolume;
 class vtkRenderer;
 class vtkFixedPointRayCastImage;
 
-class VTK_VOLUMERENDERING_EXPORT vtkMesaRayCastImageDisplayHelper : public vtkRayCastImageDisplayHelper
+class VTKRENDERINGVOLUME_EXPORT vtkMesaRayCastImageDisplayHelper : public vtkRayCastImageDisplayHelper
 {
 public:
   static vtkMesaRayCastImageDisplayHelper *New();

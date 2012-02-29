@@ -24,9 +24,10 @@
 #ifndef __vtkMesaVolumeTextureMapper2D_h
 #define __vtkMesaVolumeTextureMapper2D_h
 
+#include "vtkRenderingVolumeExport.h" // For export macro
 #include "vtkVolumeTextureMapper2D.h"
 
-class VTK_VOLUMERENDERING_EXPORT vtkMesaVolumeTextureMapper2D : public vtkVolumeTextureMapper2D
+class VTKRENDERINGVOLUME_EXPORT vtkMesaVolumeTextureMapper2D : public vtkVolumeTextureMapper2D
 {
 public:
   vtkTypeMacro(vtkMesaVolumeTextureMapper2D,vtkVolumeTextureMapper2D);

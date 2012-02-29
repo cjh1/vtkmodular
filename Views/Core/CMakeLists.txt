@@ -9,4 +9,4 @@ SET(Kit_SRCS
   vtkRenderView.cxx
   )
 
-vtk_add_library(vtkViewsCore ${Kit_SRCS})
+vtk_module_library(vtkViewsCore ${Kit_SRCS})

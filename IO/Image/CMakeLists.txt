@@ -39,13 +39,7 @@ if(WIN32)
   list(APPEND Kit_SRCS vtkAVIWriter.cxx)
 endif()
 
-include_directories(
-  ${CMAKE_CURRENT_BINARY_DIR}
-  ${VTK_SOURCE_DIR}/TPL
-  ${VTK_SOURCE_DIR}/Utilities
-  )
-
-vtk_add_library(vtkIOImage ${Kit_SRCS})
+vtk_module_library(vtkIOImage ${Kit_SRCS})
 
 if(WIN32)
   target_link_libraries(vtkIOImage vfw32)

@@ -10,4 +10,4 @@ set_source_files_properties(
   WRAP_EXCLUDE
   )
 
-vtk_add_library(vtkCommonMisc ${Kit_SRCS})
+vtk_module_library(vtkCommonMisc ${Kit_SRCS})

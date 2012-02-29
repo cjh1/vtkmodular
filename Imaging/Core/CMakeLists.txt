@@ -137,9 +137,4 @@ SET_SOURCE_FILES_PROPERTIES(
   WRAP_EXCLUDE
 )
 
-include_directories(
-  ${CMAKE_CURRENT_BINARY_DIR}
-  ${VTK_SOURCE_DIR}/Utilities
-  )
-
-vtk_add_library(vtkImagingCore ${Kit_SRCS})
+vtk_module_library(vtkImagingCore ${Kit_SRCS})

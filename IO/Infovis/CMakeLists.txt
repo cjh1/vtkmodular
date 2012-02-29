@@ -21,9 +21,4 @@ set(Kit_SRCS
   vtkXMLTreeReader.h
   )
 
-include_directories(
-  ${CMAKE_CURRENT_BINARY_DIR}
-  ${VTK_SOURCE_DIR}/TPL
-  )
-
-vtk_add_library(vtkIOInfovis ${Kit_SRCS})
+vtk_module_library(vtkIOInfovis ${Kit_SRCS})

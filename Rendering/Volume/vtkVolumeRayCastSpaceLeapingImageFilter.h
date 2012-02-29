@@ -29,11 +29,12 @@
 #ifndef __vtkVolumeRayCastSpaceLeapingImageFilter_h
 #define __vtkVolumeRayCastSpaceLeapingImageFilter_h
 
+#include "vtkRenderingVolumeExport.h" // For export macro
 #include "vtkThreadedImageAlgorithm.h"
 
 class vtkDataArray;
 
-class VTK_VOLUMERENDERING_EXPORT vtkVolumeRayCastSpaceLeapingImageFilter : public vtkThreadedImageAlgorithm
+class VTKRENDERINGVOLUME_EXPORT vtkVolumeRayCastSpaceLeapingImageFilter : public vtkThreadedImageAlgorithm
 {
 public:
   vtkTypeMacro(vtkVolumeRayCastSpaceLeapingImageFilter,vtkThreadedImageAlgorithm);

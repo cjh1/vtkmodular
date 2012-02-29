@@ -16,4 +16,4 @@ SET(Kit_SRCS
   vtkPPCAStatistics.cxx
   )
 
-vtk_add_library(vtkFiltersParallelStatistics ${Kit_SRCS})
+vtk_module_library(vtkFiltersParallelStatistics ${Kit_SRCS})

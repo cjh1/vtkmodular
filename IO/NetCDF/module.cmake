@@ -4,7 +4,7 @@ vtk_module(vtkIONetCDF
     vtkCommonDataModel
     vtkCommonSystem
     vtkIOCore
-    kwsys
+    vtksys
   COMPILE_DEPENDS
     vtknetcdf
   DEFAULT ON)

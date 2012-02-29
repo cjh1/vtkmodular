@@ -24,6 +24,7 @@
 #ifndef __vtkOpenGLVolumeTextureMapper3D_h
 #define __vtkOpenGLVolumeTextureMapper3D_h
 
+#include "vtkRenderingVolumeExport.h" // For export macro
 #include "vtkVolumeTextureMapper3D.h"
 
 #ifndef VTK_IMPLEMENT_MESA_CXX
@@ -34,7 +35,7 @@
 class vtkRenderWindow;
 class vtkVolumeProperty;
 
-class VTK_VOLUMERENDERING_EXPORT vtkOpenGLVolumeTextureMapper3D : public vtkVolumeTextureMapper3D
+class VTKRENDERINGVOLUME_EXPORT vtkOpenGLVolumeTextureMapper3D : public vtkVolumeTextureMapper3D
 {
 public:
   vtkTypeMacro(vtkOpenGLVolumeTextureMapper3D,vtkVolumeTextureMapper3D);

@@ -21,4 +21,4 @@ if(CMAKE_COMPILER_IS_GNUCXX)
    )
 endif()
 
-vtk_add_library(vtkCommonMath ${Kit_SRCS})
+vtk_module_library(vtkCommonMath ${Kit_SRCS})

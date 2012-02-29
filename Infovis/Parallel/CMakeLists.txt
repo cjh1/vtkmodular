@@ -14,4 +14,4 @@ set(Kit_SRCS
   )
 
 
-vtk_add_library(vtkInfovisParallel ${Kit_SRCS})
+vtk_module_library(vtkInfovisParallel ${Kit_SRCS})

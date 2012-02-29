@@ -61,9 +61,9 @@ SET(Kit_SRCS
   vtkImageOrthoPlanes.cxx
   vtkImagePlaneWidget.cxx
   vtkImageTracerWidget.cxx
-  vtkImplicitPlaneRepresentation.cxx
-  vtkImplicitPlaneWidget2.cxx
-  vtkImplicitPlaneWidget.cxx
+  #vtkImplicitPlaneRepresentation.cxx
+  #vtkImplicitPlaneWidget2.cxx
+  #vtkImplicitPlaneWidget.cxx # Needs vtkOutlineFilter
   vtkLinearContourLineInterpolator.cxx
   vtkLineRepresentation.cxx
   vtkLineWidget2.cxx
@@ -148,4 +148,4 @@ set_source_files_properties(
   )
 
 
-vtk_add_library(vtkInteractionWidgets ${Kit_SRCS})
+vtk_module_library(vtkInteractionWidgets ${Kit_SRCS})

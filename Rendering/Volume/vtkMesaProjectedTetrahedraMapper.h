@@ -33,13 +33,14 @@
 #ifndef __vtkMesaProjectedTetrahedraMapper_h
 #define __vtkMesaProjectedTetrahedraMapper_h
 
+#include "vtkRenderingVolumeExport.h" // For export macro
 #include "vtkProjectedTetrahedraMapper.h"
 
 class vtkVisibilitySort;
 class vtkUnsignedCharArray;
 class vtkFloatArray;
 
-class VTK_VOLUMERENDERING_EXPORT vtkMesaProjectedTetrahedraMapper : public vtkProjectedTetrahedraMapper
+class VTKRENDERINGVOLUME_EXPORT vtkMesaProjectedTetrahedraMapper : public vtkProjectedTetrahedraMapper
 {
 public:
   vtkTypeMacro(vtkMesaProjectedTetrahedraMapper,

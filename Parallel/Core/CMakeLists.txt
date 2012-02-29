@@ -28,11 +28,6 @@ set(Kit_SRCS
   ${VTK_BINARY_DIR}/Parallel/Core/vtkSocketCommunicatorHash.h
   )
 
-include_directories(
-  ${CMAKE_CURRENT_BINARY_DIR}
-  ${VTK_SOURCE_DIR}/Utilities
-  )
-
 set_source_files_properties(
   vtkMultiProcessStream
   WRAP_EXCLUDE
@@ -43,4 +38,4 @@ set_source_files_properties(
   ABSTRACT
   )
 
-vtk_add_library(vtkParallelCore ${Kit_SRCS})
+vtk_module_library(vtkParallelCore ${Kit_SRCS})

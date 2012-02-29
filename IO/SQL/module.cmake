@@ -4,5 +4,5 @@ vtk_module(vtkIOSQL
     vtkCommonDataModel
     vtkIOCore
     vtksqlite
-    kwsys
+    vtksys
   DEFAULT ON)

@@ -15,4 +15,4 @@ SET(Kit_SRCS
   vtkStreamingStatistics.cxx
   )
 
-vtk_add_library(vtkFiltersStatistics ${Kit_SRCS})
+vtk_module_library(vtkFiltersStatistics ${Kit_SRCS})

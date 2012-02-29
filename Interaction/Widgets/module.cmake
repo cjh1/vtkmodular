@@ -1,4 +1,8 @@
 vtk_module(vtkInteractionWidgets
   DEPENDS
-   vtkRenderingCore
+   vtkRenderingAnnotation
+   vtkRenderingText
+   vtkRenderingVolume
+   vtkFiltersModeling
+   vtkFiltersHybrid
   DEFAULT OFF)

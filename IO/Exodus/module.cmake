@@ -2,5 +2,5 @@ vtk_module(vtkIOExodus
   DEPENDS
     vtkFiltersGeneral
     vtkIOXML
-    vtkexodus2
+    vtkexodusII
   DEFAULT ON)

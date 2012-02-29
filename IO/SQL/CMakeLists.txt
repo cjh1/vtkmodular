@@ -21,7 +21,6 @@ set(SQLite_SRCS
 
 include_directories(
   ${VTK_SOURCE_DIR}/Common/Misc
-  ${VTK_SOURCE_DIR}/TPL
   )
 
-vtk_add_library(vtkIOSQL ${Kit_SRCS} ${SQLite_SRCS})
+vtk_module_library(vtkIOSQL ${Kit_SRCS} ${SQLite_SRCS})

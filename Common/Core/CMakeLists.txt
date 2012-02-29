@@ -1,3 +1,21 @@
+# Core configuration options.
+IF("${CMAKE_SIZEOF_VOID_P}" GREATER 4)
+ SET(VTK_USE_64BIT_IDS_DEFAULT ON)
+ELSE("${CMAKE_SIZEOF_VOID_P}" GREATER 4)
+ SET(VTK_USE_64BIT_IDS_DEFAULT OFF)
+ENDIF("${CMAKE_SIZEOF_VOID_P}" GREATER 4)
+OPTION(VTK_USE_64BIT_IDS "Build VTK with 64 bit ids"
+      ${VTK_USE_64BIT_IDS_DEFAULT})
+
+OPTION(VTK_DEBUG_LEAKS "Build leak checking support into VTK." OFF)
+MARK_AS_ADVANCED(VTK_DEBUG_LEAKS VTK_USE_64BIT_IDS)
+
+set(vtkCommonCore_EXPORT_OPTIONS
+  VTK_DEBUG_LEAKS
+  VTK_USE_64BIT_IDS
+  )
+
+#-----------------------------------------------------------------------------
 
 if(WIN32)
   if(NOT VTK_USE_X)
@@ -6,11 +24,9 @@ if(WIN32)
   endif()
 endif()
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}
-  ${CMAKE_CURRENT_BINARY_DIR}
-  ${VTK_BINARY_DIR}/Common/DataModel
-  ${VTK_BINARY_DIR}/Common/ExecutionModel
-  ${VTK_SOURCE_DIR}/TPL/utf8/source)
+include_directories(
+  ${VTK_SOURCE_DIR}/ThirdParty/utf8/source
+  )
 
 SET(Kit_SRCS
   vtkAbstractArray.cxx
@@ -125,6 +141,11 @@ SET(Kit_SRCS
   vtkXMLFileOutputWindow.cxx
   )
 
+if(vtkCommonDataModel_ENABLED)
+  include_directories(${VTK_BINARY_DIR}/Common/DataModel)
+  set_property(SOURCE vtkInformationDataObjectKey.cxx PROPERTY COMPILE_DEFINITIONS vtkCommonDataModel_ENABLED)
+endif()
+
 # __int64 seems to be platform specific, turning on if
 if(HAVE_VTK_SIZEOF__INT64)
   list(APPEND Kit_SRCS
@@ -145,11 +166,31 @@ endif()
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/vtkUnicodeString.cmake.in
   ${CMAKE_CURRENT_BINARY_DIR}/vtkUnicodeString.cmake @ONLY)
 
-configure_file(${CMAKE_CURRENT_SOURCE_DIR}/vtkConfigure.h.in
-               ${VTK_BINARY_DIR}/vtkConfigure.h @ONLY IMMEDIATE)
+# Setup clean configuration of vtkConfigure.h and vtkToolkits.h.
+MACRO(VTK_PREPARE_CMAKEDEFINE not invar outvar)
+  IF(${not} ${invar})
+    SET(${outvar} 1)
+  ELSE(${not} ${invar})
+    SET(${outvar})
+  ENDIF(${not} ${invar})
+ENDMACRO(VTK_PREPARE_CMAKEDEFINE)
 
-configure_file(${CMAKE_CURRENT_SOURCE_DIR}/vtkToolkits.h.in
-               ${VTK_BINARY_DIR}/vtkToolkits.h @ONLY IMMEDIATE)
+VTK_PREPARE_CMAKEDEFINE("" CMAKE_WORDS_BIGENDIAN VTK_WORDS_BIGENDIAN)
+VTK_PREPARE_CMAKEDEFINE("" CMAKE_USE_PTHREADS VTK_USE_PTHREADS)
+VTK_PREPARE_CMAKEDEFINE("" CMAKE_USE_SPROC VTK_USE_SPROC)
+VTK_PREPARE_CMAKEDEFINE("" CMAKE_HP_PTHREADS VTK_HP_PTHREADS)
+VTK_PREPARE_CMAKEDEFINE("" CMAKE_USE_WIN32_THREADS VTK_USE_WIN32_THREADS)
+VTK_PREPARE_CMAKEDEFINE("" CMAKE_NO_ANSI_STRING_STREAM VTK_NO_ANSI_STRING_STREAM)
+VTK_PREPARE_CMAKEDEFINE("" CMAKE_NO_STD_NAMESPACE VTK_NO_STD_NAMESPACE)
+VTK_PREPARE_CMAKEDEFINE(NOT CMAKE_ANSI_FOR_SCOPE VTK_NO_FOR_SCOPE)
+VTK_PREPARE_CMAKEDEFINE(NOT VTK_EXPLICIT_TEMPLATES
+                  VTK_NO_EXPLICIT_TEMPLATE_INSTANTIATION)
+VTK_PREPARE_CMAKEDEFINE(NOT VTK_COMPILER_HAS_FULL_SPECIALIZATION
+                        VTK_NO_FULL_TEMPLATE_SPECIALIZATION)
+VTK_PREPARE_CMAKEDEFINE("" OPENGL_LIBRARY VTK_USE_OPENGL_LIBRARY)
+
+configure_file(vtkConfigure.h.in vtkConfigure.h @ONLY)
+configure_file(vtkToolkits.h.in vtkToolkits.h @ONLY)
 
 add_custom_command(
   DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/CaseFolding.txt
@@ -383,7 +424,7 @@ if(CMAKE_SYSTEM MATCHES "SunOS.*")
   set(KIT_LIBS ${KIT_LIBS} socket nsl)
 endif()
 
-vtk_add_library(vtkCommonCore ${Kit_SRCS})
+vtk_module_library(vtkCommonCore ${Kit_SRCS})
 
 target_link_libraries(vtkCommonCore ${CMAKE_THREAD_LIBS_INIT})
 set_target_properties(vtkCommonCore PROPERTIES LINK_INTERFACE_LIBRARIES "")

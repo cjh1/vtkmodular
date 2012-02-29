@@ -13,8 +13,4 @@ set(Kit_SRCS
   face_times_italic.cxx
   )
 
-include_directories(
-  ${VTK_SOURCE_DIR}/TPL
-  ${VTK_SOURCE_DIR}/TPL/vtkfreetype/include)
-
-vtk_add_library(vtkRenderingFreeType ${Kit_SRCS})
+vtk_module_library(vtkRenderingFreeType ${Kit_SRCS})

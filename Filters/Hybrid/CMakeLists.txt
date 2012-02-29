@@ -50,4 +50,4 @@ FOREACH( file ${shader_files} )
   SET( Kit_EXTRA_SRCS ${Kit_EXTRA_SRCS} ${res} )
 ENDFOREACH( file )
 
-vtk_add_library(vtkFiltersHybrid ${Kit_SRCS})
+vtk_module_library(vtkFiltersHybrid ${Kit_SRCS})

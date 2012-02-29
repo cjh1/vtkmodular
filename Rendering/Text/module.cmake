@@ -3,5 +3,5 @@ vtk_module(vtkRenderingText
     vtkRenderingCore
     vtkRenderingFreeType
     vtkIOGeometry
-    ftgl
+    vtkftgl
   DEFAULT OFF)

@@ -12,4 +12,5 @@ set(Kit_SRCS
   vtkFreeTypeLabelRenderStrategy.cxx
   )
 
-vtk_add_library(vtkRenderingLabel ${Kit_SRCS})
+include_directories(${VTK_SOURCE_DIR}/Utilities) # octree
+vtk_module_library(vtkRenderingLabel ${Kit_SRCS})

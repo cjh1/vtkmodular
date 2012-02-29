@@ -4,4 +4,5 @@ vtk_module(vtkViewsCore
     vtkFiltersGeneral
     vtkRenderingCore
     vtkInteractionWidgets
+  EXCLUDE_FROM_ALL
   DEFAULT OFF)

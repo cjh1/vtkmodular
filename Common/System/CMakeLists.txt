@@ -24,4 +24,4 @@ if(WIN32 AND NOT BORLAND)
   set(KIT_LIBS ${KIT_LIBS} wsock32)
 endif()
 
-vtk_add_library(vtkCommonSystem ${Kit_SRCS})
+vtk_module_library(vtkCommonSystem ${Kit_SRCS})

@@ -13,4 +13,4 @@ set(Kit_SRCS
   vtkBoostSplitTableField.cxx  
   )
 
-vtk_add_library(vtkInfovisBoostGraphAlgorithms ${Kit_SRCS})
+vtk_module_library(vtkInfovisBoostGraphAlgorithms ${Kit_SRCS})

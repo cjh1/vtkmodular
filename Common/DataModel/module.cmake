@@ -5,5 +5,5 @@ vtk_module(vtkCommonDataModel
     vtkCommonMath
     vtkCommonMisc
     vtkCommonTransforms
-    kwsys
+    vtksys
   DEFAULT ON)

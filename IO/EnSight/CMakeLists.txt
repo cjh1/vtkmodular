@@ -14,4 +14,4 @@ SET_SOURCE_FILES_PROPERTIES(
 )
 
 
-vtk_add_library(vtkIOEnSight ${Kit_SRCS})
+vtk_module_library(vtkIOEnSight ${Kit_SRCS})

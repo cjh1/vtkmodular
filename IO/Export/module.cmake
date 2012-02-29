@@ -5,4 +5,5 @@ vtk_module(vtkIOExport
     vtkRenderingText
     vtkImagingCore
     vtkIOCore
+    vtkgl2ps
   DEFAULT ON)

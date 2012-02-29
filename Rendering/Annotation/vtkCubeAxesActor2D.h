@@ -43,6 +43,7 @@
 #ifndef __vtkCubeAxesActor2D_h
 #define __vtkCubeAxesActor2D_h
 
+#include "vtkRenderingAnnotationExport.h" // For export macro
 #include "vtkActor2D.h"
 
 #define VTK_FLY_OUTER_EDGES 0
@@ -54,7 +55,7 @@ class vtkCamera;
 class vtkDataSet;
 class vtkTextProperty;
 
-class VTK_HYBRID_EXPORT vtkCubeAxesActor2D : public vtkActor2D
+class VTKRENDERINGANNOTATION_EXPORT vtkCubeAxesActor2D : public vtkActor2D
 {
 public:
   vtkTypeMacro(vtkCubeAxesActor2D,vtkActor2D);

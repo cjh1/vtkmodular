@@ -13,12 +13,11 @@ configure_file(
 )
 
 include_directories(
-  ${CMAKE_CURRENT_BINARY_DIR}
   ${CMAKE_CURRENT_SOURCE_DIR}/private
   ${CMAKE_CURRENT_BINARY_DIR}/private
   )
 
-vtk_add_library(vtkIOLSDyna ${Kit_SRCS})
+vtk_module_library(vtkIOLSDyna ${Kit_SRCS})
 
 set_source_files_properties(
   vtkLSDynaPart

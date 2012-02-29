@@ -18,4 +18,4 @@ SET(Kit_SRCS
   vtkLandmarkTransform.cxx
   )
 
-vtk_add_library(vtkCommonTransforms ${Kit_SRCS})
+vtk_module_library(vtkCommonTransforms ${Kit_SRCS})

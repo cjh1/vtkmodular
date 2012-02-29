@@ -1,4 +1,6 @@
 vtk_module(vtkIOParallelExodus
   DEPENDS
-  COMPILE_DEPENDS
+    vtkParallelCore
+    vtkIOExodus
+    vtkexodusII
   DEFAULT OFF)

@@ -111,9 +111,4 @@ set(Kit_SRCS
   vtkDistancePolyDataFilter.cxx
   )
 
-include_directories(
-  ${CMAKE_CURRENT_BINARY_DIR}
-  ${VTK_SOURCE_DIR}/Utilities
-  )
-
-vtk_add_library(vtkFiltersGeneral ${Kit_SRCS})
+vtk_module_library(vtkFiltersGeneral ${Kit_SRCS})

@@ -14,4 +14,4 @@ IF (WIN32)
 ENDIF (WIN32)
 
 
-vtk_add_library(vtkIOVideo ${Kit_SRCS})
+vtk_module_library(vtkIOVideo ${Kit_SRCS})

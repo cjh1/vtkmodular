@@ -281,4 +281,4 @@ set_source_files_properties(
   WRAP_EXCLUDE
   )
 
-vtk_add_library(vtkCommonDataModel ${Kit_SRCS})
+vtk_module_library(vtkCommonDataModel ${Kit_SRCS})

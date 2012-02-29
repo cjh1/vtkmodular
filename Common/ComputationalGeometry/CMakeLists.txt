@@ -38,13 +38,4 @@ vtkParametricTorus.cxx
 vtkParametricTorus.h
   )
 
-include_directories(
-  ${CMAKE_CURRENT_BINARY_DIR}
-  ${VTK_SOURCE_DIR}/Common/Core
-  ${VTK_SOURCE_DIR}/Common/DataModel
-  ${VTK_SOURCE_DIR}/Common/Math
-  ${VTK_SOURCE_DIR}/Common/Misc
-  ${VTK_SOURCE_DIR}/Common/System
-  )
-
-vtk_add_library(vtkCommonComputationalGeometry ${Kit_SRCS})
+vtk_module_library(vtkCommonComputationalGeometry ${Kit_SRCS})

@@ -9,4 +9,4 @@ SET_SOURCE_FILES_PROPERTIES(
   WRAP_EXCLUDE
 )
 
-vtk_add_library(vtkIOPLY ${Kit_SRCS})
+vtk_module_library(vtkIOPLY ${Kit_SRCS})

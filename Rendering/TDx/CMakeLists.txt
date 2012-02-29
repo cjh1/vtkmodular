@@ -51,4 +51,4 @@ ENDIF()
 CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/vtkTDxConfigure.h.in
                ${CMAKE_CURRENT_BINARY_DIR}/vtkTDxConfigure.h @ONLY IMMEDIATE)
 
-vtk_add_library(vtkRenderingTDx ${Kit_SRCS})
+vtk_module_library(vtkRenderingTDx ${Kit_SRCS})

@@ -7,5 +7,5 @@ vtk_module(vtkIOXML
     vtkIOCore
     vtkIOGeometry
     vtkexpat
-    kwsys
+    vtksys
   DEFAULT ON)

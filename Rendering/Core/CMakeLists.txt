@@ -170,13 +170,10 @@ set(Kit_SRCS
   )
 
 include_directories(
-  ${CMAKE_CURRENT_BINARY_DIR}
-  ${CMAKE_CURRENT_SOURCE_DIR}
-  ${VTK_SOURCE_DIR}/Utilities
   ${VTK_SOURCE_DIR}/Rendering/OpenGL # For the OpenGL headers...
   ${VTK_SOURCE_DIR}/Rendering/GLSL # For the GLSL headers...
   ${VTK_BINARY_DIR}/Rendering/OpenGL # For the OpenGL headers...
   ${VTK_BINARY_DIR}/Rendering/GLSL # For the GLSL headers...
   )
 
-vtk_add_library(vtkRenderingCore ${Kit_SRCS})
+vtk_module_library(vtkRenderingCore ${Kit_SRCS})

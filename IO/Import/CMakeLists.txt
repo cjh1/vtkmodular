@@ -4,4 +4,4 @@ set(Kit_SRCS
   vtkVRMLImporter.cxx
 )
 
-vtk_add_library(vtkIOImport ${Kit_SRCS})
+vtk_module_library(vtkIOImport ${Kit_SRCS})

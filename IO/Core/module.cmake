@@ -4,5 +4,5 @@ vtk_module(vtkIOCore
     vtkCommonExecutionModel
     vtkCommonMisc
     vtkzlib
-    kwsys
+    vtksys
   DEFAULT ON)

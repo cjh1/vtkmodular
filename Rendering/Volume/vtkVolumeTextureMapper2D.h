@@ -24,9 +24,10 @@
 #ifndef __vtkVolumeTextureMapper2D_h
 #define __vtkVolumeTextureMapper2D_h
 
+#include "vtkRenderingVolumeExport.h" // For export macro
 #include "vtkVolumeTextureMapper.h"
 
-class VTK_VOLUMERENDERING_EXPORT vtkVolumeTextureMapper2D : public vtkVolumeTextureMapper
+class VTKRENDERINGVOLUME_EXPORT vtkVolumeTextureMapper2D : public vtkVolumeTextureMapper
 {
 public:
   vtkTypeMacro(vtkVolumeTextureMapper2D,vtkVolumeTextureMapper);

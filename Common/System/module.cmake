@@ -1,5 +1,5 @@
 vtk_module(vtkCommonSystem
   DEPENDS
     vtkCommonCore
-    kwsys
+    vtksys
   DEFAULT ON)
