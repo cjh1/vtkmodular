@@ -48,6 +48,7 @@
 #include "vtkRenderingAnnotationExport.h" // For export macro
 #include "vtkActor2D.h"
 
+class vtkAlgorithmOutput;
 class vtkAxisActor2D;
 class vtkDataObject;
 class vtkPolyData;
@@ -58,6 +59,7 @@ class vtkLegendBoxActor;
 class vtkGlyphSource2D;
 class vtkAxisLabelArray;
 class vtkAxisRanges;
+class vtkSpiderPlotActorConnection;
 
 
 #define VTK_IV_COLUMN 0
@@ -76,12 +78,15 @@ public:
   static vtkSpiderPlotActor *New();
 
   // Description:
-  // Set the input to the spider plot actor.
-  virtual void SetInput(vtkDataObject*);
+  // Set the input to the pie chart actor. SetInputData()
+  // does not connect the pipeline whereas SetInputConnection()
+  // does.
+  virtual void SetInputData(vtkDataObject*);
+  virtual void SetInputConnection(vtkAlgorithmOutput*);
 
   // Description:
   // Get the input data object to this actor.
-  vtkGetObjectMacro(Input,vtkDataObject);
+  virtual vtkDataObject* GetInput();
 
   // Description:
   // Specify whether to use the rows or columns as independent variables.
@@ -185,7 +190,9 @@ protected:
   ~vtkSpiderPlotActor();
 
 private:
-  vtkDataObject *Input;        // List of data sets to plot
+
+  vtkSpiderPlotActorConnection* ConnectionHolder;
+
   int IndependentVariables;    // Use column or row
   int TitleVisibility;         // Should I see the title?
   char *Title;                 // The title string

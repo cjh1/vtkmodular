@@ -41,7 +41,6 @@ SET(Kit_SRCS
   vtkArrayWeights.cxx
   vtkBitArray.cxx
   vtkBitArrayIterator.cxx
-  vtkBoundingBox.cxx
   vtkBoxMuellerRandomSequence.cxx
   vtkBreakPoint.cxx
   vtkByteSwap.cxx

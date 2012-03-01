@@ -12,7 +12,7 @@ the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
 PURPOSE.  See the above copyright notice for more information.
 
 =========================================================================*/
-// .NAME vtkLinearExtractor - select cells intersecting a line
+// .NAME vtkLinearSelector - select cells intersecting a line (possibly broken)
 //
 // .SECTION Description
 // This filter takes a vtkCompositeDataSet as input and a line segment as parameter. 
@@ -24,10 +24,10 @@ PURPOSE.  See the above copyright notice for more information.
 // BP12, F-91297 Arpajon, France. <br>
 // This class was implemented by Thierry Carrard, Charles Pignerol, and Philippe Pebay.
 
-#ifndef VTK_LINEAR_EXTRACTOR_H
-#define VTK_LINEAR_EXTRACTOR_H
+#ifndef VTK_LINEAR_SELECTOR_H
+#define VTK_LINEAR_SELECTOR_H
 
-#include "vtkFiltersExtractionExport.h" // For export macro
+#include "vtkCommonDataModelExport.h" // For export macro
 #include <vtkSelectionAlgorithm.h>
 
 class vtkAlgorithmOutput;
@@ -36,13 +36,13 @@ class vtkDoubleArray;
 class vtkIdTypeArray;
 class vtkPoints;
 
-class VTKFILTERSEXTRACTION_EXPORT vtkLinearExtractor: public vtkSelectionAlgorithm
+class VTKCOMMONDATAMODEL_EXPORT vtkLinearSelector: public vtkSelectionAlgorithm
 {
  public:
-  vtkTypeMacro(vtkLinearExtractor,vtkSelectionAlgorithm);
+  vtkTypeMacro(vtkLinearSelector,vtkSelectionAlgorithm);
   void PrintSelf(ostream& os, vtkIndent indent);
 
-  static vtkLinearExtractor *New();
+  static vtkLinearSelector *New();
 
   // Description:
   // Set/Get starting point of intersecting segment
@@ -76,8 +76,8 @@ class VTKFILTERSEXTRACTION_EXPORT vtkLinearExtractor: public vtkSelectionAlgorit
   vtkGetMacro(VertexEliminationTolerance,double);
 
  protected:
-  vtkLinearExtractor();
-  virtual ~vtkLinearExtractor();
+  vtkLinearSelector();
+  virtual ~vtkLinearSelector();
 
   virtual int FillInputPortInformation(int port, vtkInformation *info);
 
@@ -91,8 +91,8 @@ class VTKFILTERSEXTRACTION_EXPORT vtkLinearExtractor: public vtkSelectionAlgorit
   void SeekIntersectingCells(vtkDataSet* input, vtkIdTypeArray* outIndices);
 
  private:
-  vtkLinearExtractor(const vtkLinearExtractor&);  // Not implemented
-  void operator =(const vtkLinearExtractor&); // Not implemented
+  vtkLinearSelector(const vtkLinearSelector&);  // Not implemented
+  void operator =(const vtkLinearSelector&); // Not implemented
 
   // Description:
   // Start and end point of the intersecting line segment
@@ -121,4 +121,4 @@ class VTKFILTERSEXTRACTION_EXPORT vtkLinearExtractor: public vtkSelectionAlgorit
 };
 
 
-#endif	// VTK_LINEAR_EXTRACTOR_H
+#endif	// VTK_LINEAR_SELECTOR_H

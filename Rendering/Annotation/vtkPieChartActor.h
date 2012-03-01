@@ -34,6 +34,7 @@
 #include "vtkRenderingAnnotationExport.h" // For export macro
 #include "vtkActor2D.h"
 
+class vtkAlgorithmOutput;
 class vtkAxisActor2D;
 class vtkDataObject;
 class vtkPolyData;
@@ -42,6 +43,7 @@ class vtkTextMapper;
 class vtkTextProperty;
 class vtkLegendBoxActor;
 class vtkGlyphSource2D;
+class vtkPieChartActorConnection;
 class vtkPieceLabelArray;
 
 class VTKRENDERINGANNOTATION_EXPORT vtkPieChartActor : public vtkActor2D
@@ -57,12 +59,15 @@ public:
   static vtkPieChartActor *New();
 
   // Description:
-  // Set the input to the pie chart actor.
-  virtual void SetInput(vtkDataObject*);
+  // Set the input to the pie chart actor. SetInputData()
+  // does not connect the pipeline whereas SetInputConnection()
+  // does.
+  virtual void SetInputData(vtkDataObject*);
+  virtual void SetInputConnection(vtkAlgorithmOutput*);
 
   // Description:
   // Get the input data object to this actor.
-  vtkGetObjectMacro(Input,vtkDataObject);
+  virtual vtkDataObject* GetInput();
 
   // Description:
   // Enable/Disable the display of a plot title.
@@ -141,7 +146,9 @@ protected:
   ~vtkPieChartActor();
 
 private:
-  vtkDataObject *Input;        // List of data sets to plot
+
+  vtkPieChartActorConnection* ConnectionHolder;
+
   vtkIdType ArrayNumber;
   vtkIdType ComponentNumber;
   int TitleVisibility;         // Should I see the title?

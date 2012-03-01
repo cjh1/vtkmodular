@@ -56,6 +56,8 @@
 #include "vtkInteractionWidgetsExport.h" // For export macro
 #include "vtkInteractorObserver.h"
 
+class vtk3DWidgetConnection;
+class vtkAlgorithmOutput;
 class vtkDataSet;
 class vtkProp3D;
 
@@ -89,8 +91,9 @@ public:
   // Specify the input dataset. This is not required, but if supplied,
   // and no vtkProp3D is specified, it is used to initially position 
   // the widget.
-  virtual void SetInput(vtkDataSet*);
-  vtkGetObjectMacro(Input,vtkDataSet);
+  virtual void SetInputData(vtkDataSet*);
+  virtual void SetInputConnection(vtkAlgorithmOutput*);
+  virtual vtkDataSet *GetInput();
   
   // Description:
   // Set/Get a factor representing the scaling of the widget upon placement
@@ -115,8 +118,9 @@ protected:
 
   // Used to position and scale the widget initially
   vtkProp3D *Prop3D;
-  vtkDataSet *Input;
-  
+
+  vtk3DWidgetConnection *ConnectionHolder;
+
   //has the widget ever been placed
   double PlaceFactor;
   int Placed; 
@@ -132,6 +136,8 @@ protected:
   //used to track the depth of the last pick; also interacts with handle sizing
   int   ValidPick;
   double LastPickPosition[3];
+
+  void UpdateInput();
 
 private:
   vtk3DWidget(const vtk3DWidget&);  // Not implemented.

@@ -56,7 +56,6 @@ public:
   // Release the underlying resources associated with this mapper  
   void ReleaseGraphicsResources(vtkWindow *);
 
-
 protected:
   vtkCompositePolyDataMapper();
   ~vtkCompositePolyDataMapper();

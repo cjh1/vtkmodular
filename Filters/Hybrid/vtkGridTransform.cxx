@@ -721,6 +721,7 @@ vtkGridTransform::vtkGridTransform()
 vtkGridTransform::~vtkGridTransform()
 {
   this->ConnectionHolder->Delete();
+  this->ConnectionHolder = 0;
 }
 
 //----------------------------------------------------------------------------
@@ -1215,7 +1216,7 @@ void vtkGridTransform::SetDisplacementGridConnection(vtkAlgorithmOutput* output)
 }
 
 //----------------------------------------------------------------------------
-void vtkGridTransform::SetDisplacementGrid(vtkImageData* grid)
+void vtkGridTransform::SetDisplacementGridData(vtkImageData* grid)
 {
   vtkTrivialProducer* tp = vtkTrivialProducer::New();
   tp->SetOutput(grid);

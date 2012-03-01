@@ -28,7 +28,6 @@ set(Kit_SRCS
   vtkProbeSelectedLocations.cxx
   vtkHierarchicalDataExtractDataSets.cxx
   vtkHierarchicalDataExtractLevel.cxx
-  vtkLinearExtractor.cxx
   )
 
 vtk_module_library(vtkFiltersExtraction ${Kit_SRCS})

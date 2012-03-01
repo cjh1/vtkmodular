@@ -255,6 +255,7 @@ set(Kit_SRCS
   vtkWedge.cxx
   vtkXMLDataElement.cxx
   vtkTreeIterator.cxx
+  vtkBoundingBox.cxx
   )
 
 include_directories(

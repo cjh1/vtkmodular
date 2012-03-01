@@ -23,10 +23,10 @@ PURPOSE.  See the above copyright notice for more information.
 
 #ifndef __vtkBoundingBox_h
 #define __vtkBoundingBox_h
-#include "vtkCommonCoreExport.h" // For export macro
+#include "vtkCommonDataModelExport.h" // For export macro
 #include "vtkSystemIncludes.h"
-
-class VTKCOMMONCORE_EXPORT vtkBoundingBox
+ 
+class VTKCOMMONDATAMODEL_EXPORT vtkBoundingBox
 {
 public:
   // Description:
@@ -95,6 +95,14 @@ public:
   // Description:
   // Returns 1 if the boxes intersect else returns 0
   int Intersects(const vtkBoundingBox &bbox) const;
+
+
+  // Desciption:
+  // Intersect this box with the half space defined by plane. 
+   //Returns true if there is intersection---which implies that the box has been modified
+  // Returns false otherwise
+  bool IntersectPlane(double origin[3],double normal[3]);
+
 
   // Description:
   // Returns 1 if the min and max points of bbox are contained 
