@@ -21,6 +21,7 @@
 #ifndef __vtkMoleculeMapper_h
 #define __vtkMoleculeMapper_h
 
+#include "vtkChemistryCoreExport.h" // For export macro
 #include "vtkMapper.h"
 #include "vtkNew.h" // For vtkNew
 
@@ -35,7 +36,7 @@ class vtkSelection;
 class vtkSphereSource;
 class vtkTrivialProducer;
 
-class VTK_CHEMISTRY_EXPORT vtkMoleculeMapper : public vtkMapper
+class VTKCHEMISTRYCORE_EXPORT vtkMoleculeMapper : public vtkMapper
 {
 public:
   static vtkMoleculeMapper *New();
@@ -44,7 +45,7 @@ public:
 
   // Description:
   // Get/Set the input vtkMolecule.
-  void SetInput(vtkMolecule *in);
+  void SetInputData(vtkMolecule *in);
   vtkMolecule *GetInput();
 
   // Description:

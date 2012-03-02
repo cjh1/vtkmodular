@@ -1,70 +1,64 @@
-IF (VTK_USE_RENDERING AND VTK_USE_CHEMISTRY)
+SET(KIT Chemistry)
+SET(UKIT CHEMISTRY)
 
-  SET(KIT Chemistry)
+SET(KIT_TCL_LIBS vtkFilteringTCL vtkRenderingTCL vtkVolumeRenderingTCL)
+SET(KIT_PYTHON_LIBS vtkFilteringPythonD vtkRenderingPythonD vtkVolumeRenderingPythonD)
+SET(KIT_JAVA_LIBS vtkFilteringJava vtkRenderingJava vtkVolumeRenderingJava)
+SET(KIT_INTERFACE_LIBRARIES vtkFiltering vtkRendering vtkVolumeRendering)
 
-  SET(MyTests
-    TestBallAndStick.cxx
-    TestBondColorModeDiscreteByAtom.cxx
-    TestBondColorModeSingleColor.cxx
-    TestCompositeRender.cxx
-    TestFastRender.cxx
-    TestLiquoriceSticks.cxx
-    TestMolecule.cxx
-    TestMoleculeSelection.cxx
-    TestMultiCylinderOn.cxx
-    TestMultiCylinderOff.cxx
-    TestPeriodicTable.cxx
-    TestProgrammableElectronicData.cxx
-    TestSimpleBondPerceiver.cxx
-    TestVDWSpheres.cxx
-    )
+SET(Kit_SRCS
+  vtkBlueObeliskData.cxx
+  vtkBlueObeliskDataParser.cxx
+  vtkCMLMoleculeReader.cxx
+  vtkMoleculeAlgorithm.cxx
+  vtkMoleculeMapper.cxx
+  vtkMoleculeToAtomBallFilter.cxx
+  vtkMoleculeToBondStickFilter.cxx
+  vtkMoleculeToPolyDataFilter.cxx
+  vtkPeriodicTable.cxx
+  vtkProgrammableElectronicData.cxx
+  vtkSimpleBondPerceiver.cxx
+  )
 
-  # Tests with data
-  IF(VTK_DATA_ROOT)
-    SET(MyTests
-      ${MyTests}
-      TestCMLMoleculeReader.cxx
-      )
-    IF(VTK_USE_OPENQUBE)
-      # Add Eigen to the include path for the OpenQube headers
-      INCLUDE_DIRECTORIES(${EIGEN2_INCLUDE_DIR})
-      SET(MyTests
-        ${MyTests}
-        TestOpenQubeElectronicData.cxx
-        TestOpenQubeMOPACDensity.cxx
-        TestOpenQubeMOPACOrbital.cxx
-      )
-    ENDIF(VTK_USE_OPENQUBE)
-  ENDIF(VTK_DATA_ROOT)
+SET_SOURCE_FILES_PROPERTIES(
+  vtkMoleculeToPolyDataFilter.cxx
+  ABSTRACT
+  )
 
-  # Use the testing object factory, to reduce boilerplate code in tests.
-  INCLUDE("${VTK_SOURCE_DIR}/Rendering/vtkTestingObjectFactory.cmake")
-  ADD_EXECUTABLE(${KIT}CxxTests ${Tests})
-  TARGET_LINK_LIBRARIES(${KIT}CxxTests
-                        vtkChemistry
-                        vtkRendering
-                        vtkVolumeRendering)
+SET(Kit_EXTRA_SRCS)
+SET(Kit_EXTRA_CMDS)
+SET(Kit_TCL_EXTRA_SRCS)
+SET(Kit_PYTHON_EXTRA_SRCS)
+SET(Kit_JAVA_EXTRA_SRCS)
+SET(KIT_TCL_DEPS)
+SET(KIT_PYTHON_DEPS)
+SET(KIT_JAVA_DEPS)
 
-  SET (TestsToRun ${Tests})
-  REMOVE (TestsToRun ${KIT}CxxTests.cxx)
+# OpenQube setup
+FIND_PACKAGE(OpenQube QUIET)
+IF(OpenQube_FOUND)
+  FIND_PACKAGE(Eigen2 QUIET)
+ENDIF(OpenQube_FOUND)
+VTK_DEPENDENT_OPTION(VTK_USE_OPENQUBE
+                     "Compile OpenQube support into vtkChemistry."
+                     ON "OpenQube_FOUND;EIGEN2_FOUND" OFF)
+IF(VTK_USE_OPENQUBE)
+  INCLUDE_DIRECTORIES(${OpenQube_INCLUDE_DIRS} ${EIGEN2_INCLUDE_DIR})
+  SET(KIT_LIBS ${KIT_LIBS} OpenQube)
+  SET(Kit_SRCS
+    ${Kit_SRCS}
+    vtkOpenQubeElectronicData.cxx
+    vtkOpenQubeMoleculeSource.cxx
+  )
+ENDIF(VTK_USE_OPENQUBE)
 
-  # Add all the executables
-  FOREACH (test ${TestsToRun})
-    GET_FILENAME_COMPONENT(TName ${test} NAME_WE)
-    IF (VTK_DATA_ROOT)
-      IF(${${TName}Error})
-        SET(_error_threshold ${${TName}Error})
-      ELSE()
-        SET(_error_threshold 10)
-      ENDIF()
-      ADD_TEST(Chemistry-${TName} ${CXX_TEST_PATH}/${KIT}CxxTests ${TName}
-        -D ${VTK_DATA_ROOT}
-        -T ${VTK_BINARY_DIR}/Testing/Temporary
-        -V Baseline/${KIT}/${TName}.png
-        -E ${_error_threshold})
-    ELSE (VTK_DATA_ROOT)
-      ADD_TEST(Chemistry-${TName} ${CXX_TEST_PATH}/${KIT}CxxTests ${TName})
-    ENDIF (VTK_DATA_ROOT)
-  ENDFOREACH (test)
+# Install Blue Obelisk Data Repository files
+INSTALL(DIRECTORY vtkBODRData
+  DESTINATION ${VTK_INSTALL_SHARE_DIR_CM24}/vtkChemistry
+  )
 
-ENDIF (VTK_USE_RENDERING AND VTK_USE_CHEMISTRY)
+# Generate configured header file
+CONFIGURE_FILE(${vtkChemistryCore_SOURCE_DIR}/vtkChemistryConfigure.h.in
+               ${vtkChemistryCore_BINARY_DIR}/vtkChemistryConfigure.h IMMEDIATE)
+
+vtk_module_library(vtkChemistryCore ${Kit_SRCS})

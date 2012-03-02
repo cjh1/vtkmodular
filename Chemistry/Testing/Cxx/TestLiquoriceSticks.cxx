@@ -24,7 +24,7 @@
 #include "vtkRenderWindow.h"
 #include "vtkRenderer.h"
 
-int TestBondColorModeDiscreteByAtom(int, char *[])
+int TestLiquoriceSticks(int, char *[])
 {
   vtkNew<vtkMolecule> mol;
 
@@ -60,11 +60,9 @@ int TestBondColorModeDiscreteByAtom(int, char *[])
   vtkBond B13 = mol->AppendBond( O1,  H5, 1);
 
   vtkNew<vtkMoleculeMapper> molmapper;
-  molmapper->SetInput(mol.GetPointer());
+  molmapper->SetInputData(mol.GetPointer());
 
-  molmapper->UseBallAndStickSettings();
-  molmapper->RenderAtomsOff();
-  molmapper->SetBondColorModeToDiscreteByAtom();
+  molmapper->UseLiquoriceStickSettings();
 
   vtkNew<vtkActor> actor;
   actor->SetMapper(molmapper.GetPointer());

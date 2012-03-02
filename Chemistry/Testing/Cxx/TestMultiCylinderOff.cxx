@@ -24,7 +24,7 @@
 #include "vtkRenderWindow.h"
 #include "vtkRenderer.h"
 
-int TestVDWSpheres(int, char *[])
+int TestMultiCylinderOff(int, char *[])
 {
   vtkNew<vtkMolecule> mol;
 
@@ -60,9 +60,11 @@ int TestVDWSpheres(int, char *[])
   vtkBond B13 = mol->AppendBond( O1,  H5, 1);
 
   vtkNew<vtkMoleculeMapper> molmapper;
-  molmapper->SetInput(mol.GetPointer());
+  molmapper->SetInputData(mol.GetPointer());
 
-  molmapper->UseVDWSpheresSettings();
+  molmapper->UseBallAndStickSettings();
+  molmapper->RenderAtomsOff();
+  molmapper->UseMultiCylindersForBondsOff();
 
   vtkNew<vtkActor> actor;
   actor->SetMapper(molmapper.GetPointer());
@@ -78,7 +80,7 @@ int TestVDWSpheres(int, char *[])
   ren->SetBackground(0.0,0.0,0.0);
   win->SetSize(450,450);
   win->Render();
-  ren->GetActiveCamera()->Zoom(1.8);
+  ren->GetActiveCamera()->Zoom(2.2);
 
   // Finally render the scene and compare the image to a reference image
   win->SetMultiSamples(0);

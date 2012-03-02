@@ -256,6 +256,10 @@ set(Kit_SRCS
   vtkXMLDataElement.cxx
   vtkTreeIterator.cxx
   vtkBoundingBox.cxx
+  vtkAtom.cxx
+  vtkBond.cxx
+  vtkMolecule.cxx
+  vtkAbstractElectronicData.cxx
   )
 
 include_directories(
@@ -271,6 +275,7 @@ set_source_files_properties(
   vtkCell3D
   vtkCompositeDataIterator
   vtkCompositeDataSet
+  vtkAbstractElectronicData
   ABSTRACT
   )
 

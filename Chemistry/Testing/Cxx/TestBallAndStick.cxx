@@ -18,13 +18,15 @@
 #include "vtkActor.h"
 #include "vtkCamera.h"
 #include "vtkMolecule.h"
+#include "vtkLight.h"
 #include "vtkMoleculeMapper.h"
 #include "vtkNew.h"
+#include "vtkProperty.h"
 #include "vtkRenderWindowInteractor.h"
 #include "vtkRenderWindow.h"
 #include "vtkRenderer.h"
 
-int TestFastRender(int, char *[])
+int TestBallAndStick(int, char *[])
 {
   vtkNew<vtkMolecule> mol;
 
@@ -60,12 +62,20 @@ int TestFastRender(int, char *[])
   vtkBond B13 = mol->AppendBond( O1,  H5, 1);
 
   vtkNew<vtkMoleculeMapper> molmapper;
-  molmapper->SetInput(mol.GetPointer());
+  molmapper->SetInputData(mol.GetPointer());
 
-  molmapper->UseFastSettings();
+  molmapper->UseBallAndStickSettings();
 
   vtkNew<vtkActor> actor;
   actor->SetMapper(molmapper.GetPointer());
+  actor->GetProperty()->SetAmbient(0.0);
+  actor->GetProperty()->SetDiffuse(0.0);
+  actor->GetProperty()->SetSpecular(0.0);
+  actor->GetProperty()->SetSpecularPower(40);
+
+  vtkNew<vtkLight> light;
+  light->SetLightTypeToCameraLight();
+  light->SetPosition(1.0, 1.0, 1.0);
 
   vtkNew<vtkRenderer> ren;
   vtkNew<vtkRenderWindow> win;
@@ -75,8 +85,8 @@ int TestFastRender(int, char *[])
 
   ren->AddActor(actor.GetPointer());
 
-  ren->SetBackground(0.0,0.0,0.0);
-  win->SetSize(450,450);
+  ren->SetBackground(0.0, 0.0, 0.0);
+  win->SetSize(450, 450);
   win->Render();
   ren->GetActiveCamera()->Zoom(2.2);
 
