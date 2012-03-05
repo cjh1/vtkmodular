@@ -115,6 +115,9 @@ include(vtkCompilerExtras)
 include(vtkBuildPath)
 
 #-----------------------------------------------------------------------------
+include(CTest)
+
+#-----------------------------------------------------------------------------
 # Does VTK require support for 64 bit file systems
 INCLUDE(CheckCXXSourceRuns)
 FILE(READ "${VTK_CMAKE_DIR}/vtkRequireLargeFilesSupport.cxx"

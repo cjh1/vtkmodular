@@ -6,4 +6,6 @@ vtk_module(vtkCommonDataModel
     vtkCommonMisc
     vtkCommonTransforms
     vtksys
+  TEST_DEPENDS
+    vtkTestingCore
   DEFAULT ON)
