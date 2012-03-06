@@ -52,6 +52,8 @@ SET(Kit_SRCS
   vtkTrivialProducer.cxx
   vtkUndirectedGraphAlgorithm.cxx
   vtkUnstructuredGridAlgorithm.cxx
+  vtkSelectionAlgorithm.cxx
+  vtkLinearSelector.cxx
   )
 
 vtk_module_library(vtkCommonExecutionModel ${Kit_SRCS})

@@ -3,4 +3,6 @@ vtk_module(vtkChemistryCore
     vtkCommonDataModel
     vtkIOXML
     vtkRenderingCore
+  TEST_DEPENDS
+    vtkTestingCore 
   DEFAULT ON)

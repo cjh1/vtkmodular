@@ -260,6 +260,7 @@ set(Kit_SRCS
   vtkBond.cxx
   vtkMolecule.cxx
   vtkAbstractElectronicData.cxx
+  #vtkLinearSelector.cxx
   )
 
 include_directories(

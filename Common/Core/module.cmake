@@ -1,6 +1,7 @@
 vtk_module(vtkCommonCore
   DEPENDS vtksys
-  TEST_DEPENDS
-    vtkTestingCore
-    vtkCommonDataModel
+  TEST_DEPENDS 
+    vtkCommonSystem
+    vtkCommonTransforms
+    vtkRenderingCore
   DEFAULT ON)

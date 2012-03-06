@@ -10,13 +10,12 @@ foreach(f ${meta})
   get_filename_component(${vtk-module}_BASE ${f} PATH)
   set(${vtk-module}_SOURCE_DIR ${VTK_SOURCE_DIR}/${${vtk-module}_BASE})
   set(${vtk-module}_BINARY_DIR ${VTK_BINARY_DIR}/${${vtk-module}_BASE})
-  if(BUILD_TESTING AND EXISTS ${${vtk-module}_SOURCE_DIR}/Testing)
-    list(APPEND VTK_MODULES_ALL ${vtk-module-test})
-    set(${vtk-module-test}_SOURCE_DIR ${${vtk-module}_SOURCE_DIR}/Testing)
-    set(${vtk-module-test}_BINARY_DIR ${${vtk-module}_BINARY_DIR}/Testing)
-    set(${vtk-module-test}_IS_TEST 1)
-    set(${vtk-module}_TESTED_BY ${vtk-module-test})
-    set(${vtk-module-test}_TESTS_FOR ${vtk-module})
+  if(BUILD_TESTING)
+    foreach(_lang Cxx Tcl Java Python)
+      if(EXISTS ${${vtk-module}_SOURCE_DIR}/Testing/${_lang}/CMakeLists.txt)
+        vtk_add_test_module(${_lang})
+      endif()
+    endforeach()
   endif()
 endforeach()
 # Clear variables set later in each module.
@@ -60,7 +59,8 @@ option(VTK_BUILD_ALL_MODULES "Request to build all modules" OFF)
 # Provide an option for each module.
 foreach(vtk-module ${VTK_MODULES_ALL})
   if(NOT ${vtk-module}_IS_TEST)
-    option(Module_${vtk-module} "Request building ${vtk-module}" OFF)
+    option(Module_${vtk-module} "Request building ${vtk-module}"
+      ${VTK_MODULE_${vtk-module}_DEFAULT})
     mark_as_advanced(Module_${vtk-module})
     if(VTK_MODULE_${vtk-module}_EXCLUDE_FROM_ALL)
       set(VTK_MODULE_${vtk-module}_IN_ALL 0)
@@ -73,19 +73,17 @@ endforeach()
 # Follow dependencies.
 macro(vtk_module_enable vtk-module _needed_by)
   if(NOT Module_${vtk-module})
-    if(NOT ${vtk-module}_TESTED_BY OR
-      NOT "x${_needed_by}" STREQUAL "x${${vtk-module}_TESTED_BY}")
-      list(APPEND VTK_MODULE_${vtk-module}_NEEDED_BY ${_needed_by})
-    endif()
+    list(APPEND VTK_MODULE_${vtk-module}_NEEDED_BY ${_needed_by})
   endif()
   if(NOT ${vtk-module}_ENABLED)
     set(${vtk-module}_ENABLED 1)
     foreach(dep IN LISTS VTK_MODULE_${vtk-module}_DEPENDS)
       vtk_module_enable(${dep} ${vtk-module})
     endforeach()
-    if(${vtk-module}_TESTED_BY)
-      vtk_module_enable(${${vtk-module}_TESTED_BY} "")
-    endif()
+    
+    foreach(test IN LISTS ${vtk-module}_TESTED_BY)
+        vtk_module_enable(${test} "")
+    endforeach()
   endif()
 endmacro()
 
@@ -94,6 +92,15 @@ foreach(vtk-module ${VTK_MODULES_ALL})
     vtk_module_enable("${vtk-module}" "")
   elseif(VTK_MODULE_${vtk-module}_REQUEST_BY)
     vtk_module_enable("${vtk-module}" "${VTK_MODULE_${vtk-module}_REQUEST_BY}")
+  endif()
+endforeach()
+
+foreach(vtk-module ${VTK_MODULES_ALL})
+  # Exclude modules that exist only to test this module
+  # from the report of modules that need this one.  They
+  # are enabled exactly because this module is enabled.
+  if(VTK_MODULE_${vtk-module}_NEEDED_BY AND ${vtk-module}_TESTED_BY)
+    list(REMOVE_ITEM VTK_MODULE_${vtk-module}_NEEDED_BY "${${vtk-module}_TESTED_BY}")
   endif()
 endforeach()
 
@@ -163,11 +170,17 @@ endmacro()
 
 # Build all modules.
 foreach(vtk-module ${VTK_MODULES_ENABLED})
-  if(NOT ${vtk-module}_IS_TEST)
+  
+  set(_module ${vtk-module})
+  
+  if(NOT ${_module}_IS_TEST)
     init_module_vars()
+  else()
+    vtk_module_test(${_module})
   endif()
-  include("${${vtk-module}_SOURCE_DIR}/vtk-module-init.cmake" OPTIONAL)
-  add_subdirectory("${${vtk-module}_SOURCE_DIR}" "${${vtk-module}_BINARY_DIR}")
+  
+  include("${${_module}_SOURCE_DIR}/vtk-module-init.cmake" OPTIONAL)
+  add_subdirectory("${${_module}_SOURCE_DIR}" "${${_module}_BINARY_DIR}")
 endforeach()
 
 #----------------------------------------------------------------------

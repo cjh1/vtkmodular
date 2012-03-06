@@ -64,7 +64,6 @@ set(Kit_SRCS
   vtkVectorNorm.cxx
   vtkWindowedSincPolyDataFilter.cxx
   
-  vtkSelectionAlgorithm.cxx
   vtkCutter.cxx
   vtkGridSynchronizedTemplates3D.cxx
   vtkRectilinearSynchronizedTemplates.cxx

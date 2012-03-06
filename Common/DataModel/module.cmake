@@ -8,4 +8,7 @@ vtk_module(vtkCommonDataModel
     vtksys
   TEST_DEPENDS
     vtkTestingCore
+    vtkCommonExecutionModel
+    vtkIOGeometry
+    vtkRenderingCore
   DEFAULT ON)

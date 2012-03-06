@@ -62,8 +62,6 @@ set(Kit_SRCS
   vtkImagingFactory.cxx
   vtkInteractorEventRecorder.cxx
   vtkInteractorObserver.cxx
-  vtkInteractorStyle.cxx
-  #vtkInteractorStyleSwitch.cxx
   vtkLightActor.cxx
   vtkLightCollection.cxx
   vtkLight.cxx
@@ -105,7 +103,6 @@ set(Kit_SRCS
   vtkRenderer.cxx
   vtkRendererDelegate.cxx
   vtkRendererSource.cxx
-  vtkRenderState.cxx
   vtkRenderWindowCollection.cxx
   vtkRenderWindow.cxx
   vtkRenderWindowInteractor.cxx
@@ -167,13 +164,6 @@ set(Kit_SRCS
   vtkPointPicker.cxx
   vtkRenderedAreaPicker.cxx
   vtkScenePicker.cxx
-  )
-
-include_directories(
-  ${VTK_SOURCE_DIR}/Rendering/OpenGL # For the OpenGL headers...
-  ${VTK_SOURCE_DIR}/Rendering/GLSL # For the GLSL headers...
-  ${VTK_BINARY_DIR}/Rendering/OpenGL # For the OpenGL headers...
-  ${VTK_BINARY_DIR}/Rendering/GLSL # For the GLSL headers...
   )
 
 vtk_module_library(vtkRenderingCore ${Kit_SRCS})

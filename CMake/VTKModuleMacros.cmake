@@ -37,7 +37,8 @@ macro(vtk_module _name)
       set(VTK_MODULE_${vtk-module}_DESCRIPTION "${arg}")
     elseif("${_doing}" MATCHES "^DEFAULT")
       #message(FATAL_ERROR "Invalid argument [DEFAULT]")
-      # Ignore for now.
+      # Actually respect it for now.
+      set(VTK_MODULE_${vtk-module}_DEFAULT "${arg}")
       set(_doing "")
     else()
       set(_doing "")
@@ -123,12 +124,14 @@ macro(vtk_module_impl)
     )
 endmacro()
 
-macro(vtk_module_test)
-  include(../module.cmake) # Load module meta-data
-  set(${vtk-module-test}_LIBRARIES "")
-  vtk_module_use(${VTK_MODULE_${vtk-module-test}_DEPENDS})
-  foreach(dep IN LISTS VTK_MODULE_${vtk-module-test}_DEPENDS)
-    list(APPEND ${vtk-module-test}_LIBRARIES "${${dep}_LIBRARIES}")
+macro(vtk_module_test _test_name)
+  
+  include(${${_test_name}_SOURCE_DIR}/../../module.cmake) # Load module meta-data
+  set(${_test_name}_LIBRARIES "")
+  vtk_module_use(${VTK_MODULE_${_test_name}_DEPENDS})
+
+  foreach(dep IN LISTS VTK_MODULE_${_test_name}_DEPENDS)
+    list(APPEND ${_test_name}_LIBRARIES "${${dep}_LIBRARIES}")
   endforeach()
 endmacro()
 
@@ -213,6 +216,11 @@ function(vtk_add_executable name)
     add_executable(${name} ${ARGN})
     set_property(GLOBAL APPEND PROPERTY VTK_TARGETS ${name})
   endif()
+endfunction()
+
+function(vtk_add_test_executable test_exe_name)
+   vtk_add_executable(${test_exe_name} ${ARGN})
+   target_link_libraries(${test_exe_name} ${${vtk-module-test}-Cxx_LIBRARIES})
 endfunction()
 
 function(vtk_module_library name)
@@ -322,4 +330,17 @@ macro(vtk_module_third_party _pkg)
   if(_subdir AND NOT VTK_USE_SYSTEM_${_upper})
     add_subdirectory(vtk${_lower})
   endif()
+endmacro()
+
+macro(vtk_add_test_module _lang)
+  set(_test_module_name ${vtk-module-test}-${_lang})
+  
+  list(APPEND VTK_MODULES_ALL ${_test_module_name})
+  set(VTK_MODULE_${_test_module_name}_DEPENDS ${VTK_MODULE_${vtk-module-test}_DEPENDS})
+  set(${_test_module_name}_SOURCE_DIR ${${vtk-module}_SOURCE_DIR}/Testing/${_lang})
+  set(${_test_module_name}_BINARY_DIR ${${vtk-module}_BINARY_DIR}/Testing/${_lang})
+  set(${_test_module_name}_IS_TEST 1)
+  list(APPEND ${vtk-module}_TESTED_BY ${_test_module_name})
+  set(${_test_module_name}_TESTS_FOR ${vtk-module})
+  set(VTK_MODULE_${_test_module_name}_DECLARED 1)
 endmacro()

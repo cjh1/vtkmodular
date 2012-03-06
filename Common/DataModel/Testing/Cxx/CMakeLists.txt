@@ -1,21 +1,45 @@
-CREATE_TEST_SOURCELIST(Tests ${vtk-module}CxxTests.cxx
+create_test_sourcelist(Tests ${vtk-module}CxxTests.cxx
   TestVector.cxx
+  TestAMRBox.cxx
+  TestGenericCell.cxx
+  TestGraph.cxx
+  TestHigherOrderCell.cxx
+  TestImageDataFindCell.cxx
+  TestImageDataInterpolation.cxx
+  TestImageIterator.cxx
+  TestInterpolationDerivs.cxx
+  TestInterpolationFunctions.cxx
+  TestPointLocators.cxx
+  TestPolyDataRemoveCell.cxx
+  TestPolygon.cxx
+  TestSelectionSubtract.cxx
+  TestTreeBFSIterator.cxx
+  TestTreeDFSIterator.cxx
+  TestTriangle.cxx
+  otherCellArray.cxx
+  otherCellBoundaries.cxx
+  otherCellPosition.cxx
+  otherCellTypes.cxx
+  otherColorTransferFunction.cxx
+  otherEmptyCell.cxx
+  otherFieldData.cxx
+  otherRectilinearGrid.cxx
+  otherStructuredGrid.cxx
+  quadCellConsistency.cxx
+  quadraticEvaluation.cxx
+  TestBoundingBox.cxx
+  TestPlane.cxx
+  TestStructuredData.cxx
   EXTRA_INCLUDE vtkTestDriver.h
 )
 
-ADD_EXECUTABLE(${vtk-module}CxxTests ${Tests})
-SET (TestsToRun ${Tests})
-REMOVE (TestsToRun ${vtk-module}CxxTests.cxx)
+vtk_add_test_executable(${vtk-module}CxxTests ${Tests})
 
-# Configure a header needed by SystemInformation.
-#CONFIGURE_FILE("${VTK_SOURCE_DIR}/Common/Testing/Cxx/SystemInformation.h.in"
-#               "${VTK_BINARY_DIR}/Common/Testing/Cxx/SystemInformation.h"
-#               @ONLY IMMEDIATE)
+set(TestsToRun ${Tests})
+list(REMOVE_ITEM TestsToRun ${vtk-module}CxxTests.cxx)
 
-#
 # Add all the executables
-FOREACH (test ${TestsToRun})
-  GET_FILENAME_COMPONENT(TName ${test} NAME_WE)
-  ADD_TEST(NAME ${TName} COMMAND ${CXX_TEST_PATH}/${vtk-module}CxxTests ${TName})
-  message("${TName} ${CXX_TEST_PATH}/${vtk-module}CxxTests ${TName}")
-ENDFOREACH (test)
+foreach (test ${TestsToRun})
+  get_filename_component(TName ${test} NAME_WE)
+  add_test(NAME ${TName} COMMAND ${vtk-module}CxxTests ${TName})
+endforeach()

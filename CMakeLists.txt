@@ -157,7 +157,31 @@ add_definitions(-DVTK_IN_VTK)
 
 #-----------------------------------------------------------------------------
 # Platform configuration tests.
-include(CMakeBackwardCompatibilityC)
+INCLUDE (TestBigEndian)
+TEST_BIG_ENDIAN(CMAKE_WORDS_BIGENDIAN)
+
+include(FindThreads)
+set(VTK_USE_WIN32_THREADS 0)
+set(VTK_USE_PTHREADS 0)
+set(VTK_HP_PTHREADS 0)
+set(VTK_USE_SPROC 0)
+if(CMAKE_USE_WIN32_THREADS_INIT)
+  set(VTK_USE_WIN32_THREADS 1)
+  set(CMAKE_THREAD_LIBS_INIT "")
+elseif(CMAKE_USE_PTHREADS_INIT)
+  set(VTK_USE_PTHREADS 1)
+  if(CMAKE_HP_PTHREADS_INIT)
+    set(VTK_HP_PTHREADS 1)
+  endif()
+elseif(CMAKE_USE_SPROC_INIT)
+  set(VTK_USE_SPROC 1)
+endif()
+set(CMAKE_THREAD_LIBS "${CMAKE_THREAD_LIBS_INIT}" CACHE STRING "Thread library used.")
+mark_as_advanced(CMAKE_THREAD_LIBS)
+set(VTK_MAX_THREADS "64" CACHE STRING
+  "Max number of threads vktMultiThreader will allocate.")
+mark_as_advanced(VTK_MAX_THREADS)
+
 include(TestForANSIStreamHeaders)
 include(TestForSTDNamespace)
 include(TestForANSIForScope)

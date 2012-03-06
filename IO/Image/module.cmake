@@ -16,4 +16,7 @@ vtk_module(vtkIOImage
     vtkoggtheora
     vtksys
     vtkDICOMParser
+  TEST_DEPENDS
+    vtkTestingCore
+    vtkImagingCore
   DEFAULT ON)

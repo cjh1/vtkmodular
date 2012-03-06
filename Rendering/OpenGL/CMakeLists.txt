@@ -1,3 +1,7 @@
+# FIXME: This should probably be fixed, vtkgl generation needs some refinement
+# to allow for things to split up properly.
+option(VTK_USE_X "Use X for VTK render windows" OFF)
+
 set(Kit_SRCS
   vtkCameraPass.cxx
   vtkClearZPass.cxx
@@ -44,6 +48,7 @@ set(Kit_SRCS
   vtkPixelBufferObject.cxx
   vtkRenderPassCollection.cxx
   vtkRenderPass.cxx
+  vtkRenderState.cxx
   vtkSequencePass.cxx
   vtkShader2Collection.cxx
   vtkShader2.cxx
@@ -218,6 +223,25 @@ set(opengl_overrides
   ScalarsToColorsPainter
   Texture
   )
+
+# FIXME: Not sure that this is the best way to handle X...
+if(VTK_USE_X)
+  find_package(X11 REQUIRED)
+  if(NOT X11_Xt_FOUND)
+    message(FATAL_ERROR "X11_Xt_LIB could not be found. Required for VTK X lib.")
+  endif()
+  include_directories(${X11_INCLUDE_DIR} ${X11_Xt_INCLUDE_PATH})
+  # Add some custom overrides
+  list(APPEND vtk_module_overrides "vtkRenderWindowInteractor")
+  set(vtk_module_vtkRenderWindowInteractor_override "vtkXRenderWindowInteractor")
+  list(APPEND vtk_module_overrides "vtkRenderWindow")
+  set(vtk_module_vtkRenderWindow_override "vtkXOpenGLRenderWindow")
+  list(APPEND Kit_SRCS
+    vtkXRenderWindowInteractor.cxx
+    vtkXOpenGLRenderWindow.cxx
+    )
+endif()
+
 foreach(_override ${opengl_overrides})
   vtk_add_override(vtk${_override} vtkOpenGL${_override})
 endforeach()
@@ -245,3 +269,7 @@ configure_file(${VTK_CMAKE_DIR}/vtkObjectFactory.cxx.in
 
 vtk_module_library(vtkRenderingOpenGL ${Kit_SRCS})
 target_link_libraries(vtkRenderingOpenGL ${OPENGL_LIBRARIES})
+
+if(VTK_USE_X)
+  target_link_libraries(vtkRenderingOpenGL ${X11_LIBRARIES} ${X11_Xt_LIB})
+endif()
