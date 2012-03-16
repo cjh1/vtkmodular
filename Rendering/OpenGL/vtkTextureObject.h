@@ -459,7 +459,7 @@ protected:
   void CreateTexture();
 
   // Description:
-  // Destory the texture.
+  // Destroy the texture.
   void DestroyTexture();
   
   int NumberOfDimensions;

@@ -4,7 +4,7 @@ create_test_sourcelist(Tests ${vtk-module}CxxTests.cxx
   TestArrayAPIDense.cxx
   TestArrayAPISparse.cxx
   TestArrayBool.cxx
-  TestArrayCasting.cxx
+#  TestArrayCasting.cxx
   TestArrayExtents.cxx
   TestArrayInterpolationDense.cxx
   TestArrayLookup.cxx
@@ -12,8 +12,8 @@ create_test_sourcelist(Tests ${vtk-module}CxxTests.cxx
   TestArraySize.cxx
   TestArrayUserTypes.cxx
   TestArrayVariants.cxx
-#  TestConditionVariable.cxx
-  TestCxxFeatures.cxx
+  TestConditionVariable.cxx
+#  TestCxxFeatures.cxx
   TestDataArray.cxx
   TestDataArrayComponentNames.cxx 
   TestGarbageCollector.cxx
@@ -33,21 +33,23 @@ create_test_sourcelist(Tests ${vtk-module}CxxTests.cxx
   TestWeakPointer.cxx
   otherArrays.cxx
   otherByteSwap.cxx
-  otherLookupTable.cxx
-  otherLookupTableWithEnabling.cxx
+  # These two need vtkLookupTableWithEnabling/vtkLogLookupTable - move
+  # them to RenderingCore or somewhere out there.
+  #otherLookupTable.cxx
+  #otherLookupTableWithEnabling.cxx
   otherStringArray.cxx
-  vtkTestNewVar.cxx
   
   EXTRA_INCLUDE vtkTestDriver.h
 )
 
-vtk_add_test_executable(${vtk-module}CxxTests ${Tests})
+vtk_add_test_executable(${vtk-module}CxxTests ${Tests}
+  vtkTestNewVar.cxx)
 
 set(TestsToRun ${Tests})
 list(REMOVE_ITEM TestsToRun ${vtk-module}CxxTests.cxx)
 
 # Add all the executables
-foreach (test ${TestsToRun})
+foreach(test ${TestsToRun})
   get_filename_component(TName ${test} NAME_WE)
-  add_test(NAME ${TName} COMMAND ${vtk-module}CxxTests ${TName})
+  add_test(NAME ${vtk-module}-${TName} COMMAND ${vtk-module}CxxTests ${TName})
 endforeach()

@@ -26,6 +26,7 @@
 #define __vtkAxisExtended_h
 #endif
 
+#include "vtkChartsCoreExport.h" // For export macro
 #include "vtkObject.h"
 #include "vtkVector.h" // Needed for vtkVector
 //
@@ -35,7 +36,7 @@
 #  define VTK_DBL_EPSILON    DBL_EPSILON
 #endif  // DBL_EPSILON
 
-class VTK_CHARTS_EXPORT vtkAxisExtended : public vtkObject
+class VTKCHARTSCORE_EXPORT vtkAxisExtended : public vtkObject
 {
 public:
    vtkTypeMacro(vtkAxisExtended, vtkObject);
@@ -74,16 +75,16 @@ public:
    static double DensityMax(int k, double m);
 
    // Description:
-   // This methods return the legibility score of differnt formats
+   // This methods return the legibility score of different formats
    static double FormatLegibilityScore(double n, int format);
 
    // Description:
-   // This method returns the string length of differnt format notations.
+   // This method returns the string length of different format notations.
    static int FormatStringLength(int format, double n, int precision);
 
    // Description:
    // This method implements the algorithm given in the paper
-   // The method return the minimum tick position, maximum tick postion and
+   // The method return the minimum tick position, maximum tick position and
    // the tick spacing
    vtkVector3d GenerateExtendedTickLabels(double dmin, double dmax, double m,
                                           double scaling);

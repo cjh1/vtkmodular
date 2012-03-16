@@ -109,6 +109,12 @@ set(Kit_SRCS
   vtkIntersectionPolyDataFilter.cxx
   vtkBooleanOperationPolyDataFilter.cxx
   vtkDistancePolyDataFilter.cxx
+
+  # New AMR classes
+  vtkUniformGridAMRAlgorithm.cxx
+  vtkOverlappingAMRAlgorithm.cxx
+  vtkNonOverlappingAMRAlgorithm.cxx
+  vtkOverlappingAMRLevelIdScalars.cxx
   )
 
 vtk_module_library(vtkFiltersGeneral ${Kit_SRCS})

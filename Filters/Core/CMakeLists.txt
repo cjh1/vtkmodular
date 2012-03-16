@@ -73,6 +73,8 @@ set(Kit_SRCS
   vtkStreamerBase.cxx
   vtkCenterOfMass.cxx
 
+  vtkGhostArray.cxx
+
   #vtkOutlineFilter.cxx # Needs vtkOutlineSource
   )
 

@@ -42,6 +42,7 @@ class vtkLine;
 class vtkPixel;
 class vtkVoxel;
 class vtkDataArray;
+class vtkPoints;
 
 class VTKCOMMONDATAMODEL_EXPORT vtkRectilinearGrid : public vtkDataSet
 {
@@ -95,6 +96,10 @@ public:
                         vtkIdList *cellIds);
 
   // Description:
+  // Returns the points for this instance of rectilinear grid.
+  vtkPoints* GetPoints();
+
+  // Description:
   // Set dimensions of rectilinear grid dataset.
   // This also sets the extent.
   void SetDimensions(int i, int j, int k);
@@ -122,6 +127,12 @@ public:
   // Description:
   // Given a location in structured coordinates (i-j-k), return the cell id.
   vtkIdType ComputeCellId(int ijk[3]);
+
+  // Description:
+  // Given the IJK-coordinates of the point, it returns the corresponding
+  // xyz-coordinates. The xyz coordinates are stored in the user-supplied
+  // array p.
+  void GetPoint(const int i,const int j,const int k,double p[3]);
 
   // Description:
   // Specify the grid coordinates in the x-direction.
@@ -202,9 +213,6 @@ protected:
 private:
   void Cleanup();
 
-  // Description:
-  // For legacy compatibility. Do not use.
-  VTK_LEGACY(void GetCellNeighbors(vtkIdType cellId, vtkIdList& ptIds, vtkIdList& cellIds));
 private:
   vtkRectilinearGrid(const vtkRectilinearGrid&);  // Not implemented.
   void operator=(const vtkRectilinearGrid&);  // Not implemented.
@@ -254,14 +262,5 @@ inline vtkIdType vtkRectilinearGrid::ComputeCellId(int ijk[3])
 {
   return vtkStructuredData::ComputeCellId(this->Dimensions,ijk);
 }
-
-//----------------------------------------------------------------------------
-#ifndef VTK_LEGACY_REMOVE
-inline void vtkRectilinearGrid::GetCellNeighbors(vtkIdType cellId, 
-  vtkIdList& ptIds, vtkIdList& cellIds)
-{
-  this->GetCellNeighbors(cellId, &ptIds, &cellIds);
-}
-#endif
 
 #endif

@@ -2,6 +2,14 @@
 # to allow for things to split up properly.
 option(VTK_USE_X "Use X for VTK render windows" OFF)
 
+if(APPLE)
+  option(VTK_USE_COCOA "Use Cocoa for VTK render windows" ON)
+  option(VTK_USE_CARBON "Use Carbon for VTK render windows" OFF)
+  if(VTK_USE_COCOA AND VTK_USE_CARBON)
+    message(FATAL_ERROR "You can't enable Carbon and Cocoa - you must choose one.")
+  endif()
+endif()
+
 set(Kit_SRCS
   vtkCameraPass.cxx
   vtkClearZPass.cxx
@@ -13,7 +21,6 @@ set(Kit_SRCS
   vtkFrameBufferObject.cxx
   vtkGaussianBlurPass.cxx
   vtkGenericOpenGLRenderWindow.cxx
-  #vtkIdentColoredPainter.cxx
   vtkImageProcessingPass.cxx
   vtkLightingHelper.cxx
   vtkLightsPass.cxx
@@ -88,8 +95,17 @@ find_package(OpenGL REQUIRED)
 # Configuration for vtkOpenGLExtensionManager
 if(WIN32)
   set(VTK_USE_WGL_GET_PROC_ADDRESS 1)
+  find_package(DirectX QUIET)
+  if(DirectX_FOUND)
+    set(VTK_USE_DIRECTX 1)
+  endif()
 elseif(APPLE)
   set(VTK_USE_APPLE_LOADER 1)
+  find_package(ApplicationServices)
+  find_package(IOKit)
+  if(ApplicationServices_FOUND AND IOKit_FOUND)
+    set(VTK_USE_CORE_GRAPHICS 1)
+  endif()
 else()
   include(CheckFunctionExists)
   set(VTK_SAVE_CMAKE_REQUIRED_LIBRARIES "${CMAKE_REQUIRED_LIBRARIES}")
@@ -135,6 +151,10 @@ else()
         set(VTK_NO_EXTENSION_LOADING 1)
       endif()
     endif()
+    find_package(NVCtrlLib QUIET)
+    if(NVCtrlLib_FOUND)
+      set(VTK_USE_NVCONTROL 1)
+    endif()
   else()
     set(VTK_NO_EXTENSION_LOADING 1)
   endif()
@@ -155,9 +175,7 @@ add_custom_command(
 set_source_files_properties(vtkOpenGLExtensionManager.cxx
   PROPERTIES OBJECT_DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/vtkgl.cxx)
 
-include_directories(
-  ${OPENGL_INCLUDE_DIR}
-  )
+include_directories(${OPENGL_INCLUDE_DIR})
 
 set(shader_files
   vtkColorMaterialHelper_vs.glsl
@@ -177,9 +195,9 @@ set(shader_files
   vtkSobelGradientMagnitudePassShader2_fs.glsl
   vtkShadowMapPassShader_fs.glsl
   vtkShadowMapPassShader_vs.glsl
-  #  vtkSurfaceLICPainter_fs1.glsl
-  #vtkSurfaceLICPainter_fs2.glsl
-  #vtkSurfaceLICPainter_vs1.glsl
+  vtkSurfaceLICPainter_fs1.glsl
+  vtkSurfaceLICPainter_fs2.glsl
+  vtkSurfaceLICPainter_vs1.glsl
   )
 
 unset(shader_h_files)
@@ -240,6 +258,61 @@ if(VTK_USE_X)
     vtkXRenderWindowInteractor.cxx
     vtkXOpenGLRenderWindow.cxx
     )
+elseif(WIN32)
+  # Add some custom overrides
+  list(APPEND vtk_module_overrides "vtkRenderWindowInteractor")
+  set(vtk_module_vtkRenderWindowInteractor_override "vtkWin32RenderWindowInteractor")
+  list(APPEND vtk_module_overrides "vtkRenderWindow")
+  set(vtk_module_vtkRenderWindow_override "vtkWin32OpenGLRenderWindow")
+  list(APPEND Kit_SRCS
+    vtkWin32RenderWindowInteractor.cxx
+    vtkWin32OpenGLRenderWindow.cxx
+    )
+elseif(VTK_USE_COCOA)
+  # Add some custom overrides
+  list(APPEND vtk_module_overrides "vtkRenderWindowInteractor")
+  set(vtk_module_vtkRenderWindowInteractor_override "vtkCocoaRenderWindowInteractor")
+  list(APPEND vtk_module_overrides "vtkRenderWindow")
+  set(vtk_module_vtkRenderWindow_override "vtkCocoaRenderWindow")
+  list(APPEND Kit_SRCS
+    vtkCocoaRenderWindowInteractor.mm
+    vtkCocoaRenderWindow.mm
+    vtkCocoaGLView.mm
+    )
+  set_source_files_properties(vtkCocoaGLView WRAP_EXCLUDE)
+elseif(VTK_USE_CARBON)
+  # Add some custom overrides
+  list(APPEND vtk_module_overrides "vtkRenderWindowInteractor")
+  set(vtk_module_vtkRenderWindowInteractor_override "vtkCarbonRenderWindowInteractor")
+  list(APPEND vtk_module_overrides "vtkRenderWindow")
+  set(vtk_module_vtkRenderWindow_override "vtkCarbonRenderWindow")
+  list(APPEND Kit_SRCS
+    vtkCarbonRenderWindowInteractor.mm
+    vtkCarbonRenderWindow.mm
+    )
+endif()
+
+# Now to see about the GPU info list.
+list(APPEND vtk_module_overrides "vtkGPUInfoList")
+if(VTK_USE_NVCONTROL)
+  list(APPEND Kit_SRCS "vtkXGPUInfoList.cxx")
+  set(extra_libs ${NVCtrlLib_LIBRARY})
+  include_directories(${NVCtrlLib_INCLUDE_DIR})
+  set(vtk_module_vtkGPUInfoList_override "vtkXGPUInfoList")
+elseif(VTK_USE_CORE_GRAPHICS)
+  list(APPEND Kit_SRCS "vtkCoreGraphicsGPUInfoList.cxx")
+  set(extra_libs ${ApplicationServices_LIBRARY} ${IOKit_LIBRARY})
+  include_directories(${ApplicationServices_INCLUDE_DIR} ${IOKit_INCLUDE_DIR})
+  set(vtk_module_vtkGPUInfoList_override "vtkCoreGraphicsGPUInfoList")
+elseif(VTK_USE_DIRECTX)
+  list(APPEND Kit_SRCS "vtkDirectXGPUInfoList.cxx")
+  set(extra_libs ${DIRECTX_LIBRARY} wbemuuid)
+  include_directories(${DirectX_INCLUDE_DIR})
+  set(vtk_module_vtkGPUInfoList_override "vtkDirectXGPUInfoList")
+else()
+  # Shouldn't this just be the base class, and the others override if needed?
+  list(APPEND Kit_SRCS "vtkDummyGPUInfoList.cxx")
+  set(vtk_module_vtkGPUInfoList_override "vtkDummyGPUInfoList")
 endif()
 
 foreach(_override ${opengl_overrides})
@@ -268,8 +341,11 @@ configure_file(${VTK_CMAKE_DIR}/vtkObjectFactory.cxx.in
   ${CMAKE_CURRENT_BINARY_DIR}/${vtk-module}ObjectFactory.cxx)
 
 vtk_module_library(vtkRenderingOpenGL ${Kit_SRCS})
-target_link_libraries(vtkRenderingOpenGL ${OPENGL_LIBRARIES})
-
+target_link_libraries(vtkRenderingOpenGL ${OPENGL_LIBRARIES} ${extra_libs})
 if(VTK_USE_X)
   target_link_libraries(vtkRenderingOpenGL ${X11_LIBRARIES} ${X11_Xt_LIB})
+elseif(VTK_USE_COCOA)
+  target_link_libraries(vtkRenderingOpenGL "-framework Cocoa")
+elseif(VTK_USE_CARBON)
+  target_link_libraries(vtkRenderingOpenGL "-framework Carbon")
 endif()

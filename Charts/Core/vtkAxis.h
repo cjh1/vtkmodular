@@ -23,6 +23,7 @@
 #ifndef __vtkAxis_h
 #define __vtkAxis_h
 
+#include "vtkChartsCoreExport.h" // For export macro
 #include "vtkContextItem.h"
 #include "vtkSmartPointer.h" // For vtkSmartPointer
 #include "vtkVector.h"       // For position variables
@@ -36,7 +37,7 @@ class vtkDoubleArray;
 class vtkStringArray;
 class vtkTextProperty;
 
-class VTK_CHARTS_EXPORT vtkAxis : public vtkContextItem
+class VTKCHARTSCORE_EXPORT vtkAxis : public vtkContextItem
 {
 public:
   vtkTypeMacro(vtkAxis, vtkContextItem);
@@ -173,6 +174,11 @@ public:
   // Get/set whether the axis labels should be visible.
   vtkSetMacro(LabelsVisible, bool);
   vtkGetMacro(LabelsVisible, bool);
+
+  // Description:
+  // Get/set whether the tick marks should be visible.
+  vtkSetMacro(TicksVisible, bool);
+  vtkGetMacro(TicksVisible, bool);
 
   // Description:
   // Get/set the numerical precision to use, default is 2.
@@ -347,6 +353,7 @@ protected:
   bool LogScale;       // Should the axis use a log scale
   bool GridVisible;    // Whether the grid for the axis should be drawn
   bool LabelsVisible;  // Should the axis labels be visible
+  bool TicksVisible;   // Should the tick marks be visible.
   int Precision;       // Numerical precision to use, defaults to 2.
   int Notation;        // The notation to use (standard, scientific, mixed)
   int Behavior;        // The behaviour of the axis (auto, fixed, custom).

@@ -160,7 +160,7 @@ private:
 extern VTKWRAPPINGPYTHONCORE_EXPORT void vtkPythonVoidFunc(void *);
 extern VTKWRAPPINGPYTHONCORE_EXPORT void vtkPythonVoidFuncArgDelete(void *);
 
-// The following macro is used to supress missing initializer
+// The following macro is used to suppress missing initializer
 // warnings.  Python documentation says these should not be necessary.
 // We define it as a macro in case the length needs to change across
 // python versions.

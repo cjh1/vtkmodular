@@ -96,8 +96,8 @@ protected:
                           vtkInformationVector* outputVector);
 
   // Description:
+  virtual void ExecuteDataWithInformation(vtkDataObject *output, vtkInformation* outInfo);
   // This method is the old style execute method
-  virtual void ExecuteData(vtkDataObject *output, vtkInformation* outInfo);
   virtual void ExecuteData(vtkDataObject *output);
   virtual void Execute();
 

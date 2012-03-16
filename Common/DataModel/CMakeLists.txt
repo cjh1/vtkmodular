@@ -5,14 +5,10 @@ set(Kit_SRCS
   vtkAbstractInterpolatedVelocityField.cxx
   vtkAbstractPointLocator.cxx
   vtkAdjacentVertexIterator.cxx
-#  vtkAlgorithm.cxx
-#  vtkAlgorithmOutput.cxx
   vtkAMRBox.cxx
   vtkAnimationScene.cxx
   vtkAnnotation.cxx
-#  vtkAnnotationLayersAlgorithm.cxx
   vtkAnnotationLayers.cxx
-#  vtkArrayDataAlgorithm.cxx
   vtkArrayData.cxx
   vtkAttributesErrorMetric.cxx
   vtkBiQuadraticQuad.cxx
@@ -22,8 +18,6 @@ set(Kit_SRCS
   vtkBox.cxx
   vtkBSPCuts.cxx
   vtkBSPIntersections.cxx
-#  vtkCachedStreamingDemandDrivenPipeline.cxx
-#  vtkCastToConcrete.cxx
   vtkCell3D.cxx
   vtkCellArray.cxx
   vtkCell.cxx
@@ -32,85 +26,49 @@ set(Kit_SRCS
   vtkCellLocator.cxx
   vtkCellTypes.cxx
   vtkCompositeDataIterator.cxx
-#  vtkCompositeDataPipeline.cxx
-#  vtkCompositeDataSetAlgorithm.cxx
   vtkCompositeDataSet.cxx
-#  vtkComputingResources.cxx
   vtkCone.cxx
   vtkConvexPointSet.cxx
   vtkCubicLine.cxx
   vtkCylinder.cxx
-#  vtkDataObjectAlgorithm.cxx
   vtkDataObjectCollection.cxx
   vtkDataObject.cxx
-#  vtkDataObjectSource.cxx
   vtkDataObjectTypes.cxx
-#  vtkDataSetAlgorithm.cxx
   vtkDataSetAttributes.cxx
   vtkDataSetCollection.cxx
   vtkDataSet.cxx
-#  vtkDataSetSource.cxx
-#  vtkDataSetToDataSetFilter.cxx
-#  vtkDataSetToImageFilter.cxx
-#  vtkDataSetToPolyDataFilter.cxx
-#  vtkDataSetToStructuredGridFilter.cxx
-#  vtkDataSetToStructuredPointsFilter.cxx
-#  vtkDataSetToUnstructuredGridFilter.cxx
-#  vtkDemandDrivenPipeline.cxx
   vtkDirectedAcyclicGraph.cxx
-#  vtkDirectedGraphAlgorithm.cxx
   vtkDirectedGraph.cxx
   vtkDistributedGraphHelper.cxx
   vtkEdgeListIterator.cxx
   vtkEdgeTable.cxx
   vtkEmptyCell.cxx
-#  vtkExecutionScheduler.cxx
-#  vtkExecutionSchedulerManager.cxx
-#  vtkExecutiveCollection.cxx
-#  vtkExecutive.cxx
   vtkExplicitCell.cxx
-#  vtkExtentSplitter.cxx
-#  vtkExtentTranslator.cxx
   vtkFieldData.cxx
-#  vtkFilteringInformationKeyManager.cxx
   vtkGenericAdaptorCell.cxx
   vtkGenericAttributeCollection.cxx
   vtkGenericAttribute.cxx
   vtkGenericCell.cxx
   vtkGenericCellIterator.cxx
   vtkGenericCellTessellator.cxx
-#  vtkGenericDataSetAlgorithm.cxx
   vtkGenericDataSet.cxx
   vtkGenericEdgeTable.cxx
   vtkGenericInterpolatedVelocityField.cxx
   vtkGenericPointIterator.cxx
   vtkGenericSubdivisionErrorMetric.cxx
   vtkGeometricErrorMetric.cxx
-#  vtkGraphAlgorithm.cxx
   vtkGraph.cxx
   vtkGraphEdge.cxx
   vtkGraphInternals.cxx
   vtkHexagonalPrism.cxx
   vtkHexahedron.cxx
   vtkHierarchicalBoxDataIterator.cxx
-#  vtkHierarchicalBoxDataSetAlgorithm.cxx
   vtkHierarchicalBoxDataSet.cxx
-#  vtkHyperOctreeAlgorithm.cxx
   vtkHyperOctreeCursor.cxx
   vtkHyperOctree.cxx
   vtkHyperOctreePointsGrabber.cxx
-#  vtkImageAlgorithm.cxx
   vtkImageData.cxx
-#  vtkImageInPlaceFilter.cxx
   vtkImageIterator.cxx
-#  vtkImageMultipleInputFilter.cxx
-#  vtkImageMultipleInputOutputFilter.cxx
-#  vtkImageProgressIterator.cxx
-#  vtkImageSource.cxx
-#  vtkImageToImageFilter.cxx
-#  vtkImageToStructuredGrid.cxx
-#  vtkImageToStructuredPoints.cxx
-#  vtkImageTwoInputFilter.cxx
   vtkImplicitBoolean.cxx
   vtkImplicitDataSet.cxx
   vtkImplicitFunctionCollection.cxx
@@ -124,8 +82,6 @@ set(Kit_SRCS
   vtkIncrementalOctreePointLocator.cxx
   vtkIncrementalPointLocator.cxx
   vtkInEdgeIterator.cxx
-#  vtkInformationExecutivePortKey.cxx
-#  vtkInformationExecutivePortVectorKey.cxx
   vtkInformationQuadratureSchemeDefinitionVectorKey.cxx
   vtkInterpolatedVelocityField.cxx
   vtkIterativeClosestPointTransform.cxx
@@ -138,7 +94,6 @@ set(Kit_SRCS
   vtkMarchingCubesTriangleCases.cxx
   vtkMeanValueCoordinatesInterpolator.cxx
   vtkMergePoints.cxx
-#  vtkMultiBlockDataSetAlgorithm.cxx
   vtkMultiBlockDataSet.cxx
   vtkMultiPieceDataSet.cxx
   vtkMutableDirectedGraph.cxx
@@ -147,15 +102,11 @@ set(Kit_SRCS
   vtkNonMergingPointLocator.cxx
   vtkOctreePointLocator.cxx
   vtkOctreePointLocatorNode.cxx
-#  vtkOnePieceExtentTranslator.cxx
   vtkOrderedTriangulator.cxx
   vtkOutEdgeIterator.cxx
-#  vtkPassInputTypeAlgorithm.cxx
   vtkPentagonalPrism.cxx
   vtkPerlinNoise.cxx
-#  vtkPiecewiseFunctionAlgorithm.cxx
   vtkPiecewiseFunction.cxx
-#  vtkPiecewiseFunctionShiftScale.cxx
   vtkPixel.cxx
   vtkPlaneCollection.cxx
   vtkPlane.cxx
@@ -163,22 +114,15 @@ set(Kit_SRCS
   vtkPlanesIntersection.cxx
   vtkPointData.cxx
   vtkPointLocator.cxx
-#  vtkPointSetAlgorithm.cxx
   vtkPointSet.cxx
-#  vtkPointSetSource.cxx
-#  vtkPointSetToPointSetFilter.cxx
   vtkPointsProjectedHull.cxx
-#  vtkPolyDataAlgorithm.cxx
   vtkPolyDataCollection.cxx
   vtkPolyData.cxx
-#  vtkPolyDataSource.cxx
-#  vtkPolyDataToPolyDataFilter.cxx
   vtkPolygon.cxx
   vtkPolyhedron.cxx
   vtkPolyLine.cxx
   vtkPolyPlane.cxx
   vtkPolyVertex.cxx
-#  vtkProcessObject.cxx
   vtkPyramid.cxx
   vtkQuad.cxx
   vtkQuadraticEdge.cxx
@@ -192,63 +136,35 @@ set(Kit_SRCS
   vtkQuadraticWedge.cxx
   vtkQuadratureSchemeDefinition.cxx
   vtkQuadric.cxx
-#  vtkRectilinearGridAlgorithm.cxx
   vtkRectilinearGrid.cxx
-#  vtkRectilinearGridSource.cxx
-#  vtkRectilinearGridToPolyDataFilter.cxx
   vtkReebGraph.cxx
   vtkReebGraphSimplificationMetric.cxx
-#  vtkScalarTree.cxx
   vtkSelection.cxx
   vtkSelectionNode.cxx
   vtkSimpleCellTessellator.cxx
-#  vtkSimpleImageToImageFilter.cxx
-#  vtkSimpleScalarTree.cxx
   vtkSmoothErrorMetric.cxx
-#  vtkSource.cxx
   vtkSphere.cxx
   vtkSpline.cxx
-#  vtkStreamingDemandDrivenPipeline.cxx
   vtkStructuredData.cxx
   vtkStructuredExtent.cxx
-#  vtkStructuredGridAlgorithm.cxx
   vtkStructuredGrid.cxx
-#  vtkStructuredGridSource.cxx
-#  vtkStructuredGridToPolyDataFilter.cxx
-#  vtkStructuredGridToStructuredGridFilter.cxx
   vtkStructuredPointsCollection.cxx
   vtkStructuredPoints.cxx
-#  vtkStructuredPointsSource.cxx
-#  vtkStructuredPointsToPolyDataFilter.cxx
-#  vtkStructuredPointsToStructuredPointsFilter.cxx
-#  vtkStructuredPointsToUnstructuredGridFilter.cxx
   vtkStructuredVisibilityConstraint.cxx
   vtkSuperquadric.cxx
-#  vtkTableAlgorithm.cxx
   vtkTable.cxx
-#  vtkTableExtentTranslator.cxx
-#  vtkTemporalDataSetAlgorithm.cxx
   vtkTemporalDataSet.cxx
   vtkTensor.cxx
   vtkTetra.cxx
-#  vtkThreadedImageAlgorithm.cxx
-#  vtkThreadedStreamingPipeline.cxx
-#  vtkTreeAlgorithm.cxx
   vtkTreeBFSIterator.cxx
   vtkTree.cxx
   vtkTreeDFSIterator.cxx
   vtkTriangle.cxx
   vtkTriangleStrip.cxx
   vtkTriQuadraticHexahedron.cxx
-#  vtkTrivialProducer.cxx
-#  vtkUndirectedGraphAlgorithm.cxx
   vtkUndirectedGraph.cxx
   vtkUniformGrid.cxx
-#  vtkUnstructuredGridAlgorithm.cxx
   vtkUnstructuredGrid.cxx
-#  vtkUnstructuredGridSource.cxx
-#  vtkUnstructuredGridToPolyDataFilter.cxx
-#  vtkUnstructuredGridToUnstructuredGridFilter.cxx
   vtkVertex.cxx
   vtkVertexListIterator.cxx
   vtkVoxel.cxx
@@ -260,7 +176,12 @@ set(Kit_SRCS
   vtkBond.cxx
   vtkMolecule.cxx
   vtkAbstractElectronicData.cxx
-  #vtkLinearSelector.cxx
+
+  # New classes for AMR
+  vtkNonOverlappingAMR.cxx
+  vtkOverlappingAMR.cxx
+  vtkUniformGridAMR.cxx
+  vtkUniformGridAMRDataIterator.cxx
   )
 
 include_directories(

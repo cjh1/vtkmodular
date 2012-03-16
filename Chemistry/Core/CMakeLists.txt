@@ -25,40 +25,8 @@ SET_SOURCE_FILES_PROPERTIES(
   ABSTRACT
   )
 
-SET(Kit_EXTRA_SRCS)
-SET(Kit_EXTRA_CMDS)
-SET(Kit_TCL_EXTRA_SRCS)
-SET(Kit_PYTHON_EXTRA_SRCS)
-SET(Kit_JAVA_EXTRA_SRCS)
-SET(KIT_TCL_DEPS)
-SET(KIT_PYTHON_DEPS)
-SET(KIT_JAVA_DEPS)
-
-# OpenQube setup
-FIND_PACKAGE(OpenQube QUIET)
-IF(OpenQube_FOUND)
-  FIND_PACKAGE(Eigen2 QUIET)
-ENDIF(OpenQube_FOUND)
-VTK_DEPENDENT_OPTION(VTK_USE_OPENQUBE
-                     "Compile OpenQube support into vtkChemistry."
-                     ON "OpenQube_FOUND;EIGEN2_FOUND" OFF)
-IF(VTK_USE_OPENQUBE)
-  INCLUDE_DIRECTORIES(${OpenQube_INCLUDE_DIRS} ${EIGEN2_INCLUDE_DIR})
-  SET(KIT_LIBS ${KIT_LIBS} OpenQube)
-  SET(Kit_SRCS
-    ${Kit_SRCS}
-    vtkOpenQubeElectronicData.cxx
-    vtkOpenQubeMoleculeSource.cxx
-  )
-ENDIF(VTK_USE_OPENQUBE)
-
-# Install Blue Obelisk Data Repository files
-INSTALL(DIRECTORY vtkBODRData
-  DESTINATION ${VTK_INSTALL_SHARE_DIR_CM24}/vtkChemistry
-  )
-
 # Generate configured header file
-CONFIGURE_FILE(${vtkChemistryCore_SOURCE_DIR}/vtkChemistryConfigure.h.in
+configure_file(${vtkChemistryCore_SOURCE_DIR}/vtkChemistryConfigure.h.in
                ${vtkChemistryCore_BINARY_DIR}/vtkChemistryConfigure.h IMMEDIATE)
 
 vtk_module_library(vtkChemistryCore ${Kit_SRCS})

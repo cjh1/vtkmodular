@@ -4,5 +4,8 @@ vtk_module(vtkChemistryCore
     vtkIOXML
     vtkRenderingCore
   TEST_DEPENDS
-    vtkTestingCore 
+    vtkTestingCore
+    vtkTestingRendering
+    vtkInteractionStyle
+    vtkRenderingOpenGL
   DEFAULT ON)

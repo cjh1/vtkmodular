@@ -54,6 +54,8 @@ SET(Kit_SRCS
   vtkUnstructuredGridAlgorithm.cxx
   vtkSelectionAlgorithm.cxx
   vtkLinearSelector.cxx
+
+  vtkExtentRCBPartitioner.cxx
   )
 
 vtk_module_library(vtkCommonExecutionModel ${Kit_SRCS})

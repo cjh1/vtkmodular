@@ -80,7 +80,7 @@ class VTKFILTERSHYBRID_EXPORT vtkPCAAnalysisFilter : public vtkMultiBlockDataSet
   //
   // here b are the parameters expressed in standard deviations
   // bsize is the number of parameters in the b vector
-  // This function assumes that shape is allready allocated
+  // This function assumes that shape is already allocated
   // with the right size, it just moves the points.
   void GetParameterisedShape(vtkFloatArray *b, vtkPointSet* shape);
 

@@ -56,10 +56,6 @@ class VTKCOMMONTRANSFORMS_EXPORT vtkMatrixToHomogeneousTransform : public vtkHom
   // Make a new transform of the same type.
   vtkAbstractTransform *MakeTransform();
 
-  // Description:
-  // @deprecated This method is deprecated.
-  VTK_LEGACY(void SetMatrix(vtkMatrix4x4 *matrix));
-
 protected:
   vtkMatrixToHomogeneousTransform();
   ~vtkMatrixToHomogeneousTransform();

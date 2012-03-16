@@ -45,10 +45,8 @@ class vtkLightCollection;
 class vtkCullerCollection;
 class vtkLight;
 class vtkPainter;
-class vtkIdentColoredPainter;
 class vtkHardwareSelector;
 class vtkRendererDelegate;
-class vtkRenderPass;
 class vtkTexture;
 
 class VTKRENDERINGCORE_EXPORT vtkRenderer : public vtkViewport
@@ -239,7 +237,7 @@ public:
 
   // Description:
   // Clear the image to the background color.
-  virtual void Clear() {}
+  virtual void Clear() {};
 
   // Description:
   // Returns the number of visible actors.
@@ -400,7 +398,7 @@ public:
   // Description:
   // Compute the aspect ratio of this renderer for the current tile. When
   // tiled displays are used the aspect ratio of the renderer for a given
-  // tile may be diferent that the aspect ratio of the renderer when rendered
+  // tile may be different that the aspect ratio of the renderer when rendered
   // in it entirity
   double GetTiledAspectRatio();
 
@@ -410,6 +408,7 @@ public:
   // ActiveCamera does not yet exist.
   int IsActiveCameraCreated()
     { return (this->ActiveCamera != NULL); }
+
 
   // Description:
   // Turn on/off rendering of translucent material with depth peeling
@@ -457,12 +456,6 @@ public:
   vtkGetObjectMacro(Delegate,vtkRendererDelegate);
 
   // Description:
-  // Set/Get a custom render pass.
-  // Initial value is NULL.
-  void SetPass(vtkRenderPass *p);
-  vtkGetObjectMacro(Pass,vtkRenderPass);
-
-  // Description:
   // Get the current hardware selector. If the Selector is set, it implies the
   // current render pass is for selection. Mappers/Properties may choose to
   // behave differently when rendering for hardware selection.
@@ -494,6 +487,9 @@ protected:
   // matrix or model view transform matrix based on whether or not deering
   // frustum is used.
   virtual void ExpandBounds(double bounds[6], vtkMatrix4x4 *matrix);
+
+  // Internal method to release graphics resources in any derived renderers.
+  virtual void ReleaseGraphicsResources(vtkWindow *) { }
 
   vtkCamera *ActiveCamera;
   vtkLight  *CreatedLight;
@@ -569,11 +565,14 @@ protected:
   // By default, Draw is on.
   int Draw;
 
+  // Friend class to allow render passes to access functions.
+  friend class vtkRenderPass;
+
   // Description:
   // Ask all props to update and draw any opaque and translucent
   // geometry. This includes both vtkActors and vtkVolumes
   // Returns the number of props that rendered geometry.
-  virtual int UpdateGeometry(void);
+  virtual int UpdateGeometry();
 
   // Description:
   // Ask all props to update and draw any translucent polygonal
@@ -649,9 +648,6 @@ protected:
   friend class vtkRendererDelegate;
   vtkRendererDelegate *Delegate;
 
-  friend class vtkRenderPass;
-  vtkRenderPass *Pass;
-
   bool TexturedBackground;
   vtkTexture* BackgroundTexture;
 
@@ -668,6 +664,5 @@ inline vtkLightCollection *vtkRenderer::GetLights() {
 // Description:
 // Get the list of cullers for this renderer.
 inline vtkCullerCollection *vtkRenderer::GetCullers(){return this->Cullers;}
-
 
 #endif

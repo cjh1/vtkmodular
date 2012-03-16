@@ -33,7 +33,6 @@
 // vtkTransformPolyDataFilter vtkTransformFilter vtkImageReslice
 // vtkImplicitFunction
 
-
 #ifndef __vtkAbstractTransform_h
 #define __vtkAbstractTransform_h
 
@@ -242,11 +241,6 @@ public:
   // circular references.
   virtual void UnRegister(vtkObjectBase *O);
 
-  // Description:
-  // @deprecated This method is deprecated in the base class.  It is 
-  // still valid to use it on many of the specialized classes.
-  VTK_LEGACY(void Identity());
-
 protected:
   vtkAbstractTransform();
   ~vtkAbstractTransform();
@@ -436,8 +430,3 @@ protected:
 //ETX
 
 #endif
-
-
-
-
-

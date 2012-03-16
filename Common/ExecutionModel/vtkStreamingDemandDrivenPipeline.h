@@ -47,7 +47,7 @@ public:
   void PrintSelf(ostream& os, vtkIndent indent);
 
   // Description:
-  // Generalized interface for asking the executive to fullfill update
+  // Generalized interface for asking the executive to fulfill update
   // requests.
   virtual int ProcessRequest(vtkInformation* request,
                              vtkInformationVector** inInfo,
@@ -189,6 +189,10 @@ public:
   static vtkInformationIntegerKey* UPDATE_PIECE_NUMBER();
   static vtkInformationIntegerKey* UPDATE_NUMBER_OF_PIECES();
   static vtkInformationIntegerKey* UPDATE_NUMBER_OF_GHOST_LEVELS();
+
+  // Description:
+  // Key to store an update in the AMR level of resolution.
+  static vtkInformationIntegerKey* UPDATE_AMR_LEVEL();
 
   // Description:
   // Key for combining the update extents requested by all consumers,

@@ -135,6 +135,8 @@ vtkCamera::vtkCamera()
   this->ComputeViewTransform();
   this->ComputeDistance();
   this->ComputeCameraLightTransform();
+
+  this->FreezeFocalPoint = false;
 }
 
 //----------------------------------------------------------------------------
@@ -446,7 +448,7 @@ void vtkCamera::ComputeOffAxisProjectionFrustum()
     E[0] += this->EyeSeparation / 2.0;
     }
 
-  // First tranform the eye to new position.
+  // First transform the eye to new position.
   this->EyeTransformMatrix->MultiplyPoint(E, E);
 
   // Now transform the eye and screen corner points into the screen
@@ -1496,6 +1498,15 @@ void vtkCamera::PrintSelf(ostream& os, vtkIndent indent)
   if (this->UserViewTransform)
     {
     os << this->UserViewTransform << "\n";
+    }
+  else
+    {
+    os << "(none)\n";
+    }
+  os << indent << "FreezeFocalPoint: ";
+  if( this->FreezeFocalPoint )
+    {
+    os << this->FreezeFocalPoint << "\n";
     }
   else
     {

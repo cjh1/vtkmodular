@@ -65,7 +65,7 @@ protected:
   //<HyperOctree ...
   int StartPrimElement(vtkIndent);
 
-  //... dim, size, orgin>
+  //... dim, size, origin>
   void WritePrimaryElementAttributes(ostream &, vtkIndent);
 
   //Tree Structure

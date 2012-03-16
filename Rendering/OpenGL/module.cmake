@@ -13,4 +13,8 @@ vtk_module(vtkRenderingOpenGL
   COMPILE_DEPENDS
     vtkParseOGLExt
     vtkUtilitiesEncodeString
+  TEST_DEPENDS
+    vtkRenderingText
+    vtkInteractionStyle
+    vtkTestingRendering
   DEFAULT ON)

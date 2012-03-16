@@ -1,0 +1,36 @@
+set(module_SRCS
+  vtkAxis.cxx
+  vtkAxisExtended.cxx
+  vtkChart.cxx
+  vtkChartHistogram2D.cxx
+  vtkChartLegend.cxx
+  vtkChartMatrix.cxx
+  #vtkChartParallelCoordinates.cxx
+  vtkChartPie.cxx
+  vtkChartXY.cxx
+  vtkChartXYZ.cxx
+  vtkColorLegend.cxx
+  vtkColorSeries.cxx
+  vtkColorTransferControlPointsItem.cxx
+  vtkColorTransferFunctionItem.cxx
+  vtkCompositeControlPointsItem.cxx
+  vtkCompositeTransferFunctionItem.cxx
+  vtkControlPointsItem.cxx
+  vtkLookupTableItem.cxx
+  vtkPiecewiseControlPointsItem.cxx
+  vtkPiecewiseFunctionItem.cxx
+  vtkPiecewisePointHandleItem.cxx
+  vtkPlot.cxx
+  vtkPlotBar.cxx
+  vtkPlotGrid.cxx
+  vtkPlotHistogram2D.cxx
+  vtkPlotLine.cxx
+  #vtkPlotParallelCoordinates.cxx
+  vtkPlotPie.cxx
+  vtkPlotPoints.cxx
+  vtkPlotStacked.cxx
+  vtkScalarsToColorsItem.cxx
+  vtkScatterPlotMatrix.cxx
+  )
+
+vtk_module_library(vtkChartsCore ${module_SRCS})

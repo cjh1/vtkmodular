@@ -1078,6 +1078,30 @@ vtkChartLegend* vtkChartXY::GetLegend()
 }
 
 //-----------------------------------------------------------------------------
+void vtkChartXY::SetTooltip(vtkTooltipItem *tooltip)
+{
+  if(tooltip == this->Tooltip)
+    {
+    // nothing to change
+    return;
+    }
+
+  if(this->Tooltip)
+    {
+    // remove current tooltip from scene
+    this->RemoveItem(this->Tooltip);
+    }
+
+  this->Tooltip = tooltip;
+
+  if(this->Tooltip)
+    {
+    // add new tooltip to scene
+    this->AddItem(this->Tooltip);
+    }
+}
+
+//-----------------------------------------------------------------------------
 vtkTooltipItem* vtkChartXY::GetTooltip()
 {
   return this->Tooltip;
@@ -1160,8 +1184,8 @@ bool vtkChartXY::MouseMoveEvent(const vtkContextMouseEvent &mouse)
     // Figure out how much the mouse has moved by in plot coordinates - pan
     vtkVector2d screenPos(mouse.GetScreenPos().Cast<double>().GetData());
     vtkVector2d lastScreenPos(mouse.GetLastScreenPos().Cast<double>().GetData());
-    vtkVector2d pos(0.0);
-    vtkVector2d last(0.0);
+    vtkVector2d pos(0.0, 0.0);
+    vtkVector2d last(0.0, 0.0);
 
     // Go from screen to scene coordinates to work out the delta
     vtkTransform2D *transform =
@@ -1188,6 +1212,11 @@ bool vtkChartXY::MouseMoveEvent(const vtkContextMouseEvent &mouse)
     if (this->ChartPrivate->PlotCorners.size() > 2)
       {
       // Go from screen to scene coordinates to work out the delta
+      screenPos = vtkVector2d(mouse.GetScreenPos().Cast<double>().GetData());
+      lastScreenPos =
+          vtkVector2d(mouse.GetLastScreenPos().Cast<double>().GetData());
+      pos = vtkVector2d(0.0, 0.0);
+      last = vtkVector2d(0.0, 0.0);
       transform = this->ChartPrivate->PlotCorners[2]->GetTransform();
       transform->InverseTransformPoints(screenPos.GetData(), pos.GetData(), 1);
       transform->InverseTransformPoints(lastScreenPos.GetData(), last.GetData(), 1);
@@ -1211,6 +1240,8 @@ bool vtkChartXY::MouseMoveEvent(const vtkContextMouseEvent &mouse)
     this->RecalculatePlotTransforms();
     // Mark the scene as dirty
     this->Scene->SetDirty(true);
+
+    this->InvokeEvent(vtkCommand::InteractionEvent);
     }
   else if (mouse.GetButton() == this->Actions.Zoom() ||
            mouse.GetButton() == this->Actions.Select())
@@ -1668,6 +1699,7 @@ bool vtkChartXY::MouseButtonReleaseEvent(const vtkContextMouseEvent &mouse)
     this->DrawBox = false;
     // Mark the scene as dirty
     this->Scene->SetDirty(true);
+    this->InvokeEvent(vtkCommand::InteractionEvent);
     return true;
     }
   return false;
@@ -1738,6 +1770,8 @@ bool vtkChartXY::MouseWheelEvent(const vtkContextMouseEvent &, int delta)
 
   // Mark the scene as dirty
   this->Scene->SetDirty(true);
+
+  this->InvokeEvent(vtkCommand::InteractionEvent);
 
   return true;
 }

@@ -6,7 +6,8 @@ SET(Kit_SRCS
   vtkRenderViewBase.cxx
   vtkView.cxx
   vtkViewUpdater.cxx
-  vtkRenderView.cxx
+  vtkViewTheme.cxx
+#  vtkRenderView.cxx
   )
 
 vtk_module_library(vtkViewsCore ${Kit_SRCS})

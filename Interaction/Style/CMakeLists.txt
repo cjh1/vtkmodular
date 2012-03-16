@@ -1,5 +1,5 @@
 set(Kit_SRCS
-  vtkInteractorStyle.cxx
+  #vtkInteractorStyle.cxx # Moved to RenderingCore for render window int
   vtkInteractorStyleFlight.cxx
   vtkInteractorStyleImage.cxx
   vtkInteractorStyleJoystickActor.cxx

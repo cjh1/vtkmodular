@@ -22,13 +22,14 @@
 #define __vtkExtractLevel_h
 
 #include "vtkFiltersExtractionExport.h" // For export macro
-#include "vtkHierarchicalBoxDataSetAlgorithm.h"
+#include "vtkMultiBlockDataSetAlgorithm.h"
 
-class VTKFILTERSEXTRACTION_EXPORT vtkExtractLevel : public vtkHierarchicalBoxDataSetAlgorithm
+class VTKFILTERSEXTRACTION_EXPORT vtkExtractLevel :
+  public vtkMultiBlockDataSetAlgorithm
 {
 public:
   static vtkExtractLevel* New();
-  vtkTypeMacro(vtkExtractLevel, vtkHierarchicalBoxDataSetAlgorithm);
+  vtkTypeMacro(vtkExtractLevel, vtkMultiBlockDataSetAlgorithm);
   void PrintSelf(ostream& os, vtkIndent indent);
 
 
@@ -48,6 +49,9 @@ protected:
   virtual int RequestData(vtkInformation *, 
                           vtkInformationVector **, 
                           vtkInformationVector *);
+
+  virtual int FillInputPortInformation(int port,vtkInformation *info);
+  virtual int FillOutputPortInformation(int port,vtkInformation *info);
 
 private:
   vtkExtractLevel(const vtkExtractLevel&); // Not implemented.

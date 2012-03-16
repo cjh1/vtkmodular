@@ -83,7 +83,7 @@ protected:
   virtual int RequestInformation (vtkInformation *, 
                                    vtkInformationVector **, 
                                    vtkInformationVector *);
-  virtual void ExecuteData(vtkDataObject *, vtkInformation *);
+  virtual void ExecuteDataWithInformation(vtkDataObject *, vtkInformation *);
 
   double LoadValue;
   double PoissonsRatio;

@@ -24,10 +24,12 @@
 #ifndef __vtkContext2D_h
 #define __vtkContext2D_h
 
+#include "vtkRenderingContext2DExport.h" // For export macro
 #include "vtkObject.h"
 
 class vtkWindow;
 
+class vtkContext3D;
 class vtkStdString;
 class vtkUnicodeString;
 class vtkTextProperty;
@@ -43,7 +45,7 @@ class vtkImageData;
 class vtkTransform2D;
 class vtkAbstractContextBufferId;
 
-class VTK_CHARTS_EXPORT vtkContext2D : public vtkObject
+class VTKRENDERINGCONTEXT2D_EXPORT vtkContext2D : public vtkObject
 {
 public:
   vtkTypeMacro(vtkContext2D, vtkObject);
@@ -353,6 +355,12 @@ public:
   // integer.
   static int FloatToInt(float x);
 
+  // Description:
+  // Get the vtkContext3D device, in order to do some 3D rendering. This API
+  // is very experimental, and may be moved around.
+  vtkGetObjectMacro(Context3D, vtkContext3D)
+  virtual void SetContext3D(vtkContext3D *context);
+
 //BTX
 protected:
   vtkContext2D();
@@ -362,6 +370,7 @@ protected:
   vtkTransform2D *Transform;  // Current transform
 
   vtkAbstractContextBufferId *BufferId;
+  vtkContext3D *Context3D; // May be very temporary - get at a 3D version.
 
 private:
   vtkContext2D(const vtkContext2D &); // Not implemented.
