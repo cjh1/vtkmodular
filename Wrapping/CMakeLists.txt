@@ -56,7 +56,7 @@ if(NOT CMAKE_CROSSCOMPILING)
       FILE ${EXPORT_EXECUTABLES_FILE}
       NAMESPACE "${EXPORT_EXECUTABLES_NAMESPACE}" APPEND)
     if(COMPILE_TOOLS_TARGET)
-      add_dependencies(${COMPILE_TOOLS_TARGET} vtkWrapPython vtkWrapPythonInit)
+      add_dependencies(${COMPILE_TOOLS_TARGET} vtkWrapPython vtkWrapPythonInit) 
     endif()
   endif()
 

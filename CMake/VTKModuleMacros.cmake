@@ -8,6 +8,10 @@ if(VTK_WRAP_PYTHON)
   include(vtkWrapping)
 endif()
 
+if(VTK_WRAP_JAVA)
+  include(vtkJavaWrapping)
+endif()
+
 macro(vtk_module _name)
   vtk_module_check_name(${_name})
   set(vtk-module ${_name})
@@ -252,6 +256,10 @@ function(vtk_module_library name)
 
   if(VTK_WRAP_PYTHON AND NOT VTK_MODULE_${vtk-module}_EXCLUDE_FROM_WRAPPING)
     vtk_add_python_wrapping(${vtk-module})
+  endif()
+
+  if(VTK_WRAP_JAVA AND NOT VTK_MODULE_${vtk-module}_EXCLUDE_FROM_WRAPPING)
+    vtk_add_java_wrapping(${vtk-module})
   endif()
 
   if(NOT VTK_INSTALL_NO_DEVELOPMENT)

@@ -400,6 +400,10 @@ set_source_files_properties(
   vtkVariant.cxx
   vtkWeakPointerBase.cxx
   vtkUnicodeString.cxx
+  vtkDenseArray.h
+  vtkSparseArray.h
+  vtkTypedArray.h
+  vtkTypeTemplate.h
   WRAP_EXCLUDE
   )
 
