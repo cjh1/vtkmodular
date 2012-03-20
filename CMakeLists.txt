@@ -359,38 +359,6 @@ IF(VTK_USE_MPI)
 ENDIF(VTK_USE_MPI)
 
 #-----------------------------------------------------------------------------
-# Create STL header wrappers to block warnings in the STL headers.
-FOREACH(header
-  algorithm
-  deque
-  exception
-  functional
-  iterator
-  limits
-  list
-  map
-  memory
-  new
-  numeric
-  queue
-  set
-  stack
-  stdexcept
-  string
-  utility
-  vector
-  )
-  SET(VTK_STL_HEADER "${header}")
-  CONFIGURE_FILE(${VTK_SOURCE_DIR}/Utilities/vtkstd.h.in
-                 ${VTK_BINARY_DIR}/vtkstd/${header} @ONLY IMMEDIATE)
-  IF(NOT VTK_INSTALL_NO_DEVELOPMENT)
-    INSTALL(FILES ${VTK_BINARY_DIR}/vtkstd/${header}
-      DESTINATION ${VTK_INSTALL_INCLUDE_DIR_CM24}/vtkstd
-      COMPONENT Development)
-  ENDIF(NOT VTK_INSTALL_NO_DEVELOPMENT)
-ENDFOREACH(header)
-
-#-----------------------------------------------------------------------------
 # Configure files with settings for use by the build.
 
 # Include the sockets test.
@@ -408,9 +376,16 @@ if(VTK_WRAP_PYTHON)
   set(VTK_WRAP_PYTHON_EXE vtkWrapPython)
   set(VTK_WRAP_PYTHON_INIT_EXE vtkWrapPythonInit)
   set(VTK_WRAP_HIERARCHY_EXE vtkWrapHierarchy)
+  set(VTK_PYTHON_EXE vtkpython)
   # Force the PythonCore module to on if wrapping is on
   set(Module_vtkWrappingPythonCore ON CACHE BOOL "Core Python wrapping library"
     FORCE)
+  # Remove the __init__.py file - it is accumulated as modules are added.
+  file(REMOVE "${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/vtk/__init__.py")
+  file(GLOB py_utils Wrapping/Python/vtk/test/*)
+  file(COPY ${py_utils} DESTINATION ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/vtk/test)
+  file(GLOB py_utils Wrapping/Python/vtk/util/*)
+  file(COPY ${py_utils} DESTINATION ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/vtk/util)
   add_subdirectory(Wrapping)
 endif()
 

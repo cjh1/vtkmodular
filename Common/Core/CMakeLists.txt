@@ -138,11 +138,20 @@ SET(Kit_SRCS
   vtkWeakPointerBase.cxx
   vtkWindow.cxx
   vtkXMLFileOutputWindow.cxx
+  vtkDenseArray.h
+  vtkSparseArray.h
+  vtkTypedArray.h
+  vtkTypeTemplate.h
+  vtkSystemIncludes.h
+  vtkType.h
+  ${CMAKE_CURRENT_BINARY_DIR}/vtkMathConfigure.h
+  ${CMAKE_CURRENT_BINARY_DIR}/vtkConfigure.h
   )
 
 if(vtkCommonDataModel_ENABLED)
   include_directories(${VTK_BINARY_DIR}/Common/DataModel)
-  set_property(SOURCE vtkInformationDataObjectKey.cxx PROPERTY COMPILE_DEFINITIONS vtkCommonDataModel_ENABLED)
+  set_property(SOURCE vtkInformationDataObjectKey.cxx
+    PROPERTY COMPILE_DEFINITIONS vtkCommonDataModel_ENABLED)
 endif()
 
 # __int64 seems to be platform specific, turning on if
@@ -312,11 +321,12 @@ configure_file(
   )
 
 # header files that have constants that can be wrapped
-set(Kit_WRAP_HEADERS
+set_source_files_properties(
   vtkSystemIncludes.h
   vtkType.h
   ${CMAKE_CURRENT_BINARY_DIR}/vtkMathConfigure.h
-  ${VTK_BINARY_DIR}/vtkConfigure.h
+  ${CMAKE_CURRENT_BINARY_DIR}/vtkConfigure.h
+  PROPERTIES WRAP_HEADER 1
   )
 
 set_source_files_properties(
@@ -394,10 +404,24 @@ set_source_files_properties(
   )
 
 set_source_files_properties(
+  vtkDenseArray.h
+  vtkSparseArray.h
+  vtkTypedArray.h
+  vtkTypeTemplate.h
+  HEADER_FILE_ONLY
+  )
+
+set_source_files_properties(
   vtkArrayCoordinates.cxx
   vtkArrayExtents.cxx
   vtkArrayExtentsList.cxx
   vtkArrayRange.cxx
+  vtkArraySort.cxx
+  vtkArrayWeights.cxx
+  vtkDenseArray.h
+  vtkSparseArray.h
+  vtkTypedArray.h
+  vtkTypeTemplate.h
   vtkTimeStamp.cxx
   vtkVariant.cxx
   PROPERTIES WRAP_SPECIAL 1

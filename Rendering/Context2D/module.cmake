@@ -3,6 +3,7 @@ vtk_module(vtkRenderingContext2D
     vtkCommonDataModel
     vtkCommonMath
     vtkCommonTransforms
+    vtkRenderingCore
     vtkRenderingOpenGL
     vtkRenderingText
   DEFAULT ON)

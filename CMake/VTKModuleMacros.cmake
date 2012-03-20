@@ -3,6 +3,10 @@ get_filename_component(_VTKModuleMacros_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
 set(_VTKModuleMacros_DEFAULT_LABEL "VTKModular")
 
 include(${_VTKModuleMacros_DIR}/VTKModuleAPI.cmake)
+include(GenerateExportHeader)
+if(VTK_WRAP_PYTHON)
+  include(vtkWrapping)
+endif()
 
 macro(vtk_module _name)
   vtk_module_check_name(${_name})
@@ -16,12 +20,16 @@ macro(vtk_module _name)
   set(VTK_MODULE_${vtk-module-test}_DEPENDS "${vtk-module}")
   set(VTK_MODULE_${vtk-module}_DESCRIPTION "description")
   set(VTK_MODULE_${vtk-module}_EXCLUDE_FROM_ALL 0)
+  set(VTK_MODULE_${vtk-module}_EXCLUDE_FROM_WRAPPING 0)
   foreach(arg ${ARGN})
     if("${arg}" MATCHES "^((|COMPILE_|TEST_|)DEPENDS|DESCRIPTION|DEFAULT)$")
       set(_doing "${arg}")
     elseif("${arg}" MATCHES "^EXCLUDE_FROM_ALL$")
       set(_doing "")
       set(VTK_MODULE_${vtk-module}_EXCLUDE_FROM_ALL 1)
+    elseif("${arg}" MATCHES "^EXCLUDE_FROM_WRAPPING$")
+      set(_doing "")
+      set(VTK_MODULE_${vtk-module}_EXCLUDE_FROM_WRAPPING 1)
     elseif("${arg}" MATCHES "^[A-Z][A-Z][A-Z]$" AND
            NOT "${arg}" MATCHES "^(ON|OFF)$")
       set(_doing "")
@@ -237,11 +245,14 @@ function(vtk_module_library name)
   endforeach()
 
   # Generate the export macro header for symbol visibility/Windows DLL declspec
-  include(GenerateExportHeader)
   generate_export_header(${vtk-module} EXPORT_FILE_NAME ${vtk-module}Export.h)
   add_compiler_export_flags(my_abi_flags)
   set_property(TARGET ${vtk-module} APPEND
     PROPERTY COMPILE_FLAGS "${VTK_ABI_CXX_FLAGS}")
+
+  if(VTK_WRAP_PYTHON AND NOT VTK_MODULE_${vtk-module}_EXCLUDE_FROM_WRAPPING)
+    vtk_add_python_wrapping(${vtk-module})
+  endif()
 
   if(NOT VTK_INSTALL_NO_DEVELOPMENT)
     set(_hdrs)
@@ -267,6 +278,8 @@ endfunction()
 macro(vtk_module_third_party _pkg)
   string(TOLOWER "${_pkg}" _lower)
   string(TOUPPER "${_pkg}" _upper)
+
+  message("Processing TPL: ${_pkg}")
 
   set(_includes "")
   set(_libs "")

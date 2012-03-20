@@ -1,4 +1,4 @@
 vtk_module(vtkUtilitiesEncodeString
   DEPENDS
     vtksys
-  DEFAULT ON)
+  EXCLUDE_FROM_WRAPPING)

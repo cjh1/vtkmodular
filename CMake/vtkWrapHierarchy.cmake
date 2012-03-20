@@ -116,7 +116,7 @@ MACRO(VTK_WRAP_HIERARCHY TARGET OUTPUT_DIR SOURCES)
   set(OTHER_HIERARCHY_TARGETS)
   foreach(dep ${VTK_MODULE_${vtk-module}_DEPENDS})
     if(NOT "${vtk-module}" STREQUAL "${dep}")
-      if(NOT ${dep}_IS_TPL)
+      if(NOT VTK_MODULE_${dep}_EXCLUDE_FROM_WRAPPING)
         list(APPEND OTHER_HIERARCHY_FILES
               "${quote}${${dep}_BINARY_DIR}/${dep}Hierarchy.txt${quote}")
         list(APPEND OTHER_HIERARCHY_TARGETS ${dep})

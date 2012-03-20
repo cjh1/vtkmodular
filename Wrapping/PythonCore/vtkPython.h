@@ -16,24 +16,9 @@
 #define __vtkPython_h
 
 #include "vtkWrappingPythonCoreExport.h" // For export macro
+#include "vtkCommonCorePythonExport.h"
 #include "vtkPythonConfigure.h"
 #include "vtkABI.h"
-
-#if defined(WIN32)
-# if defined(vtkPythonCore_EXPORTS)
-#  define VTKWRAPPINGPYTHONCORE_EXPORT VTKWRAPPINGPYTHONCORE_EXPORT
-# else
-#  define VTKWRAPPINGPYTHONCORE_EXPORT VTK_ABI_IMPORT
-# endif
-# if defined(vtkCommonPythonD_EXPORTS)
-#  define VTK_COMMON_PYTHON_EXPORT VTKWRAPPINGPYTHONCORE_EXPORT
-# else
-#  define VTK_COMMON_PYTHON_EXPORT VTK_ABI_IMPORT
-# endif
-#else
-# define VTKWRAPPINGPYTHONCORE_EXPORT
-# define VTK_COMMON_PYTHON_EXPORT
-#endif
 
 /*
    Use the real python debugging library if it is provided.

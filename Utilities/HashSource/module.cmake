@@ -1,4 +1,5 @@
 vtk_module(vtkUtilitiesHashSource
   DEPENDS
     vtksys
-  DEFAULT ON)
+  EXCLUDE_FROM_WRAPPING
+  )

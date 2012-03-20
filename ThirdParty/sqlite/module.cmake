@@ -1,1 +1,1 @@
-vtk_module(vtksqlite)
+vtk_module(vtksqlite EXCLUDE_FROM_WRAPPING)

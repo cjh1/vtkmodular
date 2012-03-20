@@ -1,1 +1,1 @@
-vtk_module(vtknetcdf)
+vtk_module(vtknetcdf EXCLUDE_FROM_WRAPPING)

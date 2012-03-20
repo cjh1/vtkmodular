@@ -29,7 +29,6 @@ create_test_sourcelist(Tests ${vtk-module}CxxTests.cxx
   TestUnicodeStringAPI.cxx
   TestUnicodeStringArrayAPI.cxx
   TestVariantComparison.cxx
-  TestVectorOperators.cxx
   TestWeakPointer.cxx
   otherArrays.cxx
   otherByteSwap.cxx

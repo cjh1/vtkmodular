@@ -1,1 +1,1 @@
-vtk_module(vtkverdict)
+vtk_module(vtkverdict EXCLUDE_FROM_WRAPPING)

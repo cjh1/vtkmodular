@@ -1,1 +1,1 @@
-vtk_module(vtkzlib)
+vtk_module(vtkzlib EXCLUDE_FROM_WRAPPING)

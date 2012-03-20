@@ -4,6 +4,20 @@ set(VTK_MODULES_ALL)
 file(GLOB meta RELATIVE "${VTK_SOURCE_DIR}"
    "${VTK_SOURCE_DIR}/*/*/module.cmake" # grouped modules
   )
+
+# Figure out which languages are being wrapped, and add them to the list.
+set(_test_languages "Cxx")
+if(VTK_WRAP_PYTHON)
+  list(APPEND _test_languages "Python")
+endif()
+if(VTK_WRAP_TCL)
+  list(APPEND _test_languages "Tcl")
+endif()
+if(VTK_WRAP_JAVA)
+  list(APPEND _test_languages "Java")
+endif()
+
+# Assess modules, and tests in the repository.
 foreach(f ${meta})
   include(${VTK_SOURCE_DIR}/${f})
   list(APPEND VTK_MODULES_ALL ${vtk-module})
@@ -11,7 +25,8 @@ foreach(f ${meta})
   set(${vtk-module}_SOURCE_DIR ${VTK_SOURCE_DIR}/${${vtk-module}_BASE})
   set(${vtk-module}_BINARY_DIR ${VTK_BINARY_DIR}/${${vtk-module}_BASE})
   if(BUILD_TESTING)
-    foreach(_lang Cxx Tcl Java Python)
+    # Only add tests for languages that are wrapped.
+    foreach(_lang Cxx ${_test_languages})
       if(EXISTS ${${vtk-module}_SOURCE_DIR}/Testing/${_lang}/CMakeLists.txt)
         vtk_add_test_module(${_lang})
       endif()

@@ -1,2 +1,2 @@
 vtk_module(vtkParseOGLExt
-  DEFAULT ON)
+  EXCLUDE_FROM_WRAPPING)

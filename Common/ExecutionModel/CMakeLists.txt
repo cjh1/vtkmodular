@@ -58,4 +58,10 @@ SET(Kit_SRCS
   vtkExtentRCBPartitioner.cxx
   )
 
+set_source_files_properties(
+  vtkExecutionSchedulerManager
+  vtkFilteringInformationKeyManager
+  WRAP_EXCLUDE
+  )
+
 vtk_module_library(vtkCommonExecutionModel ${Kit_SRCS})

@@ -1,1 +1,1 @@
-vtk_module(vtkjpeg)
+vtk_module(vtkjpeg EXCLUDE_FROM_WRAPPING)

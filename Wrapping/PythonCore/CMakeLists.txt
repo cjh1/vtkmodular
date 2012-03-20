@@ -1,6 +1,11 @@
-
 set(VTK_WRAP_PYTHON_FIND_LIBS ON)
 include(vtkWrapPython)
+
+# Generate an extra export header for the python vtk command stuff
+include(GenerateExportHeader)
+generate_export_header(vtkCommonCorePythonD
+  EXPORT_MACRO_NAME VTK_COMMON_PYTHON_EXPORT
+  EXPORT_FILE_NAME vtkCommonCorePythonExport.h)
 
 set(PythonCore_SRCS
   vtkPythonArgs.cxx
@@ -27,10 +32,9 @@ if(VTK_WRAP_PYTHON_SIP)
 endif()
 include_directories("${PYTHON_INCLUDE_PATH}")
 
-add_library(vtkWrappingPythonCore ${PythonCore_SRCS})
+vtk_module_library(vtkWrappingPythonCore ${PythonCore_SRCS})
 
 target_link_libraries(vtkWrappingPythonCore
-  vtkCommonCore
   ${VTK_PYTHON_LIBRARIES})
 target_link_libraries(vtkWrappingPythonCore
   LINK_INTERFACE_LIBRARIES ${VTK_PYTHON_LIBRARIES})

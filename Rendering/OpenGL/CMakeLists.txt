@@ -10,6 +10,12 @@ if(APPLE)
   endif()
 endif()
 
+# FIXME: The TDx support needs some refactoring before we can build it in a
+# modular fashion, for now it must remain an option on vtkRenderingOpenGL.
+option(VTK_USE_TDX "Use TDx interaction devices" OFF)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/vtkTDxConfigure.h.in
+  ${CMAKE_CURRENT_BINARY_DIR}/vtkTDxConfigure.h)
+
 set(Kit_SRCS
   vtkCameraPass.cxx
   vtkClearZPass.cxx
@@ -306,7 +312,7 @@ elseif(VTK_USE_CORE_GRAPHICS)
   set(vtk_module_vtkGPUInfoList_override "vtkCoreGraphicsGPUInfoList")
 elseif(VTK_USE_DIRECTX)
   list(APPEND Kit_SRCS "vtkDirectXGPUInfoList.cxx")
-  set(extra_libs ${DIRECTX_LIBRARY} wbemuuid)
+  set(extra_libs ${DirectX_LIBRARY} wbemuuid)
   include_directories(${DirectX_INCLUDE_DIR})
   set(vtk_module_vtkGPUInfoList_override "vtkDirectXGPUInfoList")
 else()

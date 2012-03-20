@@ -1,1 +1,1 @@
-vtk_module(vtkexpat)
+vtk_module(vtkexpat EXCLUDE_FROM_WRAPPING)

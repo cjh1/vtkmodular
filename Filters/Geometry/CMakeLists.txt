@@ -20,4 +20,9 @@ set(Kit_SRCS
   vtkUniformGridGhostDataGenerator.cxx
   )
 
+set_source_files_properties(
+  vtkStructuredNeighbor
+  WRAP_EXCLUDE
+  )
+
 vtk_module_library(vtkFiltersGeometry ${Kit_SRCS})

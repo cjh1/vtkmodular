@@ -7,7 +7,8 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}
   ${CMAKE_CURRENT_SOURCE_DIR}/Python
   ${VTK_SOURCE_DIR}/Common/Core
   ${VTK_BINARY_DIR}/Common/Core
-  ${VTK_BINARY_DIR}/Wrapping)
+  ${VTK_BINARY_DIR}/Wrapping
+  ${VTK_BINARY_DIR}/Utilities/KWSys)
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/vtkPythonConfigure.h.in
   ${CMAKE_CURRENT_BINARY_DIR}/vtkPythonConfigure.h)
@@ -43,7 +44,8 @@ if(NOT CMAKE_CROSSCOMPILING)
   if(VTK_WRAP_PYTHON)
     find_package(PythonLibs REQUIRED)
     include_directories("${PYTHON_INCLUDE_PATH}"
-      "${CMAKE_CURRENT_SOURCE_DIR}/PythonCore")
+      "${CMAKE_CURRENT_SOURCE_DIR}/PythonCore"
+      "${CMAKE_CURRENT_BINARY_DIR}/PythonCore")
 
     add_executable(vtkWrapPython vtkWrapPython.c vtkWrap.c vtkWrapText.c
                        vtkParseMain.c vtkParse.tab.c vtkParsePreprocess.c
