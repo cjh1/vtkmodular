@@ -136,6 +136,7 @@ SET_SOURCE_FILES_PROPERTIES(
 
 SET_SOURCE_FILES_PROPERTIES(
   vtkImageStencilIterator
+  vtkImageBSplineInternals
   WRAP_EXCLUDE
 )
 

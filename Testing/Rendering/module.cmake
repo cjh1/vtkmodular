@@ -3,4 +3,4 @@ vtk_module(vtkTestingRendering
     vtkTestingCore
     vtkRenderingCore
     vtkImagingCore
-  EXCLUDE_FROM_WRAPPING)
+  )

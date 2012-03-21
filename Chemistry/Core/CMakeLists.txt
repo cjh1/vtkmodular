@@ -1,12 +1,12 @@
-SET(KIT Chemistry)
-SET(UKIT CHEMISTRY)
+set(KIT Chemistry)
+set(UKIT CHEMISTRY)
 
-SET(KIT_TCL_LIBS vtkFilteringTCL vtkRenderingTCL vtkVolumeRenderingTCL)
-SET(KIT_PYTHON_LIBS vtkFilteringPythonD vtkRenderingPythonD vtkVolumeRenderingPythonD)
-SET(KIT_JAVA_LIBS vtkFilteringJava vtkRenderingJava vtkVolumeRenderingJava)
-SET(KIT_INTERFACE_LIBRARIES vtkFiltering vtkRendering vtkVolumeRendering)
+set(KIT_TCL_LIBS vtkFilteringTCL vtkRenderingTCL vtkVolumeRenderingTCL)
+set(KIT_PYTHON_LIBS vtkFilteringPythonD vtkRenderingPythonD vtkVolumeRenderingPythonD)
+set(KIT_JAVA_LIBS vtkFilteringJava vtkRenderingJava vtkVolumeRenderingJava)
+set(KIT_INTERFACE_LIBRARIES vtkFiltering vtkRendering vtkVolumeRendering)
 
-SET(Kit_SRCS
+set(Kit_SRCS
   vtkBlueObeliskData.cxx
   vtkBlueObeliskDataParser.cxx
   vtkCMLMoleculeReader.cxx
@@ -20,9 +20,15 @@ SET(Kit_SRCS
   vtkSimpleBondPerceiver.cxx
   )
 
-SET_SOURCE_FILES_PROPERTIES(
+set_source_files_properties(
   vtkMoleculeToPolyDataFilter.cxx
   ABSTRACT
+  )
+
+set_source_files_properties(
+  vtkBlueObeliskData.cxx
+  vtkBlueObeliskDataParser.cxx
+  WRAP_EXCLUDE
   )
 
 # Generate configured header file

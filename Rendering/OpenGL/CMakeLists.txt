@@ -1,6 +1,6 @@
 # FIXME: This should probably be fixed, vtkgl generation needs some refinement
 # to allow for things to split up properly.
-option(VTK_USE_X "Use X for VTK render windows" OFF)
+option(VTK_USE_X "Use X for VTK render windows" ON)
 
 if(APPLE)
   option(VTK_USE_COCOA "Use Cocoa for VTK render windows" ON)

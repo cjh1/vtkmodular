@@ -17,10 +17,12 @@ include_directories(
   ${CMAKE_CURRENT_BINARY_DIR}/private
   )
 
-vtk_module_library(vtkIOLSDyna ${Kit_SRCS})
-
 set_source_files_properties(
   vtkLSDynaPart
   vtkLSDynaPartCollection
+  private/LSDynaFamily
+  private/LSDynaMetaData
   WRAP_EXCLUDE
   )
+
+vtk_module_library(vtkIOLSDyna ${Kit_SRCS})

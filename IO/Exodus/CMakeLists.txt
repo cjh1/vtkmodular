@@ -6,10 +6,12 @@ set(Kit_SRCS
   vtkExodusModel.cxx
   )
 
-vtk_module_library(vtkIOExodus ${Kit_SRCS})
 
 set_source_files_properties(
   vtkExodusIIReaderParser
   vtkExodusIIReaderVariableCheck
   WRAP_EXCLUDE
   )
+
+
+vtk_module_library(vtkIOExodus ${Kit_SRCS})

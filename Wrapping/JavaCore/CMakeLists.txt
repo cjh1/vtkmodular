@@ -9,4 +9,3 @@ set(JavaCore_SRCS
   )
 
 vtk_module_library(vtkWrappingJavaCore ${JavaCore_SRCS})
-

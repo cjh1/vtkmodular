@@ -95,7 +95,6 @@ set(Kit_SRCS
   vtkShaderDeviceAdapter2.cxx
   vtkShaderProgram.cxx # vtkXMLShaderProgram
   vtkStandardPolyDataPainter.cxx
-  vtkStringToImage.cxx
   vtkTexture.cxx
   vtkTexturedActor2D.cxx
   vtkTransformCoordinateSystems.cxx
@@ -160,7 +159,6 @@ set_source_files_properties(
   vtkShaderDeviceAdapter
   vtkShaderDeviceAdapter2
   vtkShaderProgram
-  vtkStringToImage
   vtkTDxInteractorStyle
   vtkViewport
   vtkVisibilitySort

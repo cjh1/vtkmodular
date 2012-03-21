@@ -389,7 +389,10 @@ if(VTK_WRAP_PYTHON)
   file(COPY ${py_utils} DESTINATION ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/vtk/test)
   file(GLOB py_utils Wrapping/Python/vtk/util/*)
   file(COPY ${py_utils} DESTINATION ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/vtk/util)
-  add_subdirectory(Wrapping)
+else()
+  # if wrapping is not on then force PythonCore module to be off
+  set(Module_vtkWrappingPythonCore OFF CACHE BOOL "Core Python wrapping library"
+    FORCE)
 endif()
 
 if(VTK_WRAP_JAVA)
@@ -418,6 +421,7 @@ endif()
 
 if(VTK_WRAP_PYTHON OR VTK_WRAP_TCL OR VTK_WRAP_JAVA)
   set(VTK_WRAP_HIERARCHY_EXE vtkWrapHierarchy)
+  add_subdirectory(Wrapping)
 endif()
 
 #----------------------------------------------------------------------

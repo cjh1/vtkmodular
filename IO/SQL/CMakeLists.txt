@@ -19,6 +19,15 @@ set(SQLite_SRCS
   vtkTableToSQLiteWriter.cxx
   )
 
+set_source_files_properties(
+  vtkDatabaseToTableReader
+  vtkRowQuery
+  vtkSQLDatabase
+  vtkSQLQuery
+  vtkTableToDatabaseWriter
+  ABSTRACT
+  )
+
 include_directories(
   ${VTK_SOURCE_DIR}/Common/Misc
   )

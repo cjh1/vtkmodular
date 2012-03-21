@@ -4,4 +4,9 @@ set(Kit_SRCS
   vtkVRMLImporter.cxx
 )
 
+set_source_files_properties(
+  vtkImporter
+  ABSTRACT
+  )
+
 vtk_module_library(vtkIOImport ${Kit_SRCS})

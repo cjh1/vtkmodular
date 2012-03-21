@@ -8,12 +8,18 @@ set(Kit_SRCS
   vtkFreeTypeStringToImage.cxx
   vtkFreeTypeUtilities.cxx
   vtkFreeTypeTools.cxx
+  vtkStringToImage.cxx
   )
 
 set_source_files_properties(
   vtkFreeTypeTools
   vtkFreeTypeUtilities
   WRAP_EXCLUDE
+  )
+
+set_source_files_properties(
+  vtkStringToImage.cxx
+  ABSTRACT
   )
 
 vtk_module_library(vtkRenderingText ${Kit_SRCS})
