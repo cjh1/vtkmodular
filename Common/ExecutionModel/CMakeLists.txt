@@ -1,4 +1,3 @@
-
 SET(Kit_SRCS
   vtkAlgorithm.cxx
   vtkAlgorithmOutput.cxx
@@ -59,8 +58,22 @@ SET(Kit_SRCS
   )
 
 set_source_files_properties(
+  vtkExecutive
+  vtkHyperOctreeAlgorithm
+  vtkImageAlgorithm
+  vtkImageInPlaceFilter
+  vtkInformationExecutivePortKey
+  vtkInformationExecutivePortVectorKey
+  vtkScalarTree
+  vtkSimpleImageToImageFilter
+  vtkThreadedImageAlgorithm
+  ABSTRACT
+  )
+
+set_source_files_properties(
   vtkExecutionSchedulerManager
   vtkFilteringInformationKeyManager
+  vtkImageProgressIterator
   WRAP_EXCLUDE
   )
 

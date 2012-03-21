@@ -4,7 +4,7 @@ create_test_sourcelist(Tests ${vtk-module}CxxTests.cxx
   TestArrayAPIDense.cxx
   TestArrayAPISparse.cxx
   TestArrayBool.cxx
-#  TestArrayCasting.cxx
+  # TestArrayCasting.cxx # Uses Boost in its own separate test.
   TestArrayExtents.cxx
   TestArrayInterpolationDense.cxx
   TestArrayLookup.cxx
@@ -13,11 +13,11 @@ create_test_sourcelist(Tests ${vtk-module}CxxTests.cxx
   TestArrayUserTypes.cxx
   TestArrayVariants.cxx
   TestConditionVariable.cxx
-#  TestCxxFeatures.cxx
+  # TestCxxFeatures.cxx # This is in its own exe too.
   TestDataArray.cxx
   TestDataArrayComponentNames.cxx 
   TestGarbageCollector.cxx
-#  TestInstantiator.cxx
+  # TestInstantiator.cxx # Have not enabled instantiators.
   TestMath.cxx
   TestMinimalStandardRandomSequence.cxx
   TestNew.cxx
@@ -37,7 +37,7 @@ create_test_sourcelist(Tests ${vtk-module}CxxTests.cxx
   #otherLookupTable.cxx
   #otherLookupTableWithEnabling.cxx
   otherStringArray.cxx
-  
+
   EXTRA_INCLUDE vtkTestDriver.h
 )
 

@@ -138,4 +138,33 @@ set(Kit_SRCS
   vtkTDxInteractorStyleSettings.cxx
   )
 
+set_source_files_properties(
+  vtkAbstractMapper3D
+  vtkAbstractMapper
+  vtkAbstractVolumeMapper
+  vtkAbstractPicker
+  vtkAbstractPropPicker
+  vtkCuller
+  vtkGPUInfoList
+  vtkImageMapper3D
+  vtkInteractorObserver
+  vtkMapper
+  vtkMapper2D
+  vtkPainter
+  vtkPolyDataPainter
+  vtkPrimitivePainter
+  vtkProp
+  vtkProp3D
+  vtkRendererDelegate
+  vtkShader
+  vtkShaderDeviceAdapter
+  vtkShaderDeviceAdapter2
+  vtkShaderProgram
+  vtkStringToImage
+  vtkTDxInteractorStyle
+  vtkViewport
+  vtkVisibilitySort
+  ABSTRACT
+  )
+
 vtk_module_library(vtkRenderingCore ${Kit_SRCS})

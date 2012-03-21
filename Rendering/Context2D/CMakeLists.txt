@@ -27,8 +27,21 @@ set(module_SRCS
   )
 
 set_source_files_properties(
+  vtkAbstractContextBufferId
+  vtkAbstractContextItem
+  vtkContextItem
+  ABSTRACT
+  )
+
+set_source_files_properties(
+  vtkContextDevice2D
+  vtkContextDevice3D
   vtkContextKeyEvent
   vtkContextMouseEvent
+  vtkOpenGL2ContextDevice2D
+  vtkOpenGLContextBufferId
+  vtkOpenGLContextDevice2D
+  vtkOpenGLContextDevice3D
   WRAP_EXCLUDE
   )
 

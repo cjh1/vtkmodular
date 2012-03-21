@@ -1,4 +1,3 @@
-
 SET(Kit_SRCS
   vtkAbstractTransform.cxx
   vtkCylindricalTransform.cxx
@@ -16,6 +15,14 @@ SET(Kit_SRCS
   vtkTransform.cxx
   vtkWarpTransform.cxx
   vtkLandmarkTransform.cxx
+  )
+
+set_source_files_properties(
+  vtkAbstractTransform
+  vtkHomogeneousTransform
+  vtkLinearTransform
+  vtkWarpTransform
+  ABSTRACT
   )
 
 vtk_module_library(vtkCommonTransforms ${Kit_SRCS})

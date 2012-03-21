@@ -1,41 +1,31 @@
 
 SET(Kit_SRCS
-vtkCardinalSpline.cxx
-vtkCardinalSpline.h
-vtkKochanekSpline.cxx
-vtkKochanekSpline.h
-vtkParametricBoy.cxx
-vtkParametricBoy.h
-vtkParametricConicSpiral.cxx
-vtkParametricConicSpiral.h
-vtkParametricCrossCap.cxx
-vtkParametricCrossCap.h
-vtkParametricDini.cxx
-vtkParametricDini.h
-vtkParametricEllipsoid.cxx
-vtkParametricEllipsoid.h
-vtkParametricEnneper.cxx
-vtkParametricEnneper.h
-vtkParametricFigure8Klein.cxx
-vtkParametricFigure8Klein.h
-vtkParametricFunction.cxx
-vtkParametricFunction.h
-vtkParametricKlein.cxx
-vtkParametricKlein.h
-vtkParametricMobius.cxx
-vtkParametricMobius.h
-vtkParametricRandomHills.cxx
-vtkParametricRandomHills.h
-vtkParametricRoman.cxx
-vtkParametricRoman.h
-vtkParametricSpline.cxx
-vtkParametricSpline.h
-vtkParametricSuperEllipsoid.cxx
-vtkParametricSuperEllipsoid.h
-vtkParametricSuperToroid.cxx
-vtkParametricSuperToroid.h
-vtkParametricTorus.cxx
-vtkParametricTorus.h
+  vtkCardinalSpline.cxx
+  vtkKochanekSpline.cxx
+  vtkParametricBoy.cxx
+  vtkParametricConicSpiral.cxx
+  vtkParametricCrossCap.cxx
+  vtkParametricDini.cxx
+  vtkParametricEllipsoid.cxx
+  vtkParametricEnneper.cxx
+  vtkParametricFigure8Klein.cxx
+  vtkParametricFunction.cxx
+  vtkParametricKlein.cxx
+  vtkParametricMobius.cxx
+  vtkParametricRandomHills.cxx
+  vtkParametricRoman.cxx
+  vtkParametricSpline.cxx
+  vtkParametricSuperEllipsoid.cxx
+  vtkParametricSuperToroid.cxx
+  vtkParametricTorus.cxx
   )
+
+set_source_files_properties(
+  vtkParametricFunction
+  ABSTRACT
+)
+
+
+
 
 vtk_module_library(vtkCommonComputationalGeometry ${Kit_SRCS})

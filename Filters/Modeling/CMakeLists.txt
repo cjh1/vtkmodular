@@ -21,4 +21,11 @@ set(Kit_SRCS
   vtkSpherePuzzle.cxx
   vtkSubdivideTetra.cxx
   )
+
+set_source_files_properties(
+  vtkGeodesicPath
+  vtkGraphGeodesicPath
+  ABSTRACT
+  )
+
 vtk_module_library(vtkFiltersModeling ${Kit_SRCS})

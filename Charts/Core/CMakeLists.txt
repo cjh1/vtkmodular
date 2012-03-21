@@ -33,4 +33,12 @@ set(module_SRCS
   vtkScatterPlotMatrix.cxx
   )
 
+set_source_files_properties(
+  vtkChart
+  vtkControlPointsItem
+  vtkPlot
+  vtkScalarsToColorsItem
+  ABSTRACT
+  )
+
 vtk_module_library(vtkChartsCore ${module_SRCS})

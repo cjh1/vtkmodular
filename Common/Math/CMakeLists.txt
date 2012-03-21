@@ -21,4 +21,10 @@ if(CMAKE_COMPILER_IS_GNUCXX)
    )
 endif()
 
+set_source_files_properties(
+  vtkFunctionSet
+  vtkInitialValueProblemSolver
+  ABSTRACT
+  )
+
 vtk_module_library(vtkCommonMath ${Kit_SRCS})

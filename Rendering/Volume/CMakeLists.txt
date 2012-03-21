@@ -54,4 +54,10 @@ set(Kit_SRCS
   #vtkVolumeTextureMapper3D.cxx
   #vtkVolumeTextureMapper.cxx
   )
+
+set_source_files_properties(
+  vtkVolumeMapper
+  ABSTRACT
+  )
+
 vtk_module_library(vtkRenderingVolume ${Kit_SRCS})

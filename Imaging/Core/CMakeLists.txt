@@ -123,6 +123,8 @@ set(Kit_SRCS
   )
 
 SET_SOURCE_FILES_PROPERTIES(
+  vtkAbstractImageInterpolator
+  vtkImageBSplineInternals
   vtkImageDecomposeFilter
   vtkImageFourierFilter
   vtkImageIterateFilter

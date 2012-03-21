@@ -13,8 +13,6 @@ IF(JAVA_COMPILE)
   endforeach()
   
 
-message("VTK_JAVA_DEPENDENCIES: ${VTK_JAVA_DEPENDENCIES}")
-
     IF(NOT VTK_JAR_PATH)
     SET(VTK_JAR_PATH "${LIBRARY_OUTPUT_PATH}")
   ENDIF(NOT VTK_JAR_PATH)
@@ -42,6 +40,8 @@ message("VTK_JAVA_DEPENDENCIES: ${VTK_JAVA_DEPENDENCIES}")
       ENDFOREACH(__java_library)
     ENDIF(JAVA_AWT_LIBRARY)
     SET(CMAKE_SKIP_RPATH 0)
+    include_directories(${vtkCommonCore_SOURCE_DIR})
+    include_directories(${vtkCommonCore_BINARY_DIR})
     ADD_EXECUTABLE(VTKJavaExecutable VTKJava.cxx)
     SET(JAVA_LIBRARIES)
 
@@ -135,7 +135,8 @@ message("VTK_JAVA_DEPENDENCIES: ${VTK_JAVA_DEPENDENCIES}")
       AxesActor
     )
     SET(VTK_JAVA_SAMPLE_DEPENDENCIES)
-    IF(VTK_USE_RENDERING)
+    # Can we just do this anyway?
+    #IF(VTK_USE_RENDERING)
       SET(VTK_JAVA_DEPENDENCIES ${VTK_JAVA_DEPENDENCIES}
         vtkCanvas
         vtkPanel
@@ -149,25 +150,28 @@ message("VTK_JAVA_DEPENDENCIES: ${VTK_JAVA_DEPENDENCIES}")
         VTKCanvas
         ReleaseVtkPanel
       )
-      ADD_DEPENDENCIES(VTKJavaRendering VTKJavaGraphics VTKJavaImaging)
-      ADD_DEPENDENCIES(VTKJavaVolumeRendering VTKJavaRendering)
-      ADD_DEPENDENCIES(VTKJavaHybrid VTKJavaRendering)
-      ADD_DEPENDENCIES(VTKJavaWidgets VTKJavaHybrid)
-    ENDIF(VTK_USE_RENDERING)
-    IF(VTK_USE_PARALLEL)
-      ADD_DEPENDENCIES(VTKJavaParallel VTKJavaRendering)
-    ENDIF(VTK_USE_PARALLEL)
-    IF(VTK_USE_GEOVIS)
-      ADD_DEPENDENCIES(VTKJavaGeovis VTKJavaWidgets)
-    ENDIF(VTK_USE_GEOVIS)
-    IF(VTK_USE_INFOVIS)
-      ADD_DEPENDENCIES(VTKJavaInfovis VTKJavaWidgets)
-    ENDIF(VTK_USE_INFOVIS)
-    IF(VTK_USE_VIEWS)
-      ADD_DEPENDENCIES(VTKJavaViews VTKJavaInfovis)
-    ENDIF(VTK_USE_VIEWS)
+      
+      # Walk through enabled module ant setup depends ..
+#      ADD_DEPENDENCIES(VTKJavaRendering VTKJavaGraphics VTKJavaImaging)
+#      ADD_DEPENDENCIES(VTKJavaVolumeRendering VTKJavaRendering)
+#      ADD_DEPENDENCIES(VTKJavaHybrid VTKJavaRendering)
+#      ADD_DEPENDENCIES(VTKJavaWidgets VTKJavaHybrid)
+#    ENDIF(VTK_USE_RENDERING)
+#    IF(VTK_USE_PARALLEL)
+#      ADD_DEPENDENCIES(VTKJavaParallel VTKJavaRendering)
+#    ENDIF(VTK_USE_PARALLEL)
+#    IF(VTK_USE_GEOVIS)
+#      ADD_DEPENDENCIES(VTKJavaGeovis VTKJavaWidgets)
+#    ENDIF(VTK_USE_GEOVIS)
+#    IF(VTK_USE_INFOVIS)
+#      ADD_DEPENDENCIES(VTKJavaInfovis VTKJavaWidgets)
+#    ENDIF(VTK_USE_INFOVIS)
+#    IF(VTK_USE_VIEWS)
+#      ADD_DEPENDENCIES(VTKJavaViews VTKJavaInfovis)
+#    ENDIF(VTK_USE_VIEWS)
 
     FOREACH(jfile ${VTK_JAVA_DEPENDENCIES})
+      message("jfile: ${jfile}")
       SET(src ${VTK_SOURCE_DIR}/Wrapping/Java/vtk/${jfile}.java)
       SET(dst ${VTK_JAVA_HOME}/${jfile}.java)
       SET(class ${VTK_JAVA_HOME}/${jfile}.class)
@@ -176,7 +180,7 @@ message("VTK_JAVA_DEPENDENCIES: ${VTK_JAVA_DEPENDENCIES}")
         CONFIGURE_FILE(${src} ${dst} COPYONLY)
       ENDIF(jfile MATCHES "vtkSettings")
 
-      ADD_CUSTOM_COMMAND(
+       ADD_CUSTOM_COMMAND(
         TARGET VTKJavaJar
         SOURCE ${dst}
         OUTPUTS ${class}

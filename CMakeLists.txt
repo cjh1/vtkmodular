@@ -379,7 +379,6 @@ find_file(VTK_WRAP_HINTS hints ${VTK_SOURCE_DIR}/Wrapping
 if(VTK_WRAP_PYTHON)
   set(VTK_WRAP_PYTHON_EXE vtkWrapPython)
   set(VTK_WRAP_PYTHON_INIT_EXE vtkWrapPythonInit)
-  set(VTK_WRAP_HIERARCHY_EXE vtkWrapHierarchy)
   set(VTK_PYTHON_EXE vtkpython)
   # Force the PythonCore module to on if wrapping is on
   set(Module_vtkWrappingPythonCore ON CACHE BOOL "Core Python wrapping library"
@@ -405,6 +404,20 @@ if(VTK_WRAP_JAVA)
   set(VTK_JAVA_JAR ${LIBRARY_OUTPUT_PATH}/vtk.jar)
   set(VTK_JAVA_HOME ${VTK_BINARY_DIR}/java/vtk)
   file(MAKE_DIRECTORY ${VTK_JAVA_HOME})
+endif()
+
+# Now for Tcl wrapping.
+option(VTK_WRAP_TCL "Should VTK Tcl wrapping be built?" OFF)
+if(VTK_WRAP_TCL)
+  set(VTK_WRAP_TCL_EXE vtkWrapTcl)
+  set(VTK_WRAP_TCL_INIT_EXE vtkWrapTclInit)
+  set(VTK_TCL_EXE vtk)
+  # Tcl package location.
+  set(VTK_TCL_HOME ${VTK_BINARY_DIR}/Wrapping/Tcl)
+endif()
+
+if(VTK_WRAP_PYTHON OR VTK_WRAP_TCL OR VTK_WRAP_JAVA)
+  set(VTK_WRAP_HIERARCHY_EXE vtkWrapHierarchy)
 endif()
 
 #----------------------------------------------------------------------

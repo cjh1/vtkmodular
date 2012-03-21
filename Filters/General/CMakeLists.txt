@@ -117,4 +117,12 @@ set(Kit_SRCS
   vtkOverlappingAMRLevelIdScalars.cxx
   )
 
+set_source_files_properties(
+  vtkApproximatingSubdivisionFilter
+  vtkDicer
+  vtkGraphWeightFilter
+  vtkInterpolatingSubdivisionFilter
+  ABSTRACT
+  )
+
 vtk_module_library(vtkFiltersGeneral ${Kit_SRCS})

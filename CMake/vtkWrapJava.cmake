@@ -64,9 +64,12 @@ macro(vtk_wrap_java3 TARGET SRC_LIST_NAME SOURCES)
   FOREACH(FILE ${SOURCES})
     # should we wrap the file?
     get_source_file_property(TMP_WRAP_EXCLUDE ${FILE} WRAP_EXCLUDE)
+    
+    # we don't wrap the headers in Java
+    get_source_file_property(TMP_WRAP_HEADER ${FILE} WRAP_HEADER)
 
     # if we should wrap it
-    IF (NOT TMP_WRAP_EXCLUDE)
+    IF (NOT TMP_WRAP_EXCLUDE AND NOT TMP_WRAP_HEADER)
 
       # what is the filename without the extension
       GET_FILENAME_COMPONENT(TMP_FILENAME ${FILE} NAME_WE)
@@ -145,7 +148,7 @@ macro(vtk_wrap_java3 TARGET SRC_LIST_NAME SOURCES)
           SET(VTK_WRAP_JAVA_CUSTOM_COUNT)
         ENDIF(VTK_WRAP_JAVA_CUSTOM_COUNT MATCHES "^${VTK_WRAP_JAVA_CUSTOM_LIMIT}$")
       ENDIF(VTK_WRAP_JAVA_NEED_CUSTOM_TARGETS)
-    ENDIF (NOT TMP_WRAP_EXCLUDE)
+    ENDIF ()
   ENDFOREACH(FILE)
 
   ADD_CUSTOM_TARGET("${TARGET}JavaClasses" ALL DEPENDS ${VTK_JAVA_DEPENDENCIES})
@@ -177,8 +180,6 @@ ENDIF(CMAKE_GENERATOR MATCHES "^Visual Studio 6$")
 
 MACRO(VTK_GENERATE_JAVA_DEPENDENCIES TARGET)
 
-  message("VTK_GENERATE_JAVA_DEPENDENCIES: ${TARGET}")
-
   SET (javaPath "${VTK_BINARY_DIR}/java")
   IF (USER_JAVA_CLASSPATH)
     SET (javaPath "${USER_JAVA_PATH};${VTK_BINARY_DIR}/java")
@@ -190,7 +191,6 @@ MACRO(VTK_GENERATE_JAVA_DEPENDENCIES TARGET)
 
   # get the classes for this lib
   FOREACH(srcName ${ARGN})
-    message("src: ${srcName}")
     
     # what is the filename without the extension
     GET_FILENAME_COMPONENT(srcNameWe ${srcName} NAME_WE)

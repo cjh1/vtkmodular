@@ -20,7 +20,8 @@ if(VTK_WRAP_JAVA)
   ENDIF(JAVA_AWT_LIBRARY)
   
   include_directories(
-    ${JAVA_INCLUDE_PATH})
+    ${JAVA_INCLUDE_PATH}
+    )
 endif()
 
 function(vtk_add_java_wrapping module_name)
@@ -35,7 +36,25 @@ function(vtk_add_java_wrapping module_name)
   # Force JavaClasses to build in the right order by adding a depenency.
   add_dependencies(vtk${wrap_name}JavaJavaClasses vtk${wrap_name}Java)
 #  SET(KIT_LIBRARY_TARGETS ${KIT_LIBRARY_TARGETS} vtk${wrap_name}Java)
+
+  
   target_link_libraries(vtk${wrap_name}Java ${module_name} vtkWrappingJavaCore)
+  include_directories(${vtkWrappingJavaCore_SOURCE_DIR})
+  
+  if(${module_name} STREQUAL "vtkCommonMath")
+  
+  message("MATH: vtk${wrap_name}Java ${module_name} vtkWrappingJavaCore")
+  message("Depends: ${VTK_MODULE_${module_name}_DEPENDS}")
+    
+  endif()
+  
+  foreach(dep ${VTK_MODULE_${module_name}_DEPENDS})
+    if(NOT VTK_MODULE_${dep}_EXCLUDE_FROM_WRAPPING)
+      target_link_libraries(vtk${wrap_name}Java ${dep}Java)
+    endif()
+  endforeach()
+
+  
 # What this install stuff ...  
 #  IF(NOT VTK_INSTALL_NO_LIBRARIES)
 #    INSTALL(TARGETS vtk${wrap_name}Java

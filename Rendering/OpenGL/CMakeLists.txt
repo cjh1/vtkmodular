@@ -86,6 +86,14 @@ set_source_files_properties(${CMAKE_CURRENT_BINARY_DIR}/vtkgl.cxx
   GENERATED)
 
 set_source_files_properties(
+  vtkImageProcessingPass
+  vtkOpenGLRenderWindow
+  vtkRenderPass
+  vtkRenderState
+  ABSTRACT
+  )
+
+set_source_files_properties(
   vtkLightingHelper
   vtkRenderState
   vtkOpenGLState
@@ -93,6 +101,8 @@ set_source_files_properties(
   vtkShader2Collection
   vtkShaderProgram2
   vtkTextureUnitManager
+  vtkgl
+  vtkRenderingOpenGLObjectFactory
   WRAP_EXCLUDE
   )
 
@@ -220,6 +230,7 @@ foreach(file ${shader_files})
     ARGS ${res} ${src} ${file_we} --build-header VTKRENDERINGOPENGL_EXPORT vtkRenderingOpenGLExport.h
     )
   list(APPEND Kit_SRCS ${res})
+  set_source_files_properties(${res} WRAP_EXCLUDE)
 endforeach()
 
 # Now we need to generate the object factory for this module. Create a list of

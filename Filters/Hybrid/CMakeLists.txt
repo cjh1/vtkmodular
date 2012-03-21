@@ -33,9 +33,7 @@ set(shader_files
 # for vtkStructuredGridLIC2D
 SET( shader_h_files )
 FOREACH( file ${shader_files} )
- 
-  message("@@@@ file=${file}")
- 
+  #message("@@@@ file=${file}")
   GET_FILENAME_COMPONENT(file_we ${file} NAME_WE)
   SET( src ${CMAKE_CURRENT_SOURCE_DIR}/${file} )
   SET( res ${CMAKE_CURRENT_BINARY_DIR}/${file_we}.cxx )
@@ -48,6 +46,7 @@ FOREACH( file ${shader_files} )
     ARGS ${res} ${src} ${file_we} --build-header VTK_HYBRID_EXPORT vtkSystemIncludes.h
     )
   SET( Kit_EXTRA_SRCS ${Kit_EXTRA_SRCS} ${res} )
+  set_source_files_properties(${res} WRAP_EXCLUDE)
 ENDFOREACH( file )
 
 vtk_module_library(vtkFiltersHybrid ${Kit_SRCS})

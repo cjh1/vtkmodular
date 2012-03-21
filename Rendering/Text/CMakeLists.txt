@@ -9,4 +9,11 @@ set(Kit_SRCS
   vtkFreeTypeUtilities.cxx
   vtkFreeTypeTools.cxx
   )
+
+set_source_files_properties(
+  vtkFreeTypeTools
+  vtkFreeTypeUtilities
+  WRAP_EXCLUDE
+  )
+
 vtk_module_library(vtkRenderingText ${Kit_SRCS})

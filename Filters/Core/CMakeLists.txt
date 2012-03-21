@@ -78,4 +78,11 @@ set(Kit_SRCS
   #vtkOutlineFilter.cxx # Needs vtkOutlineSource
   )
 
+set_source_files_properties(
+  vtkEdgeSubdivisionCriterion
+  vtkStreamer
+  vtkStreamerBase
+  ABSTRACT
+  )
+
 vtk_module_library(vtkFiltersCore ${Kit_SRCS})

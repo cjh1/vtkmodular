@@ -39,6 +39,11 @@ if(WIN32)
   list(APPEND Kit_SRCS vtkAVIWriter.cxx)
 endif()
 
+set_source_files_properties(
+  vtkVolumeReader
+  ABSTRACT
+  )
+
 vtk_module_library(vtkIOImage ${Kit_SRCS})
 
 if(WIN32)

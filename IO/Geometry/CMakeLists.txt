@@ -1,4 +1,3 @@
-
 SET(Kit_SRCS
   vtkAVSucdReader.cxx
   vtkBYUReader.cxx
@@ -51,6 +50,12 @@ SET(Kit_SRCS
   vtkShaderCodeLibrary.cxx
 
   vtkXYZMolReader.cxx
+  )
+
+set_source_files_properties(
+  vtkGenericMovieWriter
+  vtkMoleculeReaderBase
+  ABSTRACT
   )
 
 vtk_module_library(vtkIOGeometry ${Kit_SRCS})

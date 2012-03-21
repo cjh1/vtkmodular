@@ -57,4 +57,28 @@ set(Kit_SRCS
   vtkXMLWriter.cxx
   )
 
+set_source_files_properties(
+  vtkXMLCompositeDataReader
+  vtkXMLCompositeDataWriter
+  vtkXMLDataReader
+  vtkXMLPDataReader
+  vtkXMLPDataWriter
+  vtkXMLPStructuredDataReader
+  vtkXMLPStructuredDataWriter
+  vtkXMLPUnstructuredDataReader
+  vtkXMLPUnstructuredDataWriter
+  vtkXMLReader
+  vtkXMLStructuredDataReader
+  vtkXMLStructuredDataWriter
+  vtkXMLUnstructuredDataReader
+  vtkXMLUnstructuredDataWriter
+  vtkXMLWriter
+  ABSTRACT
+  )
+
+set_source_files_properties(
+  vtkXMLWriterC
+  WRAP_EXCLUDE
+  )
+
 vtk_module_library(vtkIOXML ${Kit_SRCS})

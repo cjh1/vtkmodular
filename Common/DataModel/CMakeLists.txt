@@ -1,5 +1,3 @@
-
-# DataModel
 set(Kit_SRCS
   vtkAbstractCellLocator.cxx
   vtkAbstractInterpolatedVelocityField.cxx
@@ -204,6 +202,30 @@ set_source_files_properties(
   vtkCompositeDataIterator
   vtkCompositeDataSet
   vtkAbstractElectronicData
+  vtkDataSet
+  vtkDataSetGhostGenerator
+  vtkDistributedGraphHelper
+  vtkExplicitCell
+  vtkGenericAttribute
+  vtkGenericAdaptorCell
+  vtkGenericCellIterator
+  vtkGenericCellTessellator
+  vtkGenericDataSet
+  vtkGenericPointIterator
+  vtkGenericSubdivisionErrorMetric
+  vtkGraph
+  vtkHyperOctreeCursor
+  vtkHyperOctreePointsGrabber
+  vtkImplicitFunction
+  vtkIncrementalPointLocator
+  vtkInformationQuadratureSchemeDefinitionVectorKey
+  vtkLocator
+  vtkNonLinearCell
+  vtkPointSet
+  vtkSpline
+  vtkStructuredData
+  vtkTreeIterator
+  vtkUniformGridAMR
   ABSTRACT
   )
 
@@ -214,6 +236,8 @@ set_source_files_properties(
   vtkBoundingBox
   vtkMarchingSquaresLineCases
   vtkMarchingCubesTriangleCases
+  vtkImageIterator
+  vtkImageProgressIterator
   vtkTuple
   vtkVector
   vtkColor
