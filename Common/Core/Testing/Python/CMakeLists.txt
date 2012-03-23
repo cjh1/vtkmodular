@@ -13,6 +13,7 @@ if(VTK_PYTHON_EXE)
     TestTerminationCrash
     TestVariant
     TestWeakref
+    TestCommand
     )
     add_test(NAME ${vtk-module}Python-${tfile}
       COMMAND ${VTK_PYTHON_EXE}
