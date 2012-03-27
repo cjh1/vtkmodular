@@ -4,4 +4,8 @@ vtk_module(vtkFiltersGeometry
     vtkCommonDataModel
     vtkCommonExecutionModel
     vtkFiltersCore
+  TEST_DEPENDS
+    vtkIOXML
+    vtkRenderingCore
+    vtkTestingRendering
   DEFAULT ON)

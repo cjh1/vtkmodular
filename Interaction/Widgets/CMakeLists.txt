@@ -61,9 +61,9 @@ SET(Kit_SRCS
   vtkImageOrthoPlanes.cxx
   vtkImagePlaneWidget.cxx
   vtkImageTracerWidget.cxx
-  #vtkImplicitPlaneRepresentation.cxx
-  #vtkImplicitPlaneWidget2.cxx
-  #vtkImplicitPlaneWidget.cxx # Needs vtkOutlineFilter
+  vtkImplicitPlaneRepresentation.cxx
+  vtkImplicitPlaneWidget2.cxx
+  vtkImplicitPlaneWidget.cxx
   vtkLinearContourLineInterpolator.cxx
   vtkLineRepresentation.cxx
   vtkLineWidget2.cxx

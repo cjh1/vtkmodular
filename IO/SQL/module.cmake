@@ -5,4 +5,6 @@ vtk_module(vtkIOSQL
     vtkIOCore
     vtksqlite
     vtksys
+  TEST_DEPENDS
+    vtkTestingIOSQL
   DEFAULT ON)

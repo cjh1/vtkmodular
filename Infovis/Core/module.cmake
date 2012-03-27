@@ -5,4 +5,9 @@ vtk_module(vtkInfovisCore
     vtkCommonSystem
     vtkFiltersCore
     vtkFiltersExtraction
+  TEST_DEPENDS
+    vtkInfovisLayout
+    vtkRenderingCore
+    vtkTestingRendering
+    vtkIOInfovis
   DEFAULT ON)

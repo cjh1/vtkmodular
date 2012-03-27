@@ -8,4 +8,8 @@ vtk_module(vtkIOInfovis
     vtkInfovisCore
     vtklibxml2
     vtksys
+  TEST_DEPENDS
+    vtkInfovisLayout
+    vtkRenderingCore
+    vtkTestingRendering
   DEFAULT ON)

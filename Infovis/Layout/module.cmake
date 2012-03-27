@@ -5,4 +5,9 @@ vtk_module(vtkInfovisLayout
     vtkImagingCore
     vtkFiltersSources
     vtkInfovisCore
+  TEST_DEPENDS
+    vtkRenderingLabel
+    vtkRenderingCore
+    vtkTestingRendering
+    vtkIOInfovis
   DEFAULT ON)

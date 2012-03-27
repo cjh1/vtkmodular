@@ -8,4 +8,7 @@ vtk_module(vtkFiltersExtraction
     vtkCommonMath
     vtkFiltersCore
     vtkFiltersGeneral
+  TEST_DEPENDS
+    vtkRenderingCore
+    vtkTestingRendering
   DEFAULT ON)

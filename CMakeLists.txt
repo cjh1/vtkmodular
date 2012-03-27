@@ -51,7 +51,7 @@ set(VTK_BUILD_SHARED_LIBS ${BUILD_SHARED_LIBS})
 #-----------------------------------------------------------------------------
 # VTK version number.  An even minor number corresponds to releases.
 set(VTK_MAJOR_VERSION 5)
-set(VTK_MINOR_VERSION 9)
+set(VTK_MINOR_VERSION 11)
 set(VTK_BUILD_VERSION 9)
 set(VTK_VERSION
     "${VTK_MAJOR_VERSION}.${VTK_MINOR_VERSION}.${VTK_BUILD_VERSION}")
@@ -106,9 +106,8 @@ set(VTK_INSTALL_INCLUDE_DIR_CM24 ${VTK_INSTALL_INCLUDE_DIR})
 set(VTK_INSTALL_DOXYGEN_DIR_CM24 ${VTK_INSTALL_DATA_DIR}/doxygen)
 
 #-----------------------------------------------------------------------------
-# Load some macros.
-INCLUDE(vtkDependentOption)
-INCLUDE(vtkThirdParty)
+# The third party macros are still used in one or two third party builds.
+include(vtkThirdParty)
 
 #-----------------------------------------------------------------------------
 include(vtkCompilerExtras)
@@ -156,8 +155,38 @@ include(vtkDetermineCompilerFlags)
 add_definitions(-DVTK_IN_VTK)
 
 #-----------------------------------------------------------------------------
+# Configure the default VTK_DATA_ROOT for the location of VTKData.  To get
+# the VTKData repository from git, issue the following command:
+#
+# git clone git://vtk.org/VTKData.git
+#
+# To see the web hosted repository, visit http://vtk.org/VTKData.git
+FIND_PATH(VTK_DATA_ROOT VTKData.readme
+  ${VTK_SOURCE_DIR}/VTKData
+  ${VTK_SOURCE_DIR}/../VTKData
+  ${VTK_SOURCE_DIR}/../../VTKData
+  $ENV{VTK_DATA_ROOT}
+  DOC "The repository for data used for testing.  To obtain from git: \"git clone git://vtk.org/VTKData.git\""
+  )
+
+#-----------------------------------------------------------------------------
+# Configure the default VTK_LARGE_DATA_ROOT for the location of VTKLargeData.
+# To get the VTKLargeData repository from git, issue the following command:
+#
+# git clone git://vtk.org/VTKLargeData.git
+#
+# To see the web hosted repository, visit http://vtk.org/VTKLargeData.git
+FIND_PATH(VTK_LARGE_DATA_ROOT VTKLargeData.readme
+  ${VTK_SOURCE_DIR}/VTKLargeData
+  ${VTK_SOURCE_DIR}/../VTKLargeData
+  ${VTK_SOURCE_DIR}/../../VTKLargeData
+  $ENV{VTK_LARGE_DATA_ROOT}
+  DOC "The repository for large data used for testing.  To obtain from git: \"git clone git://vtk.org/VTKLargeData.git\""
+  )
+
+#-----------------------------------------------------------------------------
 # Platform configuration tests.
-INCLUDE (TestBigEndian)
+include(TestBigEndian)
 TEST_BIG_ENDIAN(CMAKE_WORDS_BIGENDIAN)
 
 include(FindThreads)
@@ -220,97 +249,12 @@ IF(VTK_USE_RENDERING AND WIN32)
 ENDIF(VTK_USE_RENDERING AND WIN32)
 
 #-----------------------------------------------------------------------------
-# Configure KWSys to be named "vtksys".
-SET(KWSYS_NAMESPACE vtksys)
-SET(KWSYS_USE_Base64 1)
-SET(KWSYS_USE_CommandLineArguments 1)
-SET(KWSYS_USE_DynamicLoader 1)
-SET(KWSYS_USE_Process 1)
-SET(KWSYS_USE_RegularExpression 1)
-SET(KWSYS_USE_SystemTools 1)
-SET(KWSYS_USE_SystemInformation 1)
-SET(KWSYS_USE_FundamentalType 1)
-SET(KWSYS_USE_MD5 1)
-SET(KWSYS_USE_Glob 1)
-SET(KWSYS_USE_DateStamp 1)
-SET(KWSYS_HEADER_ROOT ${VTK_BINARY_DIR}/Utilities)
-SET(KWSYS_PROPERTIES_CXX ${VTK_LIBRARY_PROPERTIES})
-SET(KWSYS_INSTALL_EXPORT_NAME ${VTK_INSTALL_EXPORT_NAME})
-
-IF(NOT VTK_USE_ANSI_STDLIB)
-  SET(KWSYS_IOS_FORCE_OLD 1)
-ENDIF(NOT VTK_USE_ANSI_STDLIB)
-
-if(NOT VTK_INSTALL_NO_LIBRARIES)
-  set(KWSYS_LIBRARY_INSTALL_DIR ${VTK_INSTALL_LIB_DIR})
-  set(KWSYS_INSTALL_BIN_DIR ${VTK_INSTALL_BIN_DIR_CM24})
-  set(KWSYS_INSTALL_LIB_DIR ${VTK_INSTALL_LIB_DIR_CM24})
-  set(KWSYS_INSTALL_COMPONENT_NAME_RUNTIME RuntimeLibraries)
-endif()
-if(NOT VTK_INSTALL_NO_DEVELOPMENT)
-  set(KWSYS_INSTALL_INCLUDE_DIR ${VTK_INSTALL_INCLUDE_DIR_CM24})
-  set(KWSYS_INSTALL_COMPONENT_NAME_DEVELOPMENT Development)
-endif()
-
-#-----------------------------------------------------------------------------
 # Dispatch the build into the proper subdirectories.
-
-
 SET(VTK_HAS_EXODUS 1)
 
 #-----------------------------------------------------------------------------
 # Provide a few configuration options.
 OPTION(BUILD_EXAMPLES "Build VTK examples." OFF)
-
-MARK_AS_ADVANCED(VTK_OPENGL_HAS_OSMESA
-                 VTK_USE_OFFSCREEN
-                 VTK_USE_TK
-                 VTK_USE_GL2PS
-                 VTK_USE_MANGLED_MESA
-                 VTK_USE_MATROX_IMAGING
-                 VTK_USE_MPI
-                 VTK_USE_PARALLEL_BGL)
-
-#-----------------------------------------------------------------------------
-# Configure OpenGL support.
-IF(VTK_USE_RENDERING)
-  # At the moment CMake's FindOpenGL considers OpenGL should be found
-  # in the framework version on OSX. This is a reasonable assumption for
-  # few people are going to use X. The module warns that if X is to be
-  # used, one has to set the libs and include dir manually, which is
-  # exactly what we are going to do below.
-  IF(APPLE AND VTK_USE_X)
-    FIND_PATH(OPENGL_INCLUDE_DIR GL/gl.h
-      /usr/X11R6/include)
-    FIND_PATH(OPENGL_xmesa_INCLUDE_DIR GL/xmesa.h
-      /usr/X11R6/include)
-    FIND_LIBRARY(OPENGL_gl_LIBRARY NAMES GL MesaGL
-      PATHS /usr/lib /usr/local/lib /usr/X11R6/lib)
-    FIND_LIBRARY(OPENGL_glu_LIBRARY NAMES GLU MesaGLU
-      PATHS ${OPENGL_gl_LIBRARY} /usr/lib /usr/local/lib /usr/X11R6/lib)
-  ENDIF(APPLE AND VTK_USE_X)
-  FIND_PACKAGE(OpenGL)
-
-  FIND_PACKAGE(DirectX QUIET)
-    if(DirectX_FOUND)
-      set(VTK_USE_DIRECTX 1)
-  endif(DirectX_FOUND)
-
-  find_package(ApplicationServices)
-  find_package(IOKit)
-  if(ApplicationServices_FOUND AND IOKit_FOUND)
-    set(VTK_USE_CORE_GRAPHICS 1)
-  endif(ApplicationServices_FOUND AND IOKit_FOUND)
-
-  if(VTK_USE_X)
-    option(VTK_USE_NVCONTROL "Use NVIDIAs X server extension NVCONTROL." OFF)
-     if(VTK_USE_NVCONTROL)
-       find_package(NVCtrlLib REQUIRED)
-     endif(VTK_USE_NVCONTROL)
-     mark_as_advanced(VTK_USE_NVCONTROL)
-  endif(VTK_USE_X)
-
-ENDIF(VTK_USE_RENDERING)
 
 IF(VTK_USE_MPI)
   FIND_PACKAGE(MPI)
@@ -407,6 +351,9 @@ if(VTK_WRAP_JAVA)
   set(VTK_JAVA_JAR ${LIBRARY_OUTPUT_PATH}/vtk.jar)
   set(VTK_JAVA_HOME ${VTK_BINARY_DIR}/java/vtk)
   file(MAKE_DIRECTORY ${VTK_JAVA_HOME})
+else()
+  set(Module_vtkWrappingJavaCore OFF CACHE BOOL "Core Java wrapping library"
+    FORCE)
 endif()
 
 # Now for Tcl wrapping.
@@ -421,17 +368,20 @@ endif()
 
 if(VTK_WRAP_PYTHON OR VTK_WRAP_TCL OR VTK_WRAP_JAVA)
   set(VTK_WRAP_HIERARCHY_EXE vtkWrapHierarchy)
-  add_subdirectory(Wrapping)
 endif()
 
 #----------------------------------------------------------------------
 # Load the module DAG.
 include(VTKModuleTop)
 
+# The wrapping must come after all other modules are processed.
+if(VTK_WRAP_PYTHON OR VTK_WRAP_TCL OR VTK_WRAP_JAVA)
+  add_subdirectory(Wrapping)
+endif()
+
 if(VTK_WRAP_JAVA)
   add_subdirectory(Wrapping/Java)
 endif()
-
 
 #-----------------------------------------------------------------------------
 # The commands in this directory are intended to be executed as

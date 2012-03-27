@@ -8,4 +8,8 @@ vtk_module(vtkIOXML
     vtkIOGeometry
     vtkexpat
     vtksys
+  TEST_DEPENDS
+    vtkImagingCore
+    vtkFiltersSources
+    vtkFiltersCore
   DEFAULT ON)

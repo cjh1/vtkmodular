@@ -5,4 +5,7 @@ vtk_module(vtkIOLSDyna
     vtkIOXML
   COMPILE_DEPENDS
     vtkCommonCore
+  TEST_DEPENDS
+    vtkRenderingCore
+    vtkTestingRendering
   DEFAULT ON)

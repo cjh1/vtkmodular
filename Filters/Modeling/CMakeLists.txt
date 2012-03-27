@@ -20,6 +20,7 @@ set(Kit_SRCS
   vtkSpherePuzzleArrows.cxx
   vtkSpherePuzzle.cxx
   vtkSubdivideTetra.cxx
+  vtkOutlineFilter.cxx
   )
 
 set_source_files_properties(

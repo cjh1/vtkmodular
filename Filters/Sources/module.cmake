@@ -8,4 +8,6 @@ vtk_module(vtkFiltersSources
     vtkCommonComputationalGeometry
     vtkFiltersCore
     vtkFiltersGeneral
+  TEST_DEPENDS
+    vtkIOXML
   DEFAULT ON)

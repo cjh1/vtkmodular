@@ -28,7 +28,7 @@
       TestMultipleChartRenderers.cxx
       TestMultipleRenderers.cxx
       TestMultipleScalarsToColors.cxx
-      #TestParallelCoordinates.cxx
+      TestParallelCoordinates.cxx
       TestPieChart.cxx
       TestPlotMatrix.cxx
       TestScalarsToColors.cxx

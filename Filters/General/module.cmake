@@ -9,4 +9,8 @@ vtk_module(vtkFiltersGeneral
     vtkCommonMath
     vtkCommonComputationalGeometry
     vtkFiltersCore
+  TEST_DEPENDS
+    vtkRenderingCore
+    vtkRenderingAnnotation
+    vtkTestingRendering
   DEFAULT ON)

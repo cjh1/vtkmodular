@@ -47,14 +47,14 @@ SET(RenderingTestsWithArguments
   #TestLabelPlacementMapper2D.cxx
   #TestLabelPlacementMapperCoincidentPoints.cxx
   TestLightActor.cxx
-  #TestLODActor.cxx
+  TestLODActor.cxx
   TestManyActors.cxx
   TestOffAxisStereo.cxx
   TestOrderedTriangulator.cxx
   TestOpacity.cxx
   TestOpenGLPolyDataMapper.cxx
   TestOSConeCxx.cxx
-  #TestPOVExporter.cxx
+  TestPOVExporter.cxx
   TestResetCameraVerticalAspectRatio.cxx
   TestResetCameraVerticalAspectRatioParallel.cxx
   #TestSetImageOrientation.cxx

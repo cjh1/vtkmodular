@@ -4,13 +4,7 @@ set(_VTKModuleMacros_DEFAULT_LABEL "VTKModular")
 
 include(${_VTKModuleMacros_DIR}/VTKModuleAPI.cmake)
 include(GenerateExportHeader)
-if(VTK_WRAP_PYTHON)
-  include(vtkWrapping)
-endif()
-
-if(VTK_WRAP_JAVA)
-  include(vtkJavaWrapping)
-endif()
+include(vtkWrapping)
 
 macro(vtk_module _name)
   vtk_module_check_name(${_name})
@@ -216,7 +210,28 @@ macro(vtk_target _name)
 endmacro()
 
 function(vtk_add_library name)
-  add_library(${name} ${ARGN})
+  # compute and add header files to the target if they exist
+  set(${vtk-module}_HEADERS)
+  foreach(FILE ${ARGN})
+    get_filename_component(TMP_FILENAME ${FILE} EXT)
+    if(NOT "${EXT}" STREQUAL ".h")
+      # what is the filename without the extension
+      get_filename_component(TMP_FILENAME ${FILE} NAME_WE)
+      # the input file might be full path so handle that
+      get_filename_component(TMP_FILEPATH ${FILE} PATH)
+      # compute the input filename
+      if(TMP_FILEPATH)
+        set(TMP_INPUT ${TMP_FILEPATH}/${TMP_FILENAME}.h)
+      else()
+        set(TMP_INPUT ${CMAKE_CURRENT_SOURCE_DIR}/${TMP_FILENAME}.h)
+      endif()
+      if(EXISTS "${TMP_INPUT}")
+        list(APPEND ${vtk-module}_HEADERS "${TMP_INPUT}")
+      endif()
+    endif()
+  endforeach()
+  # add the library with the additional headers
+  add_library(${name} ${ARGN} ${${vtk-module}_HEADERS})
   vtk_target(${name})
 endfunction()
 
@@ -254,14 +269,10 @@ function(vtk_module_library name)
   set_property(TARGET ${vtk-module} APPEND
     PROPERTY COMPILE_FLAGS "${VTK_ABI_CXX_FLAGS}")
 
-  if(VTK_WRAP_PYTHON AND NOT VTK_MODULE_${vtk-module}_EXCLUDE_FROM_WRAPPING)
-    vtk_add_python_wrapping(${vtk-module})
-  endif()
+  # Add the module to the list of wrapped modules if necessary
+  vtk_add_wrapping(${vtk-module} "${ARGN}")
 
-  if(VTK_WRAP_JAVA AND NOT VTK_MODULE_${vtk-module}_EXCLUDE_FROM_WRAPPING)
-    vtk_add_java_wrapping(${vtk-module})
-  endif()
-
+  # Figure out which headers to install.
   if(NOT VTK_INSTALL_NO_DEVELOPMENT)
     set(_hdrs)
     foreach(arg ${ARGN})
@@ -273,6 +284,7 @@ function(vtk_module_library name)
         endif()
       endif()
     endforeach()
+    list(APPEND _hdrs "${CMAKE_CURRENT_BINARY_DIR}/${vtk-module}Export.h")
     if(_hdrs)
       list(REMOVE_DUPLICATES _hdrs)
       install(FILES ${_hdrs}
@@ -286,8 +298,6 @@ endfunction()
 macro(vtk_module_third_party _pkg)
   string(TOLOWER "${_pkg}" _lower)
   string(TOUPPER "${_pkg}" _upper)
-
-  message("Processing TPL: ${_pkg}")
 
   set(_includes "")
   set(_libs "")

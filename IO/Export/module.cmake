@@ -6,4 +6,6 @@ vtk_module(vtkIOExport
     vtkImagingCore
     vtkIOCore
     vtkgl2ps
+  TEST_DEPENDS
+    vtkTestingRendering
   DEFAULT ON)

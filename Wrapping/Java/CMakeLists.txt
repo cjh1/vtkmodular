@@ -126,7 +126,7 @@ SET(VTK_JAVA_DEPENDENCIES
     
 set(VTK_JAVA_SAMPLE_DEPENDENCIES)
     
-if(VTK_MODULE_vtkRenderingCore_ENABLED)
+if(vtkRenderingCore_ENABLED)
   set(VTK_JAVA_DEPENDENCIES ${VTK_JAVA_DEPENDENCIES}
     vtkJavaTesting
     AxesActor
@@ -134,21 +134,25 @@ if(VTK_MODULE_vtkRenderingCore_ENABLED)
     )
 endif()
     
-if(VTK_MODULE_vtkInteractionWidgets_ENABLED)
+if(vtkInteractionWidgets_ENABLED)
   set(VTK_JAVA_DEPENDENCIES ${VTK_JAVA_DEPENDENCIES}
     vtkCanvas)
 endif()
     
-if(VTK_MODULE_vtkRenderingCore_ENABLED AND VTK_MODULE_vtkIOImage_ENABLED)
+if(vtkRenderingCore_ENABLED AND vtkIOImage_ENABLED)
   set(VTK_JAVA_DEPENDENCIES ${VTK_JAVA_DEPENDENCIES}
     vtkPanel)
   set(VTK_JAVA_SAMPLE_DEPENDENCIES ${VTK_JAVA_SAMPLE_DEPENDENCIES}
-    ImagePlaneWidget
     InternalFrames
     Demo
     SimpleVTK
     VTKCanvas
     ReleaseVtkPanel)    
+endif()
+
+if(vtkFiltersModeling_ENABLED AND vtkIOImage_ENABLED)
+  set(VTK_JAVA_SAMPLE_DEPENDENCIES ${VTK_JAVA_SAMPLE_DEPENDENCIES}
+    ImagePlaneWidget)
 endif()
         
 FOREACH(jfile ${VTK_JAVA_DEPENDENCIES})

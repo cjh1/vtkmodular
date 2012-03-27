@@ -74,8 +74,6 @@ set(Kit_SRCS
   vtkCenterOfMass.cxx
 
   vtkGhostArray.cxx
-
-  #vtkOutlineFilter.cxx # Needs vtkOutlineSource
   )
 
 set_source_files_properties(

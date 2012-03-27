@@ -9,4 +9,8 @@ vtk_module(vtkIOGeometry
     vtksys
   COMPILE_DEPENDS
     vtkUtilitiesMaterialLibrary
+  TEST_DEPENDS
+    vtkFiltersGeometry
+    vtkRenderingCore
+    vtkTestingRendering
   DEFAULT ON)

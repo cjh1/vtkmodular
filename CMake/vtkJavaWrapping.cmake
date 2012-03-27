@@ -21,13 +21,15 @@ if(VTK_WRAP_JAVA)
   
   include_directories(
     ${JAVA_INCLUDE_PATH}
+    ${JAVA_INCLUDE_PATH2}
     )
 endif()
 
-function(vtk_add_java_wrapping module_name)
+function(vtk_add_java_wrapping module_name module_srcs)
 
-  get_target_property(module_srcs ${module_name} SOURCES)
   string(REGEX REPLACE "^vtk" "" wrap_name "${module_name}")
+  # FIXME: These must be here for now, should be fixed in the wrap hierarchy stuff
+  set(KIT_HIERARCHY_FILE ${CMAKE_CURRENT_BINARY_DIR}/${module_name}Hierarchy.txt)
 
   vtk_wrap_java3(vtk${wrap_name}Java ModuleJava_SRCS "${module_srcs};${Kit_JAVA_EXTRA_WRAP_SRCS}")
 

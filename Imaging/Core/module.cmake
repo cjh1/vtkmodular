@@ -7,4 +7,12 @@ vtk_module(vtkImagingCore
     vtkCommonMath
     vtkCommonComputationalGeometry
     vtkCommonExecutionModel
+  TEST_DEPENDS
+    vtkFiltersCore
+    vtkFiltersModeling
+    vtkFiltersGeneral
+    vtkFiltersHybrid
+    vtkRenderingCore
+    vtkTestingRendering
+    vtkInteractionStyle
   DEFAULT ON)

@@ -1,5 +1,25 @@
 create_test_sourcelist(Tests ${vtk-module}CxxTests.cxx
   TestGraphWeightEuclideanDistanceFilter.cxx
+  BoxClipPolyData.cxx
+  BoxClipTetrahedra.cxx
+  BoxClipTriangulate.cxx
+  BoxClipTriangulateAndInterpolate.cxx
+  # TestBSPTree.cxx               # todo (unsatistfied deps)
+  TestBooleanOperationPolyDataFilter.cxx
+  TestBooleanOperationPolyDataFilter2.cxx
+  TestDensifyPolyData.cxx
+  TestDistancePolyDataFilter.cxx
+  TestGradientAndVorticity.cxx
+  TestIconGlyphFilterGravity.cxx
+  TestImageDataToPointSet.cxx
+  TestIntersectionPolyDataFilter.cxx
+  # TestMultiBlock.cxx            # todo (unsatistfied deps)
+  TestQuadraturePoints.cxx
+  TestRectilinearGridToPointSet.cxx
+  TestReflectionFilter.cxx
+  TestUncertaintyTubeFilter.cxx
+  TestYoungsMaterialInterface.cxx
+
   EXTRA_INCLUDE vtkTestDriver.h
 )
 

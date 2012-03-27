@@ -13,6 +13,11 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/vtkPythonConfigure.h.in
   ${CMAKE_CURRENT_BINARY_DIR}/vtkPythonConfigure.h)
 
+# Get our lists of modules to be wrapped, create a list of uniques that need to
+# have wrap hierarchy run on them too.
+get_property(_python_modules GLOBAL PROPERTY VTK_PYTHON_WRAPPED)
+get_property(_java_modules GLOBAL PROPERTY VTK_JAVA_WRAPPED)
+
 if(NOT CMAKE_CROSSCOMPILING)
   if(VTK_WRAP_TCL OR VTK_WRAP_PYTHON OR VTK_WRAP_JAVA)
     add_executable(vtkWrapHierarchy vtkParse.tab.c vtkParsePreprocess.c
@@ -23,6 +28,7 @@ if(NOT CMAKE_CROSSCOMPILING)
     if(COMPILE_TOOLS_TARGET)
       add_dependencies(${COMPILE_TOOLS_TARGET} vtkWrapHierarchy)
     endif()
+
     if(NOT VTK_INSTALL_NO_DEVELOPMENT)
     #  INSTALL(TARGETS vtkWrapHierarchy
     #    RUNTIME DESTINATION ${VTK_INSTALL_BIN_DIR_CM24} COMPONENT Development)
@@ -42,14 +48,15 @@ if(NOT CMAKE_CROSSCOMPILING)
   endif()
 
   if(VTK_WRAP_PYTHON)
-    find_package(PythonLibs REQUIRED)
+    set(VTK_WRAP_PYTHON_FIND_LIBS ON)
+    include(vtkWrapPython)
     include_directories("${PYTHON_INCLUDE_PATH}"
       "${CMAKE_CURRENT_SOURCE_DIR}/PythonCore"
       "${CMAKE_CURRENT_BINARY_DIR}/PythonCore")
 
     add_executable(vtkWrapPython vtkWrapPython.c vtkWrap.c vtkWrapText.c
-                       vtkParseMain.c vtkParse.tab.c vtkParsePreprocess.c
-                       vtkParseExtras.c vtkParseHierarchy.c)
+                   vtkParseMain.c vtkParse.tab.c vtkParsePreprocess.c
+                   vtkParseExtras.c vtkParseHierarchy.c)
     add_executable(vtkWrapPythonInit vtkWrapPythonInit.c)
     target_link_libraries(vtkWrapPython ${VTK_PYTHON_LIBRARIES})
     export(TARGETS vtkWrapPython vtkWrapPythonInit
@@ -62,9 +69,9 @@ if(NOT CMAKE_CROSSCOMPILING)
 
   if(VTK_WRAP_JAVA)
     add_executable(vtkParseJava vtkParseJava.c vtkParseMain.c vtkParse.tab.c
-                       vtkParsePreprocess.c vtkParseExtras.c vtkParseHierarchy.c)
+                   vtkParsePreprocess.c vtkParseExtras.c vtkParseHierarchy.c)
     add_executable(vtkWrapJava vtkWrapJava.c vtkParseMain.c vtkParse.tab.c
-                       vtkParsePreprocess.c vtkParseExtras.c vtkParseHierarchy.c)
+                   vtkParsePreprocess.c vtkParseExtras.c vtkParseHierarchy.c)
     export(TARGETS vtkParseJava vtkWrapJava
       FILE ${EXPORT_EXECUTABLES_FILE}
       NAMESPACE "${EXPORT_EXECUTABLES_NAMESPACE}" APPEND)
@@ -77,4 +84,8 @@ endif()
 
 if(VTK_WRAP_PYTHON)
   add_subdirectory(Python)
+endif()
+
+if(VTK_WRAP_TCL)
+  add_subdirectory(Tcl)
 endif()

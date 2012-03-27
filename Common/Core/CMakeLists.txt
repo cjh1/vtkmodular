@@ -369,6 +369,11 @@ set_source_files_properties(
   vtkRandomSequence
   vtkScalarsToColors
   vtkWindow
+  # Not sure if this is the correct place for them - Tcl wrapping
+  vtkSystemIncludes
+  vtkMathConfigure
+  vtkType
+  vtkConfigure
   ABSTRACT
   )
 

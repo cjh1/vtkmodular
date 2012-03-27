@@ -7,4 +7,8 @@ vtk_module(vtkFiltersHybrid
     vtkFiltersGeneral
   COMPILE_DEPENDS
     vtkUtilitiesEncodeString
+  TEST_DEPENDS
+    vtkImagingCore
+    vtkRenderingCore
+    vtkTestingRendering
   DEFAULT ON)

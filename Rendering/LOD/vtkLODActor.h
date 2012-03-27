@@ -52,6 +52,7 @@
 #ifndef __vtkLODActor_h
 #define __vtkLODActor_h
 
+#include "vtkRenderingLODExport.h" // For export macro
 #include "vtkActor.h"
 
 class vtkMapper;
@@ -62,7 +63,7 @@ class vtkRenderer;
 class vtkViewport;
 class vtkWindow;
 
-class VTK_RENDERING_EXPORT vtkLODActor : public vtkActor
+class VTKRENDERINGLOD_EXPORT vtkLODActor : public vtkActor
 {
 public:
   vtkTypeMacro(vtkLODActor,vtkActor);

@@ -230,7 +230,7 @@ foreach(file ${shader_files})
     ARGS ${res} ${src} ${file_we} --build-header VTKRENDERINGOPENGL_EXPORT vtkRenderingOpenGLExport.h
     )
   list(APPEND Kit_SRCS ${res})
-  set_source_files_properties(${res} WRAP_EXCLUDE)
+  set_source_files_properties(${file_we} WRAP_EXCLUDE)
 endforeach()
 
 # Now we need to generate the object factory for this module. Create a list of
@@ -252,12 +252,18 @@ set(opengl_overrides
   LightingPainter
   PainterDeviceAdapter
   Property
-  PolyDataMapper
   Renderer
   RepresentationPainter
   ScalarsToColorsPainter
   Texture
+  # Some from the vtkImagingFactory class
+  ImageMapper
+  PolyDataMapper2D
   )
+
+# Some that do not follow the naming scheme...
+list(APPEND vtk_module_overrides "vtkPolyDataMapper")
+set(vtk_module_vtkPolyDataMapper_override "vtkPainterPolyDataMapper")
 
 # FIXME: Not sure that this is the best way to handle X...
 if(VTK_USE_X)

@@ -7,4 +7,10 @@ vtk_module(vtkIONetCDF
     vtksys
   COMPILE_DEPENDS
     vtknetcdf
+  TEST_DEPENDS
+    vtkCommonCore
+    vtkCommonDataModel
+    vtkCommonExecutionModel
+    vtkRenderingCore
+    vtkTestingRendering
   DEFAULT ON)

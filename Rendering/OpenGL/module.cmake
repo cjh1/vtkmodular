@@ -17,4 +17,6 @@ vtk_module(vtkRenderingOpenGL
     vtkRenderingText
     vtkInteractionStyle
     vtkTestingRendering
+    vtkIOExport
+    vtkRenderingLOD
   DEFAULT ON)

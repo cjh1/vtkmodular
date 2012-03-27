@@ -5,7 +5,7 @@ set(module_SRCS
   vtkChartHistogram2D.cxx
   vtkChartLegend.cxx
   vtkChartMatrix.cxx
-  #vtkChartParallelCoordinates.cxx
+  vtkChartParallelCoordinates.cxx
   vtkChartPie.cxx
   vtkChartXY.cxx
   vtkChartXYZ.cxx
@@ -25,7 +25,7 @@ set(module_SRCS
   vtkPlotGrid.cxx
   vtkPlotHistogram2D.cxx
   vtkPlotLine.cxx
-  #vtkPlotParallelCoordinates.cxx
+  vtkPlotParallelCoordinates.cxx # This adds a vtkInfovisCore dep for one class...
   vtkPlotPie.cxx
   vtkPlotPoints.cxx
   vtkPlotStacked.cxx
