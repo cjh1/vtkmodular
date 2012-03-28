@@ -89,7 +89,7 @@ CONFIGURE_FILE(${VTK_SOURCE_DIR}/Wrapping/Java/vtk/vtkSettings.java.in
 
 ADD_CUSTOM_COMMAND(
   TARGET VTKBuildAll
-  OUTPUTS ${VTK_BINARY_DIR}/java/vtk/vtkBuildAllDriver.class
+  OUTPUTS ${VTK_BINARY_DIR}/java/vtkBuildAllDriver.class
   DEPENDS ${VTK_BUILD_ALL_DEPENDS}
   SOURCE ${VTK_BINARY_DIR}/java/vtk/vtkBuildAllDriver.java
   COMMAND ${JAVA_COMPILE}
@@ -100,7 +100,7 @@ ADD_CUSTOM_COMMAND(
 ADD_CUSTOM_COMMAND(
   TARGET VTKBuildAll
   SOURCE VTKBuildAll
-  DEPENDS ${VTK_BINARY_DIR}/java/vtk/vtkBuildAllDriver.class
+  DEPENDS ${VTK_BINARY_DIR}/java/vtkBuildAllDriver.class
   )
 
 ADD_DEPENDENCIES(VTKJavaJar VTKBuildAll)

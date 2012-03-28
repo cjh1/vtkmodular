@@ -35,12 +35,13 @@
 #ifndef __vtkPExtractHistogram2D_h
 #define __vtkPExtractHistogram2D_h
 
+#include "vtkInfovisNeedAHomeExport.h" // For export macro
 #include "vtkExtractHistogram2D.h"
 
 class vtkMultiBlockDataSet;
 class vtkMultiProcessController;
 
-class VTK_INFOVIS_EXPORT vtkPExtractHistogram2D : public vtkExtractHistogram2D
+class VTKINFOVISNEEDAHOME_EXPORT vtkPExtractHistogram2D : public vtkExtractHistogram2D
 {
 public:
   static vtkPExtractHistogram2D* New();

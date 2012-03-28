@@ -57,9 +57,10 @@
 #ifndef __vtkPassArrays_h
 #define __vtkPassArrays_h
 
+#include "vtkInfovisNeedAHomeExport.h" // For export macro
 #include "vtkDataObjectAlgorithm.h"
 
-class VTK_INFOVIS_EXPORT vtkPassArrays : public vtkDataObjectAlgorithm
+class VTKINFOVISNEEDAHOME_EXPORT vtkPassArrays : public vtkDataObjectAlgorithm
 {
 public:
   static vtkPassArrays* New();

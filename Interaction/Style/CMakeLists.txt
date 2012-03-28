@@ -16,6 +16,7 @@ set(Kit_SRCS
   vtkInteractorStyleUser.cxx
 
   vtkInteractorStyleSwitch.cxx
+  vtkParallelCoordinatesInteractorStyle.cxx
   )
 
 vtk_module_library(vtkInteractionStyle ${Kit_SRCS})

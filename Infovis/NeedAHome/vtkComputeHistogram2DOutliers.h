@@ -45,6 +45,7 @@
 #ifndef __vtkComputeHistogram2DOutliers_h
 #define __vtkComputeHistogram2DOutliers_h
 //------------------------------------------------------------------------------
+#include "vtkInfovisNeedAHomeExport.h" // For export macro
 #include "vtkSelectionAlgorithm.h"
 
 //------------------------------------------------------------------------------
@@ -54,7 +55,7 @@ class vtkIdTypeArray;
 class vtkImageData;
 class vtkTable;
 //------------------------------------------------------------------------------
-class VTK_INFOVIS_EXPORT vtkComputeHistogram2DOutliers : public vtkSelectionAlgorithm
+class VTKINFOVISNEEDAHOME_EXPORT vtkComputeHistogram2DOutliers : public vtkSelectionAlgorithm
 {
 public:
   static vtkComputeHistogram2DOutliers* New();

@@ -24,10 +24,10 @@ PURPOSE.  See the above copyright notice for more information.
 #ifndef __vtkSectorSource_h
 #define __vtkSectorSource_h
 
-#include "vtkFiltersSourcesExport.h" // For export macro
+#include "vtkFiltersModelingExport.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
 
-class VTKFILTERSSOURCES_EXPORT vtkSectorSource : public vtkPolyDataAlgorithm
+class VTKFILTERSMODELING_EXPORT vtkSectorSource : public vtkPolyDataAlgorithm
 {
 public:
   static vtkSectorSource *New();

@@ -33,9 +33,10 @@
 #ifndef __vtkMatricizeArray_h
 #define __vtkMatricizeArray_h
 
+#include "vtkInfovisNeedAHomeExport.h" // For export macro
 #include "vtkArrayDataAlgorithm.h"
 
-class VTK_INFOVIS_EXPORT vtkMatricizeArray : public vtkArrayDataAlgorithm
+class VTKINFOVISNEEDAHOME_EXPORT vtkMatricizeArray : public vtkArrayDataAlgorithm
 {
 public:
   static vtkMatricizeArray* New();

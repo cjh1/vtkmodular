@@ -29,9 +29,10 @@
 #ifndef __vtkExtractArray_h
 #define __vtkExtractArray_h
 
+#include "vtkInfovisNeedAHomeExport.h" // For export macro
 #include "vtkArrayDataAlgorithm.h"
 
-class VTK_INFOVIS_EXPORT vtkExtractArray : public vtkArrayDataAlgorithm
+class VTKINFOVISNEEDAHOME_EXPORT vtkExtractArray : public vtkArrayDataAlgorithm
 {
 public:
   static vtkExtractArray* New();

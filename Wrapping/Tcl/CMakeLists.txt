@@ -63,7 +63,12 @@ IF (WIN32)
   ENDIF (NOT BORLAND)
 ENDIF (WIN32)
 
-include_directories(${CMAKE_CURRENT_BINARY_DIR})
+find_package(TCL)
+
+include_directories(
+  ${CMAKE_CURRENT_BINARY_DIR}
+  ${TCL_INCLUDE_PATH}
+  )
 
 # Create the vtk Tcl wrapper executable.
 VTK_ADD_EXECUTABLE(vtk vtkTkAppInit.cxx ${VTK_EXE_RESOURCE_FILES})

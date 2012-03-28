@@ -1,6 +1,7 @@
 vtk_module(vtkVPIC
   DEPENDS
-    vtkCommonCore
-    vtksys
+  vtkCommonCore
+  vtkParallelMPI
+  vtksys
   EXCLUDE_FROM_WRAPPING
   )

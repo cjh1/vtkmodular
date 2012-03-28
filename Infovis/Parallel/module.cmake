@@ -7,5 +7,7 @@ vtk_module(vtkInfovisParallel
   DEPENDS
     vtkInfovisCore
     vtkCommonExecutionModel
+    vtkParallelMPI
+    vtkFiltersParallel
   ${_EXCLUDE_FROM_ALL}
   DEFAULT OFF)

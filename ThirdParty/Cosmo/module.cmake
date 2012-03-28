@@ -1,5 +1,6 @@
 vtk_module(vtkCosmo
   DEPENDS
-    vtkCommonCore
+  vtkCommonCore
+  vtkParallelMPI
   EXCLUDE_FROM_WRAPPING
   )

@@ -3,7 +3,7 @@ vtk_module(vtkInfovisLayout
     vtkCommonCore
     vtkCommonExecutionModel
     vtkImagingCore
-    vtkFiltersSources
+    vtkFiltersModeling
     vtkInfovisCore
   TEST_DEPENDS
     vtkRenderingLabel

@@ -24,12 +24,6 @@
 #include "vtkVersion.h"
 #include "Wrapping/Python/vtkPythonAppInitConfigure.h"
 
-#if defined(CMAKE_INTDIR)
-# define VTK_PYTHON_LIBRARY_DIR VTK_PYTHON_LIBRARY_DIR_BUILD "/" CMAKE_INTDIR
-#else
-# define VTK_PYTHON_LIBRARY_DIR VTK_PYTHON_LIBRARY_DIR_BUILD
-#endif
-
 #include <sys/stat.h>
 
 #include <string>

@@ -20,7 +20,6 @@ set(Kit_SRCS
   vtkCameraPass.cxx
   vtkClearZPass.cxx
   vtkColorMaterialHelper.cxx
-  #vtkCoreGraphicsGPUInfoList.cxx # Mac specific
   vtkDataTransferHelper.cxx
   vtkDefaultPass.cxx
   vtkDepthPeelingPass.cxx

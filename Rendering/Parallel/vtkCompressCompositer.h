@@ -27,13 +27,14 @@
 #ifndef __vtkCompressCompositer_h
 #define __vtkCompressCompositer_h
 
+#include "vtkRenderingParallelExport.h" // For export macro
 #include "vtkCompositer.h"
 
 class vtkTimerLog;
 class vtkDataArray;
 class vtkFloatArray;
 
-class VTK_PARALLEL_EXPORT vtkCompressCompositer : public vtkCompositer
+class VTKRENDERINGPARALLEL_EXPORT vtkCompressCompositer : public vtkCompositer
 {
 public:
   static vtkCompressCompositer *New();

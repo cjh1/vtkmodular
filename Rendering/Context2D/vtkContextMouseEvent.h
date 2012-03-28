@@ -22,11 +22,13 @@
 #ifndef __vtkContextMouseEvent_h
 #define __vtkContextMouseEvent_h
 
+#include "vtkRenderingContext2DExport.h" // For export macro
+#include "vtkWin32Header.h" // For export macros.
 #include "vtkVector.h"      // Needed for vtkVector2f and vtkVector2i
 
 class vtkRenderWindowInteractor;
 
-class vtkContextMouseEvent
+class VTKRENDERINGCONTEXT2D_EXPORT vtkContextMouseEvent
 {
 public:
   // Description:

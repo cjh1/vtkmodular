@@ -36,10 +36,11 @@ PURPOSE.  See the above copyright notice for more information.
 #ifndef __vtkTransferAttributes_h
 #define __vtkTransferAttributes_h
 
+#include "vtkInfovisNeedAHomeExport.h" // For export macro
 #include "vtkPassInputTypeAlgorithm.h"
 #include "vtkVariant.h" //For vtkVariant method arguments
 
-class VTK_INFOVIS_EXPORT vtkTransferAttributes : public vtkPassInputTypeAlgorithm 
+class VTKINFOVISNEEDAHOME_EXPORT vtkTransferAttributes : public vtkPassInputTypeAlgorithm
 {
 public:
   // Description:

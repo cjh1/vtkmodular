@@ -38,7 +38,9 @@ function(vtk_add_java_wrapping module_name module_srcs)
   add_dependencies(vtk${wrap_name}JavaJavaClasses vtk${wrap_name}Java)
 
   target_link_libraries(vtk${wrap_name}Java ${module_name} vtkWrappingJavaCore)
-  include_directories(${vtkWrappingJavaCore_SOURCE_DIR})
+  include_directories(${vtkWrappingJavaCore_SOURCE_DIR} 
+    ${vtkWrappingJavaCore_BINARY_DIR}
+    )
 
   # Do we need to link to AWT?
   if(${module_name} STREQUAL "vtkRenderingCore")

@@ -10,6 +10,8 @@ set(Kit_SRCS
   vtkLabelRenderStrategy.cxx
   vtkLabelSizeCalculator.cxx
   vtkFreeTypeLabelRenderStrategy.cxx
+  vtkDynamic2DLabelMapper.cxx
+  vtkPointSetToLabelHierarchy.cxx
   )
 
 set_source_files_properties(
